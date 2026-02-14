@@ -1,4 +1,5 @@
 # Base Instructions
-Each folder in this directory contains a gameinfo.gi file (this is done because you cannot have duplicate filenames) with a moderately different configuration
+To install the performance config replace the gameinfo.gi in game/citadel with the one downloaded from this repository. ./gameinfo.gi
 
-The file base_convars.txt is purely for referencing the convars without needing to actively dig through a gameinfo.gi.
+### Additional File
+./base_convars.txt exists just to have the convars be isolated from the rest of the gameinfo.gi
