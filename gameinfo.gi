@@ -451,7 +451,6 @@
 
 	ConVars
 	{	 
-
 // ---------------- GAMEINFO CONFIG — DYSON EDITION - Maidehnless Translated -- ver. 1.3 ---------------
 // Check here for updates: https://gamebanana.com/mods/650519
 
@@ -560,7 +559,6 @@ enable_boneflex "false"                                         // Disables bone
 r_hair_ao "0"                                                   // Disables hair ambient occlusion/shading pass.                                                                                                                // Def. = "0"
 
 // ================== TEXTURES & STREAMING =================
-r_texture_streaming "1"                                         // Enables texture streaming (loads higher mips only when needed).                                                                                              // Def. = "1"
 r_texturefilteringquality "1"                                   // Texture filtering quality preset (0 = lowest).                                                                                                               // Def. = "1"
 
 // ================= PHYSICS, ROPES & DECALS =================
@@ -603,7 +601,6 @@ violence_hblood "0"                                             // Disables huma
 violence_ablood "0"                                             // Disables alien/other blood effects.                                                                                                                          // Def. = "0"
 violence_hgibs "0"                                              // Disables human gibs.                                                                                                                                         // Def. = "0"
 violence_agibs "0"                                              // Disables alien/other gibs.                                                                                                                                   // Def. = "0"
-citadel_damage_indicator "0"                                    // Disables damage direction indicator UI feedback.                                                                                                             // Def. = "0"
 citadel_hud_objective_health_enabled "2"                        // 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks                                                                                                                        // Def. = "2"
 citadel_hideout_ball_show_juggle_count "1"                      // Shows juggle count UI for hideout ball minigame.                                                                                                             // Def. = "1"
 citadel_hideout_ball_show_juggle_fx "1"                         // Shows juggle visual FX for hideout ball minigame.                                                                                                            // Def. = "1"
@@ -647,7 +644,6 @@ sos_use_guid_filter "1"                                         // \\           
 
 // ================ INPUT ================
 cl_input_enable_raw_keyboard "1"                                // Enables raw keyboard input handling (more direct input path).                                                                                                // Def. = "1"
-m_filter "0"                                                    // Disables mouse filtering/smoothing.                                                                                                                          // Def. = "0"
 
 // --------------- END OF CONFIG — DYSON EDITION - Maidehnless Translated -- ver. 1.3 ---------------
 		"rate"
@@ -766,5 +762,6 @@ m_filter "0"                                                    // Disables mous
 		"ShowLowAvailableVirtualMemoryMessageBox" "1"
 	}
 }
+
 
 
