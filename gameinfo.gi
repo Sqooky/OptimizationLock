@@ -451,9 +451,9 @@
 
 	ConVars
 	{	 
-// ---------------- GAMEINFO CONFIG — DYSON EDITION - Maidehnless Translated -- ver. 1.3 ---------------
+// ---------------- GAMEINFO CONFIG OptimizationLock -- ver. 1.3.1 ---------------
 // Check here for updates: https://gamebanana.com/mods/650519
-
+// Downloaded from https://github.com/Sqooky/OptimizationLock
 // =============== NOTE WORTHY SETTINGS ===============
 // Some pretty self explanitory settings worth looking at for easy customisations
 
@@ -645,7 +645,7 @@ sos_use_guid_filter "1"                                         // \\           
 // ================ INPUT ================
 cl_input_enable_raw_keyboard "1"                                // Enables raw keyboard input handling (more direct input path).                                                                                                // Def. = "1"
 
-// --------------- END OF CONFIG — DYSON EDITION - Maidehnless Translated -- ver. 1.3 ---------------
+// --------------- END OF CONFIG OptimizationLock -- ver. 1.3.1 ---------------
 		"rate"
 		{
 			"min"		"98304"
