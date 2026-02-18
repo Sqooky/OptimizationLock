@@ -457,17 +457,16 @@
 
 // =============== NOTE WORTHY SETTINGS ===============
 // Some pretty self explanitory settings worth looking at for easy customisations
-// --- 1. filtering ---
 
-// --- 2. Outlines ---
+// --- 1. Outlines ---
 citadel_trooper_glow_disabled "0"                               // 1 = Disable friendly/enemy minion glow                                                                                                                       // Def. = "0"
 citadel_boss_glow_disabled "1"                                  // Disables boss and walker glow/highlight effect.                                                                                                              // Def. = "1"
 citadel_player_glow_disabled "0"                                // Disables player glow/highlight effect when pinged.                                                                                              				// Def. = "1"
 
-// --- 3. Aspect Ratio ---
+// --- 2. Aspect Ratio ---
 r_aspectratio "2.15"                                            // 1.75=80fov | 2.15=90fov                                                                                                                                      // Def. = "2.15"
 
-// --- 4. HUD & Gameplay ---
+// --- 3. HUD & Gameplay ---
 citadel_unit_status_use_new "true" 							    // This uses new Health Bar, to use old Health Bar change "true" to "false"                                                                                     // Def. = "true"
 citadel_damage_report_enable "1"                                // Enables/Disables incoming/outgoing damage tab                                                                                                                // Def. = "1"
 r_drawskybox "1"                                                // Enables drawing the 2D skybox.                                                                                                                               // Def. = "1"
@@ -767,4 +766,5 @@ m_filter "0"                                                    // Disables mous
 		"ShowLowAvailableVirtualMemoryMessageBox" "1"
 	}
 }
+
 
