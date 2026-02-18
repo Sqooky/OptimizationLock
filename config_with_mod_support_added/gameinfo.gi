@@ -697,9 +697,6 @@ r_hair_ao "0"
 // Def. = "0"
 
 // ================== TEXTURES & STREAMING =================
-r_texture_streaming "1"                                        
-// Enables texture streaming (loads higher mips only when needed).                                                                                             
-// Def. = "1"
 r_texturefilteringquality "1"                                  
 // Texture filtering quality preset (0 = lowest).                                                                                                              
 // Def. = "1"
@@ -809,9 +806,6 @@ violence_hgibs "0"
 // Def. = "0"
 violence_agibs "0"                                             
 // Disables alien/other gibs.                                                                                                                                  
-// Def. = "0"
-citadel_damage_indicator "0"                                   
-// Disables damage direction indicator UI feedback.                                                                                                            
 // Def. = "0"
 citadel_hud_objective_health_enabled "2"                       
 // 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks                                                                                                                       
@@ -933,6 +927,7 @@ cl_input_enable_raw_keyboard "1"
 
 // --------------- END OF CONFIG — DYSON EDITION - Maidehnless Translated -- ver. 1.3 ---------------
 
+
 		"rate"
 		{
 			"min"		"98304"
@@ -1049,4 +1044,5 @@ cl_input_enable_raw_keyboard "1"
 		"ShowLowAvailableVirtualMemoryMessageBox" "1"
 	}
 }
+
 
