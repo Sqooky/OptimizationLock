@@ -540,11 +540,14 @@ r_grass_end_fade 0                   // Grass not rendered at distance
 r_size_cull_threshold 1.2
 sc_clutter_enable 0
 skeleton_instance_lod_optimization 1
+// ============================================================
 
+m_rawinput 1                          // Uses raw mouse input, better aim consistency, no FPS cost
+cl_input_enable_raw_keyboard 1        // Uses raw keyboard input, slightly lower input latency
+m_filter 0                            // Disables mouse smoothing, improves responsiveness
 
-
-citadel_unit_status_use_new true 
-r_aspectratio 2.6
+// --- Pidjan + Piggy Config --- \\
+// pidjan cfg end
 
 
 
