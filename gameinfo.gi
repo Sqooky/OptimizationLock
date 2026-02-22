@@ -450,34 +450,38 @@
 	}
 
 	ConVars
-	{	 
-// ---------------- GAMEINFO CONFIG OptimizationLock -- ver. 1.3.1 ---------------
-// Check here for updates: https://gamebanana.com/mods/650519
-// Downloaded from https://github.com/Sqooky/OptimizationLock
-// =============== NOTE WORTHY SETTINGS ===============
-// Some pretty self explanitory settings worth looking at for easy customisations
+	{
+// ---------------- GAMEINFO CONFIG OptimizationLock -- ver. 1.3.1b (EXTRA) --------------- \\
+            // Check here for updates: https://gamebanana.com/mods/650519 \\
+           // Downloaded from: https://github.com/Sqooky/OptimizationLock  \\
+          // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
+                // =============== NOTE WORTHY SETTINGS =============== \\
+        // Some pretty self explanitory settings worth looking at for easy customisations \\
 
-// --- 1. Outlines ---
-citadel_trooper_glow_disabled "0"                               // 1 = Disable friendly/enemy minion glow                                                                                                                       // Def. = "0"
+// --- 1. Outlines --- \\
+citadel_trooper_glow_disabled "0"                               // 1 = Disable friendly/enemy minion glow
+                                                                // Def. = "0"
+
 citadel_boss_glow_disabled "1"                                  // Disables boss and walker glow/highlight effect.                                                                                                              // Def. = "1"
 citadel_player_glow_disabled "0"                                // Disables player glow/highlight effect when pinged.                                                                                              				// Def. = "1"
 
-// --- 2. Aspect Ratio ---
-r_aspectratio "2.15"                                            // 1.75=80fov | 2.15=90fov                                                                                                                                      // Def. = "2.15"
+// --- 2. Aspect Ratio --- \\
+r_aspectratio "2.00"                                            // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov)
+citadel_camera_hero_fov "100"
 
-// --- 3. HUD & Gameplay ---
-citadel_unit_status_use_new "true" 							    // This uses new Health Bar, to use old Health Bar change "true" to "false"                                                                                     // Def. = "true"
+// --- 3. HUD & Gameplay --- \\
+citadel_unit_status_use_new "true"                              // This uses new Health Bar, to use old Health Bar change "true" to "false"                                                                                     // Def. = "true"
 citadel_damage_report_enable "1"                                // Enables/Disables incoming/outgoing damage tab                                                                                                                // Def. = "1"
-r_drawskybox "1"                                                // Enables drawing the 2D skybox.                                                                                                                               // Def. = "1"
+r_drawskybox "0"                                                // Enables drawing the 2D skybox.                                                                                                                               // Def. = "1"
 r_draw3dskybox "0"                                              // Enables drawing the 3D skybox layer (distant geometry).                                                                                                      // Def. = "1"
 
-// ================ SYSTEM & THREADING ================                                                                                                                                                                         // Recommended By
+// ================ SYSTEM & THREADING ================ \\                                                                                                                                                                    // Recommended By
 // Stream settings are moved to the top for priority                                                                                                                                                                            // Maidehnless
 r_threaded_particles "1"                                        // Updates/simulates particles using worker threads instead of the main thread.                                                                                 // Def. = "1"
 engine_no_focus_sleep "0"                                       // Controls sleeping when the game window is unfocused (0 = allow sleeping when unfocused).                                                                     // Def. = "0"
 fps_max "0"                                                   	// Max FPS while in game - if you want to limit your FPS use a 3rd party app to prevent stuttering                                                              // Def. = "0"
 
-// ================ NETWORK ================
+// ================ NETWORK ================ \\
 cl_updaterate "128"                                             // Client snapshot update rate requested from the server (higher = more frequent updates).                                                                      // Def. = "128"
 cl_interp "0.01"                                                // Client-side interpolation time (smoothing delay) for rendering other players/entities.                                                                       // Def. = "0.01"
 cl_interp_ratio "1"                                             // Multiplier that affects interpolation time (often cl_interp_ratio / cl_updaterate).                                                                          // Def. = "1"
@@ -488,12 +492,12 @@ cl_smoothtime "0.01"                                            // Time window u
 cl_resend "2"                                                   // How aggressively the client resends unacknowledged reliable data (higher = more retries).                                                                    // Def. = "2"
 cl_clock_buffer_ticks "1"                                       // Packet loss mitigation                                                                                                                                       // Def. = "1"
 
-// ================ GRAPHICS CORE ================
+// ================ GRAPHICS CORE ================ \\
 gpu_level "1"                                                   // GPU quality “preset” level (0 = lowest).                                                                                                                     // Def. = "1"
 cpu_level "1"                                                   // CPU quality “preset” level (0 = lowest).                                                                                                                     // Def. = "1"
 mat_set_shader_quality "0"                                      // Sets shader quality level (0 = lowest/cheapest shader permutations).                                                                                         // Def. = "0"
 
-// ================ SHADOWS & LIGHTING ================
+// ================ SHADOWS & LIGHTING ================ \\
 r_shadows "0"                                                   // Disables shadows                                                                                                                                             // Def. = "0"
 r_citadel_shadow_quality "0"                                    // Deadlock/Citadel shadow quality level (0 = lowest).                                                                                                          // Def. = "0"
 r_citadel_sun_shadow_slope_scale_depth_bias "1.0"               // Shadow depth bias tuning to reduce acne/peter-panning (higher bias = fewer artifacts, more floaty shadows).                                                  // Def. = "1.0"
@@ -515,14 +519,14 @@ lb_dynamic_shadow_resolution_base "256"                         // Base resoluti
 sparseshadowtree_enable_rendering "1"                           // Enables the engine’s “sparse shadow tree” rendering path (shadow virtualization/culling system).                                                             // Def. = "1"
 
 // Lighting
-r_directlighting "1"                                            // Enables direct lighting calculations (basic light contribution).                                                                                             // Def. = "1"
+r_directlighting "0"                                            // Enables direct lighting calculations (basic light contribution).                                                                                             // Def. = "1"
 r_ssao "0"                                                      // Disables screen-space ambient occlusion.                                                                                                                     // Def. = "0"
 r_ssao_strength "0"                                             // AO strength multiplier (0 = no AO contribution).                                                                                                             // Def. = "0"
 r_citadel_ssao_quality "0"                                      // SSAO quality level (0 = lowest/off-ish).                                                                                                                     // Def. = "0"
 r_citadel_ssao_thin_occluder_compensation "0"                   // Disables special handling for thin occluders in SSAO (cheaper).                                                                                              // Def. = "0"
 r_lightmap_size_directional_irradiance "4"                      // Sets directional irradiance lightmap data size (lower = less detail).                                                                                        // Def. = "4"
 
-// ================ PARTICLES ================
+// ================ PARTICLES ================ \\
 
 r_drawparticles "1"                                             // It must be ON, otherwise the skills are not visible.                                                                                                         // Def. = "1"
 
@@ -550,7 +554,7 @@ r_particle_timescale "1"                                        // Particle simu
 r_RainParticleDensity "0"                                       // Rain off                                                                                                                                                     // Def. = "0"
 particle_cluster_nodraw "1"                                     // Skips drawing particle “clusters”/grouped particle batches (performance, fewer small effects).                                                               // Def. = "1"
 
-// ================== MODELS, LOD & CULLING =================
+// ================== MODELS, LOD & CULLING ================= \\
 cl_disable_ragdolls "true"                                      // Keep set to true - disabling this (enabling ragdolls) can cause issue with doorman's ultimate                                                                // Def. = "true"
 r_size_cull_threshold "1.6"                                     // Culls small objects sooner based on screen size threshold (higher = more culling).                                                                           // Def. = "1.6"
 cl_fasttempentcollision "20"                                    // Limits/controls fast collision processing for temporary entities (impacts/tracers/etc.); higher usually = more work.                                         // Def. = "20"
@@ -558,10 +562,10 @@ skeleton_instance_lod_optimization "1"                          // Enables skele
 enable_boneflex "false"                                         // Disables bone flexes (procedural facial/mesh flex drivers).                                                                                                  // Def. = "false"
 r_hair_ao "0"                                                   // Disables hair ambient occlusion/shading pass.                                                                                                                // Def. = "0"
 
-// ================== TEXTURES & STREAMING =================
-r_texturefilteringquality "1"                                   // Texture filtering quality preset (0 = lowest).                                                                                                               // Def. = "1"
+// ================== TEXTURES & STREAMING ================= \\
+r_texturefilteringquality "0"                                   // Texture filtering quality preset (0 = lowest).                                                                                                               // Def. = "1"
 
-// ================= PHYSICS, ROPES & DECALS =================
+// ================= PHYSICS, ROPES & DECALS ================= \\
 cl_phys_timescale "1"                                           // Disable physics - set this value to 1 to get rid of floating boxes after you destroy them                                                                    // Def. = "1"
 cl_phys_sleep_enable "true"                                     // Allows physics objects to “sleep” when at rest (less CPU).                                                                                                   // Def. = "true"
 r_drawdecals "1"                                                // Enables drawing decals (bullet holes, splats) where allowed.                                                                                                 // Def. = "1"
@@ -579,21 +583,21 @@ r_ropetranslucent "0"                                           // Disables tran
 cloth_update "1"                                                // Enables cloth system updates (may still be cheap if cloth is otherwise off).                                                                                 // Def. = "1"
 cloth_sim_on_tick "0"                                           // Runs cloth sim less frequently/not strictly every tick (reduces CPU).                                                                                        // Def. = "0"
 
-// ================ ATMOSPHERE & WATER ================
+// ================ ATMOSPHERE & WATER ================ \\
 r_enable_volume_fog "0"                                         // Disables volumetric fog.                                                                                                                                     // Def. = "0"
 r_enable_gradient_fog "0"                                       // Disables gradient fog.                                                                                                                                       // Def. = "0"
 r_enable_cubemap_fog "0"                                        // Disables cubemap-based fog.                                                                                                                                  // Def. = "0"
 r_citadel_fog_quality "0"                                       // Deadlock/Citadel fog quality (0 = lowest/off).                                                                                                               // Def. = "0"
 
-// ================ POST-PROCESS & MISC  ================
+// ================ POST-PROCESS & MISC  ================ \\
 mat_colcorrection_disableentities "0"                           // Allows entity-based color correction (0 = not disabled).                                                                                                     // Def. = "0"
-mat_colorcorrection "0"                                         // Disables color correction.                                                                                                                                   // Def. = "0"
+mat_colorcorrection "1"                                         // Disables color correction.                                                                                                                                   // Def. = "0"
 r_depth_of_field "0"                                            // Disables depth of field.                                                                                                                                     // Def. = "0"
 r_effects_bloom "0"                                             // Disables effects bloom.                                                                                                                                      // Def. = "0"
 r_post_bloom "0"                                                // Disables post-process bloom.                                                                                                                                 // Def. = "0"
 r_distancefield_enable "0"                                      // Enables distance-field system (used by some lighting/shadowing/occlusion features).                                                                          // Def. = "0"
 
-// ================= GAMEPLAY & UI ==================
+// ================= GAMEPLAY & UI ================== \\
 r_drawtracers "1"                                               // Tracers enabled (as requested at the end of the config)                                                                                                      // Def. = "1"
 r_drawtracers_firstperson "1"                                   // Enables first-person tracer rendering (you see your own bullet tracers).                                                                                     // Def. = "1"
 cl_show_splashes "0"                                            // Disables splash effects (water/impact splashes).                                                                                                             // Def. = "0"
@@ -609,7 +613,7 @@ panorama_disable_box_shadow "1"                                 // Disables UI b
 panorama_disable_blur "1"                                       // Disables UI blur effects in Panorama.                                                                                                                        // Def. = "1"
 r_dashboard_render_quality "1"                                  // Sets dashboard/UI render quality (lower = cheaper UI rendering).                                                                                             // Def. = "1"
 
-// ================ AI & ENGINE ================
+// ================ AI & ENGINE ================ \\
 think_limit "10"                                                // Limits how much “think” time/entities can process per tick (CPU cap).                                                                                        // Def. = "10"
 engine_low_latency_sleep_after_client_tick "1"                  // Sleeps strategically after client tick to reduce latency/stutter (low-latency pacing).                                                                       // Def. = "1"
 battery_saver "0"                                               // Disables battery saver mode (no automatic throttling).                                                                                                       // Def. = "0"
@@ -638,14 +642,18 @@ animgraph_enable_parallel_preupdate "1"                         // Allows animgr
 animgraph_enable_parallel_op_evaluation "1"                     // Allows animgraph operator evaluation to run in parallel (performance).                                                                                       // Def. = "1"
 citadel_ag2_controller_parallel_update_enabled "1"              // Enables parallel updates for the Citadel/AG2 animation controller (performance).                                                                             // Def. = "1"
 
-// ================ AUDIO ================
+// ================ AUDIO ================ \\
 snd_sos_max_event_base_depth "10"                               // \\                                                                                                                                                           // Def. = "10"
 sos_use_guid_filter "1"                                         // \\                                                                                                                                                           // Def. = "1"
 
-// ================ INPUT ================
+// ================ INPUT ================ \\
 cl_input_enable_raw_keyboard "1"                                // Enables raw keyboard input handling (more direct input path).                                                                                                // Def. = "1"
+m_filter "0"                                                    // Disables mouse smoothing, improves responsiveness
+m_rawinput "1"                                                    // Uses raw mouse input, better aim consistency, no FPS cost
+// --------------- END OF CONFIG OptimizationLock -- ver. 1.3.1b (EXTRA) --------------- \\
 
-// --------------- END OF CONFIG OptimizationLock -- ver. 1.3.1 ---------------
+
+
 		"rate"
 		{
 			"min"		"98304"
