@@ -550,7 +550,6 @@ m_filter 0                            // Disables mouse smoothing, improves resp
 // pidjan cfg end
 
 
-
 		"rate"
 		{
 			"min"		"98304"
