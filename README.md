@@ -27,3 +27,14 @@ rate {
 
 ### Additional File
 base_convars.txt exists just to have the convars be isolated from the rest of the gameinfo.gi
+
+# Credits
+     // Maihdenless:	Made the Optimizationlock project                          \\
+    // Dacoder_		    Responsible for vers 1.3.2 and documentation                \\
+   // Abdalla		    Manually removed all of the leftover fake cvars              \\
+  // Pidjan		        Made the script to check for fake cvars.                      \\
+ // Sqooky		        Manager of the github                                          \\
+// --------------- END OF CONFIG OptimizationLock -- ver. 1.3.2 (EXTRA) --------------- \\
+
+
+
