@@ -451,10 +451,11 @@
 
 	ConVars
 	{
-// ---------------- GAMEINFO CONFIG OptimizationLock -- ver. 1.3.1b (EXTRA) --------------- \\
+// ---------------- GAMEINFO CONFIG OptimizationLock -- ver. 1.3.2 (EXTRA) --------------- \\
             // Check here for updates: https://gamebanana.com/mods/650519 \\
            // Downloaded from: https://github.com/Sqooky/OptimizationLock  \\
           // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
+
                 // =============== NOTE WORTHY SETTINGS =============== \\
         // Some pretty self explanitory settings worth looking at for easy customisations \\
 
@@ -650,8 +651,18 @@ sos_use_guid_filter "1"                                         // \\           
 cl_input_enable_raw_keyboard "1"                                // Enables raw keyboard input handling (more direct input path).                                                                                                // Def. = "1"
 m_filter "0"                                                    // Disables mouse smoothing, improves responsiveness
 m_rawinput "1"                                                    // Uses raw mouse input, better aim consistency, no FPS cost
-// --------------- END OF CONFIG OptimizationLock -- ver. 1.3.1b (EXTRA) --------------- \\
 
+
+
+
+       // Credits to the following
+      // Hanturaya:	Made the original config this is based off of.
+     // Maihdenless:	Made the Optimizationlock project 
+    // Dacoder_		Responsible for vers 1.3.2 and documentation
+   // Abdalla		Manually removed all of the leftover fake cvars
+  // Pidjan		Made the script to check for fake cvars.
+ // Sqooky		Manager of the github
+// --------------- END OF CONFIG OptimizationLock -- ver. 1.3.2 (EXTRA) --------------- \\
 
 
 		"rate"

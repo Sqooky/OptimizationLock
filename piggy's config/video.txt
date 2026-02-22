@@ -1,0 +1,85 @@
+"video.cfg"
+{
+"Version"		"20"	
+
+
+//========================================
+// EXTREMELY IMPORTANT, FOR ANY OF THIS TO WORK YOU WILL NEED TO PUT THE PREXISTING VALUES FROM YOUR video.txt IN HERE
+// Your prexisting video.txt can be found at steamapps/common/deadlock/game/citadel/cfg/video.txt
+
+"VendorID"		" "	//replace with the value found in your config
+//			 ^
+"DeviceID"		" "	//replace with the value found in your config
+//			 ^
+
+//========================================
+"setting.fullscreen" "1"				// 0 = Borderless, 1 = Exclusive Fullscreen
+"setting.nowindowborder" "1"
+"setting.fullscreen_min_on_focus_loss" "1"
+"setting.monitor_index" "0"
+"setting.high_dpi" "0"
+"setting.aspectratiomode" "0"
+"setting.cpu_level" "2"       				// 2 = best balance on modern CPUs. Lower to 0–1 only if CPU is weak or you get stutter.
+"setting.mem_level" "0"
+"setting.gpu_mem_level" "2"    				// 0 = very low VRAM (≤4GB) 1 = medium (4–6GB) 2 = high (6GB+ recommended)
+"setting.gpu_level" "3"					// Higher values improve batching on modern GPUs. Use 0–1 ONLY if GPU is constantly 95–100% loaded.
+"setting.mat_vsync" "0"
+"setting.r_low_latency" "1"
+"setting.fps_max" "0"   				// Change to cap fps (Leave at 0 if using RTSS)
+
+// =============================================================
+
+"setting.mat_viewportscale" "1"
+"setting.r_citadel_antialiasing" "0"
+"setting.r_citadel_upscaling" "0"
+"setting.r_citadel_dlss_settings_mode" "0"
+"setting.r_dlss_preset" "0"
+"setting.r_citadel_fsr_rcas_sharpness" "0"
+"setting.r_citadel_fsr2_sharpness" "0"
+"setting.r_effects_bloom" "false"
+"setting.r_post_bloom" "false"
+"setting.r_depth_of_field" "false"
+"setting.r_citadel_motion_blur" "0"
+"setting.r_reduce_flash" "1"
+"setting.r_shadows" "0"
+"setting.r_citadel_shadow_quality" "0"
+"setting.csm_max_shadow_dist_override" "0"
+"setting.csm_max_num_cascades_override" "0"
+"setting.csm_viewmodel_shadows" "0"
+"setting.lb_enable_shadow_casting" "false"
+"setting.lb_dynamic_shadow_resolution" "false"
+"setting.r_area_lights" "0"
+"setting.r_arealights" "false"
+"setting.r_citadel_ssao" "0"
+"setting.r_citadel_ssao_quality" "0"
+"setting.r_citadel_distancefield_ao_quality" "0"
+"setting.r_citadel_fog_quality" "0"
+"setting.volume_fog_width" "32"
+"setting.volume_fog_height" "32"
+"setting.volume_fog_depth" "16"
+"setting.shaderquality" "1"
+"setting.r_displacement_mapping" "0"
+"setting.r_dashboard_render_quality" "1"
+
+// ==================================
+"setting.r_texture_stream_mip_bias" "4" 
+// 4 is the lowest you can go without adding sinner light mod (8 is the lowest aka roblox)
+// ==================================
+
+"setting.r_particle_max_detail_level" "0"
+"setting.r_particle_shadows" "0"
+"setting.r_particle_cables_cast_shadows" "0"
+"setting.r_particle_depth_feathering" "false"
+"setting.r_citadel_half_res_noisy_effects" "true"
+"setting.cl_particle_fallback_base" "6"
+"setting.cl_particle_fallback_multiplier" "4"
+"setting.r_distancefield_enable" "true"
+"setting.r_citadel_outlines" "1"
+"setting.r_fullscreen_gamma" "2.2"
+"setting.useadvanced" "1"
+"setting.coop_fullscreen" "0"
+"setting.r_light_sensitivity_mode" "false"
+
+
+
+}
