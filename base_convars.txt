@@ -41,7 +41,7 @@ cl_clock_buffer_ticks "1"                                       // Smooth over p
 gpu_level "1"                                                   // GPU level (0 = lowest). [def: "3"]
 gpu_mem_level "1"                                               // GPU Memory level. [def: "2"]
 cpu_level "1"                                                   // CPU level (0 = lowest). [def: "2"]
-mat_set_shader_quality "0"                                      // Force shader quality setting (valid values are 0 or 1). [def: ??]
+mat_set_shader_quality "0"                                      // Force shader quality setting (valid values are 0 or 1). [def: 1]
 
 // ================ SHADOWS & LIGHTING ================ \\
 r_shadows "0"                                                   // Disables shadows. [def: "1"]
@@ -55,53 +55,53 @@ lb_enable_shadow_casting "0"                                    // Prevents stat
 lb_csm_draw_alpha_tested "0"                                    // Prevents alpha-tested geometry from being included in CSM passes (cheaper, possible missing leaf/fence shadows). [def: "1"]
 lb_csm_draw_translucent "0"                                     // Prevents translucent objects from rendering into CSM (cheaper, fewer shadow details). [def: "1"]
 lb_barnlight_shadowmap_scale "0.5"                              // Scale for computed barnlight shadowmap size (lower = cheaper). [def: "1"]
-lb_csm_cascade_size_override "1"                                // Enables overriding CSM cascade sizing rules (forces engine to use override values). [def: ""]                                                                       // Def. = "1"
-lb_dynamic_shadow_resolution_quantization "64"                  // Quantizes dynamic shadow resolution steps (stabilizes/limits resolution changes). [def: ""]                                                                          // Def. = "64"
-lb_csm_override_staticgeo_cascades_value "0"                    // Overrides how many cascades affect static geometry (0 = minimal/disabled override behavior). [def: ""]                                                              // Def. = "0"
-lb_csm_receiver_plane_depth_bias "0.00002"                      // Depth bias for CSM receiver plane (artifact control). [def: ""]                                                                                                    // Def. = "0.00002"
-lb_csm_receiver_plane_depth_bias_transmissive_backface "0.0002" // Depth bias for transmissive/backface receivers (artifact control). [def: ""]                                                                                       // Def. = "0.0002"
+lb_csm_cascade_size_override "1"                                // Enables overriding CSM cascade sizing rules (forces engine to use override values). [def: ""]
+lb_dynamic_shadow_resolution_quantization "64"                  // Quantizes dynamic shadow resolution steps (stabilizes/limits resolution changes). [def: "64"]
+lb_csm_override_staticgeo_cascades_value "0"                    // Overrides how many cascades affect static geometry (0 = minimal/disabled override behavior). [def: "-1"]
+lb_csm_receiver_plane_depth_bias "0.00002"                      // Depth bias for CSM receiver plane (artifact control). [def: "0.00001526"]
+lb_csm_receiver_plane_depth_bias_transmissive_backface "0.0002" // Depth bias for transmissive/backface receivers (artifact control). [def: "0.00015"]
 lb_sun_csm_size_cull_threshold_texels "30"                      // Culls tiny CSM contributions below a texel threshold (performance). [def: "10"]
 lb_dynamic_shadow_resolution_base "256"                         // Base resolution for dynamic shadows (lower = cheaper). [def: "256"]
 sparseshadowtree_enable_rendering "1"                           // Enables Sparse Shadow Tree, rendering static geometry into shadow cascades. [def: "0"]
 
 // Lighting
-r_directlighting "0"                                            // Enables direct lighting calculations (basic light contribution). [def: ""]                                                                                             // Def. = "1"
-r_ssao "0"                                                      // Disables screen-space ambient occlusion. [def: ""]                                                                                                               // Def. = "0"
-r_ssao_strength "0"                                             // AO strength multiplier (0 = no AO contribution). [def: ""]                                                                                                          // Def. = "0"
-r_citadel_ssao_quality "0"                                      // SSAO quality level (0 = lowest/off-ish). [def: ""]                                                                                                                   // Def. = "0"
-r_citadel_ssao_thin_occluder_compensation "0"                   // Disables special handling for thin occluders in SSAO (cheaper). [def: ""]                                                                                          // Def. = "0"
-r_lightmap_size_directional_irradiance "4"                      // Sets directional irradiance lightmap data size (lower = less detail). [def: ""]                                                                                    // Def. = "4"
+r_directlighting "0"                                            // Enables direct lighting calculations (basic light contribution). [def: "1"]
+r_ssao "0"                                                      // Disables screen-space ambient occlusion. [def: "1"]
+r_ssao_strength "0"                                             // AO strength multiplier (0 = no AO contribution). [def: "1.2"]
+r_citadel_ssao_quality "0"                                      // SSAO quality level (0 = lowest/off-ish). [def: "3"]
+r_citadel_ssao_thin_occluder_compensation "0"                   // Disables special handling for thin occluders in SSAO (cheaper). [def: "0.5"]
+r_lightmap_size_directional_irradiance "4"                      // Sets directional irradiance lightmap data size (lower = less detail) (-1 = use default behavior/no override). [def: "-1"]
 
 // ================ PARTICLES ================ \\
 
-r_drawparticles "1"                                             // It must be ON, otherwise the skills are not visible. [def: ""]                                                                                                       // Def. = "1"
+r_drawparticles "1"                                             // It must be ON, otherwise the skills are not visible. [def: "1"]
 
 // --- 1. LIMITS (To keep the console being flooded) ---
 // We set the minimum at which the engine does not choke on errors
-cl_particle_max_count "1500" 			    // If console is flooded with max particles exceeded warnings. [def: ""]                                                                                                   // Def. = "1500"
-cl_particle_batch_mode "1"                                      // Grouping particles to reduce draw calls. [def: ""]                                                                                                                      // Def. = "1"
+cl_particle_max_count "1500" 			    // If console is flooded with max particles exceeded warnings. [def: "1500"]
+cl_particle_batch_mode "1"                                      // Grouping particles to reduce draw calls. [def: "1"]
 
 // --- 2. QUALITY (We're killing the graphics to zero) ---
-r_particle_cables_cast_shadows "0"                              // Disables shadow casting from cable/rope-like particle effects. [def: ""]                                                                                               // Def. = "0"
-r_particle_max_detail_level "0"                                 // Minimum detail. [def: ""]                                                                                                                                               // Def. = "0"
-cl_particle_fallback_base "0"                                   // Use basic (cheap) versions of effects. [def: ""]                                                                                                                        // Def. = "0"
-cl_particle_sim_fallback_threshold_ms "5"                       // If particle sim cost exceeds this (ms), the engine can fall back to cheaper particle simulation to avoid spikes. [def: ""]                                             // Def. = "5"
-cl_particle_fallback_multiplier "0"                             // Do not replicate particles. [def: ""]                                                                                                                                   // Def. = "0"
+r_particle_cables_cast_shadows "0"                              // Disables shadow casting from cable/rope-like particle effects. [def: "1"]
+r_particle_max_detail_level "0"                                 // Minimum detail. [def: "3"]
+cl_particle_fallback_base "0"                                   // Use basic (cheap) versions of effects. [def: "0"]
+cl_particle_sim_fallback_threshold_ms "5"                       // If particle sim cost exceeds this (ms), the engine can fall back to cheaper particle simulation to avoid spikes. [def: "6"]
+cl_particle_fallback_multiplier "0"                             // Do not replicate particles. [def: "0"]
 
 // --- 3. VISIBILITY OPTIMIZATION ---
 // Remove anything that is far away or too small
-r_particle_max_size_cull "0"                                    // 0 = DO NOT remove large particles (to see ultimates!). [def: ""]                                                                                                        // Def. = "0"
+r_particle_max_size_cull "0"                                    // 0 = DO NOT remove large particles (to see ultimates!). [def: "1200"]
 
 // --- 4. REMOVING CONSOLE SPAM (SYNCHRONIZATION) ---
 // These commands caused prediction errors, set default or safe values
-r_particle_timescale "1"                                        // Particle simulation speed scale (1 = normal; <1 slower, >1 faster). [def: ""]                                                                                          // Def. = "1"
+r_particle_timescale "1"                                        // Particle simulation speed scale (1 = normal; <1 slower, >1 faster). [def: "1"]
 
 // --- 5. TRASH ---
-r_RainParticleDensity "0"                                       // Rain off. [def: ""]                                                                                                                                                     // Def. = "0"
-particle_cluster_nodraw "1"                                     // Skips drawing particle “clusters”/grouped particle batches (performance, fewer small effects). [def: ""]                                                               // Def. = "1"
+r_RainParticleDensity "0"                                       // Density of Particle Rain 0-1. [def: "0"]
+particle_cluster_nodraw "1"                                     // Skips drawing particle “clusters”/grouped particle batches (performance, fewer small effects). [def: "1"]
 
 // ================== MODELS, LOD & CULLING ================= \\
-cl_disable_ragdolls "true"                                      // Keep set to true - disabling this (enabling ragdolls) can cause issue with doorman's ultimate. [def: ""]                                                                // Def. = "true"
+cl_disable_ragdolls "1"                                      // Keep set to true - disabling this (enabling ragdolls) can cause issue with doorman's ultimate. [def: "0"]
 r_size_cull_threshold "1.6"                                     // Culls small objects sooner based on screen size threshold (higher = more culling). [def: "0.7"]
 cl_fasttempentcollision "20"                                    // Limits/controls fast collision processing for temporary entities (impacts/tracers/etc.); higher usually = more work. [def: "20"]
 skeleton_instance_lod_optimization "1"                          // Enables skeleton/animation LOD optimizations (less bone work for distant models). [def: "1"]
