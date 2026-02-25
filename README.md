@@ -23,7 +23,8 @@ Convars {
 
 
 // And end on this one.
-rate { 
+rate {
+```
 
 ### Additional File
 base_convars.txt exists just to have the convars be isolated from the rest of the gameinfo.gi

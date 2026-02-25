@@ -459,22 +459,42 @@
                 // =============== NOTE WORTHY SETTINGS =============== \\
         // Some pretty self explanitory settings worth looking at for easy customisations \\
 
+// ============ SLIGHTLY IMPORTANT ============ \\
+r_directlighting "0" 						
+//setting this to zero will make your character in the shop as well as in the end screen be completely black. If you wish to have them be properly rendered set this to 1
+// ============ SLIGHTLY IMPORTANT ============ \\
+
+
 // --- 1. Outlines --- \\
 citadel_trooper_glow_disabled "0"                               // 1 = Disable friendly/enemy minion glow
                                                                 // Def. = "0"
 
-citadel_boss_glow_disabled "1"                                  // Disables boss and walker glow/highlight effect.                                                                                                              // Def. = "1"
-citadel_player_glow_disabled "0"                                // Disables player glow/highlight effect when pinged.                                                                                              				// Def. = "1"
+citadel_boss_glow_disabled "1"                                  // Disables miniboss and walker glow/highlight effect.															// Def. = "1"
+citadel_player_glow_disabled "0"                                // Disables player glow/highlight effect when pinged.															// Def. = "1"
 
-// --- 2. Aspect Ratio --- \\
-r_aspectratio "2.00"                                            // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov)
-citadel_camera_hero_fov "100"
+// --- 2. Fov Related Commands --- \\
+r_aspectratio "2.00"                                            
+// 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov)													// Def. = "2.00"
+
+citadel_camera_hero_fov "100"					
+// I believe this is a more traditional way of changing your fov. and as such I would encourage you to tweak this one.							// Def. = "100"
+// These two commands work together, so I'd recommend picking one to change and sticking to it as otherwise you'll be a bit disoriented
+
+
 
 // --- 3. HUD & Gameplay --- \\
-citadel_unit_status_use_new "true"                              // This uses new Health Bar, to use old Health Bar change "true" to "false"                                                                                     // Def. = "true"
-citadel_damage_report_enable "1"                                // Enables/Disables incoming/outgoing damage tab                                                                                                                // Def. = "1"
-r_drawskybox "0"                                                // Enables drawing the 2D skybox.                                                                                                                               // Def. = "1"
-r_draw3dskybox "0"                                              // Enables drawing the 3D skybox layer (distant geometry).                                                                                                      // Def. = "1"
+citadel_unit_status_use_new "true" 				
+// This uses the new Health Bar. The default one stacks additional layers ontop of itself to represent more health. The new one just has a singe line		
+// Def. = "true"
+
+// To disable set to "false" or remove the line.
+
+
+citadel_damage_report_enable "1"
+// Enables/Disables incoming/outgoing damage tab                                                                                                                // Def. = "1"
+r_drawskybox "1"                                                // Enables drawing the 2D skybox texture                                                                                                                               // Def. = "1"
+
+r_draw3dskybox "0"                                              // Enables drawing the 3D buildings in the skybox. // Def. = "1"
 
 // ================ SYSTEM & THREADING ================ \\                                                                                                                                                                    // Recommended By
 // Stream settings are moved to the top for priority                                                                                                                                                                            // Maidehnless
@@ -519,8 +539,6 @@ lb_sun_csm_size_cull_threshold_texels "30"                      // Culls tiny CS
 lb_dynamic_shadow_resolution_base "256"                         // Base resolution for dynamic shadows (lower = cheaper).                                                                                                       // Def. = "256"
 sparseshadowtree_enable_rendering "1"                           // Enables the engine’s “sparse shadow tree” rendering path (shadow virtualization/culling system).                                                             // Def. = "1"
 
-// Lighting
-r_directlighting "0"                                            // Enables direct lighting calculations (basic light contribution).                                                                                             // Def. = "1"
 r_ssao "0"                                                      // Disables screen-space ambient occlusion.                                                                                                                     // Def. = "0"
 r_ssao_strength "0"                                             // AO strength multiplier (0 = no AO contribution).                                                                                                             // Def. = "0"
 r_citadel_ssao_quality "0"                                      // SSAO quality level (0 = lowest/off-ish).                                                                                                                     // Def. = "0"
