@@ -66,8 +66,14 @@
 			// These are optional low-violence paths. They will only get mounted if you're in a low-violence mode.
 			Game_LowViolence	citadel_lv
 
-			Game				citadel
-			Game				core
+
+            Game                citadel/addons
+            Mod                 citadel
+            Write               citadel          
+            Game                citadel
+            Mod                 core
+            Write               core
+            Game                core    
 		}
 	}
 	

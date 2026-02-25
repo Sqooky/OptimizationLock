@@ -1,17 +1,15 @@
-To either request support or contribute findings to the project, our discord server can be found [here](https://discord.com/invite/AM7RRGBXet).
+To either request support or contribute findings to the project, our discord server can be found [here](https://discord.com/invite/AM7RRGBXet).  
 # Base Instructions
-To install the performance config replace the gameinfo.gi in ``steamapps/common/deadlock/game/citadel with the one downloaded from this repository.
+To install the performance config replace the gameinfo.gi in ``steamapps/common/deadlock/game/citadel`` with the one downloaded from this repository.
 
-If you want precise instructions on how to install 
-
-
+Included in this git repo are various configs from various individuals. Here is a table of all files and their purpose.
 | Config File              |Purpose |
 | ------------- | ----------- | 
-|Optimizationlock default|  Performance oriented with the lowest possible settings. |
-| Piggy+Pidjan's gameinfo.gi| Provides base optimizations while trying to maintain visual clarity. |
-| Piggy's gameinfo.gi | Base optimizations but is here for if you want to use his config|
-| Base_convars.txt | All of the convars used in optimizationlock's defaults in case you want to add them manually. |
-| cvarlist.md | Every single convar in the game's code. You can browse these if you want to manually find something relevant to you, for example gamma. |
+|[Optimizationlock default](https://github.com/Sqooky/OptimizationLock/blob/main/gameinfo.gi)|  Performance oriented with the lowest possible settings. |
+| [Piggy+Pidjan's gameinfo.gi](https://github.com/Sqooky/OptimizationLock/blob/main/piggy%2Bpidjan/gameinfo.gi)| Provides base optimizations while trying to maintain visual clarity. |
+| [Piggy's gameinfo.gi](https://github.com/Sqooky/OptimizationLock/tree/main/piggy's%20config) | Base optimizations but is here for if you want to use his config|
+| [Base_convars.txt](https://github.com/Sqooky/OptimizationLock/blob/main/base_convars.txt) | All of the convars used in optimizationlock's defaults in case you want to add them manually. |
+| [cvarlist.md](https://github.com/Sqooky/OptimizationLock/blob/main/cvarlist.md)| Every single convar in the game's code. You can browse these if you want to manually find something relevant to you, for example gamma. |
 
 
 
@@ -26,8 +24,8 @@ Convars {
 rate {
 ```
 
-### Additional File
-base_convars.txt exists just to have the convars be isolated from the rest of the gameinfo.gi
+# Mod Support
+Every variation of the config included in this repository has mod support added. For those who wish to remove or add it back in, remove ``Game                citadel/addons`` From the searchpaths bracket.
 
 # Credits
 ```
