@@ -29,13 +29,13 @@ Every variation of the config included in this repository has mod support added.
 
 # Credits
 Major thanks to add of these individuals from the bottom of my heart. They are all lovely.
-       // Maihdenless	Made the Optimizationlock project                        \\\
-      // Dacoder_		Responsible for vers 1.3.2 and documentation              \\\
-     // Abdalla		    Manually removed all of the leftover fake cvars            \\\
-    // Artemon121       Made the citadel Cvar unhider. Helped Abdalla with cvars.md \\\
-   // Pidjan		    Made the script to check for fake cvars.                     \\\
-  // Piggy              Let me mirror his config                                      \\\
- // Sqooky		        Manager of the github                                          \\\
-// --------------- END OF CONFIG OptimizationLock -- ver. 1.3.2 (EXTRA) --------------- \\\
-
-
+```
+       // Maihdenless	Made the Optimizationlock project                        \\
+      // Dacoder_		Responsible for vers 1.3.2 and documentation              \\
+     // Abdalla		    Manually removed all of the leftover fake cvars            \\
+    // Artemon121       Made the citadel Cvar unhider. Helped Abdalla with cvars.md \\
+   // Pidjan		    Made the script to check for fake cvars.                     \\
+  // Piggy              Let me mirror his config                                      \\
+ // Sqooky		        Manager of the github                                          \\
+// --------------- END OF CONFIG OptimizationLock -- ver. 1.3.2 (EXTRA) --------------- \\
+```
