@@ -242,8 +242,8 @@ animgraph_draw_traces |  | false | devonly, sv, cl, rep
 animgraph_dump_update_list | Displays stats about which animations are updating | cmd | devonly, sv
 animgraph_enable | Enable animation graph | true | devonly, sv, cl, rep
 animgraph_enable_dirty_netvar_optimization |  | true | devonly, rep
-animgraph_enable_parallel_op_evaluation |  | true | devonly, sv, cl, rep
-animgraph_enable_parallel_preupdate |  | true | devonly, sv, cl, rep
+animgraph_enable_parallel_op_evaluation |  | false | devonly, sv, cl, rep
+animgraph_enable_parallel_preupdate |  | false | devonly, sv, cl, rep
 animgraph_enable_parallel_update |  | true | devonly, sv, cl, rep
 animgraph_footlock_auto_ledge_detection | Attempt to detect when the foot is partially hanging off a ledge and stop it tilting to reach the bottom | true | devonly, rep
 animgraph_footlock_auto_stair_detection | Attempt to detect when the foot is on a stair and will stop it from tilting to reach the next step | true | devonly, rep
@@ -543,7 +543,7 @@ citadel_book_page_auto_play_delay_s | When a page has no audio queue, this delay
 citadel_book_page_sound_auto_play_delay_s | When a page has an audio queue, this delay will be used before auto play advancing unless it specifies an override value | 0.2 | devonly, cl
 citadel_book_reset | \[BookID=1\] Resets the current book progress | cmd | devonly, cl
 citadel_book_xp | &lt;xp&gt; \[BookID=1\] Grants the specified amount of XP to the book | cmd | devonly, cl
-citadel_boss_glow_disabled |  | true | cl, release
+citadel_boss_glow_disabled |  | false | cl, release
 citadel_boss_tier2_ping_interval |  | 10 | devonly, sv
 citadel_boss_tier2_use_wip_model |  | false | devonly, sv
 citadel_boss_tier3_use_wip_model |  | false | devonly, sv
@@ -1085,8 +1085,8 @@ citadel_hide_tutorial_after_normal_games |  | 5 | devonly, cl
 citadel_hideout_accept_request | Accept an incoming request in the hideout | cmd | cl, release
 citadel_hideout_ball_combat | WIP Allow ball to transfer melee attacks. | 0 | devonly, sv
 citadel_hideout_ball_debug | Show custom collision, ball kick impulses etc. | 0 | sv, cheat
-citadel_hideout_ball_show_juggle_count | WIP Show juggle count on ball. | 1 | devonly, sv
-citadel_hideout_ball_show_juggle_fx | WIP Show fx when hitting apex/landing on floor. | 1 | devonly, sv
+citadel_hideout_ball_show_juggle_count | WIP Show juggle count on ball. | 0 | devonly, sv
+citadel_hideout_ball_show_juggle_fx | WIP Show fx when hitting apex/landing on floor. | 0 | devonly, sv
 citadel_hideout_button_interact_distance |  | 120 | devonly, sv, cl, rep
 citadel_hideout_cancel_matchmaking | Remove yourself or your party from the matchmaking queue | cmd | cl, release
 citadel_hideout_enable_testing_tools |  | false | devonly, cl
@@ -1174,8 +1174,6 @@ citadel_log_idle_time |  | false | devonly, sv
 citadel_log_in_combat_state | Enable to log extended MODIFIER_STATE_IN_COMBAT | true | devonly, sv
 citadel_loot_table_spew_flattened_table |  | false | sv, cl, rep, cheat
 citadel_loot_table_spew_modifications |  | false | sv, cl, rep, cheat
-citadel_loot_table_test_draft | Draft from the specified loot table | cmd | sv, cheat
-citadel_loot_table_test_street_brawl_draft_round | Start the specified street brawl draft round | cmd | sv, cheat
 citadel_mantle_cancelling_allowed | Pulling away from the mantle interrupts it, putting you into falling state early. | false | sv, cl, rep, cheat
 citadel_mantle_debug |  | false | devonly, sv, cl, rep
 citadel_mantle_horizontal_movement_distance | How far forward the mantle will move the player onto the ledge | 16 | devonly, sv, cl, rep
@@ -1201,7 +1199,7 @@ citadel_match_intro_force_enabled |  | false | devonly, sv, cl, rep
 citadel_match_intro_style | 0 = none, 1 = pregame simple, 2 = pregame full, 3 = in map | 1 | devonly, sv, cl, rep
 citadel_match_status | Prints information about the current match status | cmd | devonly, sv
 citadel_max_disconnected_time | How long a player needs to be disconnected before they count as a leaver and get punished. | 300 | devonly, sv
-citadel_max_disconnected_time_pregame | How long a player needs to be disconnected during pregame before they count as a leaver and get punished. | 120 | devonly, sv
+citadel_max_disconnected_time_pregame | How long a player needs to be disconnected during pregame before they count as a leaver and get punished. | 110 | devonly, sv
 citadel_max_path_detour | Max detour for pathing calculations. | 500 | devonly, sv
 citadel_max_reconnect_time_secs | Max time to attempt a reconnect after a crash. | 7200 | devonly, cl
 citadel_max_separation_force |  | 256 | devonly, cl
@@ -1236,8 +1234,8 @@ citadel_minimap_teleporter_active_dist |  | 400 | devonly, cl
 citadel_minimap_teleporter_height_dist |  | 160 | devonly, cl
 citadel_minimap_teleporter_nearby_dist |  | 1600 | devonly, cl
 citadel_minimap_unit_click_radius |  | 200 | cl, release
-citadel_minimap_use_canvas_for_neutrals |  | false | devonly, cl
-citadel_minimap_use_canvas_for_shop |  | false | devonly, cl
+citadel_minimap_use_canvas_for_neutrals |  | true | devonly, cl
+citadel_minimap_use_canvas_for_shop |  | true | devonly, cl
 citadel_minimap_use_effects |  | false | devonly, cl
 citadel_minimap_zip_line_thickness |  | 2 | cl, release
 citadel_minimum_fire_rate | Minimum value possible for fire rate | -50 | sv, cl, rep, cheat
@@ -1822,6 +1820,7 @@ citadel_tutorial_wasd_finished |  | false | sv, cl, rep, release
 citadel_tutorial_zipline_attach_finished |  | false | sv, cl, rep, release
 citadel_tutorial_zoom_finished |  | false | sv, cl, rep, release
 citadel_tweak_hero_level_boons | Command to tweak level boons.  Pass in scale factor | cmd | devonly, cl
+citadel_tweak_weights | Tweaks the hero item bucketing. | cmd | devonly, cl
 citadel_ui_allow_feature_bot_test | When true, we can feature bot test matches | true | cl, release
 citadel_ui_damage_impact_duration |  | 2 | devonly, cl, rep
 citadel_ui_damage_impact_duration_fadeindelay |  | 0 | devonly, cl, rep
@@ -1874,7 +1873,7 @@ citadel_unit_status_show_stats |  | false | devonly, cl
 citadel_unit_status_single_bar_mode | Allow only a single health bar, no stacking. | false | cl, cheat
 citadel_unit_status_stamina_consume_linger |  | 3 | devonly, cl
 citadel_unit_status_transparent_dist_sq |  | 0 | devonly, cl
-citadel_unit_status_use_new |  | true | cl, release
+citadel_unit_status_use_new |  | false | cl, release
 citadel_unit_status_use_v2 |  | false | devonly, cl, cheat
 citadel_unit_status_use_v2_for_nonplayers |  | false | devonly, cl, cheat
 citadel_unit_status_v2_height |  | 210 | devonly, cl
@@ -2071,7 +2070,7 @@ cl_demo_steadycam_radius | if camera moves this much from last anchor update anc
 cl_demo_view_offset_left | View offset during demo playback (+/- 1.25 is a good default for human average left/right eye offset) | 0 | devonly, cl
 cl_demoviewoverride | Override view during demo playback | 0 | devonly, cl
 cl_destroy_ragdolls | Destroys all client-side ragdolls | cmd | devonly, cl
-cl_disable_ragdolls |  | true | cl, cheat
+cl_disable_ragdolls |  | false | cl, cheat
 cl_disconnect_soundevent | This soundevent is called to stop the desired soundevents when the game is disconnected. | citadel.convar.stop_all_game_layer_soundevents | devonly
 cl_disconnect_voice_fade | This is a fade of current voices that is called when the game is disconnected. -1.f for no fade on disconnect | 2 | devonly
 cl_display_game_events |  | false | cl, cheat
@@ -2155,7 +2154,7 @@ cl_eye_occlusion_debug |  | false | cl, cheat
 cl_eye_sin_wave |  | false | devonly, cl
 cl_eye_target_override |  | 0 0 0 | devonly, cl
 cl_eye_yaw_multiplier |  | 1 | devonly, cl
-cl_fasttempentcollision |  | 20 | devonly, cl
+cl_fasttempentcollision |  | 5 | devonly, cl
 cl_flushentitypacket | For debugging. Force the engine to flush an entity packet. | 0 | cheat
 cl_force_next_signon_to_reset |  | false | devonly
 cl_frametime_summary_report_detailed | When a perf report is dumped at the end of the session, should it be detailed? | true | cl, release
@@ -2166,7 +2165,7 @@ cl_globallight_depth_bias |  | -999 | devonly, cl
 cl_globallight_expansion |  | 200 | devonly, cl
 cl_globallight_freeze |  | false | devonly, cl
 cl_globallight_orig_calc_frustum |  | true | devonly, cl
-cl_globallight_shadow_mode |  | 0 | devonly, cl
+cl_globallight_shadow_mode |  | 2 | devonly, cl
 cl_globallight_slope_scale_depth_bias |  | -999 | devonly, cl
 cl_globallight_use_alt_focus_region |  | false | devonly, cl
 cl_globallight_use_optimized_calc_frustum |  | true | devonly, cl
@@ -2197,7 +2196,7 @@ cl_imgui_set_selection | Sets ImGui selection | cmd | cl, cheat
 cl_imgui_set_status_text | Sets ImGui header status text | cmd | cl, cheat
 cl_impacteffects |  | true | devonly, cl
 cl_in_forcebuttonstate | Forces a button to be a particular state - WHEN PROCESSING USERCOMMANDS | cmd | devonly, cl
-cl_input_enable_raw_keyboard | Enable raw keyboard input | true | release
+cl_input_enable_raw_keyboard | Enable raw keyboard input | false | release
 cl_interp | Read the effective client simulation interpolation amount in terms of time. | cmd | cl, release
 cl_interp_ag2_for_non_ag2_entities |  | true | devonly, cl
 cl_interp_all | Disable interpolation list optimizations. | false | devonly, cl
@@ -2205,7 +2204,7 @@ cl_interp_animationvars | Interpolate LATCH_ANIMATION_BIT vars if interpolation 
 cl_interp_hermite | Set to zero do disable hermite interpolation. | true | cl, cheat
 cl_interp_npcs | Interpolate NPC positions starting this many seconds in past (or the value as per cl_interp_ratio, if greater) | 0 | devonly, cl
 cl_interp_parallel | Run interpolation in parallel for entities with no children. | false | devonly, cl
-cl_interp_ratio | Sets the client simulation interpolation amount, in terms of server updates (final amount is cl_interp_ratio / cl_updaterate). | 1 | cl, user
+cl_interp_ratio | Sets the client simulation interpolation amount, in terms of server updates (final amount is cl_interp_ratio / cl_updaterate). | 0 | cl, user
 cl_interp_simulationvars | Interpolate LATCH_SIMULATION_BIT vars if interpolation interval is greater than animation interval | true | devonly, cl
 cl_interp_threadmodeticks | Additional interpolation ticks to use when interpolating with threaded engine mode set. | 0 | devonly, cl
 cl_interpolate | Interpolate entities on the client. | true | devonly, cl, user
@@ -2242,11 +2241,11 @@ cl_particle_create_duplicate_work_for_profiling | Create and destroy N particle 
 cl_particle_fallback_base | Base for falling back to cheaper effects under load. | 0 | devonly
 cl_particle_fallback_multiplier | Multiplier for falling back to cheaper effects under load. | 0 | devonly
 cl_particle_log_creates | Print debug message every time a particle collection is created | false | devonly
-cl_particle_max_count |  | 1500 | devonly
+cl_particle_max_count |  | 0 | devonly
 cl_particle_newinit | turn on optimized particle init | true | devonly
 cl_particle_retire_cost |  | 0 | cheat
 cl_particle_sim_fallback_base_multiplier | How aggressive the switch to fallbacks will be depending on how far over the cl_particle_sim_fallback_threshold_ms the sim time is.  Higher numbers are more aggressive. | 5 | devonly
-cl_particle_sim_fallback_threshold_ms | Amount of simulation time that can elapse before new systems start falling back to cheaper versions | 5 | devonly
+cl_particle_sim_fallback_threshold_ms | Amount of simulation time that can elapse before new systems start falling back to cheaper versions | 6 | devonly
 cl_particle_simulate | Enables/Disables Particle Simulation | true | cheat
 cl_particles_dump_effects |  | cmd | devonly, cl
 cl_particles_dumplist | Dump all new particles, optional name substring. | cmd | devonly, cl
@@ -2299,7 +2298,7 @@ cl_printfps | Print information from cl_showfps. | cmd | devonly, cl
 cl_prop_debug | Toggle prop debug mode. If on, props will show colorcoded bounding boxes. Red means ignore all damage. White means respond physically to damage but never break. Green maps health in the range of 100 down to 1. | cmd | cl, cheat
 cl_querycache_stats | Display status of the query cache (client only) | cmd | cl, cheat
 cl_ragdoll_default_scale |  | 1 | devonly, cl
-cl_ragdoll_limit | Maximum number of ragdolls to show (-1 disables limit) | 0 | cl, a
+cl_ragdoll_limit | Maximum number of ragdolls to show (-1 disables limit) | 20 | cl, a
 cl_ragdoll_lru_debug |  | false | cl, rep, cheat
 cl_ragdoll_reload |  | false | devonly, cl
 cl_removedecals | Remove the decals from the entity under the crosshair. | cmd | cl, cheat
@@ -2307,9 +2306,9 @@ cl_report_entities | Lists all entities | cmd | devonly, cl, cheat
 cl_report_predcopy_overrides | Report prediction copy overrides | cmd | devonly, cl
 cl_report_simthinklist | Lists all simulating/thinking entities | cmd | devonly, cl
 cl_report_soundpatch | reports client-side sound patch count | cmd | devonly, cl
-cl_resend | Delay in seconds before the client will resend the 'connect' attempt | 2 | release
+cl_resend | Delay in seconds before the client will resend the 'connect' attempt | 0.5 | release
 cl_resetfps | Reset information from cl_showfps. | cmd | devonly, cl
-cl_retire_low_priority_lights | Low priority dlights are replaced by high priority ones | true | devonly, cl
+cl_retire_low_priority_lights | Low priority dlights are replaced by high priority ones | false | devonly, cl
 cl_rr_dump_rules | Print all response rules | cmd | cl, cheat
 cl_rr_reloadresponsesystems | Reload all response system scripts. | cmd | cl, cheat
 cl_sat_volume_debug | Toggles client sat volume debug visualization | cmd | devonly, cl
@@ -2346,7 +2345,7 @@ cl_sendtable_cache_filename | Send tables cache file | sendtables.bin | devonly
 cl_sequence_debug |  | -1 | devonly, cl
 cl_sequence_debug2 |  | -1 | devonly, cl
 cl_sequence_model_substring |  |  | devonly, cl
-cl_show_splashes |  | false | devonly, cl
+cl_show_splashes |  | true | devonly, cl
 cl_showdemooverlay | How often to flash demo recording/playback overlay (0 - disable overlay, -1 - show always) | 0 | devonly
 cl_showents | Dump entity list to console. | cmd | cl, cheat
 cl_showerror | Show prediction errors, 2 for above plus detailed field deltas, 3 to filter out serverside known prediction errors, -entindex for specific entity. | 0 | cl, release
@@ -2363,7 +2362,7 @@ cl_skel_constraints_enable |  | true | rep, cheat
 cl_skeleton_instance_smear_boneflags | Smear boneflags across the model.  Costs computation, but tests to make sure your bone flags are consistent. | false | cl, cheat
 cl_skip_hierarchy_update_for_unchanged_entities | Skip updating hierarchy information in PostDataUpdate for entities that have not changed | true | devonly, sv, cl, rep
 cl_skip_update_animations | Enable to skip game animations | false | devonly, cl
-cl_smooth | Smooth view/eye origin after prediction errors | false | devonly, cl
+cl_smooth | Smooth view/eye origin after prediction errors | true | devonly, cl
 cl_smooth_draw_debug |  | false | cl, cheat
 cl_smooth_root_catchup_factor |  | 0.21 | cl, cheat
 cl_smooth_root_max_accel |  | 1000 | cl, cheat
@@ -2371,7 +2370,7 @@ cl_smooth_root_origin_coeff |  | 100 | cl, cheat
 cl_smooth_root_timehorizon |  | 0.125 | cl, cheat
 cl_smooth_root_velocity_coeff |  | 20 | cl, cheat
 cl_smooth_targetspeed |  | 150 | cl, release
-cl_smoothtime | Smooth client's view after prediction error over this many seconds | 0.01 | devonly, cl
+cl_smoothtime | Smooth client's view after prediction error over this many seconds | 0.2 | devonly, cl
 cl_snd_cast_clear |  | true | devonly
 cl_snd_cast_retrigger |  | true | devonly
 cl_snd_new_visualize | Displays soundevent name played at it's 3d position | false | cl, cheat
@@ -2398,7 +2397,7 @@ cl_timeout | After this many seconds without receiving a packet from the server,
 cl_tracer_whiz_distance |  | 72 | devonly, cl
 cl_tracer_whiz_infront_distance |  | 32 | devonly, cl
 cl_trueview_show_status | 0=Never; 1=Only if there is a problem; 2=always | 2 | cl, release
-cl_updaterate | Number of packets per second of updates you are requesting from the server | 128 | cl, a, user
+cl_updaterate | Number of packets per second of updates you are requesting from the server | 20 | cl, a, user
 cl_updatevisibility | Updates visibility bits. | cmd | devonly, cl
 cl_usercmd_dbg | show usercmd payload sizing info for packets with more than this many usercmds | 0 | devonly
 cl_usercmd_max_per_movemsg | max number of CUserCmds to send in one client move message | 4 | release
@@ -2428,7 +2427,7 @@ cloth_filter_transform_stateless | Enable the new, stateless version of FilterTr
 cloth_ground_plane_thickness | Raise ground by this much for all cloth that traces the ground; should be 0 ideally | 3 | devonly
 cloth_iv_dump |  | 4 | devonly, cl
 cloth_iv_store_back |  | false | devonly, cl, rep
-cloth_sim_on_tick |  | false | devonly, cl
+cloth_sim_on_tick |  | true | devonly, cl
 cloth_update |  | true | devonly, cl
 cmd | Forward command to server. | cmd | devonly
 cojob_lock_hold_warning_threshold_ms | How long in milliseconds before we warn about lock hold duration | 10000 | devonly, sv, cl, rep
@@ -2450,7 +2449,7 @@ console_test | Output text to test console | cmd | devonly
 consoletool | Open a VConsole subtool. | cmd | norecord, release
 convars_echo_toggle_changes | Echo to the console changes caused by toggling. | true | devonly
 convert_steamid | Convert SteamID into multiple formats | cmd | devonly, cl
-cpu_level | CPU Level - Default: High | 1 | devonly, cl
+cpu_level | CPU Level - Default: High | 2 | devonly, cl
 cpuinfo | Print CPU configuration information | cmd | devonly
 cq_buffer_bloat_msecs_max | Server will not allow the client to buffer up more than N ms of commands. | 120 | rep, release
 cq_debug | Verbose command queue logging. | 0 | devonly, sv, rep
@@ -2486,7 +2485,7 @@ csm_cascade3_override_dist |  | -1 | cheat
 csm_cascade_viewdir_shadow_bias_scale |  | 2 | cheat
 csm_max_dist_between_caster_and_receiver | default pushback | 15000 | cheat
 csm_max_num_cascades_override | Number of cascades in sunlight shadow | -1 | devonly
-csm_max_shadow_dist_override |  | 0 | devonly
+csm_max_shadow_dist_override |  | -1 | devonly
 csm_max_visible_dist |  | 7500 | cheat
 csm_res_override_0 |  | 0 | cheat
 csm_res_override_1 |  | 0 | cheat
@@ -2626,7 +2625,7 @@ dumpstringtable | Usage:  dumpstringtable &lt;tablename \|all&gt; &lt;sv \| cl&g
 echo | Echo text to console. | cmd | server_can_execute
 echoln | Echo the command arguments on the console | cmd | release
 econ_show_items_with_tag | Lists the item definitions that have a specified tag. | cmd | devonly, cl
-enable_boneflex |  | false | cl, a
+enable_boneflex |  | true | cl, a
 enable_priority_boost | Disable focus based priority boost | cmd | devonly
 endmovie | Stop recording movie frames. | cmd | devonly, norecord
 engine_accurate_input_processing_delta_time | When true, elapsed time given to the input processing will be the time elapsed since the last input processing. This is only relevant when input is processed multiple times per frame ( i.e. multiple ticks per frame) | false | devonly
@@ -2637,10 +2636,10 @@ engine_cpu_info_extended | CPU the engine is running on. |  | devonly
 engine_frametime_amnesty_debug | Enable logging about events that disable frame time warnings | false | devonly
 engine_frametime_print_report | Print a performance report from the current data in the vprof 'lite' profiler | cmd | devonly
 engine_frametime_warnings_enable | Enable framerate-related warnings, such as sv_long_frame_ms.  Disabling warnings is useful when running in situations such a debug where a slow frame rate is expected | true | devonly
-engine_low_latency_sleep_after_client_tick | When r_low_latency is enabled, this moves the low latency sleep on tick frames to happen after client simulation. | true | release
+engine_low_latency_sleep_after_client_tick | When r_low_latency is enabled, this moves the low latency sleep on tick frames to happen after client simulation. | false | release
 engine_max_resource_system_update_time |  | 5 | devonly
 engine_max_ticks_to_simulate | Max number of ticks to simulate per frame, after which simulation will start to slow down compared to real time. | -1 | devonly
-engine_no_focus_sleep |  | 0 | a
+engine_no_focus_sleep |  | 20 | a
 engine_no_focus_sleep_vconsole_suppress | When VConsole is in the foreground, don't trigger engine_no_focus_sleep behavior | true | devonly
 engine_ostype | OS type the engine is running on. |  | devonly
 engine_phys_debug_limit_ticks |  | true | devonly
@@ -2900,7 +2899,7 @@ gl_clear |  | true | devonly, cl
 global_set | global_set &lt;globalname&gt; &lt;state&gt;: Sets the state of the given env_global (0 = OFF, 1 = ON, 2 = DEAD). | cmd | sv, cheat
 glow_use_tolerance |  | 0.85 | cl, rep, cheat
 god | Toggle by default, or 0 to disable and 1 to enable. Player becomes invulnerable. | cmd | sv, cheat
-gpu_level | GPU Level - Default: High | 1 | devonly, cl
+gpu_level | GPU Level - Default: High | 3 | devonly, cl
 gpu_mem_level | Memory Level - Default: High | 2 | devonly, cl
 graphcontroller_dumpparams | Print all anim graph parameters for the specified entity.<br>	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at} | cmd | devonly, sv
 grep | grep line for pattern, print out matching lines only | cmd | release
@@ -2968,11 +2967,11 @@ ik_debug_planetilt |  | 0 | devonly, rep
 ik_debug_planetilt_axis_length |  | 20 | devonly, rep
 ik_debug_targets |  | false | devonly, rep
 ik_enable | Enable IK. | true | rep, cheat
-ik_fabrik_align_chain |  | false | devonly, rep
+ik_fabrik_align_chain |  | true | devonly, rep
 ik_fabrik_backwards_enabled |  | true | devonly, rep
 ik_fabrik_forwards_enabled |  | true | devonly, rep
 ik_fabrik_override_num_iterations |  | -1 | devonly, rep
-ik_final_fixup_enable |  | false | devonly, rep
+ik_final_fixup_enable |  | true | devonly, rep
 ik_hinge_debug_bone_index |  | -1 | sv, cl, rep, cheat
 ik_planetilt_enable |  | true | devonly, rep
 ime_hkl_info | Spew IME HKL info. | cmd | devonly, norecord
@@ -3118,21 +3117,21 @@ last_viewed_announce_id | Tracks the last announcement ID viewed so we can know 
 lb_allow_shadow_rotation | SceneSystem/LightBinner/Shadow Rotation | true | devonly, cheat
 lb_allow_time_sliced_shadow_map_rendering | Allow time-sliced shadow buffer rendering when enabled via gameinfo.gi | true | devonly
 lb_barnlight_shadow_use_precomputed_vis |  | true | devonly
-lb_barnlight_shadowmap_scale | Scale for computed barnlight shadowmap size | 0.5 | release
+lb_barnlight_shadowmap_scale | Scale for computed barnlight shadowmap size | 1 | release
 lb_bin_slices |  | 8192 | devonly
 lb_convert_to_barn_lights_falloff_match_point |  | 0.15 | devonly
-lb_csm_cascade_size_override | Override width/height of individual cascades in the CSM | 1 | devonly
+lb_csm_cascade_size_override | Override width/height of individual cascades in the CSM | -1 | devonly
 lb_csm_cross_fade_override | Override CSM cross fade amount | -1 | devonly
 lb_csm_distance_fade_override | Override CSM distance fade | -1 | devonly
-lb_csm_draw_alpha_tested |  | false | devonly
-lb_csm_draw_translucent |  | false | devonly
+lb_csm_draw_alpha_tested |  | true | devonly
+lb_csm_draw_translucent |  | true | devonly
 lb_csm_fov_override |  | -1 | devonly, cheat
 lb_csm_override_bulb_radius | Override bulb radius for CSM | -1 | devonly
 lb_csm_override_staticgeo_cascades | Override Cascades that will render static objects with lb_csm_override_staticgeo_cascades_value | false | devonly
 lb_csm_override_staticgeo_cascades_animated_verts | If lb_csm_override_staticgeo_cascades, ensure only objects without animated verts, i.e. SCENEOBJECTFLAG_CAN_RENDER_INTO_SST flag will be excluded (as opposed to all static objects). | true | devonly
-lb_csm_override_staticgeo_cascades_value | If lb_csm_override_staticgeo_cascades, override value used to determine which cascades render static objects | 0 | devonly
-lb_csm_receiver_plane_depth_bias | Shader depth bias applied to shadow receiver (Note this conflicts with renderstate depth bias, both now default to 0) | 2e-05 | devonly
-lb_csm_receiver_plane_depth_bias_transmissive_backface | Depth bias applied to shadow receiver for transmissive backface geo (based on renderstate depthbias being 0) | 0.0002 | devonly
+lb_csm_override_staticgeo_cascades_value | If lb_csm_override_staticgeo_cascades, override value used to determine which cascades render static objects | -1 | devonly
+lb_csm_receiver_plane_depth_bias | Shader depth bias applied to shadow receiver (Note this conflicts with renderstate depth bias, both now default to 0) | 1.526e-05 | devonly
+lb_csm_receiver_plane_depth_bias_transmissive_backface | Depth bias applied to shadow receiver for transmissive backface geo (based on renderstate depthbias being 0) | 0.00015 | devonly
 lb_cubemap_normalization_max |  | 32 | devonly
 lb_cubemap_normalization_roughness_begin |  | 0.1 | devonly
 lb_debug_light_bounds | SceneSystem/LightBinner/Debug Light Bounds | false | devonly, cheat
@@ -3147,7 +3146,7 @@ lb_debug_visualize_shadowed_light_details |  | false | devonly, cheat
 lb_debug_visualize_shadowed_lights | SceneSystem/LightBinner/Debug Visualize Shadowed Lights | 0 | devonly, cheat
 lb_dynamic_shadow_penumbra | Adjust shadow penumbra based on light size | true | devonly
 lb_dynamic_shadow_resolution | Dynamically adjust shadow resolution | true | devonly
-lb_dynamic_shadow_resolution_base | Base resolution for dynamic shadowmap sizing.  Shadowmap size of a screen sized light | 256 | devonly
+lb_dynamic_shadow_resolution_base | Base resolution for dynamic shadowmap sizing.  Shadowmap size of a screen sized light | 1024 | devonly
 lb_dynamic_shadow_resolution_base_cmp_shadowmapsize | take min of lb_dynamic_shadow_resolution and barnlight shadowmapsize as base shadowmapsize | false | devonly, cheat
 lb_dynamic_shadow_resolution_delay | Update delay for shadow size | 0.85 | devonly
 lb_dynamic_shadow_resolution_hysteresis | Update hysteresis for shadow size | 0.33 | devonly
@@ -3159,7 +3158,7 @@ lb_enable_envmaps | SceneSystem/LightBinner/Enable EnvMaps | true | devonly, che
 lb_enable_fog_mixed_shadows | SceneSystem/LightBinner/Enable Fog Mixed Shadows | true | devonly, cheat
 lb_enable_lights | SceneSystem/LightBinner/Enable Lights | true | devonly, cheat
 lb_enable_newsum | SceneSystem/LightBinner/Enable New Sum | true | devonly, cheat
-lb_enable_shadow_casting | Allow stationary/dynamic lights to cast shadows. | false | devonly
+lb_enable_shadow_casting | Allow stationary/dynamic lights to cast shadows. | true | devonly
 lb_enable_stationary_lights | Allows rendering stationary/mixed lights | true | devonly, cheat
 lb_enable_sunlight | SceneSystem/LightBinner/Enable Sunlight | true | devonly, cheat
 lb_low_quality_shader_fade_region_rescale | For envmaps in low quality shader mode, how much of the fade region to scale the envmap box by. | 0 | devonly, cheat
@@ -3177,7 +3176,7 @@ lb_shadow_texture_height_override | Override height of shadow atlas texture | -1
 lb_shadow_texture_width_override | Override width of shadow atlas texture | -1 | devonly
 lb_ssss_importance_sample |  | false | devonly
 lb_ssss_samples | Subsurface sample count | 11 | devonly
-lb_sun_csm_size_cull_threshold_texels | Size, in texels, where we will cull an object in the shadowmap | 30 | devonly
+lb_sun_csm_size_cull_threshold_texels | Size, in texels, where we will cull an object in the shadowmap | 10 | devonly
 lb_tile_pixels |  | 8 | devonly
 lb_timesliced_shadows_dynamic_size |  | true | devonly
 lb_use_ellipsoid_bounds |  | true | devonly, cheat
@@ -3876,8 +3875,8 @@ panorama_debug_overlay_opacity_max |  | 0.25 | hidden, a
 panorama_debug_overlay_opacity_min |  | 0.01 | hidden, a
 panorama_debug_ready_for_display |  | false | devonly, hidden
 panorama_debugger_theme |  | Light | cl, a
-panorama_disable_blur |  | true | devonly, hidden
-panorama_disable_box_shadow |  | true | devonly, hidden
+panorama_disable_blur |  | false | devonly, hidden
+panorama_disable_box_shadow |  | false | devonly, hidden
 panorama_disable_descendant_filtering | Disable descendant selector filtering | false | devonly, hidden
 panorama_disable_draw_fancy_quad |  | false | devonly, hidden
 panorama_disable_draw_text |  | false | devonly, hidden
@@ -3916,9 +3915,9 @@ panorama_js_minidumps | Enable sending minidumps on JS Exceptions. | true | devo
 panorama_label_draw_rects | When labels paint, draw the rectangles for the character ranges. 0 = none, 1 = all, 2 = text only, 3 = inline objects only | 0 | devonly, cl, hidden
 panorama_label_wrap_before_shrink | Should labels try to wrap text before using text-overflow: shrink | true | devonly, cl, hidden
 panorama_large_dispatch_event_queue |  | 0 | devonly, hidden
-panorama_max_fps |  | 0 | devonly, hidden
+panorama_max_fps |  | 120 | devonly, hidden
 panorama_max_oof_overlay_up_fps |  | 4 | devonly, hidden
-panorama_max_overlay_fps |  | 0 | devonly, hidden
+panorama_max_overlay_fps |  | 60 | devonly, hidden
 panorama_max_text_shadow_strength |  | 10 | devonly, hidden
 panorama_might_scroll_no_comp_layer |  | true | devonly, hidden
 panorama_min_comp_layer_cache_cost |  | 4096 | devonly, hidden
@@ -3957,7 +3956,7 @@ parallel_perform_invalidate_physics |  | false | devonly, sv, cl, rep
 parallel_update_surrounding_bounds_in_spatial_partition_update |  | false | devonly, sv, cl, rep
 particle_cluster_debug |  | 0 | devonly, sv, cl, rep
 particle_cluster_manager_search_dist |  | 256 | devonly, sv, cl, rep
-particle_cluster_nodraw |  | true | devonly, sv, cl, rep
+particle_cluster_nodraw |  | false | devonly, sv, cl, rep
 particle_cluster_use_collision_hulls |  | true | devonly, sv, cl, rep
 particle_debug_creation_filter |  |  | devonly, cl, hidden, rep
 particle_layer_id_whitelist |  |  | devonly
@@ -4144,7 +4143,7 @@ r_JeepViewDampenDamp |  | 1 | sv, cl, nf, rep, cheat
 r_JeepViewDampenFreq |  | 7 | sv, cl, nf, rep, cheat
 r_JeepViewZHeight |  | 10 | sv, cl, nf, rep, cheat
 r_RainAllowInSplitScreen | Allows rain in splitscreen | false | devonly, cl
-r_RainParticleDensity | Density of Particle Rain 0-1 | 0 | devonly, cl
+r_RainParticleDensity | Density of Particle Rain 0-1 | 1 | devonly, cl
 r_add_views_in_pre_output |  | false | devonly
 r_allow_onesweep_gpusort |  | true | devonly
 r_always_render_all_windows | Always force all engine & tools to render | false | devonly
@@ -4152,7 +4151,7 @@ r_aoproxy_cull_dist | Distance to cull the AO proxy as a factor of size | 12 | d
 r_aoproxy_min_dist |  | 3 | devonly
 r_aoproxy_min_dist_box |  | 1 | devonly
 r_arealights |  | true | devonly, cl
-r_aspectratio |  | 2.15 | devonly
+r_aspectratio |  | 0 | devonly
 r_async_compute_fog |  | false | devonly, cl
 r_async_shader_compile_notify_frequency |  | 10 | devonly
 r_bloom_tent_filter_radius | bloom mip up-sample filtering radius (using 3x3 tent filter, radius in mip level texels), 0.0 radius =&gt; box (2x2) filter with (fixed) 1.0 radius | 0 | devonly, cl, cheat
@@ -4161,7 +4160,7 @@ r_character_decal_monitor_draw_frustum |  | false | devonly
 r_character_decal_monitor_emissive |  | false | devonly
 r_character_decal_monitor_render_res |  | 512 | devonly
 r_character_decal_renderdoc_capture |  | false | devonly
-r_character_decal_resolution | Resolution of character decal texture. | 1 | devonly
+r_character_decal_resolution | Resolution of character decal texture. | 1024 | devonly
 r_citadel_antialiasing |  | 1 | devonly, cl
 r_citadel_clip_sphere_cone_angle |  | 40 | devonly, cl, cheat
 r_citadel_clip_sphere_dist |  | 0.45 | devonly, cl, cheat
@@ -4190,7 +4189,7 @@ r_citadel_distancefield_ao_quality | Distance Field AO quality | 0 | devonly, cl
 r_citadel_distancefield_blur | Enable/Disable distance field blur | true | devonly, cl
 r_citadel_distancefield_blur_depth_threshold | Distance field blur depth threshold | 1 | devonly, cl
 r_citadel_distancefield_down_sample | Distance field down sample factor | 1 | devonly, cl
-r_citadel_distancefield_farfield_enable | Distance field far field enable | false | devonly, cl
+r_citadel_distancefield_farfield_enable | Distance field far field enable | true | devonly, cl
 r_citadel_distancefield_farfield_occlusion_length | Distance field far field occlusion length | 192 | devonly, cl
 r_citadel_distancefield_farfield_occlusion_start_offset | Distance field far field occlusion start offset | 16 | devonly, cl
 r_citadel_distancefield_farfield_resolution | Distance field far field resolution | 192 | devonly, cl
@@ -4203,7 +4202,7 @@ r_citadel_distancefield_ray_origin_bias_min | Distance field ray origin bias min
 r_citadel_distancefield_shadows |  | true | devonly, cl
 r_citadel_dlss_settings_mode |  | 0 | devonly, cl
 r_citadel_enable_pano_world_blur | Enable world-blur style | true | devonly, cl
-r_citadel_fog_quality | Fog Quality | 0 | devonly, cl
+r_citadel_fog_quality | Fog Quality | 1 | devonly, cl
 r_citadel_fsr2_sharpness |  | 0.5 | devonly, cl
 r_citadel_fsr3_min_reactiveness | minimum reactiveness for the FSR3 shader | 0.1 | devonly, cl
 r_citadel_fsr_enable_mip_bias | Apply negative mip bias when rendering with FSR. | true | devonly, cl
@@ -4211,7 +4210,7 @@ r_citadel_fsr_rcas_sharpness | RCAS sharpness when using FSR + RCAS upsample. | 
 r_citadel_glow_health_bar_debug |  | false | cl, cheat
 r_citadel_glow_health_bars |  | true | devonly, cl
 r_citadel_gpu_culling | Citadel/Graphics/GPU Culling | true | devonly, cl
-r_citadel_gpu_culling_shadows | Citadel/Graphics/GPU Cull Shadow Views | true | devonly, cl
+r_citadel_gpu_culling_shadows | Citadel/Graphics/GPU Cull Shadow Views | false | devonly, cl
 r_citadel_gpu_culling_two_pass | Citadel/Graphics/GPU Culling (Two Pass) | true | devonly, cl
 r_citadel_gpu_debug_draw |  | false | devonly, cl
 r_citadel_gpu_preview_baked_shadows |  | true | devonly, cl
@@ -4227,7 +4226,7 @@ r_citadel_mboit_overestimation |  | 0.25 | devonly, cl, cheat
 r_citadel_mboit_quality |  MBOIT quality, 0: 4 Moments  | 0 | devonly, cl
 r_citadel_npr_force_solid_outline |  | false | devonly, cl
 r_citadel_npr_outlines | Enable/Disable NPR Outlines | true | devonly, cl, cheat
-r_citadel_npr_outlines_max_dist | Maximum distance at which NPR outlines are rendered | 600 | devonly, cl, cheat
+r_citadel_npr_outlines_max_dist | Maximum distance at which NPR outlines are rendered | 1000 | devonly, cl, cheat
 r_citadel_portrait_allow_particle_only |  | true | devonly, cl
 r_citadel_portrait_highlight_particle_only |  | false | devonly, cl
 r_citadel_render_game | Should you render the main game world | true | devonly, cl, cheat
@@ -4239,11 +4238,11 @@ r_citadel_selection_outline2_offset | Selection Outline Offset: -1 for interior,
 r_citadel_selection_outline2_width | Selection Outline Width | 4 | devonly, cl
 r_citadel_shadow_caching |  | true | devonly, cl
 r_citadel_shadow_caching_stats | Print information about shadow caching | cmd | devonly, cl
-r_citadel_shadow_quality | Shadow Quality | 0 | devonly, cl
+r_citadel_shadow_quality | Shadow Quality | 1 | devonly, cl
 r_citadel_shadowdb |  | 2048 | devonly, cl
-r_citadel_ssao_quality |  | 0 | devonly, cl
-r_citadel_ssao_thin_occluder_compensation |  | 0 | devonly, cl
-r_citadel_sun_shadow_slope_scale_depth_bias |  | 1 | devonly, cl
+r_citadel_ssao_quality |  | 3 | devonly, cl
+r_citadel_ssao_thin_occluder_compensation |  | 0.5 | devonly, cl
+r_citadel_sun_shadow_slope_scale_depth_bias |  | 3.54 | devonly, cl
 r_citadel_upscaling |  | 4 | devonly, cl
 r_citadel_use_exposure_control_in_panorama_scenes |  | false | devonly, cl
 r_cleardecals | Clears all decals | cmd | devonly, cl
@@ -4252,16 +4251,16 @@ r_cubemap_normalization |  | true | devonly, cl
 r_dashboard_render_quality |  | true | devonly, cl
 r_debug_draw_safe_area_insets | Render safe area insets as wireframe. | false | devonly
 r_debug_precipitation | Show precipitation volumes | false | cl, cheat
-r_decals |  | 1 | devonly, sv, cl, rep
+r_decals |  | 2048 | devonly, sv, cl, rep
 r_decals_additional_offset |  | 0 | devonly, sv, cl, rep
 r_decals_default_fade_duration |  | 3 | devonly, sv, cl, rep
 r_decals_default_start_fade |  | 30 | devonly, sv, cl, rep
 r_decals_max_on_deformables |  | 512 | devonly, sv, cl, rep
 r_decals_overlap_threshold |  | 0 | devonly, sv, cl, rep
-r_depth_of_field |  | false | devonly, cl
+r_depth_of_field |  | true | devonly, cl
 r_directional_lightmaps |  | true | devonly
 r_directlighting | Set to use direct lighting | true | cheat
-r_distancefield_enable | Graphics/Enable Distance Field rendering | false | devonly, cl
+r_distancefield_enable | Graphics/Enable Distance Field rendering | true | devonly, cl
 r_dlss_preset |  | 5 | devonly
 r_dof1_d0 |  | 0.2 | devonly, cl
 r_dof1_d1 |  | 0.3 | devonly, cl
@@ -4273,7 +4272,7 @@ r_dof_override_near_crisp |  | 0 | cheat
 r_dof_override_ranges |  | 0 0 0 0 | devonly, cl
 r_dof_override_tilt_to_ground |  | 0.5 | cheat
 r_dopixelvisibility |  | true | cheat
-r_draw3dskybox |  | false | devonly, cl
+r_draw3dskybox |  | true | devonly, cl
 r_draw_first_tri_only |  | false | cheat
 r_draw_instances |  | true | cheat
 r_draw_overlays |  | true | devonly, cl
@@ -4284,7 +4283,7 @@ r_drawdevvisualizers | Render dev visualizers | false | cl, cheat
 r_drawpanorama | Enable the rendering of panorama UI | true | cheat
 r_drawparticles | SceneSystem/Particles/Draw Particles | true | cheat
 r_drawpixelvisibility | Show the occlusion proxies | false | devonly
-r_drawropes |  | false | cl, cheat
+r_drawropes |  | true | cl, cheat
 r_drawskybox | Render the 2d skybox. | true | cheat
 r_drawtracers |  | true | cl, cheat
 r_drawtracers_firstperson | Toggle visibility of first person weapon tracers | true | cl, a, release
@@ -4293,11 +4292,11 @@ r_drawworld | Render the world. | true | cheat
 r_dx11_debug_clean | Aggressively unbind bound resources to cleanup DX11 debug warnings. | false | release
 r_dx11_report_live_objects | Prints out live D3D11 objects (requires -dx11debug) | cmd | devonly
 r_dx11_software_cmd_lists | Enable Software Command lists for DX11 (Avoid using deferred contexts) | true | devonly
-r_effects_bloom |  | false | devonly, cl
-r_enable_cubemap_fog | Citadel/Graphics/Fog/Enable Cubemap Fog | false | devonly, cl
-r_enable_gradient_fog | Citadel/Graphics/Fog/Enable Gradient Fog | false | devonly, cl
+r_effects_bloom |  | true | devonly, cl
+r_enable_cubemap_fog | Citadel/Graphics/Fog/Enable Cubemap Fog | true | devonly, cl
+r_enable_gradient_fog | Citadel/Graphics/Fog/Enable Gradient Fog | true | devonly, cl
 r_enable_rigid_animation |  | false | devonly, cl
-r_enable_volume_fog | Citadel/Graphics/Fog/Enable Volume Fog | false | devonly, cl
+r_enable_volume_fog | Citadel/Graphics/Fog/Enable Volume Fog | true | devonly, cl
 r_entpos | Moves the camera position + orientation to the named entity | cmd | devonly
 r_environment_map_roughness_range | Fade region for sampling environment maps on lightmapped nonmetals. Smoother values than the first param sample envmaps. Rougher values than the second sample only lightmap SH. r_environment_map_roughness_range 1 1 to always sample envmaps for comparison. | 0.2 0.3 | devonly, cl, cheat
 r_experimental_lag_limiter |  | false | devonly
@@ -4339,12 +4338,12 @@ r_gpu_mem_stats | Display GPU memory usage. | cmd | devonly
 r_grass_allow_flattening |  | false | devonly
 r_grass_alpha_test |  | 0 | devonly
 r_grass_density_mode | 0 = Density corresponds to blade existance, 1 = Density corresponds to blade height, 2 = Both 0 and 1 | 0 | devonly
-r_grass_end_fade |  | 0 | devonly
+r_grass_end_fade |  | 3000 | devonly
 r_grass_max_brightness_change |  | 75 | devonly
-r_grass_quality | 0 = Off, 1 = Low, 2 = Med, 3 = high, 4 = ultra | 0 | devonly
-r_grass_start_fade |  | 0 | devonly
+r_grass_quality | 0 = Off, 1 = Low, 2 = Med, 3 = high, 4 = ultra | 2 | devonly
+r_grass_start_fade |  | 2000 | devonly
 r_grass_vertex_lighting |  | 0 | devonly
-r_hair_ao |  | false | devonly
+r_hair_ao |  | true | devonly
 r_hair_debug_guides | 1: Highlight guide hairs, 2: draw only guide hairs | 0 | devonly, cheat
 r_hair_indirect_transmittance |  | true | devonly
 r_hair_meshshader |  | 0 | devonly
@@ -4379,7 +4378,7 @@ r_lighting_only |  | false | devonly, cl
 r_lightmap_bicubic_filtering |  | true | devonly, cl
 r_lightmap_set | Lightmap set to use, only works on map load | lightmaps | cheat
 r_lightmap_size | Maximum lightmap resolution. | 65536 | devonly
-r_lightmap_size_directional_irradiance | Maximum lightmap resolution for directional_irradiance channel. -1 = use value of r_lightmap_size | 4 | devonly
+r_lightmap_size_directional_irradiance | Maximum lightmap resolution for directional_irradiance channel. -1 = use value of r_lightmap_size | -1 | devonly
 r_limit_particle_job_duration |  | false | devonly
 r_low_latency | NVIDIA Low Latency/AMD Anti-Lag 2 (0 = off, 1 = on, 2 = NV-only, on + boost) | 1 | devonly
 r_low_latency_trigger_flash | NVIDIA Low Latency Trigger Flash | true | devonly
@@ -4388,7 +4387,7 @@ r_max_portal_render_targets |  | 2 | devonly, cl
 r_max_texture_pool_size | Upper limit on texture pool size. | 0 | devonly
 r_mixed_shadows_fade_in_time |  | 0.5 | devonly, sv, cl, rep
 r_mixed_shadows_fade_out_time |  | 0.5 | devonly, sv, cl, rep
-r_monitor_3dskybox |  | false | devonly, cl
+r_monitor_3dskybox |  | true | devonly, cl
 r_morphing_enabled |  | true | cheat
 r_multigpu_num_gpus_found |  | 1 | devonly
 r_multigpu_num_gpus_used |  | 1 | devonly
@@ -4399,7 +4398,7 @@ r_nearz | Override the near clipping plane. -1 means use the default. | -1 | cl,
 r_opaque |  | true | devonly, cl
 r_particle_allowprerender |  | true | devonly
 r_particle_batch_collections |  | false | devonly
-r_particle_cables_cast_shadows |  | false | devonly
+r_particle_cables_cast_shadows |  | true | devonly
 r_particle_cables_culling |  | 1 | devonly
 r_particle_cables_culling_bounds_scale |  | 1.2 | devonly
 r_particle_cables_dynamic_roundness |  | false | devonly
@@ -4423,14 +4422,14 @@ r_particle_gpu_implicit_debug_bricks |  | false | devonly
 r_particle_gpu_implicit_debug_stats |  | false | devonly
 r_particle_gpu_implicit_debug_wireframe |  | false | devonly
 r_particle_gpu_implicit_lds_cache |  | false | devonly
-r_particle_max_detail_level | The maximum detail level of particle to create | 0 | devonly
+r_particle_max_detail_level | The maximum detail level of particle to create | 3 | devonly
 r_particle_max_draw_distance | The maximum distance that particles will render | 1e+06 | cheat
-r_particle_max_size_cull | Particle systems larger than this in every dimension skip culling to save CPU.  They will be drawn anyway. | 0 | devonly
+r_particle_max_size_cull | Particle systems larger than this in every dimension skip culling to save CPU.  They will be drawn anyway. | 1200 | devonly
 r_particle_max_texture_layers |  | -1 | devonly
 r_particle_min_timestep | A minimum on particle simulation time, particle simulation happening more frequently than this will lerp. | 0 | devonly
 r_particle_mixed_resolution_viewstart |  | 500 | devonly
 r_particle_model_new |  | false | devonly
-r_particle_model_new8 |  | false | devonly
+r_particle_model_new8 |  | true | devonly
 r_particle_model_per_thread_count |  | 32 | devonly
 r_particle_multiplier | Render each particle system N times for perf testing | 1 | cheat
 r_particle_newinput | Enable input path in particle ops | false | devonly
@@ -4441,7 +4440,7 @@ r_particle_testbuffers |  | false | devonly
 r_particle_timescale |  | 1 | devonly
 r_particle_warn_threshold_ms | Threshold to warn about when rendering particles. | 0 | devonly
 r_particles_memset_at_init | 0=don't clear particle attrs at init 1=clear to zero 2=clear to 0xdb -1=clear to zero at first sim | 1 | devonly
-r_physics_particle_op_spawn_scale |  | 0 | devonly
+r_physics_particle_op_spawn_scale |  | 1 | devonly
 r_pipeline_stats_command_flush | Experimental: Set to 1 to enable full GPU pipeline flushing after each command list. | false | devonly
 r_pipeline_stats_flush_before_sleeping | Experimental: Set to 1 to enable GPU pipeline flushes right before the render thread sleeps to wait for more work. | false | devonly
 r_pipeline_stats_present_flush | Experimental: Set to 1 to enable full GPU pipeline flushing after each present. | false | devonly
@@ -4467,30 +4466,30 @@ r_renderdoc_capture_frame | Triggers a RenderDoc capture | cmd | devonly
 r_renderdoc_capture_window_dx11 | Triggers a RenderDoc capture of a specific Window | cmd | devonly
 r_renderdoc_open_captures |  | true | devonly
 r_renderdoc_validation_error_capture_limit |  | 5 | devonly
-r_rendersun | Render sun lighting | false | cheat
+r_rendersun | Render sun lighting | true | cheat
 r_replay_post_effect |  | -1 | cl, cheat
 r_reset_character_decals |  | false | devonly
-r_ropetranslucent |  | false | devonly, cl
+r_ropetranslucent |  | true | devonly, cl
 r_screen_size_expansion |  | 0 | devonly, cl
 r_setpos | Moves the camera position + orientation to the specified position | cmd | devonly
-r_shadows |  | false | cheat
+r_shadows |  | true | cheat
 r_shadowtile_waveops |  | false | 
 r_showdebugoverlays | Set to render debug overlays | false | cheat
 r_showdebugrendertarget | Set the debug render target to show, 0 == disable | false | cheat
 r_showsceneobjectbounds | Show scenesystem object bounding boxes | false | cheat
 r_showsunshadowdebugrendertargets | Set to render sun shadow render targets | false | cheat
 r_showsunshadowdebugsplitvis | Set to render sun shadow split visibility debugger | false | cheat
-r_size_cull_threshold | Threshold of screen size percentage below which objects get culled | 0.7 | devonly
+r_size_cull_threshold | Threshold of screen size percentage below which objects get culled | 0.8 | devonly
 r_size_cull_threshold_fade | % above the screen size percentage where we will start fading out (==0 will disable fading). | 0 | devonly
-r_size_cull_threshold_shadow | Threshold of shadow map size percentage below which objects get culled | 45 | cheat
+r_size_cull_threshold_shadow | Threshold of shadow map size percentage below which objects get culled | 0.2 | cheat
 r_skinning_enabled |  | true | cheat
 r_skip_precache_validation_check |  | false | devonly
 r_smooth_morph_normals |  | true | release
-r_ssao | Set to use screen-space ambient occlusion | false | devonly
+r_ssao | Set to use screen-space ambient occlusion | true | devonly
 r_ssao_bias |  | 0.5 | devonly
 r_ssao_blur |  | true | devonly
 r_ssao_radius |  | 30 | devonly
-r_ssao_strength |  | 0 | devonly
+r_ssao_strength |  | 1.2 | devonly
 r_strip_invisible_during_sceneobject_update |  | false | devonly, cl
 r_suppress_redundant_state_changes |  | true | devonly
 r_texture_budget_dynamic | Dynamically adjust texture streaming budget based on GPU memory usage. | true | devonly
@@ -4535,7 +4534,7 @@ r_world_wind_frequency_grass |  | 0.03 | devonly
 r_world_wind_frequency_trees |  | 0.003 | devonly
 r_world_wind_offset_speed |  | 0.25 0.3 0.2 | devonly
 r_world_wind_smooth_time |  | 2 | devonly
-r_world_wind_strength |  | 0 | devonly
+r_world_wind_strength |  | 40 | devonly
 r_zprepass_normals | 0: Use normals reconstructed from depth. 1: Output correct normals in z prepass. | false | cheat
 ragdoll_biped_settle_duration |  | 1.5 | sv, cheat
 ragdoll_biped_settle_force |  | 0.5 | sv, cheat
@@ -4606,15 +4605,15 @@ resourcesystem_multiframe_finalize_time_msec | Max time to spend finalizing reso
 respawn_player | Respawns the player from death!<br> | cmd | sv, cheat
 restart | Poor man's restart: reload the current map from disk. | cmd | cheat
 rope_averagelight | Makes ropes use average of cubemap lighting instead of max intensity. | true | devonly, cl
-rope_collide | Collide rope with the world | 0 | devonly, cl
+rope_collide | Collide rope with the world | 1 | devonly, cl
 rope_shake |  | false | devonly, cl
-rope_smooth_enlarge | How much to enlarge ropes in screen space for antialiasing effect | 0 | devonly, cl
-rope_smooth_maxalpha | Alpha for rope antialiasing effect | 0 | devonly, cl
-rope_smooth_maxalphawidth |  | 0 | devonly, cl
-rope_smooth_minalpha | Alpha for rope antialiasing effect | 0 | devonly, cl
-rope_smooth_minwidth | When using smoothing, this is the min screenspace width it lets a rope shrink to | 0 | devonly, cl
-rope_subdiv | Rope subdivision amount | 0 | devonly, cl
-rope_wind_dist | Don't use CPU applying small wind gusts to ropes when they're past this distance. | 0 | devonly, cl
+rope_smooth_enlarge | How much to enlarge ropes in screen space for antialiasing effect | 1.4 | devonly, cl
+rope_smooth_maxalpha | Alpha for rope antialiasing effect | 0.5 | devonly, cl
+rope_smooth_maxalphawidth |  | 1.75 | devonly, cl
+rope_smooth_minalpha | Alpha for rope antialiasing effect | 0.2 | devonly, cl
+rope_smooth_minwidth | When using smoothing, this is the min screenspace width it lets a rope shrink to | 0.3 | devonly, cl
+rope_subdiv | Rope subdivision amount | 2 | devonly, cl
+rope_wind_dist | Don't use CPU applying small wind gusts to ropes when they're past this distance. | 1000 | devonly, cl
 rpg_camera_yaw |  | 90 | devonly, cl, rep, cheat
 rr_debugclassname | If set, rr_debugclassname will print only response tests where 'classname' corresponds to this variable. Use to filter for a specific character. |  | devonly, sv, cl, rep
 rr_debugresponseconcept | If set, rr_debugresponseconcept will print only responses testing for the specified concept |  | devonly, sv, cl, rep
@@ -4685,7 +4684,7 @@ sc_cache_envmap_lpv_lookup |  | true | devonly
 sc_clutter_density_full_size | Screen-size where clutter will be full density | 0.0075 | devonly
 sc_clutter_density_none_size | Screen-size where clutter will be gone | 0.0035 | devonly
 sc_clutter_desity_override |  | false | devonly
-sc_clutter_enable | SceneSystem/Clutter/Draw Clutter | false | devonly
+sc_clutter_enable | SceneSystem/Clutter/Draw Clutter | true | devonly
 sc_disableThreading |  | false | cheat
 sc_disable_baked_lighting |  | false | devonly
 sc_disable_culling_boxes |  | false | cheat
@@ -4869,7 +4868,7 @@ sk_player_stomach |  | 1 | devonly, sv
 skel_constraints_enable |  | true | rep, cheat
 skel_debug |  |  | devonly, sv, cl, rep
 skeleton_instance_debug_bodygroups | Debug bodygroups | false | devonly, sv, cl, rep, cheat
-skeleton_instance_lod_optimization | Compute LOD mask internally like since 2016, i.e. force all LOD groups' bones to compute | true | devonly, sv, cl, rep
+skeleton_instance_lod_optimization | Compute LOD mask internally like since 2016, i.e. force all LOD groups' bones to compute | false | devonly, sv, cl, rep
 skeleton_instance_scaleset_enable |  | true | sv, cl, rep, cheat
 skeleton_instance_smear_boneflags | Smear boneflags across the model.  Costs computation, but tests to make sure your bone flags are consistent. | false | sv, cheat
 skeleton_physics_joint_fixup |  | true | devonly, sv, cl, rep, cheat
@@ -5553,7 +5552,7 @@ sv_voicecodec | Specifies which voice codec DLL to use in a game. Set to the nam
 sv_voiceenable |  | true | a, nf, release
 sv_watchtransmit | Watch NetworkStateChanged info for this entity index. | -2 | sv, release
 sv_wateraccelerate |  | 10 | sv, cl, nf, rep, release
-sv_waterdist | Vertical view fixup when eyes are near water plane. | 0 | devonly, sv, cl, rep
+sv_waterdist | Vertical view fixup when eyes are near water plane. | 12 | devonly, sv, cl, rep
 sv_waterfriction |  | 1 | sv, cl, nf, rep, release
 sys_info | Print system information to the console | cmd | release
 sys_minidumpexpandedspew |  | true | devonly
@@ -5708,10 +5707,10 @@ vcon_clients | List connections | cmd | devonly, norecord
 vconsole_rcon_server_details | when non-empty allows for easy vconsole connection to the dedicated server. |  | norecord, release, server_cannot_query
 vehicle_debug_impact_damage |  | false | devonly, sv
 viewmodel_fov |  | 54 | cl, cheat
-violence_ablood | Draw alien blood | false | a
-violence_agibs | Show alien gib entities | false | a
-violence_hblood | Draw human blood | false | a
-violence_hgibs | Show human gib entities | false | a
+violence_ablood | Draw alien blood | true | a
+violence_agibs | Show alien gib entities | true | a
+violence_hblood | Draw human blood | true | a
+violence_hgibs | Show human gib entities | true | a
 vis_debug_currentcluster | Show the current cluster number | cmd | devonly
 vis_debug_drawcluster | Add cluster # to visualization, (-1) to clear | cmd | devonly
 vis_debug_dumpvisibleclusters | Show the list of visible clusters | cmd | devonly
@@ -5768,7 +5767,7 @@ volume_fog_depth_warp_debug |  | false | devonly
 volume_fog_dither_scale |  | 1 | cheat
 volume_fog_enable_jitter |  | true | cheat
 volume_fog_height | Height of volume fog texture | 160 | devonly
-volume_fog_intermediate_textures_hdr |  | false | devonly
+volume_fog_intermediate_textures_hdr |  | true | devonly
 volume_fog_shadow_penumbra_multiplier | Penumbra size multiplier for shadow sampling, reduces fog shadow aliasing | 3 | devonly
 volume_fog_temporal_filter |  | true | devonly
 volume_fog_temporal_weight | Temporal filtering weight | 0.9 | devonly
@@ -5806,5 +5805,5 @@ writeid | Writes a list of permanently-banned user IDs to file. | cmd | devonly
 writeip | Save the ban list to file. | cmd | devonly
 writekeybindings | Saves current key bindings to disk. | cmd | release
 zipline_knockdown_protection_delay |  | 3 | devonly, sv, cl, rep
-zipline_use_new_latch | Use the new latch motion for getting on a zipline. 0: Dont use 1: Just those with b_UseNewZipLineSetup 2: Everyone use | 0 | devonly, sv, cl, rep
+zipline_use_new_latch | Use the new latch motion for getting on a zipline. 0: Dont use 1: Just those with b_UseNewZipLineSetup 2: Everyone use | 2 | devonly, sv, cl, rep
 zoom_sensitivity_ratio | Additional mouse sensitivity scale factor applied when FOV is zoomed in. | 1 | cl, a, per_user
