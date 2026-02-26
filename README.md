@@ -28,7 +28,7 @@ rate {
 Every variation of the config included in this repository has mod support added. For those who wish to remove or add it back in, remove ``Game                citadel/addons`` From the searchpaths bracket.
 
 # Credits
-Major thanks to add of these individuals from the bottom of my heart. They are all lovely.
+Major thanks to all of these individuals from the bottom of my heart. They are all lovely.
 ```
        // Maihdenless	Made the Optimizationlock project                        \\
       // Dacoder_		Responsible for vers 1.3.2 and documentation              \\
