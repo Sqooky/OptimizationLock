@@ -30,12 +30,13 @@ Every variation of the config included in this repository has mod support added.
 # Credits
 Major thanks to all of these individuals from the bottom of my heart. They are all lovely.
 ```
-       // Maihdenless	Made the Optimizationlock project                        \\
-      // Dacoder_		Responsible for vers 1.3.2 and documentation              \\
-     // Abdalla		    Manually removed all of the leftover fake cvars            \\
-    // Artemon121       Made the citadel Cvar unhider. Helped Abdalla with cvars.md \\
-   // Pidjan		    Made the script to check for fake cvars.                     \\
-  // Piggy              Let me mirror his config                                      \\
- // Sqooky		        Manager of the github                                          \\
-// --------------- END OF CONFIG OptimizationLock -- ver. 1.3.2 (EXTRA) --------------- \\
+       // Maihdenless    Made the OptimizationLock project                                                 \\
+      // Dacoder_        Responsible for ver. 1.3.2 and documentation                                       \\
+     // Abdalla          Manually removed leftover fake cvars, redundant commands, and added cvarlist.md     \\
+    // Artemon121        Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game     \\
+   // Pidjan             Made the script to check for fake cvars, and found the cvar unhider                   \\
+  // Piggy               Let me mirror his config                                                               \\
+ // Sqooky               Manager of the GitHub                                                                   \\
+// ---------------------------- END OF CONFIG OptimizationLock -- ver. 1.3.3 (EXTRA) ---------------------------- \\
 ```
+(You can find Artemon121's cvar unhider [here](https://github.com/Artemon121/cvar-unhide-s2-citadel))
