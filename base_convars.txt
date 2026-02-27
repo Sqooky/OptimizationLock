@@ -24,8 +24,8 @@ r_draw3dskybox "0"                                              // Enables drawi
 // Stream settings are moved to the top for priority
 engine_no_focus_sleep "0"                                       // Milliseconds the engine sleeps per frame when unfocused (0 = no sleep, recommended for high-end PCs; keep at default if on a low-end PC). [def: "20"]
 fps_max "0"                                                     // Max FPS while in game - if you want to limit your FPS use a 3rd party app to prevent stuttering. [def: "400"]
-panorama_max_fps 0                                              // Uncaps UI FPS. [def: "120"]
-panorama_max_overlay_fps 0                                      // Uncaps UI overlay FPS. [def: "60"]
+panorama_max_fps "0"                                              // Uncaps UI FPS. [def: "120"]
+panorama_max_overlay_fps "0"                                      // Uncaps UI overlay FPS. [def: "60"]
 
 // ================ NETWORK ================ \\
 cl_updaterate "128"                                             // Client snapshot update rate requested from the server (higher = more frequent updates). [def: "128"]
@@ -71,7 +71,7 @@ r_ssao "0"                                                      // Disables scre
 r_ssao_strength "0"                                             // AO strength multiplier (0 = no AO contribution). [def: "1.2"]
 r_citadel_ssao_quality "0"                                      // SSAO quality level (0 = lowest/off-ish). [def: "3"]
 r_citadel_ssao_thin_occluder_compensation "0"                   // Disables special handling for thin occluders in SSAO (cheaper). [def: "0.5"]
-r_lightmap_size                                                 // Maximum lightmap resolution.. [def: "65536"]
+r_lightmap_size "4"                                                // Maximum lightmap resolution.. [def: "65536"]
 r_lightmap_size_directional_irradiance "4"                      // Sets directional irradiance lightmap data size (lower = less detail) (-1 = uses value of r_lightmap_size ). [def: "-1"]
 
 // ================ PARTICLES ================ \\
@@ -97,7 +97,7 @@ r_particle_max_size_cull "0"                                    // 0 = DO NOT re
 // --- 4. ADDITIONAL SETTINGS ---
 r_RainParticleDensity "0"                                       // Density of Particle Rain 0-1. [def: "1"]
 particle_cluster_nodraw "1"                                     // Skips drawing particle “clusters”/grouped particle batches (performance, fewer small effects). [def: "0"]
-r_world_wind_strength 0                                         // Disables wind effects, cosmetic only. [def: "40"]
+r_world_wind_strength "0"                                         // Disables wind effects, cosmetic only. [def: "40"]
 
 // ================== MODELS, LOD & CULLING ================= \\
 cl_disable_ragdolls "1"                                         // Keep set to true - disabling this (enabling ragdolls) can cause issue with doorman's ultimate. [def: "0"]
