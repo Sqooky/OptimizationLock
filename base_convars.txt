@@ -3,33 +3,35 @@
            // Downloaded from: https://github.com/Sqooky/OptimizationLock  \\
           // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
 
+// Press ctrl+f and type * to highlight the more visually impactful commands that you could adjust
+
 // ================ PREFERENCES ================ 
 
 // --- 1. Outlines --- 
 citadel_trooper_glow_disabled "0"                               // 1 = Disable friendly/enemy minion glow. [def: "0"]
 citadel_boss_glow_disabled "1"                                  // Disables boss and walker glow/highlight effect. [def: "0]
 citadel_player_glow_disabled "0"                                // Disables player glow/highlight effect when pinged. [def: "0"]
-r_citadel_npr_outlines_max_dist "600"                           // Limits outline distance to reduce unnecessary processing. [def: "1000"]
+r_citadel_npr_outlines_max_dist "1000"                          // Limits outline distance to reduce unnecessary processing. [def: "1000"]
 
 // --- 2. Field of View --- 
 r_aspectratio "2.00"                                            // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov). [def: "0"]
 citadel_camera_hero_fov "100"                                   // The field of view angle of the camera when following a hero. [def: "90"]
 
 // --- 3. HUD --- 
-citadel_unit_status_use_new "1"                                 // This uses new Health Bar, to use old Health Bar change "true" to "false". [def: "0"]
+citadel_unit_status_use_new "0"                                 // This uses new Health Bar, to use old Health Bar change "true" to "false". [def: "0"]
 citadel_hud_objective_health_enabled "2"                        // 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks. [def: "2"]
 citadel_damage_report_enable "1"                                // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
 citadel_hideout_ball_show_juggle_count "1"                      // Shows a fun juggle count minigame for hideout ball. [def: "0"]
 citadel_hideout_ball_show_juggle_fx "1"                         // Shows juggle visual FX for hideout ball minigame. [def: "0"]
 
 // --- 4. Lighting & Shadows --- 
-lb_enable_stationary_lights "1"                                 // Disables stationary lights (map looks flatter but more performant). [def: "1"]
-lb_enable_dynamic_lights "1"                                    // Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
-lb_enable_baked_shadows "1"                                     // Disables baked shadows (game looks bright if this is on while stationary lights = 1). [def: "1"]
+lb_enable_stationary_lights "1"                                 // *Disables stationary lights (map looks flatter but more performant). [def: "1"]
+lb_enable_dynamic_lights "1"                                    // *Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
+lb_enable_baked_shadows "1"                                     // *Disables baked shadows (game looks bright if this is on while stationary lights = 1). [def: "1"]
 
 // --- 5. Skybox Rendering --- 
-r_drawskybox "1"                                                // Enables drawing the 2D skybox (sky is plain black when off). [def: "1"]
-r_draw3dskybox "0"                                              // Enables drawing the 3D skybox layer (distant geometry). [def: "1"]
+r_drawskybox "1"                                                // *Enables drawing the 2D skybox (sky is plain black when off). [def: "1"]
+r_draw3dskybox "0"                                              //  Enables drawing the 3D skybox layer (distant geometry). [def: "1"]
 
 // --- 6. FPS Caps & Minimized Throttling ---
 fps_max "0"                                                     // Max FPS while in game, limit fps to your monitor refresh rate. [def: "400"]
@@ -39,7 +41,7 @@ panorama_max_fps "0"                                            // Menu FPS. [de
 panorama_max_overlay_fps "0"                                    // Uncaps UI overlay FPS (I'm assuming steam overaly). [def: "60"]
 
 // --- 7. Object Culling ---
-r_size_cull_threshold "0.7"                                     // Culls small objects sooner based on screen size threshold (higher = more culling). [def: "0.8"]
+r_size_cull_threshold "0.7"                                     // *Culls small objects sooner based on screen size threshold (higher = more culling). [def: "0.8"]
 
 // ================= UI ================== 
 r_dashboard_render_quality "1"                                  // Sets dashboard/UI render quality (lower = cheaper UI rendering). [def: "1"]
@@ -66,16 +68,16 @@ sc_disable_spotlight_shadows "1"                                // Disables spot
 sparseshadowtree_enable_rendering "1"                           // Enables Sparse Shadow Tree, rendering static geometry into shadow cascades. [def: "0"]
 sparseshadowtree_disable_for_viewmodel "0"                      // Disable SST generation and runtime for viewmodel (use original CSM rendering). [def: "1"]
 cl_globallight_shadow_mode "0"                                  // \\ [def: "2"]
-r_citadel_sun_shadow_slope_scale_depth_bias "1.0"               // \\ [def: "3.54"]
 lb_csm_draw_alpha_tested "0"                                    // Prevents alpha-tested geometry from being included in CSM passes (cheaper, possible missing leaf/fence shadows). [def: "1"]
 lb_csm_draw_translucent "0"                                     // Prevents translucent objects from rendering into CSM (cheaper, fewer shadow details). [def: "1"]
 
 // ================ LIGHTING ================ 
 r_rendersun "0"                                                 // Disables sun lighting. [def: "1"]
+r_citadel_sun_shadow_slope_scale_depth_bias "1.0"               // \\ [def: "3.54"]
 cl_retire_low_priority_lights "1"                               // Replaces/drops low-priority dynamic lights when higher-priority lights are present (helps cap dlight clutter/cost). [def: "0"]
 r_multiscattering "1"                                           // Enables multi-scattering lighting approximation. [def: "1"]
 r_light_flickering_enabled "1"                                  // Enables light flicker effects where used. [def: "1"]
-r_lightmap_size "4"                                                // Maximum lightmap resolution.. [def: "65536"]
+r_lightmap_size "4"                                             // Maximum lightmap resolution.. [def: "65536"]
 r_lightmap_size_directional_irradiance "4"                      // Sets directional irradiance lightmap data size (lower = less detail) (-1 = uses value of r_lightmap_size ). [def: "-1"]
 r_lightmap_bicubic_filtering "1"                                // Enables bicubic filtering on lightmaps. [def: "1"]
 r_ssao "0"                                                      // Disables screen-space ambient occlusion. [def: "1"]
@@ -114,7 +116,7 @@ r_particle_cables_cast_shadows "0"                              // Disables shad
 
 // ================ VISUAL CLARITY ================ 
 mat_colorcorrection "1"                                         // Disables/ Enables color correction (game looks less vibrant when off). [def: "1"]
-r_drawdecals "1"                                                // Render decals. [def: "1"]
+r_drawdecals "1"                                                // *Render decals. [def: "1"]
 r_decals "1"                                                    // Maximum number of decals allowed. (lower = fewer bullet holes/blood/impact marks). [def: "2048"]
 r_character_decal_resolution "1"                                // Resolution of character decal texture. [def: "1024"]
 r_depth_of_field "0"                                            // Disables depth of field. [def: "1"]
