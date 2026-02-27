@@ -1,4 +1,4 @@
-// ---------------- GAMEINFO CONFIG OptimizationLock -- ver. 1.3.3 (EXTRA) --------------- \\
+/ ---------------- GAMEINFO CONFIG OptimizationLock -- ver. 1.3.3 (EXTRA) --------------- \\
             // Check here for updates: https://gamebanana.com/mods/650519 \\
            // Downloaded from: https://github.com/Sqooky/OptimizationLock  \\
           // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
