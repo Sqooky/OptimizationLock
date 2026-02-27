@@ -475,7 +475,7 @@ citadel_camera_hero_fov "100"                                   // The field of 
 // --- 3. HUD & Gameplay --- \\
 citadel_unit_status_use_new "1"                                 // This uses new Health Bar, to use old Health Bar change "true" to "false". [def: "0"]
 citadel_damage_report_enable "1"                                // Enables/Disables incoming/outgoing damage tab. [def: "1"]
-r_drawskybox "0"                                                // Enables drawing the 2D skybox. [def: "1"]
+r_drawskybox "1"                                                // Enables drawing the 2D skybox. [def: "1"]
 r_draw3dskybox "0"                                              // Enables drawing the 3D skybox layer (distant geometry). [def: "1"]
 
 // ================ SYSTEM & THREADING ================ \\
@@ -500,7 +500,7 @@ mat_set_shader_quality "0"                                      // Force shader 
 
 // ================ SHADOWS & LIGHTING ================ \\
 r_shadows "0"                                                   // Disables shadows. [def: "1"]
-lb_enable_baked_shadows "0"                                     // Disables baked shadows. [def: "1"]
+lb_enable_baked_shadows "1"                                     // Disables baked shadows. [def: "1"]
 r_citadel_shadow_quality "0"                                    // Deadlock/Citadel shadow quality level (0 = lowest). [def: "2"]
 r_citadel_sun_shadow_slope_scale_depth_bias "1.0"               // \\ [def: "3.54"]
 r_citadel_gpu_culling_shadows "1"                               // Enables GPU-driven culling for shadow casters (performance). [def: "0"]
@@ -523,7 +523,7 @@ sc_disable_spotlight_shadows "1"                                // Disables spot
 
 // Lighting (last 2 have potential, need to be looked into)
 lb_enable_stationary_lights "1"                                 // Disables stationary lights. [def: "1"]
-lb_enable_dynamic_lights "0"                                    // Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
+lb_enable_dynamic_lights "1"                                    // Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
 r_rendersun "0"                                                 // Disables sun lighting. [def: "1"]
 r_ssao "0"                                                      // Disables screen-space ambient occlusion. [def: "1"]
 r_ssao_strength "0"                                             // AO strength multiplier (0 = no AO contribution). [def: "1.2"]
@@ -636,10 +636,10 @@ r_citadel_distancefield_farfield_enable "0"                     // Disables long
 // ================ INPUT ================ \\
 cl_input_enable_raw_keyboard "1"                                // Enables raw keyboard input handling (more direct input path). [def: "0"]
 
-	//Credits
+
        // Maihdenless    Made the OptimizationLock project                                                 \\
       // Dacoder_        Responsible for ver. 1.3.2 and documentation                                       \\
-     // Abdalla          Manually removed leftover fake cvars, redundant commands, and updated cvarlist.md   \\
+     // Abdalla          Manually removed leftover fake cvars, redundant commands, and added cvarlist.md     \\
     // Artemon121        Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game     \\
    // Pidjan             Made the script to check for fake cvars, and found the cvar unhider                   \\
   // Piggy               Let me mirror his config                                                               \\
