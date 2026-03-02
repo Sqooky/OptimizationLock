@@ -32,7 +32,7 @@ Major thanks to all of these individuals from the bottom of my heart. They are a
 ```
 
        // Maihdenless    Translated the config from russian, started OptimisationLock & it's Discord       \\
-      // Dacoder_        Responsible for ver. 1.3.2 and documentation                                       \\
+      // Dacoder_        Responsible for ver. 1.3.3 and documentation                                       \\
      // Brullee          Removed fake cvars, redundant commands, added cvarlist.md, and reformatted config   \\
     // Artemon121        Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game     \\
    // Pidjan             Made the script to check for fake cvars, and found the cvar unhider                   \\
