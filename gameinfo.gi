@@ -659,14 +659,17 @@ cl_particle_fallback_multiplier "4"                             // Multiplier fo
 cl_particle_fallback_base "4"                                   // Base for falling back to cheaper effects under load. [def: "0"]
 
 
-       // Maihdenless    Translated the config from russian, started OptimisationLock & it's Discord       \\
-      // Dacoder_        Responsible for ver. 1.3.2 and documentation                                       \\
-     // Brullee          Removed fake cvars, redundant commands, added cvarlist.md, and reformatted config   \\
+
+        // Maihdenless   Translated the config from russian, started OptimisationLock & its Discord       \\
+       // Dacoder_       Responsible for ver. 1.3.2 and documentation                                      \\
+      // Brullee         Removed fake cvars, redundant commands, added cvarlist.md, and reformatted config  \\
+     // Kaizuchaneru     While not directly invovled in the deveopment, they tested most cvars               \\
     // Artemon121        Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game     \\
    // Pidjan             Made the script to check for fake cvars, and found the cvar unhider                   \\
   // Piggy               Let me mirror his config                                                               \\
  // Sqooky               Manager of the GitHub                                                                   \\
 // --------------------------------- END OF CONFIG OptimizationLock -- ver. 1.4 --------------------------------- \\
+
 		"rate"
 		{
 			"min"		"98304"
