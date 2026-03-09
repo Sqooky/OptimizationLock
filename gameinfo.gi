@@ -509,7 +509,7 @@ r_citadel_npr_outlines_max_dist "1000"                          // Limits outlin
 
 // --- 2. Field of View --- 
 //r_aspectratio "2.60"                                           // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov). 	[def: "0"]
-citadel_camera_hero_fov "110"                                   // The field of view angle of the camera when following a hero. 		[def: "90"]
+//citadel_camera_hero_fov "110"                                   // The field of view angle of the camera when following a hero. 		[def: "90"]
 
 // --- 3. HUD --- 
 citadel_unit_status_use_new "1"                                 // This uses new Health Bar, to use old Health Bar change "true" to "false". 	[def: "0"]
