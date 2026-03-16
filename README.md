@@ -34,7 +34,8 @@ press ctrl+f in your text editor and type in the string you want.
 comment it out.  
 - "What does commenting mean"  
 to comment a line put ``//`` at the front of the line. It will make it not executed by the config.  
-- "Why are my characters dark in the portraits on the end screen and shop ``lb_enable_dynamic_lights`` comment it out.  
+- "Why are my characters dark in the portraits on the end screen and shop"  
+``lb_enable_dynamic_lights`` comment it out.  
 - "Why are buildings popping in and out"  
 ``r_farz`` or ``r_maxtapents`` comment them out.  
 - "How do I change my fov"  
@@ -51,12 +52,12 @@ Every variation of the config included in this repository has mod support added.
 
 # Credits
 Major thanks to all of these individuals from the bottom of my heart. They are all lovely.
-- Sqooky        Manager of the GitHub
-- Dacoder_      Responsible for ver. 1.3.2 and documentation
-- Brullee       Removed fake cvars, redundant commands, added cvarlist.md, and reformatted config
-- Kaizuchaneru  While not directly invovled in the deveopment, they tested most cvars
-- Artemon121    Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game
-- Jaden         Nice guy and helped both test and support various newcomers
-- Piggy         Let me mirror his config
-- Maihdenless   Started the original OptimisationLock & its Discord
+- Sqooky:        Manager of the GitHub
+- Dacoder_:      Responsible for ver. 1.3.2 and documentation
+- Brullee:       Removed fake cvars, redundant commands, added cvarlist.md, and reformatted config
+- Kaizuchaneru:  While not directly invovled in the deveopment, they tested most cvars
+- Artemon121:    Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game
+- Jaden:         Nice guy and helped both test and support various newcomers
+- Piggy:         Let me mirror his config
+- Maihdenless:   Started the original OptimisationLock & its Discord
 (You can find Artemon121's cvar unhider [here](https://github.com/Artemon121/cvar-unhide-s2-citadel))
