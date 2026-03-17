@@ -51,6 +51,7 @@ r_citadel_clip_sphere_min_opacity 			"0"				// Removes the blur from the pinhole
 //r_citadel_clip_sphere_skin 				"0.01"			// 																	[def: "0.01"]
 //r_citadel_clip_sphere_cone_angle 			"360"			// 																	[def: "40"]
 //r_citadel_clip_sphere_distance_max 		"100"			// 																	[def: "75"]
+
 // ================= UI ================
 r_citadel_enable_pano_world_blur 			"false"
 r_dashboard_render_quality 					"0"				// Sets dashboard/UI render quality (lower = cheaper UI rendering). [def: "1"]
@@ -66,6 +67,7 @@ panorama_temp_comp_layer_min_dimension 		"128"
 panorama_max_overlay_fps 					"15"
 panorama_max_fps 							"15"			// [ADJUST] UI FPS cap - 0=Unlimited (smooth UI) | 30/60=Standard | Higher = smoother HUD but more CPU
 panorama_async_compute_mipgen 				"1"
+
 // ================ SHADOWS ================
 r_shadows 									"0"				// Disables dynamic shadows. 										[def: "1"]
 r_citadel_shadow_quality 					"0"				// Deadlock/Citadel shadow quality level (0 = lowest). 				[def: "2"]
@@ -110,6 +112,7 @@ r_citadel_distancefield_farfield_enable		"0"				// Disables long-range distance 
 cl_disable_ragdolls 						"0"				// Keep set to 0 - enabling this (enabling ragdolls) can cause issue with doorman's ultimate. [def: "0"]
 ragdoll_parallel_pose_control 				"1"				// Multithreaded ragdoll handling, better performance (if ragdolls aren't disabled). [def: "0"]
 cl_ragdoll_limit 							"-1"			// Limit of how many ragdolls can be rendered at once. 				[def: "-1"]
+
 // ================ MODELS ================ 
 skeleton_instance_lod_optimization 			"1"				// Enables skeleton/animation LOD optimizations (less bone work for distant models). [def: "0"]
 enable_boneflex 							"0"				// Disables bone flexes (procedural facial/mesh flex drivers). 		[def: "1"]
@@ -169,7 +172,6 @@ gpu_mem_level 								"1"				// GPU Memory level. 												[def: "2"]
 cpu_level 									"1"				// CPU level. 														[def: "2"]
 //think_limit 								"0.001"			// Limits how much “think” time/entities can process per tick (CPU cap). [def: "10"]
 //^ *TODO I am going to need to test this to make sure lowering it doesn't cause problems.
-
 battery_saver 								"0"				// Disables battery saver mode (no automatic throttling). 		[def: "0"]
 
 // ================ INPUT ================ 
