@@ -493,7 +493,7 @@ citadel_hud_objective_health_enabled 		"2"				// 0=Off, 1=Shrines, 2=T1/T2, 3=Ba
 citadel_damage_report_enable 				"1"				// Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
 citadel_hideout_ball_show_juggle_count 		"1"				// Shows a fun juggle count minigame for hideout ball. 				[def: "0"]
 citadel_hideout_ball_show_juggle_fx 		"1"				// Shows juggle visual FX for hideout ball minigame. 				[def: "0"]
-citadel_crosshair_hit_marker_duration		"0.001"			// Removes the hitmarker when shooting people						[def: "0.1"]
+citadel_crosshair_hit_marker_duration		"-0.001"		// Removes the hitmarker when shooting people.					[def: "0.1"]
 
 
 
@@ -521,6 +521,7 @@ r_citadel_clip_sphere_min_opacity 			"0"				// Removes the blur from the pinhole
 //r_citadel_clip_sphere_skin 				"0.01"			// 																	[def: "0.01"]
 //r_citadel_clip_sphere_cone_angle 			"360"			// 																	[def: "40"]
 //r_citadel_clip_sphere_distance_max 		"100"			// 																	[def: "75"]
+
 // ================= UI ================
 r_citadel_enable_pano_world_blur 			"false"
 r_dashboard_render_quality 					"0"				// Sets dashboard/UI render quality (lower = cheaper UI rendering). [def: "1"]
@@ -536,6 +537,7 @@ panorama_temp_comp_layer_min_dimension 		"128"
 panorama_max_overlay_fps 					"15"
 panorama_max_fps 							"15"			// [ADJUST] UI FPS cap - 0=Unlimited (smooth UI) | 30/60=Standard | Higher = smoother HUD but more CPU
 panorama_async_compute_mipgen 				"1"
+
 // ================ SHADOWS ================
 r_shadows 									"0"				// Disables dynamic shadows. 										[def: "1"]
 r_citadel_shadow_quality 					"0"				// Deadlock/Citadel shadow quality level (0 = lowest). 				[def: "2"]
@@ -580,6 +582,7 @@ r_citadel_distancefield_farfield_enable		"0"				// Disables long-range distance 
 cl_disable_ragdolls 						"0"				// Keep set to 0 - enabling this (enabling ragdolls) can cause issue with doorman's ultimate. [def: "0"]
 ragdoll_parallel_pose_control 				"1"				// Multithreaded ragdoll handling, better performance (if ragdolls aren't disabled). [def: "0"]
 cl_ragdoll_limit 							"-1"			// Limit of how many ragdolls can be rendered at once. 				[def: "-1"]
+
 // ================ MODELS ================ 
 skeleton_instance_lod_optimization 			"1"				// Enables skeleton/animation LOD optimizations (less bone work for distant models). [def: "0"]
 enable_boneflex 							"0"				// Disables bone flexes (procedural facial/mesh flex drivers). 		[def: "1"]
@@ -593,6 +596,7 @@ cloth_sim_on_tick 							"0"				// Update the cloth simulation every tick 						
 phys_threaded_cloth_bone_update 			"1"				// Make the cloth update threaded 									[def: "0"]
 phys_threaded_kinematic_bone_update 		"1"				// 																	[def: "0"]
 phys_threaded_transform_update 				"1"				// 																	[def: "0"]
+props_break_max_pieces_perframe				"0.5"			// Makes boxes break into single pieces								[def: "16"]
 
 // ================ ROPES ================ 
 r_drawropes 								"0"				// Draw ropes. 														[def: "1"]
@@ -694,11 +698,36 @@ ai_strong_optimizations_no_checkstand 		"1"				// Not fully sure what exactly th
 citadel_npc_force_animate_every_tick 		"false"			// Don't change this, it does what it says on the tin.				[def: "true"]
 
 // ================ In Testing ================
-citadel_outer_radius_scaler 				"0.25"
-iv_parallel_restore 						"false"
-r_decals_default_fade_duration 				"1"
-r_texture_budget_update_period 				"0.5"
-save_parallel 								"true"
+citadel_outer_radius_scaler 				"0.25"			//
+iv_parallel_restore 						"false"			//
+r_decals_default_fade_duration 				"1"				//
+r_texture_budget_update_period 				"0.5"			// 
+save_parallel 								"true"			// Absolutely no idea but typically paralell processing is good.
+snd_occlusion_bounces						"0"				// Probably limits occlusion
+r_particle_max_size_cull					"1200	"		// Insane convar I need to benchmark
+r_particle_model_per_thread_count			"32"			//
+r_limit_particle_job_duration 				"true"			// Seems to help with particle clutter, although I am not sure.
+ai_async_queue_max_jobs 					"1"
+ai_gather_conditions_async 					"true"
+ai_use_async_ragdoll_fixup 					"true"
+mat_async_shader_load 						"true"
+nav_obstruction_async_update				"true"
+r_async_compute_fog 						"true"
+sparseshadowtree_parallel_generation 		"true"
+sv_parallel_sendsnapshot 					"3"
+
+// =============== No Clue What These do But it's Probably Important. =============== 
+// =============== If you test these please report to me on your findings =============== 
+//r_pipeline_stats_flush_before_sleeping true
+//r_pipeline_stats_present_flush true
+//r_wait_on_present true
+
+// =============== Gibs. In Testing to See if it Makes Troopers not Explode ===========
+destructible_parts_destroy_parts_when_gibbing false
+violence_agibs "false"
+violence_hgibs "false"
+
+
 
 						// ================ Config end ================
 

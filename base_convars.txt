@@ -25,7 +25,7 @@ citadel_hud_objective_health_enabled 		"2"				// 0=Off, 1=Shrines, 2=T1/T2, 3=Ba
 citadel_damage_report_enable 				"1"				// Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
 citadel_hideout_ball_show_juggle_count 		"1"				// Shows a fun juggle count minigame for hideout ball. 				[def: "0"]
 citadel_hideout_ball_show_juggle_fx 		"1"				// Shows juggle visual FX for hideout ball minigame. 				[def: "0"]
-citadel_crosshair_hit_marker_duration		"0.001"			// Removes the hitmarker when shooting people						[def: "0.1"]
+citadel_crosshair_hit_marker_duration		"-0.001"		// Removes the hitmarker when shooting people.					[def: "0.1"]
 
 // --- 4. Lighting & Shadows --- 
 lb_enable_stationary_lights 				"1"				// *Disables stationary lights (map looks flatter but more performant). 		[def: "1"]
@@ -126,6 +126,7 @@ cloth_sim_on_tick 							"0"				// Update the cloth simulation every tick 						
 phys_threaded_cloth_bone_update 			"1"				// Make the cloth update threaded 									[def: "0"]
 phys_threaded_kinematic_bone_update 		"1"				// 																	[def: "0"]
 phys_threaded_transform_update 				"1"				// 																	[def: "0"]
+props_break_max_pieces_perframe				"0.5"			// Makes boxes break into single pieces								[def: "16"]
 
 // ================ ROPES ================ 
 r_drawropes 								"0"				// Draw ropes. 														[def: "1"]
@@ -170,9 +171,9 @@ sc_clutter_enable 							"0"				// Disables clutter props, improves visibility &
 gpu_level 									"1"				// GPU level. 														[def: "3"]
 gpu_mem_level 								"1"				// GPU Memory level. 												[def: "2"]
 cpu_level 									"1"				// CPU level. 														[def: "2"]
+battery_saver 								"0"				// Disables battery saver mode (no automatic throttling). 		[def: "0"]
 //think_limit 								"0.001"			// Limits how much “think” time/entities can process per tick (CPU cap). [def: "10"]
 //^ *TODO I am going to need to test this to make sure lowering it doesn't cause problems.
-battery_saver 								"0"				// Disables battery saver mode (no automatic throttling). 		[def: "0"]
 
 // ================ INPUT ================ 
 cl_input_enable_raw_keyboard 				"1"				// Enables raw keyboard input handling (more direct input path).[def: "0"]
@@ -226,11 +227,36 @@ ai_strong_optimizations_no_checkstand 		"1"				// Not fully sure what exactly th
 citadel_npc_force_animate_every_tick 		"false"			// Don't change this, it does what it says on the tin.				[def: "true"]
 
 // ================ In Testing ================
-citadel_outer_radius_scaler 				"0.25"
-iv_parallel_restore 						"false"
-r_decals_default_fade_duration 				"1"
-r_texture_budget_update_period 				"0.5"
-save_parallel 								"true"
+citadel_outer_radius_scaler 				"0.25"			//
+iv_parallel_restore 						"false"			//
+r_decals_default_fade_duration 				"1"				//
+r_texture_budget_update_period 				"0.5"			// 
+save_parallel 								"true"			// Absolutely no idea but typically paralell processing is good.
+snd_occlusion_bounces						"0"				// Probably limits occlusion
+r_particle_max_size_cull					"1200	"		// Insane convar I need to benchmark
+r_particle_model_per_thread_count			"32"			//
+r_limit_particle_job_duration 				"true"			// Seems to help with particle clutter, although I am not sure.
+ai_async_queue_max_jobs 					"1"
+ai_gather_conditions_async 					"true"
+ai_use_async_ragdoll_fixup 					"true"
+mat_async_shader_load 						"true"
+nav_obstruction_async_update				"true"
+r_async_compute_fog 						"true"
+sparseshadowtree_parallel_generation 		"true"
+sv_parallel_sendsnapshot 					"3"
+
+// =============== No Clue What These do But it's Probably Important. =============== 
+// =============== If you test these please report to me on your findings =============== 
+//r_pipeline_stats_flush_before_sleeping true
+//r_pipeline_stats_present_flush true
+//r_wait_on_present true
+
+// =============== Gibs. In Testing to See if it Makes Troopers not Explode ===========
+destructible_parts_destroy_parts_when_gibbing false
+violence_agibs "false"
+violence_hgibs "false"
+
+
 
 						// ================ Config end ================
 
@@ -244,5 +270,4 @@ save_parallel 								"true"
 // --------------------------------- END OF CONFIG OptimizationLock -- ver. 1.4.3 ------------------------------- \\
 
 
-
-		/ --------------------------------- END OF CONFIG OptimizationLock -- ver. 1.4.1 ------------------------------- \\
+	/ --------------------------------- END OF CONFIG OptimizationLock -- ver. 1.4.1 ------------------------------- \\
