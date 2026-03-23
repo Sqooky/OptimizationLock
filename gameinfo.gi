@@ -102,8 +102,8 @@
 	{
 		BetaUniverse
 		{
-			FakeLag			40
-			FakeLoss		.1
+			FakeLag			0
+			FakeLoss		0
 			//FakeReorderPct 0.05
 			//FakeReorderDelay 10
 			//FakeJitter "low"
@@ -154,7 +154,7 @@
 		RenderingPipeline
 		{
 			SupportsMSAA 0
-			DistanceField 1
+			DistanceField 0
 		}
 		PauseSinglePlayerOnGameOverlay 1
 		DefensiveConCommands 1
@@ -209,8 +209,8 @@
 		"SupportsDisplacementMapping" "0"
 		"SteamAudioEnabled"				"1"
 		"LatticeDeformerEnabled"		"1"
-		"ShadowAtlasWidth" "16384"
-		"ShadowAtlasHeight" "16384"
+		"ShadowAtlasWidth" "0"
+		"ShadowAtlasHeight" "0"
 		"TimeSlicedShadowMapRendering" "1"
 	}
 
@@ -246,7 +246,7 @@
 		// steps. Additionally this controls which builders are displayed in the hammer build dialog.
 		DefaultMapBuilders
 		{
-			"bakedlighting"	"1"	// Enable lightmapping during compile time		
+			"bakedlighting"	"0"	// Enable lightmapping during compile time		
 			"envmap"	"0" // turned off since it currently causes an assert and doesn't work due to some build issue
 			"nav"		"1"	// Generate nav mesh data
 		}
@@ -279,7 +279,7 @@
 		BakedLighting
 		{
 			Version 4
-			ImportanceVolumeTransitionRegion 512            // distance we transition from high to low resolution charts 
+			ImportanceVolumeTransitionRegion 0            // distance we transition from high to low resolution charts 
 			LightmapChannels
 			{
 				direct_light_shadows 1
@@ -380,34 +380,34 @@
 		"EnvironmentMapUseCubeArray" 	1
 		"EnvironmentMapCacheSizeTools"  300
 		BindlessSceneObjectDesc			CitadelBindlessDesc
-		GrassCastsShadows				1
+		GrassCastsShadows				0
 	}
 
 	SceneSystem
 	{
 		GpuLightBinner 1
-		FogCachedShadowAtlasWidth 2048
-		FogCachedShadowAtlasHeight 2048
-		FogCachedShadowTileSize 128
+		FogCachedShadowAtlasWidth 0
+		FogCachedShadowAtlasHeight 0
+		FogCachedShadowTileSize 0
 		GpuLightBinnerSunLightFastPath 1
-		CSMCascadeResolution 2048
+		CSMCascadeResolution 0
 		SunLightManagerCount 0
 		SunLightManagerCountTools 0
-		DefaultShadowTextureWidth 6144
-		DefaultShadowTextureHeight 6144
-		DynamicShadowResolution 1
+		DefaultShadowTextureWidth 0
+		DefaultShadowTextureHeight 0
+		DynamicShadowResolution 0
 
 		TransformTextureRowCount	1024
 		TransformTextureRowCountToolsMode 6144
 		SunLightMaxCascadeSize		4
 		SunLightShadowRenderMode	Depth
 		LayerBatchThresholdFullsort 20
-		NonTexturedGradientFog		1
+		NonTexturedGradientFog		0
 		// Temp till I can add support in citadel shaders
 		DisableLateAllocatedTransformBuffer 1
 		MinimumLateAllocatedVertexCacheBufferSizeMB 64
-		CubemapFog 1
-		VolumetricFog 1
+		CubemapFog 0
+		VolumetricFog 0
 		FrameBufferCopyFormat R11G11B10F
 		Tonemapping 0
 		
@@ -509,7 +509,7 @@ r_draw3dskybox 								"0"				//  Enables drawing the 3D skybox layer (distant g
 // --- 6. FPS Caps & Minimized Throttling ---
 fps_max 									"0"				// Max FPS while in game, limit fps to your monitor refresh rate. [def: "400"]
 engine_no_focus_sleep 						"20"			// Milliseconds the engine sleeps per frame when unfocused (0 = no sleep, not recommended for low-end PC). [def: "20"]
-engine_low_latency_sleep_after_client_tick 	"1"				// Sleeps strategically after client tick to reduce latency/stutter (low-latency pacing). [def: "0"]
+engine_low_latency_sleep_after_client_tick 	"true"			// Sleeps strategically after client tick to reduce latency/stutter (low-latency pacing). [def: "false"]
 panorama_max_fps 							"30"			// Menu FPS. 														[def: "120"]
 panorama_max_overlay_fps 					"30"			// Uncaps UI overlay FPS (I'm assuming steam overaly). 				[def: "60"]
 
@@ -584,7 +584,6 @@ ragdoll_parallel_pose_control 				"1"				// Multithreaded ragdoll handling, bett
 cl_ragdoll_limit 							"-1"			// Limit of how many ragdolls can be rendered at once. 				[def: "-1"]
 
 // ================ MODELS ================
-skeleton_instance_lod_optimization 			"1"				// Enables skeleton/animation LOD optimizations (less bone work for distant models). [def: "0"]
 enable_boneflex 							"0"				// Disables bone flexes (procedural facial/mesh flex drivers). 		[def: "1"]
 r_hair_ao 									"0"				// Disables hair ambient occlusion/shading pass. 					[def: "1"]
 cl_fasttempentcollision 					"1000"			// Limits/controls fast collision processing for temporary entities (impacts/tracers/etc.); higher usually = more work. [def: "5"]
@@ -654,37 +653,42 @@ cl_particle_max_count 						"1500"			// If console is flooded with max particles
 r_particle_max_detail_level 				"1"				// The maximum detail level of particle to create. 					[def: "3"]
 particle_cluster_nodraw 					"1"				// Skips drawing particle “clusters”/grouped particle batches (performance, fewer small effects). [def: "0"]
 r_physics_particle_op_spawn_scale 			"0"				// Prevents physics-based particle spawns. 							[def: "1"]
-//r_particle_model_new8 					"0"				// Not entirely sure what this does 								[def: "1"]
+r_particle_model_new8 						"0"				// Not entirely sure what this does 								[def: "1"]
 r_RainParticleDensity 						"0"				// Density of Particle Rain 0-1. 									[def: "1"]
 r_world_wind_strength 						"0"				// Disables wind effects, cosmetic only. 							[def: "40"]
-cl_particle_sim_fallback_threshold_ms 		"0.1"				// If particle sim cost exceeds this (ms), the engine can fall back to cheaper particle simulation to avoid spikes. [def: "6"]
-cl_particle_sim_fallback_base_multiplier 	"500"				// How aggressive the switch to fallbacks will be depending on how far over the cl_particle_sim_fallback_threshold_ms the sim time is. (Higher = more aggressive). [def: "5"]
-//cl_particle_fallback_multiplier 			"4"				// Multiplier for falling back to cheaper effects under load. 		[def: "0"]
-//cl_particle_fallback_base 					"4"				// Base for falling back to cheaper effects under load. 		[def: "0"]
+cl_particle_fallback_base 					"10"			// Base for falling back to cheaper effects under load. 			[def: "0"] 
+cl_particle_fallback_multiplier 			"20"			// Multiplier for falling back to cheaper effects under load. 		[def: "0"]
+cl_particle_sim_fallback_base_multiplier 	"40"			// How aggressive the switch to fallbacks will be depending on how far over the cl_particle_sim_fallback_threshold_ms the sim time is.  Higher numbers are more aggressive. [def: "5"] 
+cl_particle_sim_fallback_threshold_ms 		"0.001" 		// Amount of simulation time that can elapse before new systems start falling back to cheaper versions [def: "6"] 
 r_particle_skip_postsim 					"1"				// Not entirely sure what it does, going off of the name I'd imagine it skips the post simulation, this is a testvar [def: "false"]
 
 // ================ Lod & Culling ================
-sc_screen_size_lod_scale_override 			"0.56"			// Controls LOD scale. Lower values will have less polys			[def: "-1"]
-sc_instanced_mesh_lod_bias 					"15"			// Bias for LOD selection of instanced mesh				 			[def: "1.25"]
-sc_instanced_mesh_lod_bias_shadow 			"10"			// Bias for LOD selection of instanced meshes in shadowmaps 		[def: "1.75"]
+skeleton_instance_lod_optimization 			"true"			// Compute LOD mask internally like since 2016, i.e. force all LOD groups' bones to compute	[def: "false"]
+sc_screen_size_lod_scale_override 			"0.57"			// Controls LOD scale. Lower values will have less polys			[def: "-1"]
+sc_instanced_mesh_lod_bias 					"0.15"			// Bias for LOD selection of instanced mesh				 			[def: "1.25"]
+sc_instanced_mesh_lod_bias_shadow 			"0.10"			// Bias for LOD selection of instanced meshes in shadowmaps 		[def: "1.75"]
 sc_instanced_mesh_motion_vectors 			"0"				// Set 1 if you use motion blur						     			[def: "1"]
 //sc_instanced_mesh_size_cull_bias 			"10"			// Bias for size culling of instanced meshes				  		[def: "1.5"]
 sc_instanced_mesh_size_cull_bias_shadow 	"10"			// Bias for size culling instanced meshes in shadowmaps     		[def: "2"]
 sc_fade_distance_scale_override 			"180"			// Distance objects fade in and out						 			[def: "-1"]
-sc_clutter_enable 							"0"				// No debris/props 1=Props visible (immersive)		      			[def: "1"]
+sc_clutter_enable 							"false"			// No debris/props 1=Props visible									[def: "true"]
 sc_aggregate_bvh_threshold 					"16"			// Lower BVH threshold								      			[def: "128"]
 sc_layer_batch_threshold 					"16"			// Lower batch threshold								    		[default: "128"]
 sc_layer_batch_threshold_fullsort 			"20"			//														  			[def: "80"]
 sv_pvs_max_distance 						"2800"			// Don't render enemy players past a certain distance				[def: "0"]
 sv_remove_ent_from_pvs 						"1"				// Culls objects (creeps, boxes, objects) outside of view   		[def: "0"]
-//r_farz 									"6000"			// Override the far clipping plane									[def: "-1"]
-mat_viewportscale 							"0.01" 			// Was 1 this controls LOD on everything except trees and bushes (good) for some reason
-r_mapextents 								"4500"			// Far clipping plane
+r_farz 										"7000"			// Override the far clipping plane									[def: "-1"]
+r_mapextents 								"7000"			// Far clipping plane
+mat_viewportscale 							"0.01" 			// Scale down the main viewport 									[def: "1"]
 phys_cull_internal_mesh_contacts 			"true" 			// 																	[def: "false"]
-citadel_use_pvs_for_players 				"true" 			// Default false, culls players when out of view 					[def: "false"]
+citadel_use_pvs_for_players 				"true" 			// Default culls players when out of view 							[def: "false"]
 
 // ================ Misc ================
-r_max_portal_render_targets 				"2"
+r_max_portal_render_targets 				"2"				// Maxium number of Doorman doors to allow rendering.				[def: "0"]
+
+// =============== Gibs. In Testing to See if it Makes Troopers not Explode ===========
+violence_agibs 								"false"			// "Alien" gibs. Leftover from neon prime I think. [def: "true"]
+violence_hgibs 								"false"			// "Human" gibs. Leftover from neon prime I think. [def: "true"]
 
 // ================ Grass ================
 r_grass_quality 							"0"				// Quality of the grass												[def: "2"]
@@ -698,21 +702,21 @@ citadel_npc_force_animate_every_tick 		"false"			// Don't change this, it does w
 
 // ================ In Testing ================
 // ================ Test group 2 ================
-citadel_camera_soft_collision_angle 360
+cl_phys_assume_fixed_tick_interval 			"false"	// Assume the client uses a fixed tickrate like the server (which may not always be true)actual [def: "true"]
+citadel_arrow_brightness 							"1"
+cl_interp_parallel 									"true"	// 
+cl_modifier_parallel_gather_status_effect_updates 	"true"	// 
+parallel_perform_invalidate_physics 				"true"	// 
 
+citadel_camera_soft_collision_angle 360
 cl_batch_entity_list_ops_during_latch 		"true"
 citadel_damage_text_batching_window_ability "1000"
 sc_force_materials_batchable 				"true"
 r_particle_timescale 						"1.3"
-cl_particle_batch_mode 						"10"
-cl_particle_fallback_base 					"100"	// Base for falling back to cheaper effects under load. [def: "0"] 
-cl_particle_fallback_multiplier 			"100"	// Multiplier for falling back to cheaper effects under load. [def: "0"]
-cl_particle_sim_fallback_base_multiplier 	"500"	// How aggressive the switch to fallbacks will be depending on how far over the cl_particle_sim_fallback_threshold_ms the sim time is.  Higher numbers are more aggressive. [def: "5"] 
-cl_particle_sim_fallback_threshold_ms 		"10"	// Amount of simulation time that can elapse before new systems start falling back to cheaper versions [def: "6"] 
-r_draw_particle_children_with_parents 		"1"		// 
+cl_particle_batch_mode 						"2"		// Has a range of 1 or 2, 2 is apparently slightly odd and 0 will make them not batch [def: "1"]
+r_draw_particle_children_with_parents 		"0"		// 
 r_late_particle_job_sync 					"true"	// 
 r_particle_batch_collections 				"true"	// 
-r_particle_cables_cast_shadows 				"false"	// 
 r_particle_max_detail_level 				"1"		// 
 r_particle_max_texture_layers 				"3"		// 
 r_particle_model_new 						"true"	// 
@@ -735,7 +739,7 @@ mat_async_shader_load 						"true"
 nav_obstruction_async_update				"true"
 r_async_compute_fog 						"true"
 sparseshadowtree_parallel_generation 		"true"
-sv_parallel_sendsnapshot 					"3"
+//sv_parallel_sendsnapshot 					"3"
 
 // =============== No Clue What These do But it's Probably Important. ===============
 // =============== If you test these please report to me on your findings ===============
@@ -743,11 +747,7 @@ sv_parallel_sendsnapshot 					"3"
 //r_pipeline_stats_present_flush true
 //r_wait_on_present true
 
-// =============== Gibs. In Testing to See if it Makes Troopers not Explode ===========
-destructible_parts_destroy_parts_when_gibbing false
-violence_agibs "false"
-violence_hgibs "false"
-
+// ================ Testing End ================
 
 
 						// ================ Config end ================
@@ -777,7 +777,7 @@ violence_hgibs "false"
 		"panorama_classes_perf_warning_threshold_ms" "0.75"
 
 		// Panorama - enable minidumps on JS exceptions
-		"panorama_js_minidumps" "1"
+		"panorama_js_minidumps" "0"
 		// Enable the render target cache optimization.
 		"panorama_disable_render_target_cache" "0"
 
@@ -831,7 +831,7 @@ violence_hgibs "false"
 		"cl_async_usercmd_send_disabled_recvmargin_min" "0.5"	// Additional frame since we do not use the async usercmd send (potentially unneccessary)
 		"cl_clock_buffer_ticks"	"1"
 		"cl_interp_ratio" "0"
-		"cl_async_usercmd_send" "false"
+		"cl_async_usercmd_send" "true"
 
 		"fps_max"		"400"
 		"fps_max_ui"	"120"
@@ -864,7 +864,7 @@ violence_hgibs "false"
 
 		"snd_event_browser_focus_events" "true"
 
-		"cl_max_particle_pvs_aabb_edge_length" "100"
+		"cl_max_particle_pvs_aabb_edge_length" "70"
 		
 		// Allow aggregation of particles (for perf)
 		"cl_aggregate_particles" "true"
@@ -881,3 +881,4 @@ violence_hgibs "false"
 		"ShowLowAvailableVirtualMemoryMessageBox" "1"
 	}
 }
+
