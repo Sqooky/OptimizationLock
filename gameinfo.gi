@@ -410,6 +410,13 @@
         VolumetricFog 0
         FrameBufferCopyFormat R11G11B10F
         Tonemapping 0
+        WellKnownLightCookies
+        {
+            "blank" "materials/effects/lightcookies/blank.vtex"
+            "flashlight" "materials/effects/lightcookies/flashlight.vtex"
+        }
+
+        ComputeShaderSkinning 1
     }
 
     NavSystem
