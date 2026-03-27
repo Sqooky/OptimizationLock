@@ -386,38 +386,30 @@
     SceneSystem
     {
         GpuLightBinner 1
-        FogCachedShadowAtlasWidth 2048
-        FogCachedShadowAtlasHeight 2048
-        FogCachedShadowTileSize 128
+        FogCachedShadowAtlasWidth 0
+        FogCachedShadowAtlasHeight 0
+        FogCachedShadowTileSize 0
         GpuLightBinnerSunLightFastPath 1
-        CSMCascadeResolution 2048
+        CSMCascadeResolution 0
         SunLightManagerCount 0
         SunLightManagerCountTools 0
-        DefaultShadowTextureWidth 6144
-        DefaultShadowTextureHeight 6144
-        DynamicShadowResolution 1
+        DefaultShadowTextureWidth 0
+        DefaultShadowTextureHeight 0
+        DynamicShadowResolution 0
 
         TransformTextureRowCount    1024
         TransformTextureRowCountToolsMode 6144
-        SunLightMaxCascadeSize      4
+        SunLightMaxCascadeSize        4
         SunLightShadowRenderMode    Depth
         LayerBatchThresholdFullsort 20
-        NonTexturedGradientFog      1
+        NonTexturedGradientFog        0
         // Temp till I can add support in citadel shaders
         DisableLateAllocatedTransformBuffer 1
         MinimumLateAllocatedVertexCacheBufferSizeMB 64
-        CubemapFog 1
-        VolumetricFog 1
+        CubemapFog 0
+        VolumetricFog 0
         FrameBufferCopyFormat R11G11B10F
         Tonemapping 0
-        
-        WellKnownLightCookies
-        {
-            "blank" "materials/effects/lightcookies/blank.vtex"
-            "flashlight" "materials/effects/lightcookies/flashlight.vtex"
-        }
-
-        ComputeShaderSkinning 1
     }
 
     NavSystem
