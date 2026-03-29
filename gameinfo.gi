@@ -673,7 +673,6 @@ r_particle_max_texture_layers               "4"             // Anything below 4 
 
 // ================ Lod & Culling ================
 skeleton_instance_lod_optimization          "false"         // Compute LOD mask internally like since 2016, i.e. force all LOD groups' bones to compute [def: "false"]
-sc_screen_size_lod_scale_override           "0.5"           // Controls LOD scale. Lower values will have less polys            [def: "-1"]
 sc_instanced_mesh_lod_bias                  "0.15"          // Bias for LOD selection of instanced mesh                         [def: "1.25"]
 sc_instanced_mesh_lod_bias_shadow           "0.10"          // Bias for LOD selection of instanced meshes in shadowmaps         [def: "1.75"]
 sc_instanced_mesh_motion_vectors            "0"             // Set 1 if you use motion blur                                     [def: "1"]
