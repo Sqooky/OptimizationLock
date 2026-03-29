@@ -471,8 +471,8 @@
 // ---------------- GAMEINFO CONFIG OptimizationLock -- ver. 1.4.6 --------------- \\
             // Check here for updates: https://gamebanana.com/mods/656341 \\
            // Downloaded from: https://github.com/Sqooky/OptimizationLock  \\
-          // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
-
+          // In-Depth Tutorial: https://www.youtube.com/watch?v=ZKyJP3u-Y60 \\
+		 //	      	   Discord: https://discord.gg/vKT2myYC2R				 \\
 
 // Press ctrl+f and type * to highlight the more visually impactful commands that you could adjust
 // ================ PREFERENCES ================
@@ -486,8 +486,8 @@ r_citadel_selection_outline2_alpha          "0.2"           // Outlines on enemy
 r_citadel_npr_outlines                      "false"         // Enable outlines on enemy players.                                [def: "true"]
 
 // --- 2. Field of View ---
-//r_aspectratio                             "2.60"          // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov).      [def: "0"]
-citadel_camera_hero_fov                     "110"           // The field of view angle of the camera when following a hero.     [def: "90"]
+r_aspectratio                             "2.15"          // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov).      [def: "0"]
+citadel_camera_hero_fov                     "100"           // The field of view angle of the camera when following a hero.     [def: "90"]
 
 // --- 3. HUD ---
 citadel_unit_status_use_new                 "1"             // This uses new Health Bar, to use old Health Bar change "true" to "false".    [def: "0"]
@@ -818,7 +818,7 @@ sparseshadowtree_parallel_generation        "true"
 
          //CREDITS
         // Sqooky              Manager of the GitHub                                                      \\
-       // Dacoder_      Responsible for ver. 1.3.2 and documentation                                       \\
+       // dacooder      Discord mod, responsible for tutorial and documentation                            \\
       // Brullee        Removed fake cvars, redundant commands, added cvarlist.md, and reformatted config   \\
      // Kaizuchaneru    While not directly invovled in the deveopment, they tested most cvars                \\
     // Artemon121       Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game      \\
