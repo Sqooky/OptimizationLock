@@ -586,7 +586,6 @@ r_citadel_distancefield_farfield_enable     "0"             // Disables long-ran
 // ================ RAGDOLLS ================
 cl_disable_ragdolls                         "0"             // Keep set to 0 - enabling this (enabling ragdolls) can cause issue with doorman's ultimate. [def: "0"]
 ragdoll_parallel_pose_control               "1"             // Multithreaded ragdoll handling, better performance (if ragdolls aren't disabled). [def: "0"]
-cl_ragdoll_limit                            "-1"            // Limit of how many ragdolls can be rendered at once.              [def: "-1"]
 
 // ================ MODELS ================
 enable_boneflex                             "0"             // Disables bone flexes (procedural facial/mesh flex drivers).      [def: "1"]
