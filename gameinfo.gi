@@ -782,7 +782,7 @@ sparseshadowtree_parallel_generation        "true"
    // Jaden             Nice guy and helped both test and support various newcomers                            \\
   // Piggy              Let me mirror his config                                                                \\
  // Tamara Mochaccina   Made the vindicta scope mod and contributed the fog fix                                  \\
-// --------------------------------- END OF CONFIG OptimizationLock -- ver. 1.4.7 ------------------------------- \\
+// ----------------------------------------- END OF CONFIG OptiLock -- ver. 1 ----------------------------------- \\
 
         "rate"
         {
