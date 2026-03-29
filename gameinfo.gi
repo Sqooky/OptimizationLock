@@ -684,7 +684,6 @@ sc_clutter_enable                           "false"         // No debris/props 1
 sc_aggregate_bvh_threshold                  "16"            // Lower BVH threshold                                              [def: "128"]
 sc_layer_batch_threshold                    "16"            // Lower batch threshold                                            [default: "128"]
 sc_layer_batch_threshold_fullsort           "20"            //                                                                  [def: "80"]
-sv_pvs_max_distance                         "2800"          // Don't render enemy players past a certain distance               [def: "0"]
 sv_remove_ent_from_pvs                      "1"             // Culls objects (creeps, boxes, objects) outside of view           [def: "0"]
 r_farz                                      "18000"          // Override the far clipping plane                                  [def: "-1"]
 mat_viewportscale                           "0.01"          // Scale down the main viewport I belive this gets overwritten by video.txt [def: "1"]
