@@ -775,8 +775,8 @@ sparseshadowtree_parallel_generation        "true"
 // ================ Testing End ================
 
          //CREDITS
-        // Sqooky              Manager of the GitHub                                                      \\
-       // dacooder      Discord mod, responsible for tutorial and documentation                            \\
+        // Sqooky       Original manager of the GitHub                                                    \\
+       // dacooder      Discord mod, Github Manager, responsible for tutorial and documentation            \\
       // Brullee        Removed fake cvars, redundant commands, added cvarlist.md, and reformatted config   \\
      // Kaizuchaneru    While not directly invovled in the deveopment, they tested most cvars                \\
     // Artemon121       Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game      \\
