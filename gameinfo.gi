@@ -472,8 +472,8 @@
           // In-Depth Tutorial: https://www.youtube.com/watch?v=ZKyJP3u-Y60 \\
 		 //	      	   Discord: https://discord.gg/vKT2myYC2R				 \\
 		 
-			//      If you would like to donate as a means of showing   \\
-	       //               https://streamlabs.com/dacoder_/tip          \\
+		//      If you would like to donate as a means of showing thanks  \\
+	   //               https://streamlabs.com/dacoder_/tip                \\
 
 
 // Press ctrl+f and type * to highlight the more visually impactful commands that you could adjust
