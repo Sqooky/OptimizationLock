@@ -118,26 +118,26 @@
 
     RenderSystem
     {
-        IndexBufferPoolSizeMB 32
-        UseReverseDepth 1
-        Use32BitDepthBuffer 0
-        Use32BitDepthBufferWithoutStencil 0
-        SwapChainSampleableDepth 1
-        VulkanMutableSwapchain 1
-        "LowLatency"                                "1"
-        "VulkanOnly"                                "1" [ $LINUX || $OSX ] // No OpenGL or D3D9/11 fallback on Linux or OSX, only Vulkan is supported.
-        "VulkanRequireSubgroupWaveOpSupport"        "1" [ !$OSX ]
-        "VulkanRequireDescriptorIndexing"           "1" [ !$OSX ]
-        "VulkanSteamShaderCache" "1"
-        "VulkanSteamAppShaderCache" "1"
-        "VulkanSteamDownloadedShaderCache" "1"
-        "VulkanAdditionalShaderCache" "vulkan_shader_cache.foz"
-        "VulkanStagingPMBSizeLimitMB" "384"
-        "GraphicsPipelineLibrary"   "1"
-        "VulkanOnlyTestProbability" "0"
-        "VulkanDefrag"              "1"
-        "MinStreamingPoolSizeMB"    "1024"
-        "MinStreamingPoolSizeMBTools" "2048"
+		IndexBufferPoolSizeMB 32
+		UseReverseDepth 1
+		Use32BitDepthBuffer 0
+		Use32BitDepthBufferWithoutStencil 0
+		SwapChainSampleableDepth 1
+		VulkanMutableSwapchain 1
+		"LowLatency"								"1"
+		"VulkanOnly_Linux"							"1"
+		"VulkanRequireSubgroupWaveOpSupport"		"1"
+		"VulkanRequireDescriptorIndexing"			"1"
+		"VulkanSteamShaderCache" "1"
+		"VulkanSteamAppShaderCache" "1"
+		"VulkanSteamDownloadedShaderCache" "1"
+		"VulkanAdditionalShaderCache" "vulkan_shader_cache.foz"
+		"VulkanStagingPMBSizeLimitMB" "384"
+		"GraphicsPipelineLibrary"	"1"
+		"VulkanOnlyTestProbability" "0"
+		"VulkanDefrag"				"1"
+		"MinStreamingPoolSizeMB"	"1024"
+		"MinStreamingPoolSizeMBTools" "2048"
     }
 
     NVNGX
@@ -385,6 +385,7 @@
 
     SceneSystem
     {
+
         GpuLightBinner 1
         FogCachedShadowAtlasWidth 0
         FogCachedShadowAtlasHeight 0
@@ -468,7 +469,7 @@
 //      If you would like to donate as a means of showing thanks I have a kofi.     \\
 //      https://ko-fi.com/sqooky                                                    \\
 
-// ---------------- GAMEINFO CONFIG OptimizationLock -- ver. 1.4.6 --------------- \\
+// ---------------- GAMEINFO CONFIG OptimizationLock -- ver. 1.4.7 --------------- \\
             // Check here for updates: https://gamebanana.com/mods/656341 \\
            // Downloaded from: https://github.com/Sqooky/OptimizationLock  \\
           // In-Depth Tutorial: https://www.youtube.com/watch?v=ZKyJP3u-Y60 \\
@@ -478,12 +479,14 @@
 // ================ PREFERENCES ================
 
 // --- 1. Outlines ---
-citadel_trooper_glow_disabled               "0"             // 1 = Disable friendly/enemy minion glow.                          [def: "0"]
+citadel_trooper_glow_disabled               "1"             // 1 = Disable friendly/enemy minion glow.                          [def: "0"]
+citadel_damage_offscreen_indicator_disabled "false"         // The little trooper portraits that show up behind walls.          [def: "true"]
 citadel_boss_glow_disabled                  "1"             // Disables boss and walker glow/highlight effect.                  [def: "0]
 citadel_player_glow_disabled                "0"             // Disables player glow/highlight effect when pinged.               [def: "0"]
-r_citadel_npr_outlines_max_dist             "250"           // Limits outline distance to reduce unnecessary processing.        [def: "1000"]
+r_citadel_npr_outlines_max_dist             "1"             // Limits outline distance to reduce unnecessary processing.        [def: "1000"]
 r_citadel_selection_outline2_alpha          "0.2"           // Outlines on enemy players and abilities on a scale of 0-1.       [def: "0.8"]
 r_citadel_npr_outlines                      "false"         // Enable outlines on enemy players.                                [def: "true"]
+r_citadel_npr_force_solid_outline           "true"
 
 // --- 2. Field of View ---
 r_aspectratio                             "2.15"          // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov).      [def: "0"]
@@ -497,10 +500,10 @@ citadel_hud_objective_health_enabled        "2"             // 0=Off, 1=Shrines,
 citadel_damage_report_enable                "1"             // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
 citadel_hideout_ball_show_juggle_count      "1"             // Shows a fun juggle count minigame for hideout ball.              [def: "0"]
 citadel_hideout_ball_show_juggle_fx         "1"             // Shows juggle visual FX for hideout ball minigame.                [def: "0"]
-citadel_crosshair_hit_marker_duration       "-0.001"        // Removes the hitmarker when shooting people.                  [def: "0.1"]
+citadel_crosshair_hit_marker_duration       "0.00001"        // Removes the hitmarker when shooting people.                  [def: "0.1"]
 
 // --- 4. Lighting & Shadows ---
-lb_enable_stationary_lights                 "1"             // *Disables stationary lights (map looks flatter but more performant).         [def: "1"]
+lb_enable_stationary_lights                 "0"             // *Disables stationary lights (map looks flatter but more performant).         [def: "1"]
 lb_enable_dynamic_lights                    "0"             // *Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
 lb_enable_baked_shadows                     "1"             // *Disables baked shadows (game looks bright if this is on while stationary lights = 1). [def: "1"]
 
@@ -580,9 +583,6 @@ mat_set_shader_quality                      "0"             // Force shader qual
 r_distancefield_enable                      "0"             // Disables/ Enables distance-field system (used by some lighting/shadowing/occlusion features). [def: "1"]
 r_citadel_distancefield_farfield_enable     "0"             // Disables long-range distance field effects.                      [def: "1"]
 
-"r_citadel_distancefield_farfield_enable" "false"
-"r_citadel_npr_outlines_max_dist" "600"
-
 // ================ RAGDOLLS ================
 cl_disable_ragdolls                         "0"             // Keep set to 0 - enabling this (enabling ragdolls) can cause issue with doorman's ultimate. [def: "0"]
 ragdoll_parallel_pose_control               "1"             // Multithreaded ragdoll handling, better performance (if ragdolls aren't disabled). [def: "0"]
@@ -600,7 +600,7 @@ cloth_sim_on_tick                           "0"             // Update the cloth 
 phys_threaded_cloth_bone_update             "1"             // Make the cloth update threaded                                   [def: "0"]
 phys_threaded_kinematic_bone_update         "1"             //                                                                  [def: "0"]
 phys_threaded_transform_update              "1"             //                                                                  [def: "0"]
-props_break_max_pieces_perframe             "-1"             // Makes boxes break into single pieces                             [def: "16"]
+props_break_max_pieces_perframe             "1"             // Makes boxes break into a single pieces                           [def: "16"]
 
 // ================ ROPES ================
 r_drawropes                                 "0"             // Draw ropes.                                                      [def: "1"]
@@ -623,17 +623,12 @@ r_character_decal_resolution                "1"             // Resolution of cha
 r_depth_of_field                            "0"             // Disables depth of field.                                         [def: "1"]
 r_effects_bloom                             "0"             // Disables effects bloom.                                          [def: "1"]
 r_post_bloom                                "0"             // Disables post-process bloom.                                     [def: "1"]
-r_enable_volume_fog                         "0"             // Disables volumetric fog.                                         [def: "1"]
-r_enable_gradient_fog                       "0"             // Disables gradient fog.                                           [def: "1"]
-r_enable_cubemap_fog                        "0"             // Disables cubemap-based fog.                                      [def: "1"]
-r_citadel_fog_quality                       "0"             // Deadlock/Citadel fog quality (0 = lowest).                       [def: "1"]
 cl_show_splashes                            "0"             // Disables splash effects (water/impact splashes).                 [def: "1"]
 violence_hblood                             "0"             // Disables human blood effects.                                    [def: "1"]
 violence_ablood                             "0"             // Disables alien/other blood effects.                              [def: "1"]
 violence_hgibs                              "0"             // Disables human gibs.                                             [def: "1"]
 violence_agibs                              "0"             // Disables alien/other gibs.                                       [def: "1"]
-sc_clutter_enable                           "false"             // Disables clutter props, improves visibility & FPS.           [def: "true"]
-
+sc_clutter_enable                           "false"         // Disables clutter props, improves visibility & FPS.               [def: "true"]
 "volume_fog_intermediate_textures_hdr"      "0"
 
 // ================ NETWORK ================
@@ -657,28 +652,35 @@ cl_input_enable_raw_keyboard                "1"             // Enables raw keybo
 
 // ================ PARTICLES ================
 cl_particle_max_count                       "1500"          // If console is flooded with max particles exceeded warnings.      [def: "0"]
-r_particle_max_size_cull                    "500"           // Particle systems larger than this in every dimension skip culling to save CPU.  They will be drawn anyway [def: "1200"]
+r_particle_max_size_cull                    "999"           // Particle systems larger than this in every dimension skip culling to save CPU.  They will be drawn anyway [def: "1200"]
 r_particle_max_detail_level                 "1"             // The maximum detail level of particle to create.                  [def: "3"]
 particle_cluster_nodraw                     "1"             // Skips drawing particle “clusters”/grouped particle batches (performance, fewer small effects). [def: "0"]
 r_physics_particle_op_spawn_scale           "0"             // Prevents physics-based particle spawns.                          [def: "1"]
-r_particle_model_new8                       "0"             // Not entirely sure what this does                                 [def: "1"]
+r_particle_model_new8                       "false"         // Not entirely sure what this does                                 [def: "true"]
+r_particle_model_new                        "true"          // Use new particles I'd imagine? not sure though.                  [def: "false"]
 r_RainParticleDensity                       "0"             // Density of Particle Rain 0-1.                                    [def: "1"]
 r_world_wind_strength                       "0"             // Disables wind effects, cosmetic only.                            [def: "40"]
 cl_particle_fallback_base                   "10"            // Base for falling back to cheaper effects under load.             [def: "0"] 
 cl_particle_fallback_multiplier             "20"            // Multiplier for falling back to cheaper effects under load.       [def: "0"]
 cl_particle_sim_fallback_base_multiplier    "40"            // How aggressive the switch to fallbacks will be depending on how far over the cl_particle_sim_fallback_threshold_ms the sim time is.  Higher numbers are more aggressive. [def: "5"] 
 cl_particle_sim_fallback_threshold_ms       "0.001"         // Amount of simulation time that can elapse before new systems start falling back to cheaper versions [def: "6"] 
-r_particle_skip_postsim                     "1"             // Not entirely sure what it does, going off of the name I'd imagine it skips the post simulation, this is a testvar [def: "false"]
+r_particle_skip_postsim                     "true"          // Not entirely sure what it does, going off of the name I'd imagine it skips the post simulation, this is a testvar [def: "false"]
+r_particle_timescale                        "1.1"          // Speeds up particle simulation, thus making them end sooner, however this causes visual desyncs, most notably with big effects that last a while such as infernus ult. Please tweak this to what you are comfortable with. [def: "1"]
+cl_particle_batch_mode                      "1"             // Has a range of 1 or 2, 2 will make celeste's auto rebound look weird and 0 will make them not batch [def: "1"]
+r_draw_particle_children_with_parents       "0"             // 
+r_late_particle_job_sync                    "true"          // 
+r_particle_batch_collections                "true"          // 
+r_particle_max_texture_layers               "4"             // Anything below 4 will make infernus afterburn, paige fire, and drifter's passive look very weird and blocky [def: "-1"]
 
 // ================ Lod & Culling ================
-skeleton_instance_lod_optimization          "true"          // Compute LOD mask internally like since 2016, i.e. force all LOD groups' bones to compute [def: "false"]
-sc_screen_size_lod_scale_override           "0.57"          // Controls LOD scale. Lower values will have less polys            [def: "-1"]
+skeleton_instance_lod_optimization          "false"         // Compute LOD mask internally like since 2016, i.e. force all LOD groups' bones to compute [def: "false"]
+sc_screen_size_lod_scale_override           "0.5"           // Controls LOD scale. Lower values will have less polys            [def: "-1"]
 sc_instanced_mesh_lod_bias                  "0.15"          // Bias for LOD selection of instanced mesh                         [def: "1.25"]
 sc_instanced_mesh_lod_bias_shadow           "0.10"          // Bias for LOD selection of instanced meshes in shadowmaps         [def: "1.75"]
 sc_instanced_mesh_motion_vectors            "0"             // Set 1 if you use motion blur                                     [def: "1"]
 //sc_instanced_mesh_size_cull_bias          "10"            // Bias for size culling of instanced meshes                        [def: "1.5"]
 sc_instanced_mesh_size_cull_bias_shadow     "10"            // Bias for size culling instanced meshes in shadowmaps             [def: "2"]
-sc_fade_distance_scale_override             "180"           // Distance objects fade in and out                                 [def: "-1"]
+sc_fade_distance_scale_override             "100"           // Distance objects fade in and out                                 [def: "-1"]
 sc_clutter_enable                           "false"         // No debris/props 1=Props visible                                  [def: "true"]
 sc_aggregate_bvh_threshold                  "16"            // Lower BVH threshold                                              [def: "128"]
 sc_layer_batch_threshold                    "16"            // Lower batch threshold                                            [default: "128"]
@@ -686,13 +688,13 @@ sc_layer_batch_threshold_fullsort           "20"            //                  
 sv_pvs_max_distance                         "2800"          // Don't render enemy players past a certain distance               [def: "0"]
 sv_remove_ent_from_pvs                      "1"             // Culls objects (creeps, boxes, objects) outside of view           [def: "0"]
 r_farz                                      "7000"          // Override the far clipping plane                                  [def: "-1"]
-r_mapextents                                "7000"          // Far clipping plane
-mat_viewportscale                           "0.01"          // Scale down the main viewport                                     [def: "1"]
+r_mapextents                                "7000"          // Far clipping plane, this will make buildings pop in and out      [def: "16384"] damn that's an oddly specific number
+mat_viewportscale                           "0.01"          // Scale down the main viewport I belive this gets overwritten by video.txt [def: "1"]
 phys_cull_internal_mesh_contacts            "true"          //                                                                  [def: "false"]
 citadel_use_pvs_for_players                 "true"          // Default culls players when out of view                           [def: "false"]
 
 // ================ Misc ================
-r_low_latency                               "1"             // Depends on if your hardware supports it I believe                [def: "1"]
+r_low_latency                               "0"             // Depends on if your hardware supports it I believe                [def: "1"]
 r_max_portal_render_targets                 "2"             // Maxium number of Doorman doors to allow rendering.               [def: "0"]
 
 // =============== Gibs. In Testing to See if it Makes Troopers not Explode ===========
@@ -709,52 +711,19 @@ cl_simulate_dormant_entities                "false"
 ai_strong_optimizations_no_checkstand       "1"             // Not fully sure what exactly this does, but I would imagine given the name of the convar it optimizes ai. [def: "0"]
 citadel_npc_force_animate_every_tick        "false"         // Don't change this, it does what it says on the tin.              [def: "true"]
 
-// ================ In Testing ================
-sc_hdr_enabled_override                     "0"
-
 // ================ Audio ================
-snd_ui_positional                           "false"         // [def: "true"]
-snd_occlusion_bounces                       "0"             // Probably limits occlusion
-audio_enable_vmix_mastering                 "false"         // [def: "true"]
-snd_steamaudio_num_threads                  "3"             // Audio thread count [def: "4"]
+snd_ui_positional                           "false"         // Disables positional audio to save cpu                            [def: "true"]
+snd_occlusion_bounces                       "0"             // Limits occlusion to save cpu                                     [def: "1"]
+snd_occlusion_rays                          "0"             //                                                                  [def: "4"]
+audio_enable_vmix_mastering                 "false"         //                                                                  [def: "true"]
+snd_steamaudio_num_threads                  "4"             // Audio thread count                                               [def: "4"]
+snd_mixahead                                "0.05"          // Adds some latency that shouldn't be percivable to save cpu       [def: "0.001"]
+// README This ^ probably depends on how good your cpu is, the better it is the more threads you can allow
 snd_soundmixer_version                      "1"             // [def: "2"]
-// README This probably depends on how good your cpu is, the better it is the more threads you can allow
 
-// ================ Test Group 5 ================
-// ================ Testing Stuff From Kai's Updated Cfg ================
-sv_hide_ent_in_pvs                          "1"             // [def: "-1"]
-ai_lod_auto_enabled                         "true"          // not fully sure what this does but curious [def: "false"]
-"props_break_apply_radial_forces" "false"
-"particle_cluster_use_collision_hulls" "0"
-"citadel_unit_status_old_update_rate" "15"
-"r_pipeline_stats_use_flush_api" "0"
-"sc_instanced_mesh_opaque_fade" "0"
-"g_ragdoll_important_maxcount" "1" 
-"g_ragdoll_maxcount" "1"
-"r_texture_stream_max_resolution" "1024"
-"r_texture_nonstreaming_load" "1"
-"csm_max_num_cascades_override" "2"
-"r_hair_indirect_transmittance" "false"
-"r_drawdecals" "false" //defaul true
-"minimap_update_rate_hz" "30"
-"ai_think_interval" "0.3"
-"ai_async_queue_max_jobs" "8"
-"ai_think_interval_lod_med" "0.4"
-"ai_think_interval_lod_low" "1"
-"ai_gather_conditions_async" "true"
-"ai_foot_sweep_enable" "false"
-"wind_system_temporal_smoothing" "false"
-"wind_system_default_resolution_xy" "64"
-"lb_precomputed_shadowmap_enable" "0"
-"lb_shadow_map_cull_empty_mixed" "true"
-"r_citadel_fog_quality" "0"
-"r_citadel_gpu_culling_shadows" "1" //test, was 0
-"r_hair_shadowtile" "false"
-"vis_sunlight_enable" "0"
-"snd_use_baked_occlusion" "1"
-"citadel_per_weapon_per_surface_impact_effects" "false"
-"r_particle_model_per_thread_count" "48"
-"r_limit_particle_job_duration" "1"
+// wug wug (big tests)
+sv_parallel_checktransmit                   "1"
+cl_enable_eye_occlusion                     "false"
 
 // ================ EVERYTHING BELOW THIS IS STABLE YAY ================
 
@@ -781,14 +750,6 @@ citadel_camera_soft_collision_angle         "360"
 cl_batch_entity_list_ops_during_latch       "true"
 citadel_damage_text_batching_window_ability "1000"
 sc_force_materials_batchable                "true"
-r_particle_timescale                        "1.1"           // Speeds up particle simulation, thus making them end sooner, however this causes visual desyncs, most notably with big effects that last a while such as infernus ult. Please tweak this to what you are comfortable with. [def: "1"]
-cl_particle_batch_mode                      "1"             // Has a range of 1 or 2, 2 will make celeste's auto rebound look weird and 0 will make them not batch [def: "1"]
-r_draw_particle_children_with_parents       "0"             // 
-r_late_particle_job_sync                    "true"          // 
-r_particle_batch_collections                "true"          // 
-r_particle_max_detail_level                 "1"             // 
-r_particle_max_texture_layers               "2"             // 
-r_particle_model_new                        "false"         // 
 
 // ================ Test group 1 ================ 
 r_particle_allowprerender                   "false"
@@ -797,7 +758,7 @@ iv_parallel_restore                         "false"         //
 r_decals_default_fade_duration              "1"             //
 r_texture_budget_update_period              "0.5"           //
 save_parallel                               "true"          // Absolutely no idea but typically paralell processing is good.
-r_particle_model_per_thread_count           "6000"          //
+r_particle_model_per_thread_count           "48"          //
 r_limit_particle_job_duration               "true"          // Seems to help with particle clutter, although I am not sure.
 ai_async_queue_max_jobs                     "1"
 ai_gather_conditions_async                  "true"
@@ -825,7 +786,7 @@ sparseshadowtree_parallel_generation        "true"
    // Jaden             Nice guy and helped both test and support various newcomers                            \\
   // Piggy              Let me mirror his config                                                                \\
  // Tamara Mochaccina   Made the vindicta scope mod and contributed the fog fix                                  \\
-// --------------------------------- END OF CONFIG OptimizationLock -- ver. 1.4.6 ------------------------------- \\
+// --------------------------------- END OF CONFIG OptimizationLock -- ver. 1.4.7 ------------------------------- \\
 
         "rate"
         {

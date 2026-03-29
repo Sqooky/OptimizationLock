@@ -70,7 +70,7 @@ Every variation of the config included in this repository has mod support added.
 # Credits
 Major thanks to all of these individuals from the bottom of my heart. They are all lovely.
 - Sqooky:        Manager of the GitHub
-- Dacoder_:      Responsible for ver. 1.3.2 and documentation
+- Dacooder:      Responsible for ver. 1.3.2 and documentation
 - Brullee:       Removed fake cvars, redundant commands, added cvarlist.md, and reformatted config
 - Kaizuchaneru:  While not directly invovled in the deveopment, they tested most cvars
 - Artemon121:    Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game
