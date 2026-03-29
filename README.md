@@ -1,5 +1,5 @@
-To either request support or contribute findings to the project, our Discord Server can be found [here] (https://discord.gg/hkmmVHnVVT)
-If you would like to donate as a means of showing thanks I have a kofi [here](https://streamlabs.com/dacoder_/tip).
+To either request support or contribute findings to the project, our Discord Server can be found [here](https://discord.gg/hkmmVHnVVT)
+If you would like to donate as a means of showing thanks: [here](https://streamlabs.com/dacoder_/tip).
 
 # Pretty Important Announcement
 Valve has started restricting certain convars, as of late March. The config still works for now and Valve is aware of this config and is aware of the need for this. So only time will tell.
