@@ -7,7 +7,7 @@ Valve has started restricting certain convars, as of late March. The config stil
 
 # Base Instructions
 To install the performance config replace the gameinfo.gi in ``steamapps/common/deadlock/game/citadel`` with the one downloaded from this repository.
-**There is a video tutorial** for installation avalible www.youtube.com/watch?v=ZKyJP3u-Y60
+**There is a video tutorial** for installation avaliable www.youtube.com/watch?v=ZKyJP3u-Y60
 
 # Table
 Here is a list of each config provided in this repository.
