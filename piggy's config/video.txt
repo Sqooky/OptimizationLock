@@ -1,18 +1,4 @@
-"video.cfg"
-{
-"Version"		"20"	
-
-
-//========================================
-// EXTREMELY IMPORTANT, FOR ANY OF THIS TO WORK YOU WILL NEED TO PUT THE PREXISTING VALUES FROM YOUR video.txt IN HERE
-// Your prexisting video.txt can be found at steamapps/common/deadlock/game/citadel/cfg/video.txt
-
-"VendorID"		" "	//replace with the value found in your config
-//			 ^
-"DeviceID"		" "	//replace with the value found in your config
-//			 ^
-
-
+COPY EVERYTHING UNDER THIS TEXT - GO TO YOUR OWN VIDEO.TXT IN CFG - PASTE THE TEXT DIRECTLY UNDER DEVICEID (DO NOT REMOVE OR REPLACE ANYTHING ABOVE DEVICEID)
 
 // ------------------------------------------------------------
 // RESOLUTION AND REFRESH RATE SETTINGS

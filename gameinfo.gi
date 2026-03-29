@@ -687,8 +687,7 @@ sc_layer_batch_threshold                    "16"            // Lower batch thres
 sc_layer_batch_threshold_fullsort           "20"            //                                                                  [def: "80"]
 sv_pvs_max_distance                         "2800"          // Don't render enemy players past a certain distance               [def: "0"]
 sv_remove_ent_from_pvs                      "1"             // Culls objects (creeps, boxes, objects) outside of view           [def: "0"]
-r_farz                                      "7000"          // Override the far clipping plane                                  [def: "-1"]
-r_mapextents                                "7000"          // Far clipping plane, this will make buildings pop in and out      [def: "16384"] damn that's an oddly specific number
+r_farz                                      "18000"          // Override the far clipping plane                                  [def: "-1"]
 mat_viewportscale                           "0.01"          // Scale down the main viewport I belive this gets overwritten by video.txt [def: "1"]
 phys_cull_internal_mesh_contacts            "true"          //                                                                  [def: "false"]
 citadel_use_pvs_for_players                 "true"          // Default culls players when out of view                           [def: "false"]
