@@ -37,12 +37,6 @@ to comment a line put ``//`` at the front of the line. It will make it not execu
 the gameinfo.gi gets overwritten every major update. You need to manually replace it again.  
 - "I can't see trooper healthbars and boxes past a certain distance"  
 ``r_size_cull_threshold "0.7"``  comment this out.  
-- "I can't see players past a certain distance"  
-``sv_pvs_max_distance`` comment it out  
-- "Can't see the Doorman ult indicator"  
-Set ``cl_ragdoll_limit`` to `` "-1"``  
-- "There's holes in victor and paige at certain angles/sinners lights are little triangles"  
-Comment out ``sc_screen_size_lod_scale_override`` or increase the value.  
 
 # Mod Support
 Every variation of the config included in this repository has mod support added.
