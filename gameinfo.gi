@@ -466,14 +466,15 @@
     ConVars
     {    
 
-//      If you would like to donate as a means of showing thanks I have a kofi.     \\
-//      https://ko-fi.com/sqooky                                                    \\
-
-// ---------------- GAMEINFO CONFIG OptimizationLock -- ver. 1.4.7 --------------- \\
+// ---------------- GAMEINFO CONFIG OptiLock -- ver. 1  ------------------------ \\
             // Check here for updates: https://gamebanana.com/mods/656341 \\
-           // Downloaded from: https://github.com/Sqooky/OptimizationLock  \\
+           //Downloaded from: https://github.com/dacooderr/OptimizationLock\\
           // In-Depth Tutorial: https://www.youtube.com/watch?v=ZKyJP3u-Y60 \\
 		 //	      	   Discord: https://discord.gg/vKT2myYC2R				 \\
+		 
+			//      If you would like to donate as a means of showing   \\
+	       //               https://streamlabs.com/dacoder_/tip          \\
+
 
 // Press ctrl+f and type * to highlight the more visually impactful commands that you could adjust
 // ================ PREFERENCES ================
@@ -508,7 +509,6 @@ lb_enable_dynamic_lights                    "0"             // *Disables dynamic
 lb_enable_baked_shadows                     "1"             // *Disables baked shadows (game looks bright if this is on while stationary lights = 1). [def: "1"]
 
 // --- 5. Skybox Rendering ---
-r_drawskybox                                "1"             // *Enables drawing the 2D skybox (sky is plain black when off).    [def: "1"]
 r_draw3dskybox                              "0"             //  Enables drawing the 3D skybox layer (distant geometry).         [def: "1"]
 
 // --- 6. FPS Caps & Minimized Throttling ---
