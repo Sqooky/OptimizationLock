@@ -1,6 +1,7 @@
 To either request support or contribute findings to the project, our Discord Server can be found [here](https://discord.gg/hkmmVHnVVT)
 
 If you would like to donate as a means of showing us thanks: 
+
 dacooderr: (https://streamlabs.com/dacoder_/tip) 
 Sqooky!: (https://ko-fi.com/sqooky)
 
