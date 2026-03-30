@@ -1,0 +1,1 @@
+drag and drop into your Steam\steamapps\common\Deadlock\game\citadel\addons folder
