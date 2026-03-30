@@ -160,7 +160,7 @@ violence_ablood                             "0"             // Disables alien/ot
 violence_hgibs                              "0"             // Disables human gibs.                                             [def: "1"]
 violence_agibs                              "0"             // Disables alien/other gibs.                                       [def: "1"]
 sc_clutter_enable                           "false"         // Disables clutter props, improves visibility & FPS.               [def: "true"]
-"volume_fog_intermediate_textures_hdr"      "0"
+volume_fog_intermediate_textures_hdr        "0"
 
 // ================ NETWORK ================
 cl_async_usercmd_send                       "true"

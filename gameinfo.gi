@@ -486,7 +486,6 @@ citadel_player_glow_disabled                "0"             // Disables player g
 r_citadel_npr_outlines_max_dist             "1"             // Limits outline distance to reduce unnecessary processing.        [def: "1000"]
 r_citadel_selection_outline2_alpha          "0.2"           // Outlines on enemy players and abilities on a scale of 0-1.       [def: "0.8"]
 r_citadel_npr_outlines                      "false"         // Enable outlines on enemy players.                                [def: "true"]
-r_citadel_npr_force_solid_outline           "false"         // Causes odd visual bugs with statues and neutrals when set to true    [def: "false"]
 
 // --- 2. Field of View ---
 citadel_camera_hero_fov                     "110"           // The field of view angle of the camera when following a hero.     [def: "90"]
@@ -507,7 +506,6 @@ lb_enable_dynamic_lights                    "0"             // *Disables dynamic
 lb_enable_baked_shadows                     "1"             // *Disables baked shadows (game looks bright if this is on while stationary lights = 1). [def: "1"]
 
 // --- 5. Skybox Rendering ---
-r_drawskybox                                "1"             // *Enables drawing the 2D skybox (sky is plain black when off).    [def: "1"]
 r_draw3dskybox                              "0"             //  Enables drawing the 3D skybox layer (distant geometry).         [def: "1"]
 
 // --- 6. FPS Caps & Minimized Throttling ---
@@ -639,7 +637,7 @@ cl_async_usercmd_send                       "true"
 //cl_resend                                 "15"            // Delay in seconds between reconnect attempts (higher = less frequent, helps avoid kicks/timeouts on unstable connections). [def: "0.5"]
 
 // ================ SYSTEM RELATED ================
-gpu_level                                   "1"             // GPU level.                                                       [def: "3"]
+gpu_level                                   "3"             // GPU level.                                                       [def: "3"]
 gpu_mem_level                               "1"             // GPU Memory level.                                                [def: "2"]
 cpu_level                                   "1"             // CPU level.                                                       [def: "2"]
 battery_saver                               "0"             // Disables battery saver mode (no automatic throttling).       [def: "0"]
@@ -664,7 +662,7 @@ cl_particle_fallback_multiplier             "20"            // Multiplier for fa
 cl_particle_sim_fallback_base_multiplier    "40"            // How aggressive the switch to fallbacks will be depending on how far over the cl_particle_sim_fallback_threshold_ms the sim time is.  Higher numbers are more aggressive. [def: "5"] 
 cl_particle_sim_fallback_threshold_ms       "0.001"         // Amount of simulation time that can elapse before new systems start falling back to cheaper versions [def: "6"] 
 r_particle_skip_postsim                     "true"          // Not entirely sure what it does, going off of the name I'd imagine it skips the post simulation, this is a testvar [def: "false"]
-r_particle_timescale                        "1.1"          // Speeds up particle simulation, thus making them end sooner, however this causes visual desyncs, most notably with big effects that last a while such as infernus ult. Please tweak this to what you are comfortable with. [def: "1"]
+r_particle_timescale                        "1.1"           // Speeds up particle simulation, thus making them end sooner, however this causes visual desyncs, most notably with big effects that last a while such as infernus ult. Please tweak this to what you are comfortable with. [def: "1"]
 cl_particle_batch_mode                      "1"             // Has a range of 1 or 2, 2 will make celeste's auto rebound look weird and 0 will make them not batch [def: "1"]
 r_draw_particle_children_with_parents       "0"             // 
 r_late_particle_job_sync                    "true"          // 
@@ -776,6 +774,13 @@ sparseshadowtree_parallel_generation        "true"
 
 // ================ Testing End ================
 
+
+// ================ Convars You Shouldn't mess with but I want to maintain the documentation
+r_citadel_npr_force_solid_outline           "false"         // Causes odd visual bugs with dragons and neutrals when set to true    [def: "false"]
+r_drawskybox                                "true"          // Can't be changed anymore                                             [def: "true"]
+
+
+          // Convars end
          //CREDITS
         // Sqooky              Manager of the GitHub                                                      \\
        // Dacooder      Responsible for ver. 1.3.2 and documentation                                       \\
