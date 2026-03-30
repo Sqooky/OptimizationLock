@@ -637,7 +637,7 @@ cl_async_usercmd_send                       "true"
 //cl_resend                                 "15"            // Delay in seconds between reconnect attempts (higher = less frequent, helps avoid kicks/timeouts on unstable connections). [def: "0.5"]
 
 // ================ SYSTEM RELATED ================
-gpu_level                                   "3"             // GPU level.                                                       [def: "3"]
+gpu_level                                   "1"             // GPU level.                                                       [def: "3"]
 gpu_mem_level                               "1"             // GPU Memory level.                                                [def: "2"]
 cpu_level                                   "1"             // CPU level.                                                       [def: "2"]
 battery_saver                               "0"             // Disables battery saver mode (no automatic throttling).       [def: "0"]
