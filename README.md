@@ -6,7 +6,7 @@ If you would like to donate as a means of showing thanks: [here](https://streaml
 Valve has started restricting certain convars, as of late March. The config still works for now and Valve is aware of this config and is aware of the need for this. So only time will tell.
 
 # Base Instructions
-To install the performance config replace the gameinfo.gi in ``steamapps/common/deadlock/game/citadel`` with the one downloaded from this repository.
+To install the performance config replace the gameinfo.gi in ``steamapps/common/deadlock/game/citadel`` with the one downloaded from this repository. Instructions for video.txt are in the video.txt file.
 
 **There is a video tutorial** for installation avaliable www.youtube.com/watch?v=ZKyJP3u-Y60
 
