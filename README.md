@@ -48,8 +48,8 @@ Major thanks to all of these individuals from the bottom of my heart. They are a
 - Kaizuchaneru:  While not directly invovled in the deveopment, they tested most cvars
 - Artemon121:    Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game
 - Jaden:         Nice guy and helped both test and support various newcomers
-- Piggy:         Let me mirror his config
-- Tamara Mochaccina Contributed vindicta scope fix and the fog fix
+- Piggy:         Contributed the video.txt file
+- Tamara Mochaccina: Contributed vindicta scope fix and the fog fix
 - Maihdenless:   Started the original OptimisationLock & its Discord
 (You can find Artemon121's cvar unhider [here](https://github.com/Artemon121/cvar-unhide-s2-citadel))
 
