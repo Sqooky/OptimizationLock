@@ -510,7 +510,7 @@ citadel_allow_team_change_when_assigned | devonly, sv | Default: false<br>
 citadel_always_show_active_hud_stats | cl, a | Default: false<br>
 citadel_always_transmit_abilities | devonly, sv | Default: false<br>Enable to always force transmit ability entities
 citadel_announcement_banned_heroes_display_time | devonly, cl | Default: 10<br>
-citadel_announcement_display_time | devonly, cl | Default: 1<br>
+citadel_announcement_display_time | devonly, cl | Default: 4<br>
 citadel_announcement_game_over_msg_display_time | devonly, cl | Default: 11<br>
 citadel_arrow_brightness | devonly, cl | Default: 0.6<br>Changes the zipline arrow brightness
 citadel_assume_pawn_control | sv, cheat | Take control of the pawn under the crosshair, or by name if specified
@@ -1484,7 +1484,6 @@ citadel_portrait_world_renderer_off | devonly, cl | Default: false<br>
 citadel_post_game_force_hero_id | devonly, cl | 
 citadel_post_game_local_player_screen_enabled | devonly, cl | Default: false<br>
 citadel_post_game_progress | devonly, cl | Default: 0<br>-1 = force disabled, 0 = default, 1 = force enabled
-citadel_post_game_progress_use_test_data | devonly, cl | Default: false<br>
 citadel_postgame_duration | sv, cheat | Default: 10<br>How long postgame lasts until play of the game
 citadel_powerup_initial_spawn_time_override | devonly, sv | Default: -1<br>If positive, override initial spawn time (in seconds) for all powerup camps
 citadel_powerup_spawn_enabled | devonly, sv | Default: true<br>
@@ -4158,7 +4157,7 @@ r_aoproxy_cull_dist | devonly | Default: 12<br>Distance to cull the AO proxy as 
 r_aoproxy_min_dist | devonly | Default: 3<br>
 r_aoproxy_min_dist_box | devonly | Default: 1<br>
 r_arealights | devonly, cl | Default: true<br>
-r_aspectratio | devonly | Default: 0<br>
+r_aspectratio | devonly | Default: 2<br>
 r_async_compute_fog | devonly, cl | Default: false<br>
 r_async_shader_compile_notify_frequency | devonly | Default: 10<br>
 r_bloom_tent_filter_radius | devonly, cl, cheat | Default: 0<br>bloom mip up-sample filtering radius (using 3x3 tent filter, radius in mip level texels), 0.0 radius =&gt; box (2x2) filter with (fixed) 1.0 radius
