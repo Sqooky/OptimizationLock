@@ -666,7 +666,6 @@ cl_input_enable_raw_keyboard                "1"             // Enables raw keybo
 r_particle_model_per_thread_count           "64"            // I believe it is how many particle models a thread is allowed to handle.  [def: "32"]
 r_limit_particle_job_duration               "true"          // Seems to help with particle clutter, although I am not sure.             [def: "false"]
 r_particle_allowprerender                   "false"         // I imagine it renders particles prematurely, which we do not care for.    [def: "true"]
-cl_particle_max_count                       "1500"          // Maximum allowed particles. Setting it too low will cause issues. [def: "0"]
 r_particle_max_detail_level                 "1"             // The maximum detail level of particle to create.                  [def: "3"]
 particle_cluster_nodraw                     "1"             // Skips drawing particle “clusters”/grouped particle batches (performance, fewer small effects). [def: "0"]
 r_physics_particle_op_spawn_scale           "0"             // Prevents physics-based particle spawns.                          [def: "1"]
@@ -764,6 +763,7 @@ csm_viewmodel_shadows                       "false"         // All of these comm
 //r_wait_on_present true
 
 // ================ Convars You Shouldn't/Can't Mess With But I Want to Maintain the Documentation ================ 
+//cl_particle_max_count                       "1500"          // Maximum allowed particles. Setting it too low will cause issues. [def: "0"]
 //cl_phys_enabled                           "false"         // You can disable physics and might see an improvement in framerate, however a lot will be buggy.   [def: "true"]
 gpu_level                                   "1"             // GPU level literally doesn't matter, gets set to 2 in the engine
 r_citadel_npr_force_solid_outline           "false"         // Causes odd visual bugs with dragons and neutrals when set to true    [def: "false"]
