@@ -13,18 +13,16 @@
 //         /!#%|'-_- '\%k*|  
 //     o   |*@/        \_/      
 //         \)&|                  
-// OptimizationLock v2.1 by Sqooky with help from others <3
+// OptimizationLock v2.2 by Sqooky with help from others <3
 
 //      If you would like to donate as a means of showing thanks I have a kofi.     \\
 //      https://ko-fi.com/sqooky                                                    \\
 
-// ---------------- GAMEINFO CONFIG Sqooky's.gi / OptimizationLock -- ver. 2.1 --------------- \\
+// ---------------- GAMEINFO CONFIG Sqooky's.gi / OptimizationLock -- ver. 2.2 --------------- \\
             // Check here for updates: https://gamebanana.com/mods/656341 \\
            // Downloaded from: https://github.com/Sqooky/OptimizationLock  \\
           // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
 
-
-// Press ctrl+f and type * to highlight the more visually impactful commands that you could adjust
 // ================ Preferences ================
 
 // --- 1. Outlines ---
@@ -311,8 +309,28 @@ r_citadel_selection_outline2_alpha          "0.2"           // Outlines on enemy
 r_drawskybox                                "true"          // Can't be changed anymore                                             [def: "true"]
 
 
+// IN TESTING
+//panorama_worldpanel_update_culling              "true"        // Messes with health bar rendering. it is weird.
+r_citadel_distancefield_max_distance            "16"
+r_citadel_distancefield_min_screen_space_size   "99"
+r_citadel_gpu_culling                           "true"
+r_citadel_gpu_culling_shadows                   "true"
+r_citadel_gpu_culling_two_pass                  "true"
+sc_aggregate_gpu_culling_conservative_bounds    "true"
+sc_aggregate_gpu_culling_show_culled            "true"
+sc_aggregate_render_mesh_shader                 "false"
+sc_force_materials_batchable                    "true"
+sc_aggregate_debug_draw_meshlets                "-1"
+sc_aggregate_debug_draw_meshlets_bounds         "true"
+//sc_aggregate_show_outside_vis                   "true" //this makes the entire map stop rendering
+sc_allow_dithered_lod                           "false"
+sc_force_materials_batchable                    "true"
+cl_batch_entity_list_ops_during_latch           "true"
+phys_batch_ray_test                             "16"
+cl_aggregate_particles                          "true"
+sc_aggregate_gpu_culling_conservative_bounds    "true"
 
-// --- Credits ---
+
 //  Major thanks to all of these individuals from the bottom of my heart. They are all lovely.
 //- Sqooky:             I am the primary developer and maintainer of the project, but without everyone else here this project would not be maintained to this degree
 //- JasperP:            My personal hero.  
@@ -322,13 +340,12 @@ r_drawskybox                                "true"          // Can't be changed 
 //- Dacooder:           Made a wonderful video highlighting me and the config.  
 //- Kaizuchaneru:       While not directly invovled in the deveopment, they tested most cvars  
 //- Kin:                Did an insane amount of benchmarking unprompted.  
-//- Krisha:             Acts as my guinea pig for test versions.  
 //- Maihdenless:        Started the original OptimisationLock & its Discord.  
 //- Piggy:              Let me mirror his config.  
 //- Soulx:              Gave me five dollars and told me about spirolactone (fucking sick I love you)
 //- Tamara Mochaccina:  Contributed vindicta scope fix and the fog fix.  
 
-// --- Cool people I've met because of this project who I want to thank anyway ---
+// Cool people I've met because of this project who I want to thank anyway
 //- 6Daves
 //- Anartoast
 //- Boot
@@ -342,4 +359,5 @@ r_drawskybox                                "true"          // Can't be changed 
 //- PeachCebo
 //- Tamara Mochaccina
 //- And you, thank you for using this and making my day <3. Please take care of yourselves.
-// --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.1 ------------------------------- \\
+// --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.2 ------------------------------- \\
+        "/ --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.1 ------------------------------- \\

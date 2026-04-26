@@ -13,7 +13,7 @@
 //         /!#%|'-_- '\%k*|
 //     o   |*@/        \_/
 //         \)&|
-// OptimizationLock v1.5.1 by Sqooky with help from others <3
+// OptimizationLock v2.2 by Sqooky with help from others <3
 
 "GameInfo"
 {
@@ -83,7 +83,7 @@
 
         SearchPaths
         {
-            //Game	            citadel/cvar_unlocker
+            //Game              citadel/cvar_unlocker
             Game_Language       citadel_*LANGUAGE*
             Game                citadel/addons
             Mod                 citadel
@@ -140,30 +140,30 @@
     RenderSystem
     {
                 // Stolen from CS2
-		AllowPartialMipChainImmediateTexLoads  "1"
-		UseHardwareGammaRamp                   "0"         // Fullscreen gamma controlled in postprocessing
+        AllowPartialMipChainImmediateTexLoads  "1"
+        UseHardwareGammaRamp                   "0"         // Fullscreen gamma controlled in postprocessing
                 // End of stolen from CS2
 
-		IndexBufferPoolSizeMB                  "64"        // Not fully sure, in cs2 this is 64        [def: "32"]
-		UseReverseDepth                        "1"         // Also not fully sure.                     [def: "1"]
-		Use32BitDepthBuffer                    "0"         //      [def: "0"]
-		Use32BitDepthBufferWithoutStencil      "1"         //      [def: "0"]
-		SwapChainSampleableDepth               "1"         //      [def: "1"]
-		VulkanMutableSwapchain                 "1"         //      [def: "1"]
-		LowLatency                             "1"         //      [def: "1"]
-		VulkanOnly_Linux                       "1"         //      [def: "1"]
-		VulkanRequireSubgroupWaveOpSupport     "1"         //      [def: "1"]
-		VulkanRequireDescriptorIndexing        "1"         // Setting this command to zero causes my wayland compositor to crash upon launching the game. I would imagine don't fiddle with it      [def: "1"]
-		VulkanSteamShaderCache                 "1"         //      [def: "1"]
-		VulkanSteamAppShaderCache              "1"         //      [def: "1"]
-		VulkanSteamDownloadedShaderCache       "1"         //      [def: "1"]
-		VulkanAdditionalShaderCache            "vulkan_shader_cache.foz"
-		VulkanStagingPMBSizeLimitMB            "16"        // I am going to assume pmb is shorthand for "primitive mesh" and this is the size of memory allowed to be allocated to a mesh? not fully sure.
-		GraphicsPipelineLibrary                "1"         // This seemed to discard precompiled shaders when set to 0            [def: "1"]
-		VulkanOnlyTestProbability              "1"         //      [def: "0"]
-		VulkanDefrag                           "1"         //      [def: "1"]
-		MinStreamingPoolSizeMB                 "512"       // In CS2 this is 500, not sure why      [def: "1024"]
-		MinStreamingPoolSizeMBTools            "2048"      //      [def: "2048"]
+        IndexBufferPoolSizeMB                  "64"        // Not fully sure, in cs2 this is 64        [def: "32"]
+        UseReverseDepth                        "1"         // Also not fully sure.                     [def: "1"]
+        Use32BitDepthBuffer                    "0"         //      [def: "0"]
+        Use32BitDepthBufferWithoutStencil      "1"         //      [def: "0"]
+        SwapChainSampleableDepth               "1"         //      [def: "1"]
+        VulkanMutableSwapchain                 "1"         //      [def: "1"]
+        LowLatency                             "1"         //      [def: "1"]
+        VulkanOnly_Linux                       "1"         //      [def: "1"]
+        VulkanRequireSubgroupWaveOpSupport     "1"         //      [def: "1"]
+        VulkanRequireDescriptorIndexing        "1"         // Setting this command to zero causes my wayland compositor to crash upon launching the game. I would imagine don't fiddle with it      [def: "1"]
+        VulkanSteamShaderCache                 "1"         //      [def: "1"]
+        VulkanSteamAppShaderCache              "1"         //      [def: "1"]
+        VulkanSteamDownloadedShaderCache       "1"         //      [def: "1"]
+        VulkanAdditionalShaderCache            "vulkan_shader_cache.foz"
+        VulkanStagingPMBSizeLimitMB            "16"        // I am going to assume pmb is shorthand for "primitive mesh" and this is the size of memory allowed to be allocated to a mesh? not fully sure.
+        GraphicsPipelineLibrary                "1"         // This seemed to discard precompiled shaders when set to 0            [def: "1"]
+        VulkanOnlyTestProbability              "1"         //      [def: "0"]
+        VulkanDefrag                           "1"         //      [def: "1"]
+        MinStreamingPoolSizeMB                 "512"       // In CS2 this is 500, not sure why      [def: "1024"]
+        MinStreamingPoolSizeMBTools            "2048"      //      [def: "2048"]
     }
 
     NVNGX
@@ -200,8 +200,8 @@
         UsePlatTime                                     "1"
 
         // Stolen from CS2 again
-	Budget_StackSimulationUS                        "25"
-	Budget_FirstStackSimulationUS                   "50"
+    Budget_StackSimulationUS                        "25"
+    Budget_FirstStackSimulationUS                   "50"
     }
     Sounds
     {
@@ -421,7 +421,7 @@
         // These are stolen from CS2
         IrradianceVolumes                               "0"
         EnvironmentMapBlurType                          "GGX"
-        LPVEdgeBlending	                                "0"             // Don't apply the edge fade distance to LPV bounds, we don't blend LPVs in CS2 shaders
+        LPVEdgeBlending                                 "0"             // Don't apply the edge fade distance to LPV bounds, we don't blend LPVs in CS2 shaders
 
 
         //EnvironmentMapPreviewFormat                   "RGBA16161616F" // This is from CS2 where it is also commented out. I would imagine setting it enables HDR of some format considering this is the integer HDR format, but I do not have an HDR monitor to test
@@ -467,17 +467,12 @@
         GpuLightBinnerBinEnvMaps                        "1"
         GpuLightBinnerBinLPVs                           "1"
 
-        DynamicDecalsUseShrinkWrap                      "1" // enable shrinkwrap optimization for dynamic decal materials using F_FASTAPPROX
         LightCookieAllocGranularity                     "1"
         LightCookieMinAllocSize                         "0"
         DisableShadowFullSort                           "1"
         SparseShadowTrees                               "1" // enable this to experiment with Sparse Shadow Trees as a drop in replacement for static geo shadow rendering into cascades
         PointLightShadowsEnabled                        "1"
 
-
-        // Ancient gameinfo.gi
-        NoSunLightManager                               "1"
-        VrLightBinner                                   "1"
 
         WellKnownLightCookies
         {
@@ -531,7 +526,7 @@
         "Features" "non_homogenous_forward_layer_only"
 
         //Stolen from CS2
-	"EnableMixedResolution" "1"
+    "EnableMixedResolution" "1"
 
     }
 
@@ -851,29 +846,29 @@ r_citadel_npr_outlines                      "false"         // Enable outlines o
 //- Tamara Mochaccina Contributed vindicta scope fix and the fog fix.
 //- Maihdenless:      Started the original OptimisationLock & its Discord.
 //- Soulx:            Gave me five dollars and told me about spirolactone (fucking sick I love you)
-// --------------------------------- END OF CONFIG OptimizationLock -- ver. 1.5.1 ------------------------------- \\
+// --------------------------------- END OF CONFIG OptimizationLock -- v2-test ------------------------------- \\
 
 
 //
-//panorama_worldpanel_update_culling              true
-r_citadel_distancefield_max_distance            16
-r_citadel_distancefield_min_screen_space_size   99
-r_citadel_gpu_culling                           true
-r_citadel_gpu_culling_shadows                   true
-r_citadel_gpu_culling_two_pass                  false
-sc_aggregate_gpu_culling_conservative_bounds    true
-sc_aggregate_gpu_culling_show_culled            true
-sc_aggregate_render_mesh_shader                 false
-sc_force_materials_batchable                    true
-sc_aggregate_debug_draw_meshlets                -1
-sc_aggregate_debug_draw_meshlets_bounds         true
-//sc_aggregate_show_outside_vis                   true //this makes the entire map stop rendering
-sc_allow_dithered_lod                           false
-sc_force_materials_batchable                    true
-cl_batch_entity_list_ops_during_latch           true
-phys_batch_ray_test                             16
-cl_aggregate_particles                          true
-sc_aggregate_gpu_culling_conservative_bounds    true
+//panorama_worldpanel_update_culling              "true"        // Messes with health bar rendering. it is weird.
+r_citadel_distancefield_max_distance            "16"
+r_citadel_distancefield_min_screen_space_size   "99"
+r_citadel_gpu_culling                           "true"
+r_citadel_gpu_culling_shadows                   "true"
+r_citadel_gpu_culling_two_pass                  "true"
+sc_aggregate_gpu_culling_conservative_bounds    "true"
+sc_aggregate_gpu_culling_show_culled            "true"
+sc_aggregate_render_mesh_shader                 "false"
+sc_force_materials_batchable                    "true"
+sc_aggregate_debug_draw_meshlets                "-1"
+sc_aggregate_debug_draw_meshlets_bounds         "true"
+//sc_aggregate_show_outside_vis                   "true" //this makes the entire map stop rendering
+sc_allow_dithered_lod                           "false"
+sc_force_materials_batchable                    "true"
+cl_batch_entity_list_ops_during_latch           "true"
+phys_batch_ray_test                             "16"
+cl_aggregate_particles                          "true"
+sc_aggregate_gpu_culling_conservative_bounds    "true"
 
 
 
