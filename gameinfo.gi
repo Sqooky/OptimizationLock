@@ -129,7 +129,7 @@
 
     MaterialEditor
     {
-        "DefaultShader"                                 "environment_texture_set"
+        "DefaultShader"                                "environment_texture_set"
     }
 
     NetworkSystem
@@ -157,26 +157,26 @@
         UseHardwareGammaRamp                   "0"         // Fullscreen gamma controlled in postprocessing
                 // End of stolen from CS2
 
-        IndexBufferPoolSizeMB                  "64"        // Not fully sure, in cs2 this is 64        [def: "32"]
-        UseReverseDepth                        "1"         // Also not fully sure.                     [def: "1"]
-        Use32BitDepthBuffer                    "0"         //      [def: "0"]
-        Use32BitDepthBufferWithoutStencil      "1"         //      [def: "0"]
-        SwapChainSampleableDepth               "1"         //      [def: "1"]
-        VulkanMutableSwapchain                 "1"         //      [def: "1"]
-        LowLatency                             "1"         //      [def: "1"]
-        VulkanOnly_Linux                       "1"         //      [def: "1"]
-        VulkanRequireSubgroupWaveOpSupport     "1"         //      [def: "1"]
-        VulkanRequireDescriptorIndexing        "1"         // Setting this command to zero causes my wayland compositor to crash upon launching the game. I would imagine don't fiddle with it      [def: "1"]
-        VulkanSteamShaderCache                 "1"         //      [def: "1"]
-        VulkanSteamAppShaderCache              "1"         //      [def: "1"]
-        VulkanSteamDownloadedShaderCache       "1"         //      [def: "1"]
-        VulkanAdditionalShaderCache            "vulkan_shader_cache.foz"
-        VulkanStagingPMBSizeLimitMB            "16"        // I am going to assume pmb is shorthand for "primitive mesh" and this is the size of memory allowed to be allocated to a mesh? not fully sure.
-        GraphicsPipelineLibrary                "1"         // This seemed to discard precompiled shaders when set to 0            [def: "1"]
-        VulkanOnlyTestProbability              "1"         //      [def: "0"]
-        VulkanDefrag                           "1"         //      [def: "1"]
-        MinStreamingPoolSizeMB                 "512"       // In CS2 this is 500, not sure why      [def: "1024"]
-        MinStreamingPoolSizeMBTools            "2048"      //      [def: "2048"]
+        IndexBufferPoolSizeMB                           "64"        // Not fully sure, in cs2 this is 64        [def: "32"]
+        UseReverseDepth                                 "1"         // Also not fully sure.                     [def: "1"]
+        Use32BitDepthBuffer                             "0"         //      [def: "0"]
+        Use32BitDepthBufferWithoutStencil               "1"         //      [def: "0"]
+        SwapChainSampleableDepth                        "1"         //      [def: "1"]
+        VulkanMutableSwapchain                          "1"         //      [def: "1"]
+        LowLatency                                      "1"         //      [def: "1"]
+        VulkanOnly_Linux                                "1"         //      [def: "1"]
+        VulkanRequireSubgroupWaveOpSupport              "1"         //      [def: "1"]
+        VulkanRequireDescriptorIndexing                 "1"         // Setting this command to zero causes my wayland compositor to crash upon launching the game. I would imagine don't fiddle with it      [def: "1"]
+        VulkanSteamShaderCache                          "1"         //      [def: "1"]
+        VulkanSteamAppShaderCache                       "1"         //      [def: "1"]
+        VulkanSteamDownloadedShaderCache                "1"         //      [def: "1"]
+        VulkanAdditionalShaderCache                     "vulkan_shader_cache.foz"
+        VulkanStagingPMBSizeLimitMB                     "16"        // I am going to assume pmb is shorthand for "primitive mesh" and this is the size of memory allowed to be allocated to a mesh? not fully sure.
+        GraphicsPipelineLibrary                         "1"         // This seemed to discard precompiled shaders when set to 0            [def: "1"]
+        VulkanOnlyTestProbability                       "1"         //      [def: "0"]
+        VulkanDefrag                                    "1"         //      [def: "1"]
+        MinStreamingPoolSizeMB                          "512"       // In CS2 this is 500, not sure why      [def: "1024"]
+        MinStreamingPoolSizeMBTools                     "2048"      //      [def: "2048"]
     }
 
     NVNGX
