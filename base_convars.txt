@@ -360,4 +360,3 @@ sc_aggregate_gpu_culling_conservative_bounds    "true"
 //- Tamara Mochaccina
 //- And you, thank you for using this and making my day <3. Please take care of yourselves.
 // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.2 ------------------------------- \\
-        "/ --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.1 ------------------------------- \\
