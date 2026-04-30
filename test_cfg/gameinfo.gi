@@ -498,52 +498,48 @@
 
     NavSystem
     {
-        "NavTileSize"                       "128.0"
-        "NavCellSize"                       "1.5"
-        "NavCellHeight"                     "2.0"
+        "NavTileSize" "128.0"
+        "NavCellSize" "1.5"
+        "NavCellHeight" "2.0"
 
         // Hull definitions live in scripts/nav_hulls.vdata
         // Preset definitions live in scripts/nav_hulls_presets.vdata
-        "NavHullsPreset"                    "default"
+        "NavHullsPreset" "default"
 
-        "NavRegionMinSize"                  "8"
-        "NavRegionMergeSize"                "20"
-        "NavEdgeMaxLen"                     "1200"
-        "NavEdgeMaxError"                   "51.0"
-        "NavVertsPerPoly"                   "4"
-        "NavDetailSampleDistance"           "120.0"
-        "NavDetailSampleMaxError"           "2.0"
-        "NavSmallAreaOnEdgeRemovalSize"     "81.0"
+        "NavRegionMinSize" "8"
+        "NavRegionMergeSize" "20"
+        "NavEdgeMaxLen" "1200"
+        "NavEdgeMaxError" "51.0"
+        "NavVertsPerPoly" "4"
+        "NavDetailSampleDistance" "120.0"
+        "NavDetailSampleMaxError" "2.0"
+        "NavSmallAreaOnEdgeRemovalSize" "81.0"
     }
 
     AnimationSystem
     {
         "DisableServerInterpCompensation"   "1"
-        "DisableAnimationScript"            "1"
-        "ServerPoseRecipeHistorySize"       "60"
-        "ClientPoseRecipeHistorySize"       "60"
+        "DisableAnimationScript"    "1"
+        "ServerPoseRecipeHistorySize"   "60"
+        "ClientPoseRecipeHistorySize"   "60"
 
     }
 
     ModelDoc
     {
-        "models_gamedata"                   "models_gamedata.fgd"
-        "features"                          "animgraph;modelconfig;gamepreview;wireframe_backfaces;distancefield"
+        "models_gamedata"           "models_gamedata.fgd"
+        "features"                  "animgraph;modelconfig;gamepreview;wireframe_backfaces;distancefield"
     }
 
     Particles
     {
-        EnableParticleShaderFeatureBranching  "1"
-        Float16HDRBackBuffer                "1"
-        PET_SupportFadingOpaqueModels       "1"
-        Features                            "non_homogenous_forward_layer_only"
-
-        ParticleTraceOffsetOnlyHit          "1"
-        ParticlesFoggedByDefault            "0"
-
+        "EnableParticleShaderFeatureBranching"  "1"
+        "Float16HDRBackBuffer" "1"
+        "PET_SupportFadingOpaqueModels" "1"
+        "Features" "non_homogenous_forward_layer_only"
 
         //Stolen from CS2
-        EnableMixedResolution               "1"
+    "EnableMixedResolution" "1"
 
     }
 
@@ -570,8 +566,8 @@ citadel_unit_status_allies_see_thru_walls_max_distance "40" // How far to make a
 
 // --- 2. Field of View ---
 // These commands both affect fov but do so in different ways. citadel_camera_hero_fov changes the field of view using typical degrees but doesn't modify the punch zoom in. This means that if you have a high fov value the zoom in can be disorienting.
-//citadel_camera_hero_fov                     "106"           // The field of view angle of the camera when following a hero.     [def: "90"]
-r_aspectratio                               "2.60"          // This command is commented out, represented by the // at the beginning of the line. Editing it will not do anything. To mess with it remove the //
+citadel_camera_hero_fov                     "106"           // The field of view angle of the camera when following a hero.     [def: "90"]
+//r_aspectratio                               "2.10"          // This command is commented out, represented by the // at the beginning of the line. Editing it will not do anything. To mess with it remove the //
 // r_aspectratio changes the zoom of the camera which in turn doesn't make the punch zoom in as jarring, but the command is not as intuitive to set precisely
 // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov). 
 
@@ -804,9 +800,9 @@ audio_enable_vmix_mastering                 "false"         // Whether the engin
 snd_mixahead                                "0.05"          // Adds some latency that shouldn't be percivable to save cpu       [def: "0.001"]
 snd_occlusion_bounces                       "0"             // Limits audio occlusion to save cpu                               [def: "1"]
 snd_occlusion_rays                          "0"             // Occlusion bounces, this effectively disables them.               [def: "4"]
-snd_soundmixer_version                      "2"             // [def: "2"]
+snd_soundmixer_version                      "1"             // [def: "2"]
 snd_steamaudio_reverb_order_rendering       "0"             // The amount of directional detail in the rendered audio by Steam Audio. [def: "0"]
-snd_ui_positional                           "true"         // Disables positional audio to save cpu                            [def: "true"]
+snd_ui_positional                           "false"         // Disables positional audio to save cpu                            [def: "true"]
 snd_steamaudio_num_threads                  "4"             // Audio thread count                                               [def: "4"]
 // README This ^ probably depends on how good your cpu is, the better it is the more threads you can allow
 
@@ -855,13 +851,14 @@ r_citadel_distancefield_max_distance            "16"
 r_citadel_distancefield_min_screen_space_size   "99"
 r_citadel_gpu_culling                           "true"
 r_citadel_gpu_culling_shadows                   "true"
-//r_citadel_gpu_culling_two_pass                  "true"
-//sc_aggregate_debug_draw_meshlets                "-1"
-//sc_aggregate_debug_draw_meshlets_bounds         "true"
-sc_aggregate_gpu_culling_conservative_bounds    "false"
+r_citadel_gpu_culling_two_pass                  "true"
+sc_aggregate_debug_draw_meshlets                "-1"
+sc_aggregate_debug_draw_meshlets_bounds         "true"
+sc_aggregate_gpu_culling_conservative_bounds    "true"
+sc_aggregate_gpu_culling_conservative_bounds    "true"
 sc_aggregate_gpu_culling_show_culled            "true"
-sc_aggregate_render_mesh_shader                 "true"
-sc_allow_dithered_lod                           "true"
+sc_aggregate_render_mesh_shader                 "false"
+sc_allow_dithered_lod                           "false"
 sc_force_materials_batchable                    "true"
 sc_force_materials_batchable                    "true"
 
@@ -895,23 +892,6 @@ sc_force_materials_batchable                    "true"
 //- And you, thank you for using this and making my day <3. Please take care of yourselves.
 // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.2 ------------------------------- \\
 
-citadel_video_preset            "1" // [def: "3"]
-cl_lagcompensation              "true"
-sv_networkvar_perfieldtracking  "true"
-sv_stats                        "true"
-think_limit                     "1024"
-//thread_pool_option              "-1"
-ai_think_interval               "10"
-//vprof_think_limit               "true"
-ai_use_async_ragdoll_fixup      "true"
-animgraph_enable_parallel_op_evaluation true
-animgraph_enable_parallel_preupdate true
-audio_enclosure_calc_enabled    "true"
-nav_test_split_obstacle_dirty   "true"
-nav_pathfind_multithread        "true"
-
-
-
 // CS2 Differences
 animgraph_slope_enable true
 ent_bitvec_enable false
@@ -931,6 +911,7 @@ save_parallel true
 save_version 2
 sv_pvs_cache_query_inflate_amount 0
 sv_use_pvs_cache false
+
         "rate"
         {
             "min"       "98304"
@@ -1000,14 +981,14 @@ sv_use_pvs_cache false
         "cl_async_usercmd_send_disabled_recvmargin_min" "0.5"   // Additional frame since we do not use the async usercmd send (potentially unneccessary)
         "cl_clock_buffer_ticks" "1"
         "cl_interp_ratio" "0"
-        "cl_async_usercmd_send" "true"
+        "cl_async_usercmd_send" "false"
 
         "fps_max_ui"    "120"
 
         "in_button_double_press_window" "0.3"
 
         // Convars that control spatialization of UI audio.
-        "snd_ui_positional"                             "true"
+        "snd_ui_positional"                             "false"
         "snd_ui_spatialization_spread"                  "2.4"
 
         // sound volume rate change limiting
@@ -1032,12 +1013,13 @@ sv_use_pvs_cache false
 
         "snd_event_browser_focus_events" "true"
 
-        "cl_max_particle_pvs_aabb_edge_length" "100"
+        "cl_max_particle_pvs_aabb_edge_length" "0"
 
         // Allow aggregation of particles (for perf)
-        //"cl_aggregate_particles" "false"
+        //"cl_aggregate_particles" "true"
 
-        "citadel_enable_vdata_sound_preload" "true"
+        "citadel_enable_vdata_sound_preload"    "true"
+        "r_add_views_in_pre_output"             "1"
     }
 
     Memory
@@ -1049,6 +1031,5 @@ sv_use_pvs_cache false
         "ShowLowAvailableVirtualMemoryMessageBox" "1"
     }
 }
-
 
 
