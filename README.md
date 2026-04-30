@@ -1,5 +1,5 @@
 To either request support or contribute findings to the project, our Discord Server can be found [here](https://discord.gg/EF3Jq57jQv).  
-If you would like to donate as a means of showing thanks I have a kofi [here](https://ko-fi.com/sqooky).
+If you would like to donate as a means of showing thanks I have a kofi here! https://ko-fi.com/sqooky
 
 
 <div>
@@ -62,6 +62,10 @@ Comment out ``sc_screen_size_lod_scale_override`` or increase the value.
 Comment out ``sc_screen_size_lod_scale_override`` or increase the value.
 - "I'm using boot's/kaiz's config and I can't see heros in shop or in the end screen"
 ``citadel_portrait_world_renderer_off`` comment it out or set it to false
+- "I'm using boot's/kaiz's config and I can't see lash's ground slam"
+``r_drawdecals`` comment it out or set it to true 
+- "Can't see blast vent wind at range"
+``sc_fade_distance_scale_override`` comment it out
 
 # Mod Support
 Every variation of the config included in this repository has mod support added. For those who wish to remove or add it back in, remove ``Game                citadel/addons`` From the searchpaths bracket.
@@ -98,7 +102,7 @@ Every variation of the config included in this repository has mod support added.
 - Soulx
 - Piggy
 - Chatbaran
-
+- And you, thank you for using this and making my day <3. Please take care of yourselves.
 
 
 # Pretty Important Announcement
@@ -106,4 +110,3 @@ In the patch from a while back there was a change to citadel_main_english.txt st
 That aside it is possible that in the future valve will properly implement this, thus restricting the usage of convars ingame. Until that happens (and most likely after it happens) I will still be working on this project. 
 
 Until then you should consider writing [a forum post](https://forums.playdeadlock.com/) going "heyyyyyy I'm scared I won't be able to play this game at ~+60fps if cvars are properly disabled" as it is the most direct way to provide feedback to the developers
-- And you, thank you for using this and making my day <3. Please take care of yourselves.
