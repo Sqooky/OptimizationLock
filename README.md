@@ -1,12 +1,6 @@
 To either request support or contribute findings to the project, our Discord Server can be found [here](https://discord.gg/EF3Jq57jQv).  
 If you would like to donate as a means of showing thanks I have a kofi [here](https://ko-fi.com/sqooky).
-
-# Pretty Important Announcement
-In the patch from today there was a change to citadel_main_english.txt stating "Unable to enter matchmaking while any party member has changes to ConVars in Gameinfo.gi or is running Tools-Mode." At present moment it seems to be bugged or improperly implemented, as I have been able to load into matches with custom convars applied. 
- 
-That aside it is possible that in the future valve will properly implement this, thus restricting the usage of convars ingame. Until that happens (and after it happens) I will still be working on this project. 
-
-Until then you should consider writing [a forum post](https://forums.playdeadlock.com/) going "heyyyyyy I'm scared I won't be able to play this game at ~+60fps if cvars are properly disabled" as it is the most direct way to provide feedback to the developers
+https://github.com/Sqooky/OptimizationLock/blob/main/media/joy.png?raw=true
 
 # Base Instructions
 To install the performance config replace the gameinfo.gi in ``steamapps/common/deadlock/game/citadel`` with the one downloaded from this repository.
@@ -100,4 +94,12 @@ Every variation of the config included in this repository has mod support added.
 - Soulx
 - Piggy
 - Chatbaran
+
+
+
+# Pretty Important Announcement
+In the patch from a while back there was a change to citadel_main_english.txt stating "Unable to enter matchmaking while any party member has changes to ConVars in Gameinfo.gi or is running Tools-Mode." At present moment it is not fully implemented.
+That aside it is possible that in the future valve will properly implement this, thus restricting the usage of convars ingame. Until that happens (and most likely after it happens) I will still be working on this project. 
+
+Until then you should consider writing [a forum post](https://forums.playdeadlock.com/) going "heyyyyyy I'm scared I won't be able to play this game at ~+60fps if cvars are properly disabled" as it is the most direct way to provide feedback to the developers
 - And you, thank you for using this and making my day <3. Please take care of yourselves.
