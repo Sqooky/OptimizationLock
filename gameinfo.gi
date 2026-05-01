@@ -171,9 +171,9 @@
         VulkanSteamAppShaderCache                       "1"         //      [def: "1"]
         VulkanSteamDownloadedShaderCache                "1"         //      [def: "1"]
         VulkanAdditionalShaderCache                     "vulkan_shader_cache.foz"
-        VulkanStagingPMBSizeLimitMB                     "16"        // I am going to assume pmb is shorthand for "primitive mesh" and this is the size of memory allowed to be allocated to a mesh? not fully sure.
-        GraphicsPipelineLibrary                         "1"         // This seemed to discard precompiled shaders when set to 0            [def: "1"]
-        VulkanOnlyTestProbability                       "1"         //      [def: "0"]
+        VulkanStagingPMBSizeLimitMB                     "384"       // Jasper (my beloved) said to not mess withthis
+        GraphicsPipelineLibrary                         "1"         // This seemed to discard precompiled shaders when set to 0             [def: "1"]
+        VulkanOnlyTestProbability                       "0"         // Jasper said that "[when set to 1] this makes users have a 1% chance of using Vulkan" [def: "0"]
         VulkanDefrag                                    "1"         //      [def: "1"]
         MinStreamingPoolSizeMB                          "512"       // In CS2 this is 500, not sure why      [def: "1024"]
         MinStreamingPoolSizeMBTools                     "2048"      //      [def: "2048"]
