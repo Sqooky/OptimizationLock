@@ -1,3 +1,9 @@
+// Kaizuchanru's minimum spec config
+// Kaiz made this so give them some support imo
+//
+// Their twitch can be found here! Give them a follow
+// https://www.twitch.tv/kaizuchaneru
+
 "GameInfo"
 {
 	game 		"citadel"
@@ -513,6 +519,7 @@
 "sparseshadowtree_enable_rendering" "0"
 "sparseshadowtree_disable_for_viewmodel" "1"
 
+
 // ================ DISTANCE FIELD ================
 "r_citadel_distancefield_farfield_enable" "false"
 "r_citadel_npr_outlines_max_dist" "600"
@@ -525,7 +532,7 @@
 
 // ================ SKY & ENVIRONMENT ================
 "r_draw3dskybox" "0"
-"r_drawskybox" "1"                  // Set to 0 to disable skybox
+"r_drawskybox" "0"                  // Set to 0 to disable skybox
 "r_monitor_3dskybox" "0"
 "r_world_wind_strength" "0"
 "sv_waterdist" "0"
@@ -538,7 +545,7 @@
 "r_citadel_ssao_thin_occluder_compensation" "0"
 
 // ================ PARTICLE SYSTEM ================
-"r_particle_max_detail_level" "1 "//was 0
+"r_particle_max_detail_level" "0 "//was 0
 "r_particle_cables_cast_shadows" "0"
 "r_RainParticleDensity" "0"
 "r_physics_particle_op_spawn_scale" "0"
@@ -582,11 +589,11 @@
 "r_character_decal_resolution" "0.01" //default 1
 "r_decals" "1"                  // im p sure valve killed this command [ADJUST] Max decals visible: 1= only 1 bullet hole(max FPS) | 16=default
 "r_propsmaxdist" "600"
-"props_break_max_pieces_perframe" "2" 
+"props_break_max_pieces_perframe" "1"  //was 2
 "r_citadel_screenspace_particles_full_res" "0"
 "r_citadel_gpu_culling_shadows" "1"
 "skeleton_instance_lod_optimization" "1"
-"r_size_cull_threshold" "1.2" //was 1.2, 5 is too aggressive
+"r_size_cull_threshold" "1.2" // do not go over or youll have wall hack
 "r_hair_ao" "0"
 "r_render_hair" "0"                   // doesnt work [FPS IMPACT] 0=Off (max FPS boost, bald heroes) | 1=On (hair rendered)
 "r_haircull_percent" "100"
@@ -626,17 +633,17 @@
 "r_grass_end_fade" "0"
 
 // ================ UI & HUD ================
-"panorama_disable_box_shadow" "0"
+"panorama_disable_box_shadow" "1"
 "r_dashboard_render_quality" "0"
 "closecaption" "false"
 "citadel_hud_objective_health_enabled" "2"  // [ADJUST] Objective health display: 0=Off | 1=Shrines only | 2=T1/T2 Towers | 3=Barracks
 "citadel_boss_glow_disabled" "1"
-"citadel_damage_offscreen_indicator_disabled" "1" // Set 1 to disable
+"citadel_damage_offscreen_indicator_disabled" "1" // Set 1 to disable CREEP HP
 "citadel_portrait_world_renderer_off" "true" // Set true to disable hero hud
 "panorama_use_new_occlusion_invalidation" "1"
 "panorama_temp_comp_layer_min_dimension" "128"
-"panorama_max_overlay_fps" "15"
-"panorama_max_fps" "15"               // [ADJUST] UI FPS cap - 0=Unlimited (smooth UI) | 30/60=Standard | Higher = smoother HUD but more CPU
+"panorama_max_overlay_fps" "0"
+"panorama_max_fps" "0"               // [ADJUST] UI FPS cap - 0=Unlimited (smooth UI) | 30/60=Standard | Higher = smoother HUD but more CPU
 "panorama_async_compute_mipgen" "1"
 "citadel_show_new_damage_feedback_numbers" "0" // Set 1 to enable
 "hud_free_cursor" "0"                // Reduces UI input delay in minimap/spectator modes (not sure if this is true)
@@ -652,7 +659,7 @@
 "r_frame_sync_enable" "0" //was 0
 //"cl_clock_buffer_ticks" "0"          // Testing set 1 to smooth over packet loss
 "cl_async_usercmd_send" "true"
-//"cl_smooth" "0"                      // [ADJUST] 0=No smoothing (lower input lag) | 1=Smoothing enabled (may add delay)
+"cl_smooth" "0"                      // [ADJUST] 0=No smoothing (lower input lag) | 1=Smoothing enabled (may add delay)
 "cl_smoothtime" "0.01"
 "cl_smooth_draw_debug" "0"
 "cl_interp_parallel" "1"
@@ -683,7 +690,7 @@
 
 // ================ MEMORY BUDGET ================
 "r_texture_budget_dynamic" "1"          // Dynamic texture budget adjustment
-"r_texture_budget_threshold" "0.8"
+"r_texture_budget_threshold" "0.7"
 
 // ================ SHADER & RENDERING ================
 "mat_async_shader_load" "1"
@@ -770,18 +777,18 @@
 
 "update_voices_low_priority" "true" //default false
 "animgraph_enable_parallel_preupdate" "true" //default false Enables parallel processing for the pre-update phase of animation graphs, helping spread the load across more CPU cores
-"anim_decode_forcewritealltransforms" "true" //Default: false<br>Force BatchAnimationDecode to write transformations for all bones
+//"anim_decode_forcewritealltransforms" "true" //Default: false<br>Force BatchAnimationDecode to write transformations for all bones
 //"net_skip_redundant_change_callbacks" "true" //default false im p sure this keep pulling up report screen for some reason
-"animgraph_footlock_enabled" "false"
+//"animgraph_footlock_enabled" "false"
 "r_morphing_enabled" "false" 
 "r_smooth_morph_normals" "0"
 
-"animgraph_slowdownonslopes_enabled" "false"
+//"animgraph_slowdownonslopes_enabled" "false"
 "cl_simulate_dormant_entities" "false"
 //"engine_allow_multiple_simulates_per_frame" "false" //default false not sure about this one so dont change it
 
-"animgraph_enable_parallel_op_evaluation" "true" //default false
-"animgraph_enable_parallel_preupdate" "true" //false
+//"animgraph_enable_parallel_op_evaluation" "true" //default false
+//"animgraph_enable_parallel_preupdate" "true" //false
 "ai_lod_auto_enabled" "true" //default 0, idk about this
 "ai_use_async_ragdoll_fixup" "true" //doesnt really need tbh since ragdoll is disabled
 "cl_phys_networked_start_sleep" "true" //try on and off, this is probably what causing result screen to pop up when idling
@@ -843,7 +850,7 @@
 "sc_instanced_mesh_opaque_fade" "0"
 "g_ragdoll_important_maxcount" "1" 
 "g_ragdoll_maxcount" "1"
-"r_texture_stream_max_resolution" "1024"
+"r_texture_stream_max_resolution" "128"
 "r_texture_nonstreaming_load" "1"
 //"r_indirectlighting" "false"
 "csm_max_num_cascades_override" "2"
@@ -853,7 +860,7 @@
 "minimap_update_rate_hz" "30"
 "ai_think_interval" "0.3"
 
-"ai_async_queue_max_jobs" "8"
+"ai_async_queue_max_jobs" "1" //was 8
 "ai_think_interval_lod_med" "0.4"
 "ai_think_interval_lod_low" "1"
 "ai_gather_conditions_async" "true"
@@ -864,20 +871,128 @@
 "lb_shadow_map_cull_empty_mixed" "true"
 "r_citadel_fog_quality" "0"
 "r_citadel_gpu_culling_shadows" "1" //test, was 0
-"r_hair_shadowtile" "false"
+"r_hair_shadowtile" "false"	
 "vis_sunlight_enable" "0"
 "snd_use_baked_occlusion" "1"
 "citadel_per_weapon_per_surface_impact_effects" "false"
 
-"r_particle_model_per_thread_count" "48"
+"r_particle_model_per_thread_count" "64"
 "r_limit_particle_job_duration" "1"
 
-//"r_citadel_selection_outline2_offset" "2"
-//"r_citadel_selection_outline2_alpha" "255"
-//"r_citadel_selection_outline2_width" "10"
+"r_citadel_selection_outline2_offset" "2"
+"r_citadel_selection_outline2_alpha" "255"
+"r_citadel_selection_outline2_width" "10"
+"battery_saver" "false"
+"citadel_in_world_item_panel_dpi" "0.5"
+//"citadel_minimap_use_canvas_for_neutrals" "0"
+//"citadel_minimap_use_canvas_for_shop" "0"
+"citadel_npc_disable_floor_point_caching" "false"
+"citadel_npc_force_animate_every_tick" "false"
+"cl_batch_entity_list_ops_during_latch" "1"
+"cl_bone_cache_optimization" "1"
+"cl_particle_batch_mode" "1"
+//"cl_particle_max_count" "1" //max # of particle? doesnt seem to work idk
+"cl_phys_sleep_enable" "1"
+"csm_cascade0_override_dist" "0"
+"csm_cascade1_override_dist" "0"
+"csm_cascade2_override_dist" "0"
+"csm_cascade3_override_dist" "0"
+"csm_max_dist_between_caster_and_receiver" "0"
+"csm_max_visible_dist" "0"
+"csm_res_override_0" "1"
+"csm_res_override_1" "1"
+"csm_res_override_2" "1"
+"csm_res_override_3" "1"
+"csm_viewmodel_shadows" "false"
+"dsp_slow_cpu" "1"
+"engine_low_latency_sleep_after_client_tick" "1"
+"fog_enable" "0" //doesnt work anymore sadly
+"fog_enableskybox" "0"
+"m_rawinput" "1" //doesnt seem to exist in deadlock yet
+"mm_idle_enabled" "false"
+"nav_obstruction_async_update" "true"
+"r_aoproxy_cull_dist" "0.01"
+"r_lightmap_size" "1"
+"r_post_bloom" "0"
+"r_ssao_strength" "0" //alr disabled ssao above shouldnt matter
+"sc_disable_baked_lighting" "false"
+"sc_force_materials_batchable" "true"
+"snd_occlusion_bounces" "0" //try on and off
+"anim_disable" "true"   
+r_citadel_gpu_culling_two_pass "0"
+r_late_particle_job_sync "1"
+//snd_soundmixer_version "1"
+//thread_pool_option "6"
+r_flush_on_pooled_ib_resize "false"
+r_texture_stream_throttle_count_over_budget "0"
+//r_update_particles_on_render_only_frames "1"
+
+"cl_skel_constraints_enable" "0"
+"ik_enable" "0"
+//"panorama_disable_draw_text_shadow" "1"
+"panorama_disable_descendant_filtering" "true"
+
+"net_use_packet_compression" "false"
+"cl_pred_optimize" "true"
+"cl_pred_parallel_postnetwork" "true"
+
+"sc_instanced_mesh_gpu_culling" "true"
+"sc_aggregate_gpu_culling" "true"
+//"sc_disable_procedural_layer_rendering" "true"
+"cl_skip_update_animations" "1"
+
+//"r_skinning_enabled" "0" //turns everything into tpose
+"cl_phys_animated_hierarchy" "false"
+"phys_continuous_kinematic_update" "0"
+
+"snd_disable_mixer_duck" "1"
+"lb_enable_newsum" "0"
+
+"lb_csm_draw_alpha_tested" "0"                   // Stops calculating shadow alpha on fences/leaves
+"lb_shadow_texture_width_override" "16"          // Shrinks the global shadow atlas to 16 pixels
+"lb_shadow_texture_height_override" "16"         // Shrinks the global shadow atlas to 16 pixels
+"sparseshadowtree_disable_add_layers" "1"        // Completely breaks Sparse Shadow Tree layering
+"mat_slopescaledepthbias_shadowmap" "0"          // Disables shadow depth bias math
+"mat_depthbias_shadowmap" "0"                    // Disables shadow depth bias math
+"sc_allow_dynamic_constant_batching" "1"
+
+"sc_disable_culling_boxes" "1"       // Skips calculating bounding boxes for culling
+//"sc_disable_world_materials" "1"     // Turns the entire map gray (strips all materials from the world)
+//"r_draw_instances" "0"               // Deletes small props and details from the map entirely
+"r_flashlightambient" "0"            // Disables ambient lighting math on flashlights/muzzle flashes
+"r_flashlightconstant" "0"           // Disables constant lighting math
+
+"sc_allow_precomputed_vismembers" "1"
+"sc_barnlight_enable_precomputed_vis" "1"
+"lb_barnlight_shadow_use_precomputed_vis" "1"
+"sc_force_single_display_list_per_layer" "1"
+"sc_aggregate_gpu_occlusion_culling" "1"
+"sc_aggregate_gpu_vis_culling" "1"
+
+"citadel_damage_indicator_radius" "1"
+"citadel_damage_indicator_height" "10"
+"citadel_damage_indicator_width" "10"
+"citadel_damage_text_lifetime" "0.01"
+"citadel_damage_text_lifetime_new" "0.1"
+"r_threaded_particles" "1"
+
+"panorama_enable_secondary_layout_pass" "0"     // Skips the secondary CSS layout check (drastically reduces UI calculation time)
+"panorama_draw_text_fast_path" "1"              // Forces text rendering through a hardware fast-path
+"panorama_draw_text_fast_path_text_shadow" "1"  // Forces text shadows through a hardware fast-path
+"panorama_hsbc_through_fast_path" "1"           // Forces UI hue/saturation/brightness changes through a fast-path
+"panorama_use_backbuffer_directly" "1"          // Skips copying the UI buffer to memory and writes directly to the backbuffer
+"panorama_script_cache_enabled" "1"             // Aggressively caches UI Javascript to prevent mid-game recompilation
+"citadel_unit_status_hide_names" "1"         // Removes player names from health bars (text rendering is heavy).
+"citadel_hud_objective_health_idle_timeout" "0" // Boss/Tower health bars vanish the millisecond they stop taking damage.
+"citadel_camera_parrot_smoothing_rate" "0"   // Stops the camera from running math to "smooth" itself back into place after hitting a wall.
+"steam_inputhandler_enabled" "0"             // Completely disables Steam Input API polling. Huge for 1% lows if you only use Keyboard/Mouse.
+
+"sv_ladder_slack_z_mult" "0"                 // Disables complex velocity math when characters transition on/off ropes/ladders.
+"panorama_clear_frames_on_device_restore" "0"
 
 
- 
+
+
 		"rate"
 		{
 			"min"		"98304"

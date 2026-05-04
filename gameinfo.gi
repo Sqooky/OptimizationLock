@@ -890,6 +890,9 @@ sc_force_materials_batchable                    "true"
 //- Tamara Mochaccina
 //- And you, thank you for using this and making my day <3. Please take care of yourselves.
 // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.3.1 ------------------------------- \\
+
+//steam_inputhandler_enabled    "0"         // Probs good to disable but it does what it says on the tin and I want to make a preset for steam deck users first [def: "true"]
+
         "rate"
         {
             "min"       "98304"
