@@ -13,7 +13,7 @@
 //         /!#%|'-_- '\%k*|  
 //     o   |*@/        \_/      
 //         \)&|                  
-// OptimizationLock v2.2 by Sqooky with help from others <3
+// OptimizationLock v2.3.1 by Sqooky with help from others <3
 
 // As much as I would love to say I did this alone, I did not. These are the amazing people who deserve as much praise as I, if not more
 //- Sqooky:             I am the primary developer and maintainer of the project, but without everyone else here this project would not be maintained to this degree
@@ -31,49 +31,49 @@
 
 "GameInfo"
 {
-    game        "citadel"
-    title       "Citadel"
-    type        multiplayer_only
-    nomodels 1
-    nohimodel 1
-    nocrosshair 0
+    game                            "citadel"
+    title                           "Citadel"
+    type                            "multiplayer_only"
+    nomodels                        "1"
+    nohimodel                       "1"
+    nocrosshair                     "0"
     hidden_maps
     {
         "test_speakers"         1
         "test_hardware"         1
     }
-    nodegraph 0
-    perfwizard 0
-    tonemapping 0 
-    GameData    "citadel.fgd"
+    nodegraph                       "0"
+    perfwizard                      "0"
+    tonemapping                     "0"
+    GameData                        "citadel.fgd"
 
-    DisallowGameInfoConditionals 0
-    PGIVersion "6E09D3ED5A47F6A97443813F0E00F90BAA435918F82DF0C9B5DA46D27A33D903"
+    DisallowGameInfoConditionals    "0"
+    PGIVersion                      "6E09D3ED5A47F6A97443813F0E00F90BAA435918F82DF0C9B5DA46D27A33D903"
 
     Localize
     {
-        DuplicateTokensAssert   1
-        DisallowTokenContexts   1
+        DuplicateTokensAssert       "1"
+        DisallowTokenContexts       "1"
     }
 
     SupportedLanguages
     {
         "brazilian" "3"
-        "czech" "3"
-        "english" "3"
-        "french" "3"
-        "german" "3"
-        "italian" "3"
+        "czech"     "3"
+        "english"   "3"
+        "french"    "3"
+        "german"    "3"
+        "italian"   "3"
         "indonesian" "3"
-        "japanese" "3"
-        "koreana" "3"
-        "latam" "3"
-        "polish" "3"
-        "russian" "3"
-        "schinese" "3"
-        "spanish" "3"
-        "thai" "3"
-        "turkish" "3"
+        "japanese"  "3"
+        "koreana"   "3"
+        "latam"     "3"
+        "polish"    "3"
+        "russian"   "3"
+        "schinese"  "3"
+        "spanish"   "3"
+        "thai"      "3"
+        "turkish"   "3"
         "ukrainian" "3"
     }
 
@@ -95,16 +95,16 @@
 
 // Deadlock Mod Manager - Start
 
-        SearchPaths
+		SearchPaths
         {  
             Game_Language       citadel_*LANGUAGE*
             Game                citadel/addons
             Mod                 citadel
-            Write               citadel
+            Write               citadel          
             Game                citadel
             Mod                 core
             Write               core
-            Game                core
+            Game                core        
         }
 // Deadlock Mod Manager - End
     }
@@ -171,9 +171,9 @@
         VulkanSteamAppShaderCache                       "1"         //      [def: "1"]
         VulkanSteamDownloadedShaderCache                "1"         //      [def: "1"]
         VulkanAdditionalShaderCache                     "vulkan_shader_cache.foz"
-        VulkanStagingPMBSizeLimitMB                     "16"        // I am going to assume pmb is shorthand for "primitive mesh" and this is the size of memory allowed to be allocated to a mesh? not fully sure.
-        GraphicsPipelineLibrary                         "1"         // This seemed to discard precompiled shaders when set to 0            [def: "1"]
-        VulkanOnlyTestProbability                       "1"         //      [def: "0"]
+        VulkanStagingPMBSizeLimitMB                     "384"       // Jasper (my beloved) said to not mess withthis
+        GraphicsPipelineLibrary                         "1"         // This seemed to discard precompiled shaders when set to 0             [def: "1"]
+        VulkanOnlyTestProbability                       "0"         // Jasper said that "[when set to 1] this makes users have a 1% chance of using Vulkan" [def: "0"]
         VulkanDefrag                                    "1"         //      [def: "1"]
         MinStreamingPoolSizeMB                          "512"       // In CS2 this is 500, not sure why      [def: "1024"]
         MinStreamingPoolSizeMBTools                     "2048"      //      [def: "2048"]
@@ -548,13 +548,12 @@
 //      If you would like to donate as a means of showing thanks I have a kofi.     \\
 //      https://ko-fi.com/sqooky                                                    \\
 
-// ---------------- GAMEINFO CONFIG Sqooky's.gi / OptimizationLock -- ver. 2.2 --------------- \\
+// ---------------- GAMEINFO CONFIG Sqooky's.gi / OptimizationLock -- ver. 2.3.1 --------------- \\
             // Check here for updates: https://gamebanana.com/mods/656341 \\
            // Downloaded from: https://github.com/Sqooky/OptimizationLock  \\
           // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
 
 
-// Press ctrl+f and type * to highlight the more visually impactful commands that you could adjust
 // ================ Preferences ================
 
 // --- 1. Outlines ---
@@ -566,8 +565,8 @@ citadel_unit_status_allies_see_thru_walls_max_distance "40" // How far to make a
 
 // --- 2. Field of View ---
 // These commands both affect fov but do so in different ways. citadel_camera_hero_fov changes the field of view using typical degrees but doesn't modify the punch zoom in. This means that if you have a high fov value the zoom in can be disorienting.
-citadel_camera_hero_fov                     "106"           // The field of view angle of the camera when following a hero.     [def: "90"]
-//r_aspectratio                               "2.10"          // This command is commented out, represented by the // at the beginning of the line. Editing it will not do anything. To mess with it remove the //
+//citadel_camera_hero_fov                     "106"           // The field of view angle of the camera when following a hero.     [def: "90"]
+r_aspectratio                               "2.80"          // This command is commented out, represented by the // at the beginning of the line. Editing it will not do anything. To mess with it remove the //
 // r_aspectratio changes the zoom of the camera which in turn doesn't make the punch zoom in as jarring, but the command is not as intuitive to set precisely
 // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov). 
 
@@ -583,9 +582,9 @@ citadel_hud_objective_health_enabled        "2"             // 0=Off, 1=Shrines,
 citadel_unit_status_use_new                 "1"             // This uses new Health Bar, to use old Health Bar change "true" to "false".    [def: "0"]
 
 // --- 4. Lighting & Shadows ---
-lb_enable_baked_shadows                     "1"             // *Disables baked shadows (game looks bright if this is on while stationary lights = 1). [def: "1"]
-lb_enable_dynamic_lights                    "1"             // *Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
-lb_enable_stationary_lights                 "1"             // *Disables stationary lights (map looks flatter but more performant).         [def: "1"]
+lb_enable_baked_shadows                     "0"             // *Disables baked shadows (game looks bright if this is on while stationary lights = 1). [def: "1"]
+lb_enable_dynamic_lights                    "0"             // *Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
+lb_enable_stationary_lights                 "0"             // *Disables stationary lights (map looks flatter but more performant).         [def: "1"]
 
 // --- 5. Skybox Rendering ---
 r_draw3dskybox                              "0"             //  Enables drawing the 3D skybox layer (distant geometry).         [def: "1"]
@@ -890,28 +889,29 @@ sc_force_materials_batchable                    "true"
 //- PeachCebo
 //- Tamara Mochaccina
 //- And you, thank you for using this and making my day <3. Please take care of yourselves.
-// --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.2 ------------------------------- \\
+// --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.3.1 ------------------------------- \\
 
-// CS2 Differences
-animgraph_slope_enable true
-ent_bitvec_enable false
-gameinstructor_enable false
-lb_allow_time_sliced_shadow_map_rendering false
-lb_precomputed_shadowmap_depth_bias 0.00035
-nav_path_fixup_climb_up_segments false
-panorama_skip_composition_layer_content_paint true
-party_invite_show_popup true
-r_aoproxy_show false
-r_bloom_tent_filter_radius 3.1 
-r_decals_overlap_threshold 6
-//r_render_forward_opaque false //Setting this to false causes playemodels to not render
-ragdoll_resolve_initial_conflict true
-ragdoll_resolve_separation true
-save_parallel true
-save_version 2
-sv_pvs_cache_query_inflate_amount 0
-sv_use_pvs_cache false
 
+hud_fastswitch 0
+//panorama_allow_texture_composition_layer_fast_path true
+//panorama_transition_time_factor     "0"
+steam_inputhandler_enabled          "0"
+//panorama_disable_render_target_cache "true"
+r_skip_precache_validation_check true
+ai_debug_decisionmaking true
+//cl_skip_update_animations true
+multigpu_skip_semaphores true
+multigpu_skip_transfers true
+//panorama_skip_composition_layer_content_paint true
+//panorama_skip_compo true
+thread_pool_option 6
+// 1 gives "GlobalThreadPoolMode"		"efficiency"
+// 2 removes it from boot.vcfg
+// 3 gives "GlobalThreadPoolMode"		"undifferentiated"
+// 4 gives "GlobalThreadPoolMode"		"auto_threads"
+// 5 removes it from boot.vcfg
+// 6 gives "GlobalThreadPoolMode"		"max_threads"
+// 7-10 removes it from boot.vcfg
         "rate"
         {
             "min"       "98304"
@@ -1020,6 +1020,20 @@ sv_use_pvs_cache false
 
         "citadel_enable_vdata_sound_preload"    "true"
         "r_add_views_in_pre_output"             "1"
+
+
+"r_citadel_npr_outlines" "true"
+"r_citadel_npr_outlines_max_dist" "1000"
+"citadel_player_outline_enemies" "true"
+"citadel_trooper_outline_enabled" "true"
+"citadel_trooper_glow_disabled" "false"
+"r_citadel_selection_outline2_alpha" "1"
+"citadel_trooper_friendly_glow_disabled" "false"
+r_citadel_npr_force_solid_outline           "true" 
+
+citadel_boss_glow_disabled                  "1"             // Disables boss and walker glow/highlight effect. Set to "0" if you want Walkers to have outlines
+
+
     }
 
     Memory
