@@ -59,13 +59,13 @@ Set ``cl_ragdoll_limit`` to `` "-1"``
 - "There's holes in victor and paige at certain angles"  
 Comment out ``sc_screen_size_lod_scale_override`` or increase the value.
 - "Sinners lights are little triangles"  
-Comment out ``sc_screen_size_lod_scale_override`` or increase the value.
-- "I'm using boot's/kaiz's config and I can't see heros in shop or in the end screen"
-``citadel_portrait_world_renderer_off`` comment it out or set it to false
-- "I'm using boot's/kaiz's config and I can't see lash's ground slam"
-``r_drawdecals`` comment it out or set it to true 
-- "Can't see blast vent wind at range"
-``sc_fade_distance_scale_override`` comment it out
+Comment out ``sc_screen_size_lod_scale_override`` or increase the value.  
+- "I'm using boot's/kaiz's config and I can't see heros in shop or in the end screen"  
+``citadel_portrait_world_renderer_off`` comment it out or set it to false  
+- "I'm using boot's/kaiz's config and I can't see lash's ground slam"  
+``r_drawdecals`` comment it out or set it to true  
+- "Can't see blast vent wind at range"  
+``sc_fade_distance_scale_override`` comment it out  
 
 # Mod Support
 Every variation of the config included in this repository has mod support added. For those who wish to remove or add it back in, remove ``Game                citadel/addons`` From the searchpaths bracket.
