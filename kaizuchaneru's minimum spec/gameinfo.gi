@@ -535,7 +535,6 @@
 "r_drawskybox" "0"                  // Set to 0 to disable skybox
 "r_monitor_3dskybox" "0"
 "r_world_wind_strength" "0"
-"sv_waterdist" "0"
 
 // ================ SSAO ================
 "r_citadel_ssao_bent_normals" "false"
@@ -762,9 +761,6 @@
 "citadel_hideout_enable_testing_tools" "true" //default false doesnt work
 
 //"r_light_sensitivity_mode" "true"
-"sv_pvs_max_distance" "2800" //default 4000, unrender things(boxes, creeps, objs,etc) behind walls or out of viewing distance, does not affect player model.
-"sv_hide_ent_in_pvs" "1"
-"sv_remove_ent_from_pvs" "1" //default 0 remove entities from potential view something, basically culling objs outside of view
 
 "phys_cull_internal_mesh_contacts" "true" //default false
 "citadel_use_pvs_for_players" "true" //default false, culls players when out of view
@@ -987,7 +983,6 @@ r_texture_stream_throttle_count_over_budget "0"
 "citadel_camera_parrot_smoothing_rate" "0"   // Stops the camera from running math to "smooth" itself back into place after hitting a wall.
 "steam_inputhandler_enabled" "0"             // Completely disables Steam Input API polling. Huge for 1% lows if you only use Keyboard/Mouse.
 
-"sv_ladder_slack_z_mult" "0"                 // Disables complex velocity math when characters transition on/off ropes/ladders.
 "panorama_clear_frames_on_device_restore" "0"
 
 
