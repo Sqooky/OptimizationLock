@@ -904,7 +904,7 @@ multigpu_skip_semaphores true
 multigpu_skip_transfers true
 //panorama_skip_composition_layer_content_paint true
 //panorama_skip_compo true
-thread_pool_option 6
+thread_pool_option 1
 // 1 gives "GlobalThreadPoolMode"		"efficiency"
 // 2 removes it from boot.vcfg
 // 3 gives "GlobalThreadPoolMode"		"undifferentiated"
