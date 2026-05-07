@@ -857,7 +857,9 @@ r_citadel_npr_outlines                      "false"         // Enable outlines o
 r_citadel_npr_outlines_max_dist             "1"             // Limits outline distance to reduce unnecessary processing.        [def: "1000"]
 r_citadel_selection_outline2_alpha          "0.2"           // Outlines on enemy players and abilities on a scale of 0-1.       [def: "0.8"]
 r_drawskybox                                "true"          // Can't be changed anymore                                             [def: "true"]
-
+//sc_disable_procedural_layer_rendering     "false"         // Disables rendering, ie the screen is black. [def: "false"]
+//sc_throw_away_all_layers true
+//sc_skip_traversal true
 
 // IN TESTING
 //panorama_worldpanel_update_culling              "true"        // Messes with health bar rendering. it is weird.   [def: "false"]
@@ -872,8 +874,7 @@ r_citadel_gpu_culling_shadows                   "true"
 r_citadel_gpu_culling_two_pass                  "true"
 sc_aggregate_debug_draw_meshlets                "-1"
 sc_aggregate_debug_draw_meshlets_bounds         "true"
-sc_aggregate_gpu_culling_conservative_bounds    "true"
-sc_aggregate_gpu_culling_conservative_bounds    "true"
+sc_aggregate_gpu_culling_conservative_bounds    "false"
 sc_aggregate_gpu_culling_show_culled            "true"
 sc_aggregate_render_mesh_shader                 "false"
 sc_allow_dithered_lod                           "false"
@@ -909,6 +910,25 @@ sc_force_materials_batchable                    "true"
 //- Tamara Mochaccina
 //- And you, thank you for using this and making my day <3. Please take care of yourselves.
 // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.3.1 ------------------------------- \\
+citadel_radial_distortion 1
+vis_sunlight_enable false
+
+vismon_trace_limit 0
+cc_captiontrace 0
+citadel_fissure_forward_trace_distance 0
+//citadel_melee_draw_traces true
+cloth_ground_plane_thickness 0
+disable_source_soundscape_trace true
+citadel_perf_interval_report_s 100000
+citadel_video_preset 0
+cl_frametime_summary_report_detailed false
+
+sc_aggregate_indirect_draw_compaction_threshold 1
+sc_instanced_mesh_opaque_fade false
+sc_aggregate_render_mesh_shader false
+sc_aggregate_rtproxy_instanced_geo false
+sc_aggregate_rtproxy_unique_geo false
+sc_allow_dithered_lod false
 particle_cluster_use_collision_hulls false
 cl_fasttempentcollision 20
 cam_collision 0
@@ -919,7 +939,6 @@ citadel_unit_status_delta_decay_rate 2
 citadel_camera_hard_trace_radius 32
 citadel_fibonnaci_sphere_trace_los_max 32
 citadel_show_chat_wheel_angle_threshold 0
-citadel_mantle_probe_depth -1
 rtx_dynamic_blas    false
 rtx_dynamic_blas_caching false
 rtx_force_default_hitgroup true
@@ -1086,5 +1105,6 @@ citadel_boss_glow_disabled                  "1"             // Disables boss and
         "ShowLowAvailableVirtualMemoryMessageBox" "1"
     }
 }
+
 
 
