@@ -918,7 +918,6 @@ citadel_unit_status_dpi 6
 citadel_unit_status_delta_decay_rate 2
 citadel_camera_hard_trace_radius 32
 citadel_fibonnaci_sphere_trace_los_max 32
-citadel_num_matches_in_profile_history 128
 citadel_show_chat_wheel_angle_threshold 0
 citadel_mantle_probe_depth -1
 rtx_dynamic_blas    false
