@@ -1,0 +1,1 @@
+Hi! My name is Sqooky and this is my config (wow!). I have tried to maintain as much visual fidelity as possible while just cutting down on stuff such as dynamic shadows and lights. :D thank you and have a wonderful day!!!
