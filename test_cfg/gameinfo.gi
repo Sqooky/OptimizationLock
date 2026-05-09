@@ -551,7 +551,6 @@
 
     Particles
     {
-        very_fast "1"
         "EnableParticleShaderFeatureBranching"  "1"
         "Float16HDRBackBuffer" "1"
         "PET_SupportFadingOpaqueModels" "1"
