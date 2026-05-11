@@ -299,6 +299,7 @@
     {
     }
 
+    // Removing this makes everything functionally fullbright! It disables baked shadows and lighting so it might help if your gpu is low on vram
     ResourceCompiler
     {
         // Overrides of the default builders as specified in code, this controls which map builder steps
@@ -427,21 +428,23 @@
         "forcevtxfileupconvert"                         "1"
     }
 
+
+    // Removing WorldRenderer causes player models to black
     WorldRenderer
     {
-        EnvironmentMaps                                 "1"             //                                                                                                      [def: "1"]
-        EnvironmentMapFaceSize                          "256"          //                                                                                                      [def: "256"]
-        EnvironmentMapRenderSize                        "1024"          // There does not seem to be any downside to messing with this value so it is currently in experimentation. [def: "1024"]
-        EnvironmentMapFormat                            "BC6H"          // These values don't seem to be able to be changed but this should change the texture format          [def: "BC6H"]
-        EnvironmentMapPreviewFormat                     "BC6H"          // ^                                                                                                   [def: "BC6H"]
 
 
-        EnvironmentMapColorSpace                        "linear"        // Colorspace. Options should be gamma or linear.                                                      [def: "linear"]
-        EnvironmentMapMipProcessor                      "GGXCubeMapBlur"
         // Build cubemaps into a cube array instead of individual cubemaps.
-        EnvironmentMapUseCubeArray                      "1"             // I don't know why disabling this would cause any problems
-        EnvironmentMapCacheSizeTools                    "300"           // Not sure what this does yet                                                                         [def: "300"]
         BindlessSceneObjectDesc                         "CitadelBindlessDesc"
+        EnvironmentMapCacheSizeTools                    "300"           // Not sure what this does yet                                                                         [def: "300"]
+        EnvironmentMapColorSpace                        "linear"        // Colorspace. Options should be gamma or linear.                                                      [def: "linear"]
+        EnvironmentMapFaceSize                          "256"          //                                                                                                      [def: "256"]
+        EnvironmentMapFormat                            "BC6H"          // These values don't seem to be able to be changed but this should change the texture format          [def: "BC6H"]
+        EnvironmentMapMipProcessor                      "GGXCubeMapBlur"
+        EnvironmentMapPreviewFormat                     "BC6H"          // ^                                                                                                   [def: "BC6H"]
+        EnvironmentMapRenderSize                        "1024"          // There does not seem to be any downside to messing with this value so it is currently in experimentation. [def: "1024"]
+        EnvironmentMapUseCubeArray                      "1"             // I don't know why disabling this would cause any problems
+        EnvironmentMaps                                 "1"             //                                                                                                      [def: "1"]
         GrassCastsShadows                               "0"
 
         // Stolen from a 2015 gameinfo.gi
@@ -461,7 +464,7 @@
         HairShading                                     "false"
         //MeshletBufferCPUSlotCount                       "0"
         ParticleBufferSize                              "256"
-        RenderMeshlets                                  "0"
+        //RenderMeshlets                                  "1"
 
 
         CMTAtlasHeight                                  "512"
@@ -559,8 +562,7 @@
         ParticlesFoggedByDefault                "0"
         PerVertexLighting                       "0"
         GpuImplicitRendererManifest             "1"
-
-
+        "EnableMixedResolution" "1"
     }
 
     ConVars
