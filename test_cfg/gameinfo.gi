@@ -884,6 +884,7 @@ r_drawskybox                                    "true"          // Can't be chan
 //citadel_damage_text_show_effectiveness        "true"          // This is supposed to show if your target has any spirit/bullet resist, but seems to be broken rn. [def: "false"]
 //phys_batch_ray_test                           "16"            // Don't know what this does? shouldn't be needed deadlock doesn't have many physics objects  [def: "0"]
 //panorama_worldpanel_update_culling            "true"          // Messes with health bar rendering, the information will be inaccurate unless close to the target if set to true. It is weird.       [def: "false"]
+//r_draw_first_tri_only                         "true"          // Only draw the first triangle. Only works on dx11, causes issues with every playermodel and the hud for some reason [def: "false"]
 
 //sc_disable_procedural_layer_rendering         "false"         // Disables rendering, ie the screen is black.          [def: "false"]
 //sc_throw_away_all_layers                      "true"          // Disables rendering, ie the screen is black.          [def: "false"]
@@ -997,7 +998,7 @@ mat_max_lighting_complexity 1
 r_update_particles_on_render_only_frames true
 r_citadel_screenspace_particles_full_res false
 r_citadel_shadow_caching false
-r_draw_first_tri_only true
+//r_draw_first_tri_only true
 r_frame_sync_enable true
 //r_nearz 20
 r_particle_batch_collections true
