@@ -785,7 +785,7 @@ r_particle_max_detail_level                 "1"             // The maximum detai
 r_particle_max_texture_layers               "4"             // Anything below 4 will make infernus afterburn, paige fire, and drifter's passive look very weird and blocky [def: "-1"]
 r_particle_model_per_thread_count           "64"            // I believe it is how many particle models a thread is allowed to handle.  [def: "32"]
 r_particle_skip_postsim                     "true"          // Not entirely sure what it does, going off of the name I'd imagine it skips the post simulation, this is a testvar [def: "false"]
-r_particle_timescale                        "1.1"           // Speeds up particle simulation, thus making them end sooner, however this causes visual desyncs, most notably with big effects that last a while such as infernus ult. Please tweak this to what you are comfortable with. [def: "1"]
+//r_particle_timescale                        "1.1"           // Speeds up particle simulation, thus making them end sooner, however this causes visual desyncs, most notably with big effects that last a while such as infernus ult. Please tweak this to what you are comfortable with. [def: "1"]
 cl_aggregate_particles                      "true"          // Doesn't seem to cause any issues but a benchmark proper should be conducted [def: "false"]
 r_physics_particle_op_spawn_scale           "0"             // Prevents physics-based particle spawns.                          [def: "1"]
 r_world_wind_strength                       "0"             // Disables wind effects, cosmetic only.                            [def: "40"]
@@ -991,7 +991,7 @@ thread_pool_option                      "4"     // If I understand correctly, th
 // -1 Default
 // -2 removes it from boot.vcfg
 citadel_camera_listening_offset -1
-r_cache_pool_allocations false
+r_cache_pool_allocations true
 citadel_hud_objective_health_debug_show_midboss true
 r_vma_defrag_algorithm 1
 mat_max_lighting_complexity 1
@@ -1005,13 +1005,16 @@ r_particle_batch_collections true
 //r_particle_explicit_fetch true
 r_particle_fixedrandomseeds true
 r_particle_max_detail_level 1
-r_particle_model_per_thread_count 16
-
+r_particle_model_per_thread_count 64
+//citadel_first_person true
+r_particle_mixed_resolution_viewstart 16
+r_pixelvisibility_partial false
+r_pipeline_stats_use_flush_api false
 
 //r_showdebugoverlays true
 r_skip_precache_validation_check true
 //4493
-r_vulkan_force_sync1 true
+//r_vulkan_force_sync1 true
         "rate"
         {
             "min"       "98304"
