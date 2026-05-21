@@ -13,7 +13,7 @@
 //         /!#%|'-_- '\%k*|  
 //     o   |*@/        \_/       
 //         \)&|                  
-// OptimizationLock v2.4 by Sqooky with help from others <3
+// OptimizationLock v2.4.1 by Sqooky with help from others <3
 
 // As much as I would love to say I did this alone, I did not. These are the amazing people who deserve as much praise as I, if not more
 //- Sqooky:             I am the primary developer and maintainer of the project, but without everyone else here this project would not be maintained to this degree
@@ -571,7 +571,7 @@
 //      If you would like to donate as a means of showing thanks I have a kofi.     \\
 //      https://ko-fi.com/sqooky                                                    \\
 
-// -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.4 -------- \\
+// -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.4.1 -------- \\
 // The github is here https://github.com/Sqooky/OptimizationLock  \\
 // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
 // The gamebanana:https://gamebanana.com/mods/656341 (it's usually behind, please check the github) \\
@@ -652,12 +652,12 @@ r_citadel_clip_sphere_min_opacity           "0"             // Removes the blur 
 // --- 9. Texture Quality ---
 r_texture_budget_threshold                  "0.7"           // Reduce texture memory pool size when this percentage of the budget is full. [def: "0.8"]
 r_texture_budget_update_period              "0.5"           // Time (in seconds) between updating texture memory budget.        [def: "0.1"]
-r_texture_stream_mip_bias                   "8"             // Worth adjusting, practically how good your textures will look.   [def: "1"]
+r_texture_stream_mip_bias                   "3"             // Worth adjusting, practically how good your textures will look.   [def: "1"]
 r_texturefilteringquality                   "3"             // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x
 
 // --- 10. Render Distance ---
-r_farz                                      "-1"          // This controls the far clipping plane, ie building/player popin   [def: "-1"]
-r_mapextents                                "16384"          // Far clipping plane, this will make buildings pop in and out      [def: "16384"] damn that's an oddly specific number
+r_farz                                      "8192"          // This controls the far clipping plane, ie building/player popin   [def: "-1"]
+r_mapextents                                "8192"          // Far clipping plane, this will make buildings pop in and out      [def: "16384"] damn that's an oddly specific number
 
 // ================ IMPORTANT ================ 
 thread_pool_option                      "-1"     // If I understand correctly, this should be how threads are handled relative to the game, but there isn't a clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage may vary. [def: "-1"]
@@ -971,7 +971,7 @@ r_drawskybox                                "true"          // Can't be changed 
 //- PeachCebo
 //- Tamara Mochaccina
 //- And you, thank you for using this and making my day <3. Please take care of yourselves.
-// --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.4 ------------------------------- \\
+// --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.4.1 ------------------------------- \\
 
 
 
