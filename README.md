@@ -3,6 +3,7 @@ If you would like to donate as a means of showing thanks I have a kofi here! htt
 
 # Translations
 ### [Instrucciones en español aqui](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_spanish.md)
+### [Инструкции на русском тута](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_spanish.md)
 
 **Donors!**
 I love you all so much
