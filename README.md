@@ -13,7 +13,7 @@ Eu amo muito todos vocês!
 </div>
 
 # Instruções Básicas
-Para instalar, substitua a sua gameinfo.gi in ``steamapps/common/deadlock/game/citadel`` com o arquivo baixado deste repositório.
+Para instalar, substitua a sua gameinfo.gi em ``steamapps/common/deadlock/game/citadel`` com o arquivo baixado deste repositório.
 **Um tutorial em vídeo** sobre a instalação disponível [aqui](https://youtu.be/TbjLbQVN2kE)
 
 # Tabela
@@ -80,22 +80,20 @@ Every variation of the config included in this repository has mod support added.
 Todas as variações da config incluídas neste repositório possuem suporte para mods. Caso precise remover, ou re-adicionar, remova ``Game                citadel/addons`` da chave de diretórios "searchpaths".
 
 # Créditos
-  Major thanks to all of these individuals from the bottom of my heart. They are all lovely.
-  Meus agradecimentos sinceros a todos esses indivíduos. São todos adoráveis.
+Meus agradecimentos sinceros a todos esses indivíduos. São todos adoráveis.
   
-- Sqooky:               I am the primary developer and maintainer of the project, but without everyone else here this project would not be maintained to this degree  
-- JasperP:              My personal hero.  
-- Artemon121:           Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game.  
-- Boot:                 Incredibly nice guy, gave me five dollars, made his config, and did a ton of independent testing and help
-- Brullee:              Removed fake cvars, redundant commands, added cvarlist.md, and reformatted config  
-- Dacooder:             Made a wonderful video highlighting me and the config.  
-- Kaizuchaneru:         While not directly invovled in the deveopment, they tested most cvars  
-- Kin:                  Did an insane amount of benchmarking unprompted.  
-- Krisha:               Acts as my guinea pig for test versions.  
-- Maihdenless:          Started the original OptimisationLock & its Discord.  
-- Piggy:                Let me mirror his config.  
-- Soulx:                Gave me five dollars and told me about spirolactone (fucking sick I love you)
-- Tamara Mochaccina:    Contributed vindicta scope fix and the fog fix.  
+- Sqooky:               Principal desenvolvedora e curadora do repositório, mas não seria possível manter um projeto dessa magnitude sem os outros envolvidos aqui. 
+- JasperP:              Meu herói pessoal.  (Desenvolvedor da Valve que me contatou por conta desse projeto)
+- Artemon121:           Criou o revelador de cvars do Citadel, que ajudou Abdalla a conseguir convars para testar dentro do jogo.  
+- Boot:                 Cara muito simpático, me deu cinco dólares, fez a própria config, testou e ajudou com variás coisas sozinho
+- Brullee:              Removou cvars falsas, comandos redundantes, adicionou a cvarlist.md, e reformulou a config  
+- Kaizuchaneru:         Mesmo não se involvendo diretamente no desenvolvimento, foi quem testou a maioria das convars 
+- Kin:                  Realizou uma quantidade absurda de testes por vontade própria.  
+- Krisha:               Age como meu rato de laboratório para testes.  
+- Maihdenless:          Iniciou o OptimisationLock original e seu antigo Discord.  
+- Piggy:                Me deixou espelhar sua config.  
+- Soulx:                Me deu cinco dólares e me contou sobre espironolactona (muito foda, te amo)
+- Tamara Mochaccina:    Contribuiu com o ajuste de mira da Vindicta e ajuste da névoa.  
 
 
 ## Pessoas legais que conheci por este projeto e as quais quero agradecer por serem elas mesmas.
