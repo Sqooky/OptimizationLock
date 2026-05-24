@@ -13,7 +13,7 @@
 //         /!#%|'-_- '\%k*|  
 //     o   |*@/        \_/       
 //         \)&|                  
-// OptimizationLock v2.4.1 by Sqooky with help from others <3
+// OptimizationLock v2.4.2 by Sqooky with help from others <3
 
 // As much as I would love to say I did this alone, I did not. These are the amazing people who deserve as much praise as I, if not more
 //- Sqooky:             I am the primary developer and maintainer of the project, but without everyone else here this project would not be maintained to this degree
@@ -571,7 +571,7 @@
 //      If you would like to donate as a means of showing thanks I have a kofi.     \\
 //      https://ko-fi.com/sqooky                                                    \\
 
-// -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.4.1 -------- \\
+// -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.4.2 -------- \\
 // The github is here https://github.com/Sqooky/OptimizationLock  \\
 // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
 // The gamebanana:https://gamebanana.com/mods/656341 (it's usually behind, please check the github) \\
@@ -579,7 +579,7 @@
 
 // ================ Preferences ================
 // --- 0. IMPORTANT ---
-r_particle_max_size_cull                    "999"           //                                                                  [def: "1200"]
+r_particle_max_size_cull                    "700"           //                                                                  [def: "1200"]
 // Particle systems larger than this in every dimension skip culling to save CPU.  They will be drawn anyway 
 // So particle culling is handled by the CPU in deadlock, if you have GPU overhead to spare, consider lowering this value. 
 steam_inputhandler_enabled                  "true"             // This disables controller support when set to false. Setting to false should improve performance if you're not on a steam deck, but some people are, and I don't want an influx of "why no work with controller"  [def: "true"]
@@ -596,7 +596,7 @@ citadel_unit_status_allies_see_thru_walls_max_distance "40" // How far to make a
 // --- 2. Field of View ---
 // These commands both affect fov but do so in different ways. citadel_camera_hero_fov changes the field of view using typical degrees but doesn't modify the punch zoom in. This means that if you have a high fov value the zoom in can be disorienting.
 //citadel_camera_hero_fov                     "106"           // The field of view angle of the camera when following a hero.     [def: "90"]
-r_aspectratio                               "2.80"          // This command is commented out, represented by the // at the beginning of the line. Editing it will not do anything. To mess with it remove the //
+r_aspectratio                               "2.50"          // This command is commented out, represented by the // at the beginning of the line. Editing it will not do anything. To mess with it remove the //
 // r_aspectratio changes the zoom of the camera which in turn doesn't make the punch zoom in as jarring, but the command is not as intuitive to set precisely
 // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov). 
 
@@ -971,7 +971,7 @@ r_drawskybox                                "true"          // Can't be changed 
 //- PeachCebo
 //- Tamara Mochaccina
 //- And you, thank you for using this and making my day <3. Please take care of yourselves.
-// --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.4.1 ------------------------------- \\
+// --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.4.2 ------------------------------- \\
 
 
 
