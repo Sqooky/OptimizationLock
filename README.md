@@ -98,11 +98,11 @@ Every variation of the config included in this repository has mod support added.
 - Soulx:  Gave me five dollars and told me about spirolactone 
 - Xeno:   Very politely waited for me to figure out how to accept donations and was very polite about it
 
- Translators
+## Translators
 - Egyptianscale:                  Translated to Russian
 - Tamara Mochaccina and Heathen:  Translated to Spanish
 
- Misc
+## Misc
 - Artemon121:     Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game.
 - Dacooder:       Contributed one fix, copied the config, distributed it as his own, and when I asked why he removed accredition despite previously calling me "the brains of the project" called me a harasser and proceeded to make two videos and a google doc exposing me. Honestly that made my day.
 - Kin:            Did an insane amount of benchmarking unprompted.
@@ -110,7 +110,7 @@ Every variation of the config included in this repository has mod support added.
 - Maihdenless:    Started the original OptimisationLock & its Discord.
 - Piggy:          Let me mirror his config.
 
- Cool people I've met because of this project who I want to thank anyway
+## Cool people I've met because of this project who I want to thank anyway
 - 6Daves
 - Achira
 - Anartoast
