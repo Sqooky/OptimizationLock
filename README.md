@@ -64,7 +64,7 @@ Sua gameinfo.gi é redefinida em toda atualização. Você deve substituí-la ma
 - "Não consigo ver a barra de vida das tropas de uma certa distância!"  
 Mude os valores de ``r_size_cull_threshold`` ``sc_fade_distance_scale_override``
 - "Não consigo ver o indicador da ult do Porteiro!"  
-Set ``cl_ragdoll_limit`` to `` "-1"``
+Mude ``cl_ragdoll_limit`` para `` "-1"``
 - "Tem buracos no modelo de Victor e Gina em certos ângulos!"  
 Comente ``sc_screen_size_lod_scale_override`` ou aumente o valor.
 - "As luzes nos sacrifícios estão triangulares!"  
