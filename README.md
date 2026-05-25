@@ -14,7 +14,7 @@ Eu amo muito todos vocês!
 
 # Instruções Básicas
 Para instalar, substitua a sua _gameinfo.gi_ em ``steamapps/common/deadlock/game/citadel`` com o arquivo baixado deste repositório.
-**Vídeo-Tutorial em inglẽs** sobre a instalação, disponível [aqui](https://youtu.be/TbjLbQVN2kE)
+**Vídeo-Tutorial em inglês** sobre a instalação, disponível [aqui](https://youtu.be/TbjLbQVN2kE)
 
 # Tabela
 Aqui vai uma lista de cada _config_ disponível neste repositório.
@@ -34,7 +34,7 @@ Para adicionar _convars_ manualmente, você deve abrir sua gameinfo.gi, pesquisa
 Ao adicionar as _convars_ manualmente, certifique-se de não remover `` rate {`` ou colocá-las após seu colchete, pois isso irá impedir que o jogo inicie.
 ```
 Convars {
-//Você vai querer que suas convars comecem nessa linha-
+//Você vai querer que suas _convars_ comecem nessa linha-
 
 
 // E terminem nessa linha.
@@ -43,7 +43,7 @@ rate {
 
 # "O MAPA FICOU ESTRANHO E ESCURO DEPOIS QUE INSTALEI A CONFIG"
 Diminua suas configurações de sombra dentro do jogo para médio ou baixo.
-É RECOMENDADO O USO DO PROGAMA "Notepad+++" PARA EDITAR AS CONVARS!
+É RECOMENDADO O USO DO PROGAMA "[Notepad+++](https://github.com/notepad-plus-plus/notepad-plus-plus)" PARA EDITAR AS CONVARS!
 # FAQ
 - "Como faço para achar uma variável na minha _config?_"  
 Pressione Ctrl+F no seu editor de texto e digite a variável que você estiver procurando.  
