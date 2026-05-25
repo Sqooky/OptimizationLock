@@ -1,5 +1,5 @@
 Para solicitar suporte, ou, para contribuir com seus achados para o projeto, nosso servidor no Discord pode ser acessado [aqui](https://discord.gg/EF3Jq57jQv).  
-Caso queria fazer uma doação como forma de agradecimento eu tenho um kofi aqui! https://ko-fi.com/sqooky
+Caso queira fazer uma doação como forma de agradecimento eu tenho um Kofi aqui! https://ko-fi.com/sqooky
 
 **Doadores!**
 Eu amo muito todos vocês!
@@ -9,29 +9,29 @@ Eu amo muito todos vocês!
 - Sonny
 
 <div>
-  <img src="https://github.com/Sqooky/OptimizationLock/blob/main/media/joy.png?raw=true" alt="A picture reading Sqooky's .gi A collage of performance configs with the intent of optimizing the game."/>
+  <img src="https://github.com/Sqooky/OptimizationLock/blob/main/media/joy.png?raw=true" alt="Uma imagem que lẽ o seguinte: (No meio) Uma coletânea de configurações com a intenção de otimizar o jogo. (Em baixo) Ou, OptimizationLock v2. (No topo) Obrigada pela toneladas de downloads (40k no GB)!"/>
 </div>
 
 # Instruções Básicas
-Para instalar, substitua a sua gameinfo.gi em ``steamapps/common/deadlock/game/citadel`` com o arquivo baixado deste repositório.
-**Um tutorial em vídeo** sobre a instalação disponível [aqui](https://youtu.be/TbjLbQVN2kE)
+Para instalar, substitua a sua _gameinfo.gi_ em ``steamapps/common/deadlock/game/citadel`` com o arquivo baixado deste repositório.
+**Vídeo-Tutorial em inglẽs** sobre a instalação, disponível [aqui](https://youtu.be/TbjLbQVN2kE)
 
 # Tabela
-Aqui vai uma lista de cada config disponível neste repositório.
+Aqui vai uma lista de cada _config_ disponível neste repositório.
 | Arquivo de config                                                                                                                     | Propósito                                                                                                              |
 |---------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | [Sqooky's Config/Optimizationlock Default](https://github.com/Sqooky/OptimizationLock/blob/main/Sqooky's%20.gi/gameinfo.gi)                                    | Focada no desempenho, tentando não deixar o jogo feio. Recomendada para a maioria.                                                    |
-| [Test_Cfg](https://github.com/Sqooky/OptimizationLock/blob/main/test_cfg/gameinfo.gi) | Config da Spooky, mas na branch de testes. Pode apresentar pequenos problemas, mas deve performar melhor. |
-| [Boot's Max Fps](https://github.com/Sqooky/OptimizationLock/blob/main/boot's%20maxium%20fps%20config/gameinfo.gi)                                    | Com maior foco no desempenho, é atualmente a config que apresenta a melhor performance entre todas as testadas. |
-| [Kaizuchaneru's Minimum Spec](https://github.com/Sqooky/OptimizationLock/blob/main/kaizuchaneru's%20minimum%20spec/gameinfo.gi) | Prioriza o FPS acima de tudo e reduz drasticamente a qualidade visual. Recomendada para computadores menos potentes. |
-| [Piggy's gameinfo.gi](https://github.com/Sqooky/OptimizationLock/tree/main/piggy's%20config)                                    | Otimizações básicas do piggy, caso você queira usar a config dele.                                                     |
-| [Convars.txt](https://github.com/Sqooky/OptimizationLock/blob/main/convars.txt)                                                 | Todas as convars no código do jogo. Não serve como uma config em si, e sim como referência.                                 |
-| [Base_convars.txt](https://github.com/Sqooky/OptimizationLock/blob/main/base_convars.txt)                                       | Todas as convars padrões do OptimizationLock, caso você queira adicioná-las manuamente.                        |
+| [Test_Cfg](https://github.com/Sqooky/OptimizationLock/blob/main/test_cfg/gameinfo.gi) | Config da Spooky, mas, na _branch_ de testes. Pode apresentar pequenos problemas, mas deve performar melhor. |
+| [Boot's Max Fps](https://github.com/Sqooky/OptimizationLock/blob/main/boot's%20maxium%20fps%20config/gameinfo.gi)                                    | Com maior foco no desempenho, é atualmente a _config_ que apresenta a melhor performance entre todas as testadas. |
+| [Kaizuchaneru's Minimum Spec](https://github.com/Sqooky/OptimizationLock/blob/main/kaizuchaneru's%20minimum%20spec/gameinfo.gi) | Prioriza os QPS acima de tudo e reduz drasticamente a qualidade visual. Recomendada para computadores menos potentes. |
+| [Piggy's gameinfo.gi](https://github.com/Sqooky/OptimizationLock/tree/main/piggy's%20config)                                    | Otimizações básicas de Piggy, caso você queira usar a config dele.                                                     |
+| [Convars.txt](https://github.com/Sqooky/OptimizationLock/blob/main/convars.txt)                                                 | Todas as _convars_ no código do jogo. Não serve como uma _config_ em si, e sim como referência.                                 |
+| [Base_convars.txt](https://github.com/Sqooky/OptimizationLock/blob/main/base_convars.txt)                                       | Todas as _convars_ padrões do OptimizationLock, caso você queira adicioná-las manuamente.                        |
 
 
 
-Para adicionar convars manualmente, você deve abrir sua gameinfo.gi, pesquisar por ``convars`` e colar os comandos após o ``{``
-Ao adicionar as convars manualmente, certifiquece-se de não remover `` rate {`` ou colocá-las após seu colchete, pois isso irá impedir que o jogo inicie.
+Para adicionar _convars_ manualmente, você deve abrir sua gameinfo.gi, pesquisar por ``convars`` e colar os comandos após o ``{``.
+Ao adicionar as _convars_ manualmente, certifique-se de não remover `` rate {`` ou colocá-las após seu colchete, pois isso irá impedir que o jogo inicie.
 ```
 Convars {
 //Você vai querer que suas convars comecem nessa linha-
@@ -43,62 +43,62 @@ rate {
 
 # "O MAPA FICOU ESTRANHO E ESCURO DEPOIS QUE INSTALEI A CONFIG"
 Diminua suas configurações de sombra dentro do jogo para médio ou baixo.
+É RECOMENDADO O USO DO PROGAMA "Notepad+++" PARA EDITAR AS CONVARS!
 # FAQ
-- "Como faço para achar uma variável na minha config"  
-Pressione ctrl+f no seu editor de texto e digite a variável que você estiver procurando.  
-- "Como eu restauro uma variável para o valor padrão"  
+- "Como faço para achar uma variável na minha _config?_"  
+Pressione Ctrl+F no seu editor de texto e digite a variável que você estiver procurando.  
+- "Como eu restauro uma variável para o valor padrão?"  
 Comente-a  
-- "O que significa comentar"  
+- "O que significa comentar?"  
 Para comentar uma linha, coloque ``//`` no início dela. Isso fará que a config não a execute.  
-- "Por que meus personagens estão escuros nos retratos da loja e tela de vitória"  
+- "Por que meus personagens estão escuros nos retratos da loja e tela de vitória?"  
 Vá em ``lb_enable_dynamic_lights`` e mude para ``true``
-- "Por que as construções ficam sumindo e voltando"  
+- "Por que as construções ficam sumindo e voltando?"  
 Vá em ``r_farz`` ou ``r_mapextents`` e comente-as.  
-- "Como mudo meu FOV"  
+- "Como mudo meu FOV?"  
 Vá em ``citadel_camera_hero_fov`` ou ``r_aspectratio`` comente-as ou mude o valor.  
-- "A config quebrou com uma atualização"  
-Sua gameinfo.gi é redefinida em toda atualização grande. Você deve substituí-la manualmente.  
-- "Não consigo ver caixas depois de uma certa distância"  
+- "A config quebrou com uma atualização!"  
+Sua gameinfo.gi é redefinida em toda atualização. Você deve substituí-la manualmente.  
+- "Não consigo ver caixas depois de uma certa distância!"  
 ``r_size_cull_threshold "0.7"``
-- "Não consigo ver a barra de vida das tropas de uma certa distância"  
+- "Não consigo ver a barra de vida das tropas de uma certa distância!"  
 Mude os valores de ``r_size_cull_threshold`` ``sc_fade_distance_scale_override``
-- "Não consigo ver o indicador da ult do Porteiro"  
+- "Não consigo ver o indicador da ult do Porteiro!"  
 Set ``cl_ragdoll_limit`` to `` "-1"``
-- "Tem buracos no modelo de Victor e Gina de certos ângulos"  
+- "Tem buracos no modelo de Victor e Gina em certos ângulos!"  
 Comente ``sc_screen_size_lod_scale_override`` ou aumente o valor.
-- "As luzes nos sacrifícios estão triangulares"  
+- "As luzes nos sacrifícios estão triangulares!"  
 Comente ``sc_screen_size_lod_scale_override`` ou aumente o valor.  
-- "Estou usando a config de boot/kaiz e não consigo ver os personagens na loja ou na tela de vitória"  
+- "Estou usando a config de boot/kaiz e não consigo ver os personagens na loja ou na tela de vitória!"  
 Comente ``citadel_portrait_world_renderer_off`` ou mude para falso.  
-- "Estou usando a config de boot/kaiz e não consigo ver o Ataque Terrestre do Chico"  
+- "Estou usando a config de boot/kaiz e não consigo ver o Ataque Terrestre do Chico!"  
 Comente ``r_drawdecals`` ou mude para falso.  
-- "Não consigo ver o vento dos respiradouros de uma certa distância"  
+- "Não consigo ver o vento dos respiradouros de uma certa distância!"  
 Comente ``sc_fade_distance_scale_override``.  
 
 # Suporte para Mods
-Every variation of the config included in this repository has mod support added. For those who wish to remove or add it back in, remove ``Game                citadel/addons`` From the searchpaths bracket.
-Todas as variações da config incluídas neste repositório possuem suporte para mods. Caso precise remover, ou re-adicionar, remova ``Game                citadel/addons`` da chave de diretórios "searchpaths".
+Todas as variações da _config_ incluídas neste repositório possuem suporte para mods. Caso precise remover, ou re-adicionar, remova ``Game                citadel/addons`` da chave de diretórios "searchpaths".
 
 # Créditos
 Meus agradecimentos sinceros a todos esses indivíduos. São todos adoráveis.
   
-- Sqooky:               Principal desenvolvedora e curadora do repositório, mas não seria possível manter um projeto dessa magnitude sem os outros envolvidos aqui. 
-- JasperP:              Meu herói pessoal.  (Desenvolvedor da Valve que me contatou por conta desse projeto)
-- Artemon121:           Criou o revelador de cvars do Citadel, que ajudou Abdalla a conseguir convars para testar dentro do jogo.  
-- Boot:                 Cara muito simpático, me deu cinco dólares, fez a própria config, testou e ajudou com variás coisas sozinho
-- Brullee:              Removou cvars falsas, comandos redundantes, adicionou a cvarlist.md, e reformulou a config  
-- Kaizuchaneru:         Mesmo não se involvendo diretamente no desenvolvimento, foi quem testou a maioria das convars 
-- Kin:                  Realizou uma quantidade absurda de testes por vontade própria.  
-- Krisha:               Age como meu rato de laboratório para testes.  
-- Maihdenless:          Iniciou o OptimisationLock original e seu antigo Discord.  
-- Piggy:                Me deixou espelhar sua config.  
-- Soulx:                Me deu cinco dólares e me contou sobre espironolactona (muito foda, te amo)
+- Sqooky:               Principal desenvolvedora e curadora do repositório, mas não seria possível manter um projeto dessa magnitude sem os outros envolvidos aqui; 
+- JasperP:              Meu herói pessoal.  (Desenvolvedor da Valve que me contatou por conta desse projeto);
+- Artemon121:           Criou o "revelador de cvars do Citadel", que ajudou Abdalla a conseguir _convars_ para testar dentro do jogo;  
+- Boot:                 Cara muito simpático, me deu cinco dólares, fez a própria config, testou e ajudou com várias coisas sozinho;
+- Brullee:              Removou _cvars_ falsas, comandos redundantes, adicionou a cvarlist.md, e reformulou a _config_;  
+- Kaizuchaneru:         Mesmo não se involvendo diretamente no desenvolvimento, foi quem testou a maioria das convars; 
+- Kin:                  Realizou uma quantidade absurda de testes por vontade própria;  
+- Krisha:               Age como meu rato de laboratório para testes;  
+- Maihdenless:          Iniciou o OptimisationLock original e seu antigo Discord;  
+- Piggy:                Me deixou espelhar sua config;  
+- Soulx:                Me deu cinco dólares e me contou sobre espironolactona (muito foda, te amo);
 - Tamara Mochaccina:    Contribuiu com o ajuste de mira da Vindicta e ajuste da névoa.  
 
 
 ## Pessoas legais que conheci por este projeto e as quais quero agradecer por serem elas mesmas.
 - 6Daves
-- Anartoast
+- anartoast
 - Boot
 - GoreDaughter
 - Jaden
