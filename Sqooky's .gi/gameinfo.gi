@@ -13,7 +13,7 @@
 //         /!#%|'-_- '\%k*|
 //     o   |*@/        \_/
 //         \)&|
-// OptimizationLock v2.4.3 by Sqooky with help from others <3
+// OptimizationLock v2.4.4 by Sqooky with help from others <3
 
 // As much as I would love to say I did this alone, I did not. These are the amazing people who deserve as much praise as I, if not more
 //  Major thanks to all of these individuals from the bottom of my heart. They are all lovely.
@@ -31,8 +31,11 @@
 //- Xeno:   Very politely waited for me to figure out how to accept donations and was very polite about it
 
 // Translators
-//- Egyptianscale:                  Translated to Russian
-//- Tamara Mochaccina and Heathen:  Translated to Spanish
+//- Egyptianscale: Translated to Russian
+//- Tamara Mochaccina and Heathen: Translated to Spanish
+//- Linaa and anartoast: Translated to Portuguese
+//- Macchiako: Translated to Bulgarian
+//- Cyvoid: Translated to Italianchaccina and Heathen:  Translated to Spanish
 
 // Misc
 //- Artemon121:     Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game.
@@ -607,7 +610,7 @@ GameInfo
         //      If you would like to donate as a means of showing thanks I have a kofi.     \\
         //      https://ko-fi.com/sqooky                                                    \\
 
-        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.4.3 -------- \\
+        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.4.4 -------- \\
         // The github is here https://github.com/Sqooky/OptimizationLock  \\
         // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
         // The gamebanana:https://gamebanana.com/mods/656341 (it's usually behind, please check the github) \\
@@ -868,7 +871,6 @@ GameInfo
 
         // ================ Rendering Stuff ================
         r_citadel_gpu_culling          "true"  // The game barely uses the gpu so this is a win                    [def: "true"]
-        r_citadel_gpu_culling_two_pass "false" // Assuming that this is culling passes this should be faster       [def: "true"]
         r_frame_sync_enable            "false" // No documentation, not sure if this does anything                 [def: "true"]
         r_force_zprepass               "0"     // 0: Force z prepass off. 1: Force on. -1: Don't force             [def: "-1"]
         // With my understanding of how zprepasses work this should reduce cpu usage if set to zero, but that's under the assumption that valve's implementation isn't properly optimized. Please play with this. Your mileage may vary.
@@ -959,6 +961,7 @@ GameInfo
 
         // ================ Convars You Shouldn't/Can't Mess With But I Want to Maintain the Documentation ================
 
+        //r_citadel_gpu_culling_two_pass "false" // Setting this to false will cause issues with frametime [def: "true"]
         //lb_enable_envmaps                       "false" // This makes all characters black
         // r_showdebugoverlays                    "true"  // Shows a ton of debug overlays IT MAKES ME SO HAPPY I LOVE IT     [def: "false"]
         // citadel_first_person                   "true"  // Puts you in first person, messes up character rendering
@@ -982,12 +985,20 @@ GameInfo
         // sc_skip_traversal                      "true"  // Disables rendering, ie the screen is black.          [def: "false"]
         // sc_aggregate_show_outside_vis          "true"  // This makes the entire map stop rendering             [def: "false"]
 
-                // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.4.3 ------------------------------- \\
+                // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.4.4 ------------------------------- \\
 
 
 
         // =============== Cvars in Testing :D ===============
-
+//citadel_sat_volume_outline_color 255 255 255 255
+//citadel_sat_volume_sat_color 255 255 255 255
+//r_citadel_selection_outline2_alpha 1
+//r_citadel_selection_outline2_offset 10
+//r_citadel_selection_outline2_width 10
+//sc_force_translation_in_projection true
+//cam_collision false
+//citadel_camera_wobble_disable true
+//citadel_zipline_allow_direction_choice false
 //r_citadel_gpu_preview_denoise false
 //r_citadel_gpu_preview_baked_shadows false
 //r_citadel_depth_prepass_dynamic_objects false
@@ -1038,8 +1049,8 @@ GameInfo
 //enable_boneflex false
 //anim_resource_validate_on_load                  "false"
 //animgraph_enable false
-citadel_camera_use_vmdl_flatten_horizontal false
-citadel_camera_use_vmdl_flatten_vertical false
+//citadel_camera_use_vmdl_flatten_horizontal false
+//citadel_camera_use_vmdl_flatten_vertical false
 //citadel_debug_player_speed_in_meters false
 //citadel_use_new_minimap false
 //citadel_weapon_normalize_recoil_with_firerate false
