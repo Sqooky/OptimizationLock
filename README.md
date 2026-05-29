@@ -5,6 +5,7 @@
 ### [Инструкции на български тук](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_bulgarian.md)
 ### [Istruzioni in italiano qui](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_italian.md)
 ### [Instructions en français ici](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_french.md)
+### [中文说明](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_chinese.md)
 ## Main body
 To either request support or contribute findings to the project, our Discord Server can be found [here](https://discord.gg/EF3Jq57jQv).  
 If you see me in game say hi! My username is "I want to eat flowers!"
