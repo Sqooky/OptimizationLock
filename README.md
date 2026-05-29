@@ -4,8 +4,9 @@
 ### [🇧🇷 Instruções em Português aqui](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_portuguese.md)
 ### [🇧🇬 Инструкции на български тук](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_bulgarian.md)
 ### [🇮🇹 Istruzioni in italiano qui](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_italian.md)
-### [ 🇫🇷 Instructions en français ici](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_french.md)
+### [🇫🇷 Instructions en français ici](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_french.md)
 ### [🇨🇳 中文说明](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_chinese.md)
+### [🇺🇦 Інструкції українською тут](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_ukrainian.md)
 
 ## Main body
 To either request support or contribute findings to the project, our Discord Server can be found [here](https://discord.gg/EF3Jq57jQv).  
@@ -117,6 +118,7 @@ Every variation of the config included in this repository has mod support added.
 - Cyvoid:                           Translated to Italian
 - Vi:                               Translated to French
 - ZHTodd223:                        Translated to Chinese
+- Sasha11711:                       Translated to Ukrainian!
 
 ## Misc
 - Artemon121:     Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game.
