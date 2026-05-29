@@ -1,4 +1,4 @@
-```text
+
 ## 翻译版本
 ### [西班牙语说明](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_spanish.md)
 ### [俄语说明](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_russian.md)
@@ -44,6 +44,7 @@
 
 要手动添加控制台变量，你需要打开 gameinfo.gi，使用 Ctrl+F 搜索 `convars`，然后在 `{` 之后粘贴命令。
 手动添加时，请确保不要删除 `rate {` 或把命令放到它的括号内，否则会导致游戏无法启动。
+
 ```
 Convars {
 // 希望你的命令从这行下面开始 ——
@@ -53,7 +54,7 @@ Convars {
 rate {
 ```
 
-# “安装配置后地图变得奇怪且黑暗”
+# “安装配置后地图变得很黑很奇怪”
 请将游戏内的阴影设置降低到中或低。
 
 # 常见问题
@@ -147,9 +148,8 @@ rate {
 - Boot  
 - Lina 🜏
 
-# 相当重要的公告
+# 重要的公告
 在前段时间的补丁中，citadel_main_english.txt 增加了这样一句话：“当任何队伍里的成员修改了 Gameinfo.gi 中的 ConVars 或正在运行工具模式时，无法进入匹配。”目前这一机制尚未完全实装。  
 除此之外，未来 Valve 很可能会正式实施该限制，从而限制游戏内使用控制台变量。在此之前（很可能在此之后也是如此），我仍会继续维护这个项目。
 
 在此之前，你可以考虑[在官方论坛发帖](https://forums.playdeadlock.com/)，表达“嘿，我担心如果禁用 Cvars 设置的话，我就无法以 60 帧每秒的帧率来玩这个游戏了”，这是向开发者反馈的最直接方式。
-```
