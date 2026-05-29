@@ -7,7 +7,7 @@
 ### [Instructions en français ici](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_french.md)
 ## Main body
 To either request support or contribute findings to the project, our Discord Server can be found [here](https://discord.gg/EF3Jq57jQv).  
-If you would like to donate as a means of showing thanks I have a kofi here! https://ko-fi.com/sqooky  
+I've probably put at least five hundred hours into working on this project. I want it to be free forever, but I'm dirt poor and if you would like to donate as a means of showing thanks I have a kofi here! https://ko-fi.com/sqooky (I will love you forever)  
 
 **Donors!**
 I love you all so much
