@@ -286,7 +286,7 @@ GameInfo
     {
         CreateRenderClusters          "1"
         DefaultMinDrawVolumeSize      "2048"
-        DefaultMinTrianglesPerCluster "16384"
+        DefaultMinTrianglesPerCluster "2048"
         DefaultPointEntity            "info_player_start"
         DefaultSolidEntity            "trigger_multiple"
         GameFeatureSet                "Citadel"
@@ -304,7 +304,7 @@ GameInfo
         TileMeshesEnabled             "1"
         TimeSlicedShadowMapRendering  "0"
         UseAnalyticGrid               "0"
-        UsesBakedLighting             "1"
+        UsesBakedLighting             "0"
         fgd                           "citadel.fgd" // NOTE: This is relative to the 'game' path.
 
 
@@ -364,9 +364,9 @@ GameInfo
         WorldRendererBuilder
         {
             VisibilityGuidedMeshClustering     "1"
-            MinimumTrianglesPerClusteredMesh   "8192"
-            MinimumVerticesPerClusteredMesh    "8192"
-            MinimumVolumePerClusteredMesh      "8192" // ~20x20x20 cube
+            MinimumTrianglesPerClusteredMesh   "4096"
+            MinimumVerticesPerClusteredMesh    "4096"
+            MinimumVolumePerClusteredMesh      "4096" // ~20x20x20 cube
             MaxPrecomputedVisClusterMembership "96"
             MaxCullingBoundsGroups             "128"
             UseAggregateInstances              "1"
@@ -632,14 +632,14 @@ GameInfo
         // --- 2. Field of View ---
         // These commands both affect fov but do so in different ways. citadel_camera_hero_fov changes the field of view using typical degrees but doesn't modify the punch zoom in. This means that if you have a high fov value the zoom in can be disorienting.
         //citadel_camera_hero_fov                     "106"           // The field of view angle of the camera when following a hero.     [def: "90"]
-        r_aspectratio                               "2.50"          // This command is commented out, represented by the // at the beginning of the line. Editing it will not do anything. To mess with it remove the //
+        r_aspectratio                               "2.90"          // This command is commented out, represented by the // at the beginning of the line. Editing it will not do anything. To mess with it remove the //
         // r_aspectratio changes the zoom of the camera which in turn doesn't make the punch zoom in as jarring, but the command is not as intuitive to set precisely
         // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov). 
 
         // --- 3. HUD ---
         citadel_unit_status_delta_decay_rate               "2"       // how quickly the yellow to indicate damage fades from the health bar. [def: "3"]
         // citadel_hud_objective_health_debug_show_midboss "true"    // This makes midboss' health bar visible whenever it's able to be rendered. I like it, you might not [def: "false"]
-        // citadel_unit_status_use_v2                      "0"       // Set to 1 to enable the new health bar that allows you to  see enemy stamina. [def: "0"]
+         citadel_unit_status_use_v2                      "0"       // Set to 1 to enable the new health bar that allows you to  see enemy stamina. [def: "0"]
         // citadel_unit_status_use_v2_for_nonplayers       "0"       // Set to 1 to enable the new health bar but for troopers, objs, and camps.     [def: "0"]
         citadel_crosshair_hit_marker_duration              "0.00001" // Removes the hitmarker when shooting people.                      [def: "0.1"]
         citadel_damage_report_enable                       "1"       // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
@@ -647,7 +647,7 @@ GameInfo
         citadel_hideout_ball_show_juggle_count             "1"       // Shows a fun juggle count minigame for hideout ball.              [def: "0"]
         citadel_hideout_ball_show_juggle_fx                "1"       // Shows juggle visual FX for hideout ball minigame.                [def: "0"]
         citadel_hud_objective_health_enabled               "2"       // 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks.                           [def: "2"]
-        citadel_unit_status_use_new                        "true"       // This uses new Health Bar, to use old Health Bar change "true" to "false".    [def: "false"]
+        citadel_unit_status_use_new                        "false"       // This uses new Health Bar, to use old Health Bar change "true" to "false".    [def: "false"]
         citadel_show_chat_wheel_angle_threshold            "0"       // (degrees) Increase this to change how much you have to move your camera angle to make the Chat Wheel instantly visible while holding Ping. [def: "16"]
 
         // --- 4. Lighting & Shadows ---
@@ -988,6 +988,19 @@ GameInfo
 
 
         // =============== Cvars in Testing :D ===============
+citadel_unit_status_single_bar_mode true
+//citadel_unit_status_health_per_minor_pip 0
+//citadel_unit_status_max_health_per_bar 5000
+//citadel_unit_status_health_per_pip 0
+citadel_unit_status_health_pips_per_row 100
+engine_max_resource_system_update_time 10
+citadel_unit_status_old_update_rate 15
+//citadel_unit_status_v2_height 600
+//citadel_unit_status_v2_width 300
+citadel_unit_status_single_bar_mode true
+//citadel_unit_status_height 300
+snd_soundmixer_update_maximum_frame_rate 15
+minimap_update_rate_hz 15
 panorama_disable_descendant_filtering true
 //panorama_disable_draw_fancy_quad true
 //panorama_disable_layer_clear true
@@ -1190,7 +1203,7 @@ citadel_in_world_item_panel_dpi 0.8
 
         // sound volume rate change limiting
         snd_envelope_rate                        "100.0"
-        snd_soundmixer_update_maximum_frame_rate "0"
+        //snd_soundmixer_update_maximum_frame_rate "0"
 
         //don't let people mess with speaker config settings.
         speaker_config
