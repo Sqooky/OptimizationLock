@@ -13,7 +13,7 @@
 //         /!#%|'-_- '\%k*|
 //     o   |*@/        \_/
 //         \)&|
-// OptimizationLock v2.4.4 by Sqooky with help from others <3
+// OptimizationLock vtesting by Sqooky with help from others <3
 
 // As much as I would love to say I did this alone, I did not. These are the amazing people who deserve as much praise as I, if not more
 //  Major thanks to all of these individuals from the bottom of my heart. They are all lovely.
@@ -31,8 +31,14 @@
 //- Xeno:   Very politely waited for me to figure out how to accept donations and was very polite about it
 
 // Translators
-//- Egyptianscale:                  Translated to Russian
-//- Tamara Mochaccina and Heathen:  Translated to Spanish
+//- Egyptianscale: Translated to Russian
+//- Tamara Mochaccina and Heathen: Translated to Spanish
+//- Linaa and anartoast: Translated to Portuguese
+//- Macchiako:  Translated to Bulgarian
+//- Cyvoid:     Translated to Italian
+//- Vi:         Translated to French
+//- ZHTodd223:  Translated to Chinese
+//- Sasha11711: Translated to Ukrainian!
 
 // Misc
 //- Artemon121:     Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game.
@@ -607,7 +613,7 @@ GameInfo
         //      If you would like to donate as a means of showing thanks I have a kofi.     \\
         //      https://ko-fi.com/sqooky                                                    \\
 
-        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.4.4 -------- \\
+        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. testing -------- \\
         // The github is here https://github.com/Sqooky/OptimizationLock  \\
         // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
         // The gamebanana:https://gamebanana.com/mods/656341 (it's usually behind, please check the github) \\
@@ -983,7 +989,7 @@ GameInfo
         // sc_skip_traversal                      "true"  // Disables rendering, ie the screen is black.          [def: "false"]
         // sc_aggregate_show_outside_vis          "true"  // This makes the entire map stop rendering             [def: "false"]
 
-                // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.4.4 ------------------------------- \\
+                // --------------------------------- END OF CONFIG OptimizationLock -- ver. testing ------------------------------- \\
 
 
 
