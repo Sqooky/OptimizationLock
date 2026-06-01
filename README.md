@@ -1,16 +1,16 @@
 ## Translations
 ### [🇲🇽 Instrucciones en español aqui](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_spanish.md)
-Translated by [Tamara Mochaccina](https://throne.com/anonimacl) and [Heathen]()
+Translated by [Tamara Mochaccina](https://throne.com/anonimacl) and Heathen
 ### [🇷🇺 Инструкции на русском тута](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_russian.md)
 Translated by [Egyptianscale](https://youtube.com/@egyptianscale?si=dut5A-T0kcPaHOCM)
 ## [🇧🇷 Instruções em Português aqui](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_portuguese.md)
-Translated by [Linaa]() and [anartoast](https://ko-fi.com/anartoast)
+Translated by Linaa and [anartoast](https://ko-fi.com/anartoast)
 ### [🇧🇬 Инструкции на български тук](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_bulgarian.md)
 Translated by [Macchiako](https://ko-fi.com/kity985)
 ### [🇮🇹 Istruzioni in italiano qui](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_italian.md)
-Translated by [Cyvoid]()
+Translated by Cyvoid
 ### [🇫🇷 Instructions en français ici](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_french.md)
-Translated by [Vi]()
+Translated by Vi
 ### [🇨🇳 中文说明](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_chinese.md)
 Translated by [ZHTodd223](https://github.com/ZHTodd223)
 ### [🇺🇦 Інструкції українською тут](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_ukrainian.md)
