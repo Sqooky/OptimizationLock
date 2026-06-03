@@ -490,7 +490,7 @@ GameInfo
         EnvironmentMaps              "1"    //                                                                                                      [def: "1"]
         GrassCastsShadows            "0"
 
-        EnvironmentMapCacheSize "256"
+        EnvironmentMapCacheSize "1024"
 
         // These are stolen from CS2
         LPVEdgeBlending "0" // Don't apply the edge fade distance to LPV bounds, we don't blend LPVs in CS2 shaders
@@ -509,13 +509,13 @@ GameInfo
         // RenderMeshlets            "1"
 
 
-        //CMTAtlasHeight             "512"
-        //CMTAtlasWidth              "512"
-        //CSMCascadeResolution       "0" // [def: "2048"]
-        //CharacterDecals            "0"
-        //CubemapFog                 "0" // [def: "1"]
-        //DefaultShadowTextureHeight "0" // [def: "6144"]
-        //DefaultShadowTextureWidth  "0" // [def: "6144"]
+        CMTAtlasHeight                            "512"
+        CMTAtlasWidth                             "512"
+        //CSMCascadeResolution                      "0" // [def: "2048"]
+        //CharacterDecals                           "0"
+        //CubemapFog                                "0" // [def: "1"]
+        //DefaultShadowTextureHeight                "0" // [def: "6144"]
+        //DefaultShadowTextureWidth                 "0" // [def: "6144"]
         // Temp till I can add support in citadel shaders
         DisableLateAllocatedTransformBuffer         "1"          // [def: "1"]
         DynamicShadowResolution                     "1"          // [def: "1"]
@@ -525,7 +525,7 @@ GameInfo
         FrameBufferCopyFormat                       "R11G11B10F" // [def: "R11G11B10F"]
         GpuLightBinner                              "1"          // [def: "1"]
         GpuLightBinnerSunLightFastPath              "1"          // [def: "1"]
-        GpuLightBinnerSupportViewModelCascade       "0"
+        //GpuLightBinnerSupportViewModelCascade       "0"
         HDRFrameBuffer                              "0"
         LayerBatchThresholdFullsort                 "80"    // [def: "20"]
         MinimumLateAllocatedVertexCacheBufferSizeMB "64"    // [def: "64"]
@@ -541,14 +541,14 @@ GameInfo
         VolumetricFog                               "0"    // [def: "1"]
 
         // Stolen from CS2
-        GpuLightBinnerBinEnvMaps "1"
-        GpuLightBinnerBinLPVs    "1"
+        //GpuLightBinnerBinEnvMaps "1"
+        //GpuLightBinnerBinLPVs    "1"
 
-        LightCookieAllocGranularity "1"
-        LightCookieMinAllocSize     "0"
+        //LightCookieAllocGranularity "1"
+        //LightCookieMinAllocSize     "0"
         DisableShadowFullSort       "1"
         SparseShadowTrees           "1" // enable this to experiment with Sparse Shadow Trees as a drop in replacement for static geo shadow rendering into cascades
-        PointLightShadowsEnabled    "1"
+        PointLightShadowsEnabled    "0"
 
 
         WellKnownLightCookies
@@ -599,12 +599,12 @@ GameInfo
     {
         EnableParticleShaderFeatureBranching "1"
         Float16HDRBackBuffer                 "1"
-        PET_SupportFadingOpaqueModels        "1"
+        PET_SupportFadingOpaqueModels        "0"
         Features                             "non_homogenous_forward_layer_only"
         ParticlesFoggedByDefault             "0"
         PerVertexLighting                    "0"
         GpuImplicitRendererManifest          "1"
-        EnableMixedResolution                "1"
+        EnableMixedResolution                "0"
     }
 
     ConVars
@@ -637,8 +637,8 @@ GameInfo
 
         // --- 2. Field of View ---
         // These commands both affect fov but do so in different ways. citadel_camera_hero_fov changes the field of view using typical degrees but doesn't modify the punch zoom in. This means that if you have a high fov value the zoom in can be disorienting.
-        //citadel_camera_hero_fov                     "106"           // The field of view angle of the camera when following a hero.     [def: "90"]
-        r_aspectratio                               "2.90"          // This command is commented out, represented by the // at the beginning of the line. Editing it will not do anything. To mess with it remove the //
+        citadel_camera_hero_fov                     "120"           // The field of view angle of the camera when following a hero.     [def: "90"]
+        //r_aspectratio                               "3"          // This command is commented out, represented by the // at the beginning of the line. Editing it will not do anything. To mess with it remove the //
         // r_aspectratio changes the zoom of the camera which in turn doesn't make the punch zoom in as jarring, but the command is not as intuitive to set precisely
         // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov). 
 
@@ -701,8 +701,8 @@ GameInfo
         r_texturefilteringquality      "3"   // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x
 
         // --- 10. Render Distance ---
-        r_farz       "8192" // This controls the far clipping plane, ie building/player popin   [def: "-1"]
-        r_mapextents "8192" // Far clipping plane, this will make buildings pop in and out      [def: "16384"] damn that's an oddly specific number
+        r_farz       "7000" // This controls the far clipping plane, ie building/player popin   [def: "-1"]
+        r_mapextents "7000" // Far clipping plane, this will make buildings pop in and out      [def: "16384"] damn that's an oddly specific number
 
         // ================ IMPORTANT ================
         thread_pool_option "-1" // If I understand correctly, this should be how threads are handled relative to the game, but there isn't a clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage may vary. [def: "-1"]
@@ -818,10 +818,10 @@ GameInfo
 
         // ================ System Related ================
         // Chances are these don't matter so you can ignore them
-        battery_saver         "0"     // Disables battery saver mode (no automatic throttling).                   [def: "0"]
-        cpu_level             "1"     // CPU level.                                                               [def: "2"]
-        enable_priority_boost "true"  //
-        gpu_mem_level         "1"     // GPU Memory level.                                                        [def: "2"]
+        //battery_saver         "0"     // Disables battery saver mode (no automatic throttling).                   [def: "0"]
+        //cpu_level             "1"     // CPU level.                                                               [def: "2"]
+        //enable_priority_boost "true"  //
+        //gpu_mem_level         "1"     // GPU Memory level.                                                        [def: "2"]
         // think_limit        "0.001" // Limits how much “think” time/entities can process per tick (CPU cap).    [def: "10"]
         //^ *TODO I am going to need to test this to make sure lowering it doesn't cause problems.
 
@@ -993,7 +993,27 @@ GameInfo
 
 
 
+
         // =============== Cvars in Testing :D ===============
+panorama_disable_blur true
+panorama_disable_box_shadow true
+panorama_disable_descendant_filtering true
+//panorama_disable_draw_fancy_quad true
+panorama_max_text_shadow_strength 5
+panorama_min_comp_layer_cache_cost 384
+panorama_panel_occlusion false
+//panorama_skip_composition_layer_content_paint_tint true
+panorama_transforms_no_comp_layer true
+
+panorama_comp_layer_lru_lifetime 2
+panorama_clear_frames_on_device_restore 0
+panorama_cache_command_list_size_threshold 512
+v8_jitless false
+v8_stack_size 512
+//panorama_highlight_slow_operations true
+"v8_maximum_heap_size_mb" "1024"                  // (Default is 512) Doubles UI memory heap to prevent CPU GC stutters
+"cl_skip_hierarchy_update_for_unchanged_entities" "true" // Skips updating bones/hierarchy for networked entities that haven't moved. Massive CPU saver.
+"steam_inputhandler_enabled" "0"             // Completely disables Steam Input API polling. Huge for 1% lows if you only use Keyboard/Mouse.
 citadel_unit_status_single_bar_mode true
 //citadel_unit_status_health_per_minor_pip 0
 //citadel_unit_status_max_health_per_bar 5000
@@ -1018,7 +1038,6 @@ panorama_max_fps 15
 panorama_max_overlay_fps 15
 panorama_max_text_shadow_strength 5
 panorama_panel_occlusion false
-panorama_render_target_cache_max_size 384
 panorama_skip_composition_layer_content_paint true
 panorama_transforms_no_comp_layer true
 panorama_transition_time_factor 5
@@ -1112,9 +1131,8 @@ citadel_in_world_item_panel_dpi 0.8
         // citadel_fibonnaci_sphere_trace_los_max        "32" //put under camera tweaks :D
         // cam_collision                                 "0"
         // mat_shading_complexity_max_register_count     "8"
-        // hud_fastswitch                                "0"
-        // panorama_transition_time_factor               "0"
-        // panorama_disable_render_target_cache          "true"
+        // hud_fastswitch                                "0" 
+        panorama_disable_render_target_cache          "true"
         // r_skip_precache_validation_check              "true"
         // cl_skip_update_animations                     "true"
         // multigpu_skip_semaphores                      "true"
