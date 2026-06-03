@@ -37,7 +37,7 @@
 | [Sqooky 的配置 / Optimizationlock 默认版](https://github.com/Sqooky/OptimizationLock/blob/main/Sqooky's%20.gi/gameinfo.gi) | 以性能为导向，同时避免画面变得难看。我推荐大多数用户使用。 | 截图见[此处](https://github.com/Sqooky/OptimizationLock/tree/main/Sqooky's%20.gi) |
 | [Test_Cfg](https://github.com/Sqooky/OptimizationLock/blob/main/test_cfg/gameinfo.gi) | Sqooky 配置的测试分支版。可能有一些小问题，但性能应该更好。 | 无截图。 |
 | [Boot 的极限帧数配置](https://github.com/Sqooky/OptimizationLock/blob/main/boot's%20maxium%20fps%20config/gameinfo.gi) | 极度侧重性能，目前在所有测试过的配置中帧数最高。 | 截图见[此处](https://github.com/Sqooky/OptimizationLock/tree/main/boot's%20maxium%20fps%20config) |
-| [Kaizuchaneru 的最低配置](https://github.com/Sqooky/OptimizationLock/blob/main/kaizuchaneru's%20minimum%20spec/gameinfo.gi) | 该配置将帧数放在首位，大幅降低图形质量。推荐配置很差的电脑使用。 | 截图见[此处](https://github.com/Sqooky/OptimizationLock/tree/main/kaizuchaneru's%20minimum%20spec) |
+| [Kaizuchaneru 的最低配置](https://github.com/Sqooky/OptimizationLock/blob/main/kaizuchanerus%20minimum%20spec/gameinfo.gi) | 该配置将帧数放在首位，大幅降低图形质量。推荐配置很差的电脑使用。 | 截图见[此处](https://github.com/Sqooky/OptimizationLock/tree/main/kaizuchaneru's%20minimum%20spec) |
 | [Piggy 的 gameinfo.gi](https://github.com/Sqooky/OptimizationLock/tree/main/piggy's%20config) | 目前 piggy 的配置已过时，但如果你想用他的配置，仍可在此找到。 | |
 | [Convars.txt](https://github.com/Sqooky/OptimizationLock/blob/main/convars.txt) | 游戏代码中的每一个控制台变量。这不是一个正式配置，而是一个参考文件。 | |
 | [Base_convars.txt](https://github.com/Sqooky/OptimizationLock/blob/main/base_convars.txt) | OptimizationLock 默认使用到的所有控制台变量，方便你手动添加。 | |
