@@ -29,6 +29,7 @@
 //- Sonny:  Gave me five dollars and waited through me setting up a paypal account and didn't change their mind
 //- Soulx:  Gave me five dollars and told me about spirolactone 
 //- Xeno:   Very politely waited for me to figure out how to accept donations and was very polite about it
+//- N8Fan:  Gave me TEN dollars so I could play vampire survivors
 
 // Translators
 //- Egyptianscale: Translated to Russian

@@ -29,6 +29,7 @@ I love you all so much
 - Boot
 - Xeno
 - Sonny
+- N8Fan
 
 <div>
   <img src="https://github.com/Sqooky/OptimizationLock/blob/main/media/joy.png?raw=true" alt="A picture reading Sqooky's .gi A collage of performance configs with the intent of optimizing the game."/>
