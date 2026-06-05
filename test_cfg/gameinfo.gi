@@ -137,21 +137,20 @@ GameInfo
         // Search paths are relative to the exe directory\..\
         //
 
-        
-// Deadlock Mod Manager - Start
+        // Deadlock Mod Manager - Start
 
-		SearchPaths
-        {  
-            Game_Language       citadel_*LANGUAGE*
-            Game                citadel/addons
-            Mod                 citadel
-            Write               citadel          
-            Game                citadel
-            Mod                 core
-            Write               core
-            Game                core        
+        SearchPaths
+        {
+            Game_Language "citadel_*LANGUAGE*"
+            Game          "citadel/addons"
+            Mod           "citadel"
+            Write         "citadel"
+            Game          "citadel"
+            Mod           "core"
+            Write         "core"
+            Game          "core"
         }
-// Deadlock Mod Manager - End
+        // Deadlock Mod Manager - End
     }
 
     MaterialSystem2
@@ -372,9 +371,9 @@ GameInfo
         WorldRendererBuilder
         {
             VisibilityGuidedMeshClustering     "1"
-            MinimumTrianglesPerClusteredMesh   "8192"
-            MinimumVerticesPerClusteredMesh    "8192"
-            MinimumVolumePerClusteredMesh      "8192" // ~20x20x20 cube
+            MinimumTrianglesPerClusteredMesh   "4096"
+            MinimumVerticesPerClusteredMesh    "4096"
+            MinimumVolumePerClusteredMesh      "4096" // ~20x20x20 cube
             MaxPrecomputedVisClusterMembership "96"
             MaxCullingBoundsGroups             "128"
             UseAggregateInstances              "1"
@@ -655,7 +654,7 @@ GameInfo
         citadel_hideout_ball_show_juggle_count             "1"       // Shows a fun juggle count minigame for hideout ball.              [def: "0"]
         citadel_hideout_ball_show_juggle_fx                "1"       // Shows juggle visual FX for hideout ball minigame.                [def: "0"]
         citadel_hud_objective_health_enabled               "2"       // 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks.                           [def: "2"]
-        citadel_unit_status_use_new                        "true"       // This uses new Health Bar, to use old Health Bar change "true" to "false".    [def: "false"]
+        citadel_unit_status_use_new                        "false"       // This uses new Health Bar, to use old Health Bar change "true" to "false".    [def: "false"]
         citadel_show_chat_wheel_angle_threshold            "0"       // (degrees) Increase this to change how much you have to move your camera angle to make the Chat Wheel instantly visible while holding Ping. [def: "16"]
 
         // --- 4. Lighting & Shadows ---
@@ -997,52 +996,54 @@ GameInfo
 
 
         // =============== Cvars in Testing :D ===============
-//panorama_disable_blur true
-//panorama_disable_box_shadow true
-//panorama_disable_descendant_filtering true
+cl_hud_telemetry_frametime_show false // This is from kaiz. 
+panorama_disable_blur true
+panorama_disable_box_shadow true
+panorama_disable_descendant_filtering true
 //panorama_disable_draw_fancy_quad true
-//panorama_max_text_shadow_strength 5
-//panorama_min_comp_layer_cache_cost 384
-//panorama_panel_occlusion false
+panorama_max_text_shadow_strength 5
+panorama_min_comp_layer_cache_cost 384
+panorama_panel_occlusion false
 //panorama_skip_composition_layer_content_paint_tint true
-//panorama_transforms_no_comp_layer true
+panorama_transforms_no_comp_layer true
 
-//panorama_comp_layer_lru_lifetime 2
-//panorama_clear_frames_on_device_restore 0
-//panorama_cache_command_list_size_threshold 512
-//v8_jitless false
-//v8_stack_size 512
+panorama_comp_layer_lru_lifetime 2
+panorama_clear_frames_on_device_restore 0
+panorama_cache_command_list_size_threshold 512
+v8_jitless false
+v8_stack_size 512
 //panorama_highlight_slow_operations true
-//"v8_maximum_heap_size_mb" "1024"                  // (Default is 512) Doubles UI memory heap to prevent CPU GC stutters
-//"cl_skip_hierarchy_update_for_unchanged_entities" "true" // Skips updating bones/hierarchy for networked entities that haven't moved. Massive CPU saver.
-//"steam_inputhandler_enabled" "0"             // Completely disables Steam Input API polling. Huge for 1% lows if you only use Keyboard/Mouse.
-//citadel_unit_status_single_bar_mode true
+"v8_maximum_heap_size_mb" "1024"                  // (Default is 512) Doubles UI memory heap to prevent CPU GC stutters
+"cl_skip_hierarchy_update_for_unchanged_entities" "true" // Skips updating bones/hierarchy for networked entities that haven't moved. Massive CPU saver.
+"steam_inputhandler_enabled" "0"             // Completely disables Steam Input API polling. Huge for 1% lows if you only use Keyboard/Mouse.
+citadel_unit_status_single_bar_mode true
 //citadel_unit_status_health_per_minor_pip 0
 //citadel_unit_status_max_health_per_bar 5000
-////citadel_unit_status_health_per_pip 0
-//citadel_unit_status_health_pips_per_row 100
-//engine_max_resource_system_update_time 10
-//citadel_unit_status_old_update_rate 15
+//citadel_unit_status_health_per_pip 0
+citadel_unit_status_health_pips_per_row 100
+engine_max_resource_system_update_time 10
+citadel_unit_status_old_update_rate 15
 //citadel_unit_status_v2_height 600
 //citadel_unit_status_v2_width 300
-//citadel_unit_status_single_bar_mode true
+citadel_unit_status_single_bar_mode true
 //citadel_unit_status_height 300
-//snd_soundmixer_update_maximum_frame_rate 15
-//minimap_update_rate_hz 15
-//panorama_disable_descendant_filtering true
+snd_soundmixer_update_maximum_frame_rate 15
+minimap_update_rate_hz 15
+panorama_disable_descendant_filtering true
 //panorama_disable_draw_fancy_quad true
 //panorama_disable_layer_clear true
 //panorama_disable_render_callbacks true
-//panorama_disable_render_target_cache false
-//panorama_enable_secondary_layout_pass false
-//panorama_js_minidumps false
-//panorama_max_fps 15
-//panorama_max_overlay_fps 15
-//panorama_max_text_shadow_strength 5
-//panorama_panel_occlusion false
-//panorama_skip_composition_layer_content_paint true
-//panorama_transforms_no_comp_layer true
-//panorama_transition_time_factor 5
+panorama_disable_render_target_cache false
+panorama_enable_secondary_layout_pass false
+panorama_js_minidumps false
+panorama_max_fps 15
+panorama_max_overlay_fps 15
+panorama_max_text_shadow_strength 5
+panorama_panel_occlusion false
+panorama_skip_composition_layer_content_paint true
+panorama_transforms_no_comp_layer true
+panorama_transition_time_factor 5
+animgraph_enable_dirty_netvar_optimization true
 
 //panorama_clear_frames_on_device_restore "0"
 panorama_debugger_theme dark
@@ -1124,26 +1125,29 @@ citadel_in_world_item_panel_dpi 0.8
 //cl_skel_constraints_enable false
 //audio_enclosure_calc_enabled false
 //animated_material_attributes    false
-// citadel_radial_distortion                     "1" // Doesn't seem to do anything :(, here's what it's supposed to do: 0: Off 1: Distorts the visible distribution of arcs based on the mouse pointer. [def: "0"]
-// cl_fasttempentcollision                       "20"
-// citadel_camera_hard_trace_radius              "32" //put under camera tweaks :D
-// citadel_fibonnaci_sphere_trace_los_max        "32" //put under camera tweaks :D
-// cam_collision                                 "0"
-// mat_shading_complexity_max_register_count     "8"
-// hud_fastswitch                                "0" 
-//panorama_disable_render_target_cache          "true"
-// r_skip_precache_validation_check              "true"
-// cl_skip_update_animations                     "true"
-// multigpu_skip_semaphores                      "true"
-// multigpu_skip_transfers                       "true"
-// panorama_skip_composition_layer_content_paint "true"
-// panorama_skip_compo                           "true"
-// r_draw_first_tri_only                         "true"
-// r_frame_sync_enable                           "true"
-// r_nearz                                       "20"
-// r_particle_explicit_fetch                     "true"
-// r_citadel_distancefield_max_distance          "16" // Doesn't seem to do anything, or if it does it is overwritten. [def: "2048"]
-// r_citadel_distancefield_min_screen_space_size "99" // Same as above                                                    [def: "0.015"]
+
+
+
+        // citadel_radial_distortion                     "1" // Doesn't seem to do anything :(, here's what it's supposed to do: 0: Off 1: Distorts the visible distribution of arcs based on the mouse pointer. [def: "0"]
+        // cl_fasttempentcollision                       "20"
+        // citadel_camera_hard_trace_radius              "32" //put under camera tweaks :D
+        // citadel_fibonnaci_sphere_trace_los_max        "32" //put under camera tweaks :D
+        // cam_collision                                 "0"
+        // mat_shading_complexity_max_register_count     "8"
+        // hud_fastswitch                                "0" 
+        panorama_disable_render_target_cache          "true"
+        // r_skip_precache_validation_check              "true"
+        // cl_skip_update_animations                     "true"
+        // multigpu_skip_semaphores                      "true"
+        // multigpu_skip_transfers                       "true"
+        // panorama_skip_composition_layer_content_paint "true"
+        // panorama_skip_compo                           "true"
+        // r_draw_first_tri_only                         "true"
+        // r_frame_sync_enable                           "true"
+        // r_nearz                                       "20"
+        // r_particle_explicit_fetch                     "true"
+        // r_citadel_distancefield_max_distance          "16" // Doesn't seem to do anything, or if it does it is overwritten. [def: "2048"]
+        // r_citadel_distancefield_min_screen_space_size "99" // Same as above                                                    [def: "0.015"]
 
         rate
         {
