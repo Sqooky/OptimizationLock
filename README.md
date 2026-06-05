@@ -128,6 +128,9 @@ Every variation of the config included in this repository has mod support added.
 - Vi:                               Translated to French
 - ZHTodd223:                        Translated to Chinese
 - Sasha11711:                       Translated to Ukrainian!
+- Dirtkiller23:                     Proof read the Russian translation
+- Noskillch:                        Proof read the french translation
+
 
 ## Misc
 - Artemon121:     Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game.

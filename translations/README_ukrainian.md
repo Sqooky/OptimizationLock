@@ -1,8 +1,6 @@
 ## Основне
 Якщо маєте запитання чи хочете зробити свій внесок у проект, можете приєданися до нашого Діскорд серверу [тут](https://discord.gg/EF3Jq57jQv).  
-Якщо зустрінете мене у грі, скажіть привіт! Мій нік "I want to eat flowers!"
-
-Якщо хочете фінансово подякувати автору, ви можете зробити донат тут! https://ko-fi.com/sqooky  
+Скажіть привіт якщо зустрінете мене у грі! Мій нік "I want to eat flowers!"
 
 ### Пожертви
 Я витратила *як мінімум* десь п'ятсот годин в цей проект і я хочу щоб він назавжди лишався безкоштовним, але я вкрай бідна. Тож, якщо ви хочете задонатити як знак подяки, ось моя kofi сторінка! https://ko-fi.com/sqooky (Я вічно вас любитиму)  
@@ -29,10 +27,10 @@
 | [Sqooky's Config/Optimizationlock Default](https://github.com/Sqooky/OptimizationLock/blob/main/Sqooky's%20.gi/gameinfo.gi)                                    | Націлене на продуктивність без значного погіршення графіки. Рекомендовано для більшості користувачів. | Скріншоти [тут](https://github.com/Sqooky/OptimizationLock/tree/main/Sqooky's%20.gi) |
 | [Test_Cfg](https://github.com/Sqooky/OptimizationLock/blob/main/test_cfg/gameinfo.gi) | Те саме що зверху, але тестова гілка. Може спричинити дрібні баги, але зате має давати кращу оптимізацію. | Скріншотів немає                                                                                         |
 | [Boot's Max Fps](https://github.com/Sqooky/OptimizationLock/blob/main/boot's%20maxium%20fps%20config/gameinfo.gi)                                    | Сильно націлене на продуктивність, Зараз цей конфіг дає найбільше фпс зі всіх перевірених. | Скріншоти [тут](https://github.com/Sqooky/OptimizationLock/tree/main/boot's%20maxium%20fps%20config) |                   |
-| [Kaizuchaneru's Minimum Spec](https://github.com/Sqooky/OptimizationLock/blob/main/kaizuchanerus%20minimum%20spec/gameinfo.gi) | Націлений ТІЛЬКИ на продуктивність, через що дуже погіршує графіку. Рекомендовано для поганих комп'ютерів |  Скріншоти [тут](https://github.com/Sqooky/OptimizationLock/tree/main/kaizuchaneru's%20minimum%20spec)                     |
-| [Piggy's gameinfo.gi](https://github.com/Sqooky/OptimizationLock/tree/main/piggy's%20config)                                    |  Конфіг Piggy вже застарів, але він всерівно включений тут у випадку якщо хочете використовувати саме його конфіг.                                                     |                    |
+| [Kaizuchaneru's Minimum Spec](https://github.com/Sqooky/OptimizationLock/blob/main/kaizuchanerus%20minimum%20spec/gameinfo.gi) | Націлений ТІЛЬКИ на продуктивність, через що дуже погіршує графіку. Рекомендовано для поганих комп'ютерів. |  Скріншоти [тут](https://github.com/Sqooky/OptimizationLock/tree/main/kaizuchanerus%20minimum%20spec)                     |
+| [Piggy's gameinfo.gi](https://github.com/Sqooky/OptimizationLock/tree/main/piggy's%20config%20(comparatively%20outdated))                                    |  Конфіг Piggy вже застарів, але він всерівно включений тут у випадку якщо хочете використовувати саме його конфіг.                                                     |                    |
 | [Convars.txt](https://github.com/Sqooky/OptimizationLock/blob/main/convars.txt)                                                 | Список усіх конварів (класів консольних змінних) що є в коді гри. Тут лише для довідки, сам по собі **це не є конфіг**.                                 |                    |
-| [Base_convars.txt](https://github.com/Sqooky/OptimizationLock/blob/main/base_convars.txt)                                       | Усі конвари що використовуються у optimizationlock за замовчуванням. Тут у випадку якщо хочете самі їх додати.                        |                    |
+| [Base_convars.txt](https://github.com/Sqooky/OptimizationLock/blob/main/Sqooky's%20.gi/base_convars.txt)                                       | Усі конвари що використовуються у optimizationlock за замовчуванням. Тут у випадку якщо хочете самі їх додати.                        |                    |
 
 
 Щоб власноруч додати конвари (класи консольних змінних) вам потрібно відкрити gameinfo.gi, за допомогою ctrl+f знайти ``convars`` і вставити команди після ``{`` 
@@ -46,7 +44,7 @@ Convars {
 rate {
 ```
 
-# "ІГРОВИЙ СВІТ ТЕМНИЙ ТА НЕПРАВИЛЬНИЙ ПІСЛЯ ВСТАНДОВЛЕННЯ КОНФІГУ"
+# "ІГРОВИЙ СВІТ ТЕМНИЙ ТА НЕПРАВИЛЬНИЙ ПІСЛЯ ВСТАНОВЛЕННЯ КОНФІГУ"
 Знижте налаштування тіней у грі до середніх чи низьких
 # Часті Питання
 - "Де знайти потрібне значення у конфігу"  
@@ -81,7 +79,7 @@ rate {
 Закоментуйте ``sc_fade_distance_scale_override``  
 
 # Підтримка Модів (аддонів)
-Кожен конфіг зібраний у цьому репозиторії має підтримку модів. Для тих хто хточе це забрати, видаліть лінію ``Game                citadel/addons`` з дужок searchpaths.
+Кожен конфіг зібраний у цьому репозиторії має підтримку модів. Для тих хто хоче це забрати, видаліть лінію ``Game                citadel/addons`` з дужок searchpaths.
 
 # Подяки
  Як би мені не хотілося сказати що зробила я все сама, це не так. Ось дивовижні люди які заслуговують на стільки ж, якщо не більше похвал що і я.  
@@ -114,7 +112,7 @@ rate {
 
 ## Різне
 - Artemon121:     Зробив розкривач Citadel конварів, що допомогло Abdalla дістати різні конвари та перевірити їх в грі.
-- Dacooder:       Вніс один фікс, скопіював конфіг, розповсюдив його як свій, а коли я запитала чому він видалив акредитацію при тому що раніше називав мене "мозгом проекту" назвав мене домагальницею і потім зняв два відео та зробив Google документ у спробі викрити мене. Чесно кажучи, це підняло мені настрій.
+- Dacooder:       Вніс один фікс, скопіював конфіг, розповсюдив його як свій, а коли я запитала чому він видалив акредитацію при тому що раніше називав мене "мозгом проекту" назвав мене домагальницею і потім зняв два відео та зробив Google документ типу викриваючи мене. Чесно кажучи, це підняло мені настрій.
 - Kin:            Добровільно зробив шалену кількість бенчмаркінгу.
 - Kunet:          Створив форматувальник синтаксу gameinfo! Ось чому всі відступи правильно розставлені! Це просто круть.
 - Maihdenless:    Заснував оригінальний OptimisationLock і його Discord сервер.
