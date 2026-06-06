@@ -17,7 +17,6 @@ Translated by [ZHTodd223](https://github.com/ZHTodd223)
 Translated by [Sasha11711](https://gamebanana.com/members/4167224)
 
 ## Main body
-To either request support or contribute findings to the project, our Discord Server can be found [here](https://discord.gg/EF3Jq57jQv).  
 If you see me in game say hi! My username is "I want to eat flowers!"
 
 ### Donating
