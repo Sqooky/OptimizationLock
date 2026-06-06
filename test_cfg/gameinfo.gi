@@ -473,10 +473,14 @@ GameInfo
     }
 
 
-    // Removing WorldRenderer causes player models to black
+    // Removing WorldRenderer causes player models to disappear
     WorldRenderer
     {
 
+        AggregateInstanceStream         "1"
+        AggregateRTProxyDesc            "1"
+        AggregateSceneObjectDesc        "1"
+        AggregateVertexColorStream      "1"
 
         // Build cubemaps into a cube array instead of individual cubemaps.
         BindlessSceneObjectDesc      "CitadelBindlessDesc"
@@ -598,14 +602,21 @@ GameInfo
 
     Particles
     {
+
+        //BindlessParticleShader                "1"   // Setting this to 1 Will make every particle the error texture. Neat!
+        Blobulator                              "1"
+
+
         EnableParticleShaderFeatureBranching "1"
         Float16HDRBackBuffer                 "1"
-        PET_SupportFadingOpaqueModels        "0"
+        PET_SupportFadingOpaqueModels        "1"        // Setting this to 0 will make the rujivinator invisible so don't do that
         Features                             "non_homogenous_forward_layer_only"
         ParticlesFoggedByDefault             "0"
         PerVertexLighting                    "0"
         GpuImplicitRendererManifest          "1"
         EnableMixedResolution                "0"
+        MPropertyFlattenIntoParentRow           "1"
+        PostSimulate                            "0"
     }
 
     ConVars
@@ -639,7 +650,7 @@ GameInfo
         // --- 2. Field of View ---
         // These commands both affect fov but do so in different ways. citadel_camera_hero_fov changes the field of view using typical degrees but doesn't modify the punch zoom in. This means that if you have a high fov value the zoom in can be disorienting.
         citadel_camera_hero_fov                     "120"           // The field of view angle of the camera when following a hero.     [def: "90"]
-        //r_aspectratio                               "3"          // This command is commented out, represented by the // at the beginning of the line. Editing it will not do anything. To mess with it remove the //
+        //r_aspectratio                               "2.5"          // This command is commented out, represented by the // at the beginning of the line. Editing it will not do anything. To mess with it remove the //
         // r_aspectratio changes the zoom of the camera which in turn doesn't make the punch zoom in as jarring, but the command is not as intuitive to set precisely
         // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov). 
 
@@ -654,7 +665,7 @@ GameInfo
         citadel_hideout_ball_show_juggle_count             "1"       // Shows a fun juggle count minigame for hideout ball.              [def: "0"]
         citadel_hideout_ball_show_juggle_fx                "1"       // Shows juggle visual FX for hideout ball minigame.                [def: "0"]
         citadel_hud_objective_health_enabled               "2"       // 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks.                           [def: "2"]
-        citadel_unit_status_use_new                        "false"       // This uses new Health Bar, to use old Health Bar change "true" to "false".    [def: "false"]
+        citadel_unit_status_use_new                        "true"       // This uses new Health Bar, to use old Health Bar change "true" to "false".    [def: "false"]
         citadel_show_chat_wheel_angle_threshold            "0"       // (degrees) Increase this to change how much you have to move your camera angle to make the Chat Wheel instantly visible while holding Ping. [def: "16"]
 
         // --- 4. Lighting & Shadows ---
