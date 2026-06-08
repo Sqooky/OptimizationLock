@@ -30,6 +30,7 @@ I love you all so much
 - Sonny:    Gave me five dollars and waited through me setting up a paypal account and didn't change their mind  
 - N8Fan:    Gave me TEN dollars so I could play vampire survivors  
 - Cos:      GAVE ME SEVENTY DOLLARS FOR NO FUCKING REASON I LOVE YOU SO MUCH?????????????????????????  
+- Wely:   Gave me THIRTY DOLLARS IN STEAM GIFT CARD MONEY????? WOA
 
 <div>
   <img src="https://github.com/Sqooky/OptimizationLock/blob/main/media/joy.png?raw=true" alt="A picture reading Sqooky's .gi A collage of performance configs with the intent of optimizing the game."/>
@@ -119,6 +120,7 @@ Every variation of the config included in this repository has mod support added.
 - Soulx:  Gave me five dollars and told me about spirolactone  
 - Xeno:   Very politely waited for me to figure out how to accept donations and was very polite about it  
 - Cos:      GAVE ME SEVENTY DOLLARS FOR NO FUCKING REASON I LOVE YOU SO MUCH?????????????????????????  
+- Wely:   Gave me THIRTY DOLLARS IN STEAM GIFT CARD MONEY????? WOA
 
 ## Translators
 - Egyptianscale:                    Translated to Russian

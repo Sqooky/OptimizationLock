@@ -32,6 +32,7 @@
 //- Xeno:   Very politely waited for me to figure out how to accept donations and was very polite about it
 //- N8Fan:  Gave me TEN dollars so I could play vampire survivors
 //- Cos:    GAVE ME SEVENTY DOLLARS FOR NO FUCKING REASON I LOVE YOU SO MUCH?????????????????????????
+//- Wely:   Gave me THIRTY DOLLARS IN STEAM GIFT CARD MONEY????? WOA
 
 // Translators
 //- Egyptianscale: Translated to Russian
