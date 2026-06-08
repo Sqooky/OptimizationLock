@@ -965,7 +965,6 @@ GameInfo
         // r_wait_on_present                      "true"
 
         // ================ Convars You Shouldn't/Can't Mess With But I Want to Maintain the Documentation ================
-
         // citadel_damage_text_show_effectiveness   "true"  // This is supposed to show if your target has any spirit/bullet resist, but seems to be broken rn. [def: "false"]
         // citadel_first_person                     "true"  // Puts you in first person, messes up character rendering
         // cl_particle_max_count                    "1500"  // Maximum allowed particles. Setting it too low will cause issues. With flooding from the console.  [def: "0"]
@@ -1091,7 +1090,6 @@ GameInfo
         // panorama_skip_composition_layer_content_paint "true"
         // panorama_skip_compo                           "true"
         // r_draw_first_tri_only                         "true"
-        // r_frame_sync_enable                           "true"
         // r_nearz                                       "20"
         // r_particle_explicit_fetch                     "true"
         // r_citadel_distancefield_max_distance          "16" // Doesn't seem to do anything, or if it does it is overwritten. [def: "2048"]
