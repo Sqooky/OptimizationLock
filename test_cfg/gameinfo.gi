@@ -23,6 +23,7 @@
 //- Brullee:            Removed fake cvars, redundant commands, added cvarlist.md, and reformatted config.
 //- Kaizuchaneru:       While not directly invovled in the deveopment, they tested most cvars.
 //- Tamara Mochaccina:  Contributed vindicta scope fix and the fog fix.
+//- Liah:               Found a cvar causing a weird issue.
 
 // Donors. Thank you so much. Even considering that you would view my work as deserving of any donation at all is incredible. I love you all
 //- Boot:   Gave me five dollars and is just a wonderful person and friend at a baseline
@@ -30,6 +31,7 @@
 //- Soulx:  Gave me five dollars and told me about spirolactone 
 //- Xeno:   Very politely waited for me to figure out how to accept donations and was very polite about it
 //- N8Fan:  Gave me TEN dollars so I could play vampire survivors
+//- Cos:    GAVE ME SEVENTY DOLLARS FOR NO FUCKING REASON I LOVE YOU SO MUCH?????????????????????????
 
 // Translators
 //- Egyptianscale: Translated to Russian
@@ -137,20 +139,22 @@ GameInfo
         // Search paths are relative to the exe directory\..\
         //
 
-        // Deadlock Mod Manager - Start
+        
 
-        SearchPaths
-        {
-            Game_Language "citadel_*LANGUAGE*"
-            Game          "citadel/addons"
-            Mod           "citadel"
-            Write         "citadel"
-            Game          "citadel"
-            Mod           "core"
-            Write         "core"
-            Game          "core"
+// Deadlock Mod Manager - Start
+
+		SearchPaths
+        {  
+            Game_Language       citadel_*LANGUAGE*
+            Game                citadel/addons
+            Mod                 citadel
+            Write               citadel          
+            Game                citadel
+            Mod                 core
+            Write               core
+            Game                core        
         }
-        // Deadlock Mod Manager - End
+// Deadlock Mod Manager - End
     }
 
     MaterialSystem2
@@ -649,29 +653,29 @@ GameInfo
 
         // --- 2. Field of View ---
         // These commands both affect fov but do so in different ways. citadel_camera_hero_fov changes the field of view using typical degrees but doesn't modify the punch zoom in. This means that if you have a high fov value the zoom in can be disorienting.
-        citadel_camera_hero_fov                     "120"           // The field of view angle of the camera when following a hero.     [def: "90"]
-        //r_aspectratio                               "2.5"          // This command is commented out, represented by the // at the beginning of the line. Editing it will not do anything. To mess with it remove the //
+        citadel_camera_hero_fov                             "120"           // The field of view angle of the camera when following a hero.     [def: "90"]
+        //r_aspectratio                                     "3"          // This command is commented out, represented by the // at the beginning of the line. Editing it will not do anything. To mess with it remove the //
         // r_aspectratio changes the zoom of the camera which in turn doesn't make the punch zoom in as jarring, but the command is not as intuitive to set precisely
         // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov). 
 
         // --- 3. HUD ---
-        citadel_unit_status_delta_decay_rate               "2"       // how quickly the yellow to indicate damage fades from the health bar. [def: "3"]
-        // citadel_hud_objective_health_debug_show_midboss "true"    // This makes midboss' health bar visible whenever it's able to be rendered. I like it, you might not [def: "false"]
-         citadel_unit_status_use_v2                      "0"       // Set to 1 to enable the new health bar that allows you to  see enemy stamina. [def: "0"]
-        // citadel_unit_status_use_v2_for_nonplayers       "0"       // Set to 1 to enable the new health bar but for troopers, objs, and camps.     [def: "0"]
-        citadel_crosshair_hit_marker_duration              "0.00001" // Removes the hitmarker when shooting people.                      [def: "0.1"]
-        citadel_damage_report_enable                       "1"       // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
-        citadel_damage_text_batching_window_ability        "1000"    // How long to wait until batching damage text.
-        citadel_hideout_ball_show_juggle_count             "1"       // Shows a fun juggle count minigame for hideout ball.              [def: "0"]
-        citadel_hideout_ball_show_juggle_fx                "1"       // Shows juggle visual FX for hideout ball minigame.                [def: "0"]
-        citadel_hud_objective_health_enabled               "2"       // 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks.                           [def: "2"]
-        citadel_unit_status_use_new                        "true"       // This uses new Health Bar, to use old Health Bar change "true" to "false".    [def: "false"]
-        citadel_show_chat_wheel_angle_threshold            "0"       // (degrees) Increase this to change how much you have to move your camera angle to make the Chat Wheel instantly visible while holding Ping. [def: "16"]
+        citadel_unit_status_delta_decay_rate                "2"       // how quickly the yellow to indicate damage fades from the health bar. [def: "3"]
+        // citadel_hud_objective_health_debug_show_midboss  "true"    // This makes midboss' health bar visible whenever it's able to be rendered. I like it, you might not [def: "false"]
+         citadel_unit_status_use_v2                         "0"       // Set to 1 to enable the new health bar that allows you to  see enemy stamina. [def: "0"]
+        // citadel_unit_status_use_v2_for_nonplayers        "0"       // Set to 1 to enable the new health bar but for troopers, objs, and camps.     [def: "0"]
+        citadel_crosshair_hit_marker_duration               "0.00001" // Removes the hitmarker when shooting people.                      [def: "0.1"]
+        citadel_damage_report_enable                        "1"       // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
+        citadel_damage_text_batching_window_ability         "1000"    // How long to wait until batching damage text.
+        citadel_hideout_ball_show_juggle_count              "1"       // Shows a fun juggle count minigame for hideout ball.              [def: "0"]
+        citadel_hideout_ball_show_juggle_fx                 "1"       // Shows juggle visual FX for hideout ball minigame.                [def: "0"]
+        citadel_hud_objective_health_enabled                "2"       // 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks.                           [def: "2"]
+        citadel_unit_status_use_new                         "true"       // This uses new Health Bar, to use old Health Bar change "true" to "false".    [def: "false"]
+        citadel_show_chat_wheel_angle_threshold             "0"       // (degrees) Increase this to change how much you have to move your camera angle to make the Chat Wheel instantly visible while holding Ping. [def: "16"]
 
         // --- 4. Lighting & Shadows ---
-        lb_enable_baked_shadows     "0" // *Disables baked shadows (game looks bright if this is on while stationary lights = 1). [def: "1"]
-        lb_enable_dynamic_lights    "1" // *Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
-        lb_enable_stationary_lights "0" // *Disables stationary lights (map looks flatter but more performant).         [def: "1"]
+        lb_enable_baked_shadows                             "0" // *Disables baked shadows (game looks bright if this is on while stationary lights = 1). [def: "1"]
+        lb_enable_dynamic_lights                            "1" // *Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
+        lb_enable_stationary_lights                         "0" // *Disables stationary lights (map looks flatter but more performant).         [def: "1"]
 
         // --- 5. Skybox Rendering ---
         r_draw3dskybox "0" //  Enables drawing the 3D skybox layer (distant geometry).         [def: "1"]
@@ -886,7 +890,6 @@ GameInfo
 
         // ================ Rendering Stuff ================
         r_citadel_gpu_culling          "true"  // The game barely uses the gpu so this is a win                    [def: "true"]
-        r_frame_sync_enable            "false" // No documentation, not sure if this does anything                 [def: "true"]
         r_force_zprepass               "0"     // 0: Force z prepass off. 1: Force on. -1: Don't force             [def: "-1"]
         // With my understanding of how zprepasses work this should reduce cpu usage if set to zero, but that's under the assumption that valve's implementation isn't properly optimized. Please play with this. Your mileage may vary.
         r_vma_defrag_algorithm                             "0"     // Should speed up vulkan defragging, which could increase performance if you're  getting bad performance the longer a match goes on [def: "1"]
@@ -976,33 +979,42 @@ GameInfo
 
         // ================ Convars You Shouldn't/Can't Mess With But I Want to Maintain the Documentation ================
 
-        //r_citadel_gpu_culling_two_pass "false" // Setting this to false will cause issues with frametime [def: "true"]
-
-        //lb_enable_envmaps                       "false" // This makes all characters black
-        // r_showdebugoverlays                    "true"  // Shows a ton of debug overlays IT MAKES ME SO HAPPY I LOVE IT     [def: "false"]
-        // citadel_first_person                   "true"  // Puts you in first person, messes up character rendering
-        // r_extra_render_frames                  "1"     // Setting this to anything above 0 causes issues with latency. negative values cause the game to crash. [def: "0"]
-        // cl_particle_max_count                  "1500"  // Maximum allowed particles. Setting it too low will cause issues. With flooding from the console.  [def: "0"]
-        // cl_phys_enabled                        "false" // You can disable physics and might see an improvement in framerate, however a lot will be buggy.   [def: "true"]
-        gpu_level                                 "1"     // GPU level literally doesn't matter, gets set to 2 in the engine
-        r_citadel_npr_force_solid_outline         "false" // Causes odd visual bugs with dragons and neutrals when set to true    [def: "false"]
-        r_citadel_npr_outlines                    "false" // Enable outlines on enemy players.                                [def: "true"]
-        r_citadel_npr_outlines_max_dist           "1"     // Limits outline distance to reduce unnecessary processing.        [def: "1000"]
-        r_citadel_selection_outline2_alpha        "0.2"   // Outlines on enemy players and abilities on a scale of 0-1.       [def: "0.8"]
-        r_drawskybox                              "true"  // Can't be changed anymore                                             [def: "true"]
-        // sc_aggregate_gpu_culling_show_culled   "true"  // Debug I think, doesn't seem to do anything                     [def: "false"]
-        // sc_aggregate_render_mesh_shader        "false" // Using mesh shaders if available instead of drawcalls.          [def: "true"]
-        // citadel_damage_text_show_effectiveness "true"  // This is supposed to show if your target has any spirit/bullet resist, but seems to be broken rn. [def: "false"]
-        // phys_batch_ray_test                    "16"    // Don't know what this does? shouldn't be needed deadlock doesn't have many physics objects  [def: "0"]
-        // panorama_worldpanel_update_culling     "true"  // Messes with health bar rendering, the information will be inaccurate unless close to the target if set to true. It is weird.       [def: "false"]
-        // r_draw_first_tri_only                  "true"  // Only draw the first triangle. Only works on dx11, causes issues with every playermodel and the hud for some reason [def: "false"]
-        // sc_disable_procedural_layer_rendering  "false" // Disables rendering, ie the screen is black.          [def: "false"]
-        // sc_throw_away_all_layers               "true"  // Disables rendering, ie the screen is black.          [def: "false"]
-        // sc_skip_traversal                      "true"  // Disables rendering, ie the screen is black.          [def: "false"]
-        // sc_aggregate_show_outside_vis          "true"  // This makes the entire map stop rendering             [def: "false"]
+        // citadel_damage_text_show_effectiveness   "true"  // This is supposed to show if your target has any spirit/bullet resist, but seems to be broken rn. [def: "false"]
+        // citadel_first_person                     "true"  // Puts you in first person, messes up character rendering
+        // cl_particle_max_count                    "1500"  // Maximum allowed particles. Setting it too low will cause issues. With flooding from the console.  [def: "0"]
+        // cl_phys_enabled                          "false" // You can disable physics and might see an improvement in framerate, however a lot will be buggy.   [def: "true"]
+        // gpu_level                                "1"     // GPU level literally doesn't matter, gets set to 2 in the engine
+        // lb_enable_envmaps                        "false" // This makes all characters black
+        // panorama_worldpanel_update_culling       "true"  // Messes with health bar rendering, the information will be inaccurate unless close to the target if set to true. It is weird.       [def: "false"]
+        // phys_batch_ray_test                      "16"    // Don't know what this does? shouldn't be needed deadlock doesn't have many physics objects  [def: "0"]
+        // r_citadel_gpu_culling_two_pass           "false" // Setting this to false will cause issues with frametime [def: "true"]
+        // r_citadel_npr_force_solid_outline        "false" // Causes odd visual bugs with dragons and neutrals when set to true    [def: "false"]
+        // r_citadel_npr_outlines                   "false" // Enable outlines on enemy players.                                [def: "true"]
+        // r_citadel_npr_outlines_max_dist          "1"     // Limits outline distance to reduce unnecessary processing.        [def: "1000"]
+        // r_citadel_selection_outline2_alpha       "0.2"   // Outlines on enemy players and abilities on a scale of 0-1.       [def: "0.8"]
+        // r_draw_first_tri_only                    "true"  // Only draw the first triangle. Only works on dx11, causes issues with every playermodel and the hud for some reason [def: "false"]
+        // r_drawskybox                             "true"  // Can't be changed anymore                                             [def: "true"]
+        // r_extra_render_frames                    "1"     // Setting this to anything above 0 causes issues with latency. negative values cause the game to crash. [def: "0"]
+        // r_frame_sync_enable                      "false" // Setting this to false causes vram to overflow to normal ram for some reason? Game freaks out.                [def: "true"]
+        // r_showdebugoverlays                      "true"  // Shows a ton of debug overlays IT MAKES ME SO HAPPY I LOVE IT     [def: "false"]
+        // sc_aggregate_gpu_culling_show_culled     "true"  // Debug I think, doesn't seem to do anything                     [def: "false"]
+        // sc_aggregate_render_mesh_shader          "false" // Using mesh shaders if available instead of drawcalls.          [def: "true"]
+        // sc_aggregate_show_outside_vis            "true"  // This makes the entire map stop rendering             [def: "false"]
+        // sc_disable_procedural_layer_rendering    "false" // Disables rendering, ie the screen is black.          [def: "false"]
+        // sc_skip_traversal                        "true"  // Disables rendering, ie the screen is black.          [def: "false"]
+        // sc_throw_away_all_layers                 "true"  // Disables rendering, ie the screen is black.          [def: "false"]
 
                 // --------------------------------- END OF CONFIG OptimizationLock -- ver. testing ------------------------------- \\
-
+citadel_melee_shake_duration 0
+citadel_melee_heavymelee_push_force 0
+citadel_melee_hit_delay_max_time 0
+citadel_melee_shake_frequency 0
+citadel_npc_trooper_celebration_percent 1
+citadel_npc_trooper_celebration_radius 4000
+citadel_melee_shake_amplitude 0
+citadel_melee_heavymelee_toss_force_vs_tiny_min 0
+citadel_melee_heavymelee_push_force_vs_tiny 0
+citadel_medic_minion_sight_range -1
 
 
 
@@ -1282,6 +1294,8 @@ citadel_in_world_item_panel_dpi 0.8
         ShowLowAvailableVirtualMemoryMessageBox "1"
     }
 }
+
+
 
 
 
