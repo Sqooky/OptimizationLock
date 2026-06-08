@@ -13,7 +13,7 @@
 //         /!#%|'-_- '\%k*|
 //     o   |*@/        \_/
 //         \)&|
-// OptimizationLock v2.4.4 by Sqooky with help from others <3
+// OptimizationLock v2.4.5 by Sqooky with help from others <3
 
 // As much as I would love to say I did this alone, I did not. These are the amazing people who deserve as much praise as I, if not more
 //  Major thanks to all of these individuals from the bottom of my heart. They are all lovely.
@@ -23,20 +23,25 @@
 //- Brullee:            Removed fake cvars, redundant commands, added cvarlist.md, and reformatted config.
 //- Kaizuchaneru:       While not directly invovled in the deveopment, they tested most cvars.
 //- Tamara Mochaccina:  Contributed vindicta scope fix and the fog fix.
+//- Liah:               Found a cvar causing a weird issue.
 
 // Donors. Thank you so much. Even considering that you would view my work as deserving of any donation at all is incredible. I love you all
 //- Boot:   Gave me five dollars and is just a wonderful person and friend at a baseline
 //- Sonny:  Gave me five dollars and waited through me setting up a paypal account and didn't change their mind
 //- Soulx:  Gave me five dollars and told me about spirolactone 
 //- Xeno:   Very politely waited for me to figure out how to accept donations and was very polite about it
+//- N8Fan:  Gave me TEN dollars so I could play vampire survivors
+//- Cos:    GAVE ME SEVENTY DOLLARS FOR NO FUCKING REASON I LOVE YOU SO MUCH?????????????????????????
 
 // Translators
 //- Egyptianscale: Translated to Russian
 //- Tamara Mochaccina and Heathen: Translated to Spanish
 //- Linaa and anartoast: Translated to Portuguese
-//- Macchiako: Translated to Bulgarian
-//- Cyvoid: Translated to Italian
-//- Vi:     Translated to French
+//- Macchiako:  Translated to Bulgarian
+//- Cyvoid:     Translated to Italian
+//- Vi:         Translated to French
+//- ZHTodd223:  Translated to Chinese
+//- Sasha11711: Translated to Ukrainian!
 
 // Misc
 //- Artemon121:     Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game.
@@ -611,7 +616,7 @@ GameInfo
         //      If you would like to donate as a means of showing thanks I have a kofi.     \\
         //      https://ko-fi.com/sqooky                                                    \\
 
-        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.4.4 -------- \\
+        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.4.5 -------- \\
         // The github is here https://github.com/Sqooky/OptimizationLock  \\
         // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
         // The gamebanana:https://gamebanana.com/mods/656341 (it's usually behind, please check the github) \\
@@ -651,7 +656,7 @@ GameInfo
         citadel_hideout_ball_show_juggle_count             "1"       // Shows a fun juggle count minigame for hideout ball.              [def: "0"]
         citadel_hideout_ball_show_juggle_fx                "1"       // Shows juggle visual FX for hideout ball minigame.                [def: "0"]
         citadel_hud_objective_health_enabled               "2"       // 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks.                           [def: "2"]
-        citadel_unit_status_use_new                        "1"       // This uses new Health Bar, to use old Health Bar change "true" to "false".    [def: "0"]
+        citadel_unit_status_use_new                        "true"       // This uses new Health Bar, to use old Health Bar change "true" to "false".    [def: "0"]
         citadel_show_chat_wheel_angle_threshold            "0"       // (degrees) Increase this to change how much you have to move your camera angle to make the Chat Wheel instantly visible while holding Ping. [def: "16"]
 
         // --- 4. Lighting & Shadows ---
@@ -699,8 +704,8 @@ GameInfo
         r_texturefilteringquality      "3"   // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x
 
         // --- 10. Render Distance ---
-        r_farz       "8192" // This controls the far clipping plane, ie building/player popin   [def: "-1"]
-        r_mapextents "8192" // Far clipping plane, this will make buildings pop in and out      [def: "16384"] damn that's an oddly specific number
+        r_farz       "7000" // This controls the far clipping plane, ie building/player popin   [def: "-1"]
+        r_mapextents "7000" // Far clipping plane, this will make buildings pop in and out      [def: "16384"] damn that's an oddly specific number
 
         // ================ IMPORTANT ================
         thread_pool_option "-1" // If I understand correctly, this should be how threads are handled relative to the game, but there isn't a clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage may vary. [def: "-1"]
@@ -816,10 +821,10 @@ GameInfo
 
         // ================ System Related ================
         // Chances are these don't matter so you can ignore them
-        battery_saver         "0"     // Disables battery saver mode (no automatic throttling).                   [def: "0"]
-        cpu_level             "1"     // CPU level.                                                               [def: "2"]
-        enable_priority_boost "true"  //
-        gpu_mem_level         "1"     // GPU Memory level.                                                        [def: "2"]
+        //battery_saver         "0"     // Disables battery saver mode (no automatic throttling).                   [def: "0"]
+        //cpu_level             "1"     // CPU level.                                                               [def: "2"]
+        //enable_priority_boost "true"  //
+        //gpu_mem_level         "1"     // GPU Memory level.                                                        [def: "2"]
         // think_limit        "0.001" // Limits how much “think” time/entities can process per tick (CPU cap).    [def: "10"]
         //^ *TODO I am going to need to test this to make sure lowering it doesn't cause problems.
 
@@ -830,7 +835,7 @@ GameInfo
         particle_cluster_use_collision_hulls     "false" // Should make particles able to pass through each other. Saves some perf   [def: "true"]
         r_update_particles_on_render_only_frames "true"  // This does what it says on the tin, should save more performance the lower fps gets   [def: "false"]
         r_particle_fixedrandomseeds              "true"  // I need to properly test this, but I'm pretty sure that setting this to true marginally increases performance [def: "false"]
-        r_citadel_screenspace_particles_full_res "false" // Render screen space particles at full resolution. This could introduce readability issues but should be fine.
+        r_citadel_screenspace_particles_full_res "true" // Render screen space particles at full resolution. This could introduce readability issues but should be fine.
         r_particle_mixed_resolution_viewstart    "16"    // I don't know if this does anything but I didn't notice anything terrible out the gate and lowering particle resolution can't hurt [def: "500"]
         cl_particle_batch_mode                   "1"     // Has a range of 1 or 2, 2 will make celeste's auto rebound look weird and 0 will make them not batch [def: "1"]
         cl_particle_fallback_base                "10"    // Base for falling back to cheaper effects under load.             [def: "0"]
@@ -872,7 +877,6 @@ GameInfo
 
         // ================ Rendering Stuff ================
         r_citadel_gpu_culling          "true"  // The game barely uses the gpu so this is a win                    [def: "true"]
-        r_frame_sync_enable            "false" // No documentation, not sure if this does anything                 [def: "true"]
         r_force_zprepass               "0"     // 0: Force z prepass off. 1: Force on. -1: Don't force             [def: "-1"]
         // With my understanding of how zprepasses work this should reduce cpu usage if set to zero, but that's under the assumption that valve's implementation isn't properly optimized. Please play with this. Your mileage may vary.
         r_vma_defrag_algorithm                             "0"     // Should speed up vulkan defragging, which could increase performance if you're  getting bad performance the longer a match goes on [def: "1"]
@@ -962,31 +966,32 @@ GameInfo
 
         // ================ Convars You Shouldn't/Can't Mess With But I Want to Maintain the Documentation ================
 
-        //r_citadel_gpu_culling_two_pass "false" // Setting this to false will cause issues with frametime [def: "true"]
-        //lb_enable_envmaps                       "false" // This makes all characters black
-        // r_showdebugoverlays                    "true"  // Shows a ton of debug overlays IT MAKES ME SO HAPPY I LOVE IT     [def: "false"]
-        // citadel_first_person                   "true"  // Puts you in first person, messes up character rendering
-        // r_extra_render_frames                  "1"     // Setting this to anything above 0 causes issues with latency. negative values cause the game to crash. [def: "0"]
-        // cl_particle_max_count                  "1500"  // Maximum allowed particles. Setting it too low will cause issues. With flooding from the console.  [def: "0"]
-        // cl_phys_enabled                        "false" // You can disable physics and might see an improvement in framerate, however a lot will be buggy.   [def: "true"]
-        gpu_level                                 "1"     // GPU level literally doesn't matter, gets set to 2 in the engine
-        r_citadel_npr_force_solid_outline         "false" // Causes odd visual bugs with dragons and neutrals when set to true    [def: "false"]
-        r_citadel_npr_outlines                    "false" // Enable outlines on enemy players.                                [def: "true"]
-        r_citadel_npr_outlines_max_dist           "1"     // Limits outline distance to reduce unnecessary processing.        [def: "1000"]
-        r_citadel_selection_outline2_alpha        "0.2"   // Outlines on enemy players and abilities on a scale of 0-1.       [def: "0.8"]
-        r_drawskybox                              "true"  // Can't be changed anymore                                             [def: "true"]
-        // sc_aggregate_gpu_culling_show_culled   "true"  // Debug I think, doesn't seem to do anything                     [def: "false"]
-        // sc_aggregate_render_mesh_shader        "false" // Using mesh shaders if available instead of drawcalls.          [def: "true"]
-        // citadel_damage_text_show_effectiveness "true"  // This is supposed to show if your target has any spirit/bullet resist, but seems to be broken rn. [def: "false"]
-        // phys_batch_ray_test                    "16"    // Don't know what this does? shouldn't be needed deadlock doesn't have many physics objects  [def: "0"]
-        // panorama_worldpanel_update_culling     "true"  // Messes with health bar rendering, the information will be inaccurate unless close to the target if set to true. It is weird.       [def: "false"]
-        // r_draw_first_tri_only                  "true"  // Only draw the first triangle. Only works on dx11, causes issues with every playermodel and the hud for some reason [def: "false"]
-        // sc_disable_procedural_layer_rendering  "false" // Disables rendering, ie the screen is black.          [def: "false"]
-        // sc_throw_away_all_layers               "true"  // Disables rendering, ie the screen is black.          [def: "false"]
-        // sc_skip_traversal                      "true"  // Disables rendering, ie the screen is black.          [def: "false"]
-        // sc_aggregate_show_outside_vis          "true"  // This makes the entire map stop rendering             [def: "false"]
+        // citadel_damage_text_show_effectiveness   "true"  // This is supposed to show if your target has any spirit/bullet resist, but seems to be broken rn. [def: "false"]
+        // citadel_first_person                     "true"  // Puts you in first person, messes up character rendering
+        // cl_particle_max_count                    "1500"  // Maximum allowed particles. Setting it too low will cause issues. With flooding from the console.  [def: "0"]
+        // cl_phys_enabled                          "false" // You can disable physics and might see an improvement in framerate, however a lot will be buggy.   [def: "true"]
+        // gpu_level                                "1"     // GPU level literally doesn't matter, gets set to 2 in the engine
+        // lb_enable_envmaps                        "false" // This makes all characters black
+        // panorama_worldpanel_update_culling       "true"  // Messes with health bar rendering, the information will be inaccurate unless close to the target if set to true. It is weird.       [def: "false"]
+        // phys_batch_ray_test                      "16"    // Don't know what this does? shouldn't be needed deadlock doesn't have many physics objects  [def: "0"]
+        // r_citadel_gpu_culling_two_pass           "false" // Setting this to false will cause issues with frametime [def: "true"]
+        // r_citadel_npr_force_solid_outline        "false" // Causes odd visual bugs with dragons and neutrals when set to true    [def: "false"]
+        // r_citadel_npr_outlines                   "false" // Enable outlines on enemy players.                                [def: "true"]
+        // r_citadel_npr_outlines_max_dist          "1"     // Limits outline distance to reduce unnecessary processing.        [def: "1000"]
+        // r_citadel_selection_outline2_alpha       "0.2"   // Outlines on enemy players and abilities on a scale of 0-1.       [def: "0.8"]
+        // r_draw_first_tri_only                    "true"  // Only draw the first triangle. Only works on dx11, causes issues with every playermodel and the hud for some reason [def: "false"]
+        // r_drawskybox                             "true"  // Can't be changed anymore                                             [def: "true"]
+        // r_extra_render_frames                    "1"     // Setting this to anything above 0 causes issues with latency. negative values cause the game to crash. [def: "0"]
+        // r_frame_sync_enable                      "false" // Setting this to false causes vram to overflow to normal ram for some reason? Game freaks out.                [def: "true"]
+        // r_showdebugoverlays                      "true"  // Shows a ton of debug overlays IT MAKES ME SO HAPPY I LOVE IT     [def: "false"]
+        // sc_aggregate_gpu_culling_show_culled     "true"  // Debug I think, doesn't seem to do anything                     [def: "false"]
+        // sc_aggregate_render_mesh_shader          "false" // Using mesh shaders if available instead of drawcalls.          [def: "true"]
+        // sc_aggregate_show_outside_vis            "true"  // This makes the entire map stop rendering             [def: "false"]
+        // sc_disable_procedural_layer_rendering    "false" // Disables rendering, ie the screen is black.          [def: "false"]
+        // sc_skip_traversal                        "true"  // Disables rendering, ie the screen is black.          [def: "false"]
+        // sc_throw_away_all_layers                 "true"  // Disables rendering, ie the screen is black.          [def: "false"]
 
-                // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.4.4 ------------------------------- \\
+                // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.4.5 ------------------------------- \\
 
 
 

@@ -24,11 +24,12 @@ I've probably put *at least* five hundred hours into working on this project. I 
 
 **Donors!**
 I love you all so much
-- Soulx
-- Boot
-- Xeno
-- Sonny
-- N8Fan
+- Soulx:    Gave me five dollars and told me about spirolactone  
+- Boot:     Gave me five dollars and is just a wonderful person and friend at a baseline  
+- Xeno:     Very politely waited for me to figure out how to accept donations and was very polite about it  
+- Sonny:    Gave me five dollars and waited through me setting up a paypal account and didn't change their mind  
+- N8Fan:    Gave me TEN dollars so I could play vampire survivors  
+- Cos:      GAVE ME SEVENTY DOLLARS FOR NO FUCKING REASON I LOVE YOU SO MUCH?????????????????????????  
 
 <div>
   <img src="https://github.com/Sqooky/OptimizationLock/blob/main/media/joy.png?raw=true" alt="A picture reading Sqooky's .gi A collage of performance configs with the intent of optimizing the game."/>
@@ -113,10 +114,11 @@ Every variation of the config included in this repository has mod support added.
 
 ## Donors
  Thank you so much. Even considering that you would view my work as deserving of any donation at all is incredible. I love you all  
-- Boot:   Gave me five dollars and is just a wonderful person and friend at a baseline
-- Sonny:  Gave me five dollars and waited through me setting up a paypal account and didn't change their mind
-- Soulx:  Gave me five dollars and told me about spirolactone 
-- Xeno:   Very politely waited for me to figure out how to accept donations and was very polite about it
+- Boot:   Gave me five dollars and is just a wonderful person and friend at a baseline  
+- Sonny:  Gave me five dollars and waited through me setting up a paypal account and didn't change their mind  
+- Soulx:  Gave me five dollars and told me about spirolactone  
+- Xeno:   Very politely waited for me to figure out how to accept donations and was very polite about it  
+- Cos:      GAVE ME SEVENTY DOLLARS FOR NO FUCKING REASON I LOVE YOU SO MUCH?????????????????????????  
 
 ## Translators
 - Egyptianscale:                    Translated to Russian
