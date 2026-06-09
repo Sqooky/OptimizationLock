@@ -32,7 +32,6 @@
 //- Xeno:   Very politely waited for me to figure out how to accept donations and was very polite about it
 //- N8Fan:  Gave me TEN dollars so I could play vampire survivors
 //- Cos:    GAVE ME SEVENTY DOLLARS FOR NO FUCKING REASON I LOVE YOU SO MUCH?????????????????????????
-//- Wely:   Gave me THIRTY DOLLARS IN STEAM GIFT CARD MONEY????? WOA
 
 // Translators
 //- Egyptianscale: Translated to Russian
@@ -901,9 +900,9 @@ GameInfo
         citadel_video_preset                               "2"     // Rendering performance level. min 0, max 3                        [def: "3"]
         // sc_aggregate_indirect_draw_compaction_threshold "1"     // Need to test                                                   [def: "8"]
         sc_instanced_mesh_opaque_fade                      "false" // Fade meshes? NAH                                                 [def: "true"]
-        sc_aggregate_render_mesh_shader                    "false" // Using mesh shaders if available instead of drawcalls. Should be cheaper [def: "true"]
-        sc_aggregate_rtproxy_instanced_geo                 "false" //
-        sc_aggregate_rtproxy_unique_geo                    "false" //
+        //sc_aggregate_render_mesh_shader                    "true" // Using mesh shaders if available instead of drawcalls. Should be cheaper [def: "true"]
+        //sc_aggregate_rtproxy_instanced_geo                 "false" //
+        //sc_aggregate_rtproxy_unique_geo                    "false" //
         sc_allow_dithered_lod                              "false" //
 
 
