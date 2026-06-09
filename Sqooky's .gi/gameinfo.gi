@@ -13,7 +13,7 @@
 //         /!#%|'-_- '\%k*|
 //     o   |*@/        \_/
 //         \)&|
-// OptimizationLock v2.4.5 by Sqooky with help from others <3
+// OptimizationLock v2.4.6 by Sqooky with help from others <3
 
 // As much as I would love to say I did this alone, I did not. These are the amazing people who deserve as much praise as I, if not more
 //  Major thanks to all of these individuals from the bottom of my heart. They are all lovely.
@@ -617,7 +617,7 @@ GameInfo
         //      If you would like to donate as a means of showing thanks I have a kofi.     \\
         //      https://ko-fi.com/sqooky                                                    \\
 
-        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.4.5 -------- \\
+        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.4.6 -------- \\
         // The github is here https://github.com/Sqooky/OptimizationLock  \\
         // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
         // The gamebanana:https://gamebanana.com/mods/656341 (it's usually behind, please check the github) \\
@@ -888,9 +888,9 @@ GameInfo
         citadel_video_preset                               "2"     // Rendering performance level. min 0, max 3                        [def: "3"]
         // sc_aggregate_indirect_draw_compaction_threshold "1"     // Need to test                                                   [def: "8"]
         sc_instanced_mesh_opaque_fade                      "false" // Fade meshes? NAH                                                 [def: "true"]
-        sc_aggregate_render_mesh_shader                    "false" // Using mesh shaders if available instead of drawcalls. Should be cheaper [def: "true"]
-        sc_aggregate_rtproxy_instanced_geo                 "false" //
-        sc_aggregate_rtproxy_unique_geo                    "false" //
+        //sc_aggregate_render_mesh_shader                    "false" // Using mesh shaders if available instead of drawcalls. Should be cheaper [def: "true"]
+        //sc_aggregate_rtproxy_instanced_geo                 "false" //
+        //sc_aggregate_rtproxy_unique_geo                    "false" //
         sc_allow_dithered_lod                              "false" //
 
 
@@ -991,7 +991,7 @@ GameInfo
         // sc_skip_traversal                        "true"  // Disables rendering, ie the screen is black.          [def: "false"]
         // sc_throw_away_all_layers                 "true"  // Disables rendering, ie the screen is black.          [def: "false"]
 
-                // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.4.5 ------------------------------- \\
+                // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.4.6 ------------------------------- \\
 
 
 
