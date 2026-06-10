@@ -26,12 +26,14 @@
 //- Liah:               Found a cvar causing a weird issue.
 
 // Donors. Thank you so much. Even considering that you would view my work as deserving of any donation at all is incredible. I love you all
-//- Boot:   Gave me five dollars and is just a wonderful person and friend at a baseline
-//- Sonny:  Gave me five dollars and waited through me setting up a paypal account and didn't change their mind
-//- Soulx:  Gave me five dollars and told me about spirolactone 
-//- Xeno:   Very politely waited for me to figure out how to accept donations and was very polite about it
-//- N8Fan:  Gave me TEN dollars so I could play vampire survivors
+//- Boot:   Gave me FIVE DOLLARS and is just a wonderful person and friend at a baseline
+//- Sonny:  Gave me FIVE DOLLARS and waited through me setting up a paypal account and didn't change their mind
+//- Soulx:  Gave me FIVE DOLLARS and told me about spirolactone 
+//- Xeno:   Very politely waited for me to figure out how to accept donations and gave me FIVE DOLLARS
+//- N8Fan:  Gave me TEN DOLLARS so I could play vampire survivors
 //- Cos:    GAVE ME SEVENTY DOLLARS FOR NO FUCKING REASON I LOVE YOU SO MUCH?????????????????????????
+//- Wely:   Gave me THIRTY DOLLARS IN STEAM GIFT CARD MONEY????? WOA
+//- Prot4g: Gave me TWENTY DOLLARS WOA I LOVE YOU!!!
 
 // Translators
 //- Egyptianscale: Translated to Russian
@@ -1051,7 +1053,7 @@ citadel_unit_status_old_update_rate 15
 citadel_unit_status_single_bar_mode true
 //citadel_unit_status_height 300
 snd_soundmixer_update_maximum_frame_rate 15
-minimap_update_rate_hz 15
+minimap_update_rate_hz 1
 panorama_disable_descendant_filtering true
 //panorama_disable_draw_fancy_quad true
 //panorama_disable_layer_clear true
