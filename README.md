@@ -1,5 +1,4 @@
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J01UY6OZ)
-
+<a href="https://ko-fi.com/sqooky" target="_blank"><img height="90" src="//files.gamebanana.com/img/ss/mods/6a29840754e45.jpg" alt="Buy Me a Coffee at ko-fi.com"></a> <br>
 ## Translations
 ### [🇲🇽 Instrucciones en español aqui](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_spanish.md)
 Translated by [Tamara Mochaccina](https://throne.com/anonimacl) and Heathen
