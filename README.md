@@ -1,3 +1,5 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J01UY6OZ)
+
 ## Translations
 ### [🇲🇽 Instrucciones en español aqui](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_spanish.md)
 Translated by [Tamara Mochaccina](https://throne.com/anonimacl) and Heathen
@@ -33,6 +35,7 @@ I love you all so much
 - Cos:    GAVE ME SEVENTY DOLLARS FOR NO FUCKING REASON I LOVE YOU SO MUCH?????????????????????????
 - Wely:   Gave me THIRTY DOLLARS IN STEAM GIFT CARD MONEY????? WOA
 - Prot4g: Gave me TWENTY DOLLARS WOA I LOVE YOU!!!
+- TheLastFriendly: GAVE ME 100 DOLLARS FOR CLOTHES  I LOVE YOU SO MUCH 
 
 <div>
   <img src="https://github.com/Sqooky/OptimizationLock/blob/main/media/joy.png?raw=true" alt="A picture reading Sqooky's .gi A collage of performance configs with the intent of optimizing the game."/>
@@ -117,14 +120,15 @@ Every variation of the config included in this repository has mod support added.
 
 ## Donors
  Thank you so much. Even considering that you would view my work as deserving of any donation at all is incredible. I love you all  
-//- Boot:   Gave me FIVE DOLLARS and is just a wonderful person and friend at a baseline
-//- Sonny:  Gave me FIVE DOLLARS and waited through me setting up a paypal account and didn't change their mind
-//- Soulx:  Gave me FIVE DOLLARS and told me about spirolactone 
-//- Xeno:   Very politely waited for me to figure out how to accept donations and gave me FIVE DOLLARS
-//- N8Fan:  Gave me TEN DOLLARS so I could play vampire survivors
-//- Cos:    GAVE ME SEVENTY DOLLARS FOR NO FUCKING REASON I LOVE YOU SO MUCH?????????????????????????
-//- Wely:   Gave me THIRTY DOLLARS IN STEAM GIFT CARD MONEY????? WOA
-//- Prot4g: Gave me TWENTY DOLLARS WOA I LOVE YOU!!!
+- Boot:   Gave me FIVE DOLLARS and is just a wonderful person and friend at a baseline
+- Sonny:  Gave me FIVE DOLLARS and waited through me setting up a paypal account and didn't change their mind
+- Soulx:  Gave me FIVE DOLLARS and told me about spirolactone 
+- Xeno:   Very politely waited for me to figure out how to accept donations and gave me FIVE DOLLARS
+- N8Fan:  Gave me TEN DOLLARS so I could play vampire survivors
+- Cos:    GAVE ME SEVENTY DOLLARS FOR NO FUCKING REASON I LOVE YOU SO MUCH?????????????????????????
+- Wely:   Gave me THIRTY DOLLARS IN STEAM GIFT CARD MONEY????? WOA
+- Prot4g: Gave me TWENTY DOLLARS WOA I LOVE YOU!!!
+- TheLastFriendly: GAVE ME 100 DOLLARS FOR CLOTHES  I LOVE YOU SO MUCH 
 
 ## Translators
 - Egyptianscale:                    Translated to Russian
