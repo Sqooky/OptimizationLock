@@ -1,5 +1,3 @@
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J01UY6OZ)
-<a href="https://ko-fi.com/sqooky" target="_blank"><img height="90" src="https://files.gamebanana.com/img/ss/mods/6a29840754e45.jpg" alt="Buy Me a Coffee at ko-fi.com"></a> <br>
 ## Translations
 ### [🇲🇽 Instrucciones en español aqui](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_spanish.md)
 Translated by [Tamara Mochaccina](https://throne.com/anonimacl) and Heathen
@@ -19,11 +17,13 @@ Translated by [ZHTodd223](https://github.com/ZHTodd223)
 Translated by [Sasha11711](https://gamebanana.com/members/4167224)
 
 ## Main body
+
+<a href="https://ko-fi.com/sqooky" target="_blank"><img height="90" src="https://files.gamebanana.com/img/ss/mods/6a29840754e45.jpg" alt="Buy Me a Coffee at ko-fi.com"></a> <br>
 To either request support or contribute findings to the project, our Discord Server can be found [here](https://discord.gg/EF3Jq57jQv). 
 If you see me in game say hi! My username is "I want to eat flowers!"
 
 ### Donating
-I've probably put *at least* five hundred hours into working on this project. I want it to be free forever, but I'm dirt poor and if you would like to donate as a means of showing thanks I have a kofi here! https://ko-fi.com/sqooky (I will love you forever)  
+I've probably put *at least* five hundred hours into working on this project. I want it to be free forever, but I'm dirt poor and if you would like to donate as a means of showing thanks I have a kofi here! https://ko-fi.com/sqooky and I will love you forever
 
 **Donors!**
 I love you all so much
