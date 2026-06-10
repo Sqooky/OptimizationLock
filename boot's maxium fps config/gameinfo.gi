@@ -175,7 +175,7 @@ GameInfo
         LowLatency                         "1"
         VulkanOnly_Linux                   "1"
         VulkanRequireSubgroupWaveOpSupport "1"
-        VulkanRequireDescriptorIndexing    "\"1\" [ !$OSX ]"
+        VulkanRequireDescriptorIndexing    "1" 
         VulkanSteamShaderCache             "1"
         VulkanSteamAppShaderCache          "1"
         VulkanSteamDownloadedShaderCache   "1"
