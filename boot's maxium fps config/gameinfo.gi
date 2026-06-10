@@ -830,7 +830,7 @@ GameInfo
         cl_smoothtime                                   "0.01" // Smooth client's view after prediction error over this many seconds (Lower = snappier but more abrupt, higher = smoother but floaty). [def: "0.2"]
         cl_updaterate                                   "128"  // Client snapshot update rate requested from the server (higher = more frequent updates).      [def: "128"]
         net_async_clientconnect                         "1"
-        r_frame_sync_enable                             "0" // was 0
+        //r_frame_sync_enable                             "0" // was 0
         sv_parallel_sendsnapshot                        "2"
 
         // ================ System Related ================
