@@ -28,7 +28,7 @@
 // Donors. Thank you so much. Even considering that you would view my work as deserving of any donation at all is incredible. I love you all
 //- Boot:   Gave me FIVE DOLLARS and is just a wonderful person and friend at a baseline
 //- Sonny:  Gave me FIVE DOLLARS and waited through me setting up a paypal account and didn't change their mind
-//- Soulx:  Gave me FIVE DOLLARS and told me about spirolactone 
+//- Soulx:  Gave me FIVE DOLLARS and told me about spirolactone
 //- Xeno:   Very politely waited for me to figure out how to accept donations and gave me FIVE DOLLARS
 //- N8Fan:  Gave me TEN DOLLARS so I could play vampire survivors
 //- Cos:    GAVE ME SEVENTY DOLLARS FOR NO FUCKING REASON I LOVE YOU SO MUCH?????????????????????????
@@ -141,20 +141,20 @@ GameInfo
         // Search paths are relative to the exe directory\..\
         //
 
-        
+
 
 // Deadlock Mod Manager - Start
 
 		SearchPaths
-        {  
+        {
             Game_Language       citadel_*LANGUAGE*
             Game                citadel/addons
             Mod                 citadel
-            Write               citadel          
+            Write               citadel
             Game                citadel
             Mod                 core
             Write               core
-            Game                core        
+            Game                core
         }
 // Deadlock Mod Manager - End
     }
@@ -658,7 +658,7 @@ GameInfo
         citadel_camera_hero_fov                             "120"           // The field of view angle of the camera when following a hero.     [def: "90"]
         //r_aspectratio                                     "3"          // This command is commented out, represented by the // at the beginning of the line. Editing it will not do anything. To mess with it remove the //
         // r_aspectratio changes the zoom of the camera which in turn doesn't make the punch zoom in as jarring, but the command is not as intuitive to set precisely
-        // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov). 
+        // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov).
 
         // --- 3. HUD ---
         citadel_unit_status_delta_decay_rate                "2"       // how quickly the yellow to indicate damage fades from the health bar. [def: "3"]
@@ -695,7 +695,7 @@ GameInfo
         // --- 8. Camera Tweaks ---
 
         citadel_camera_use_vmdl_flatten_horizontal  "false" // From my understanding of how these commands work, they slightly smooth camera inputs. This should make the camera more responsive?   [def: "true"]
-        citadel_camera_use_vmdl_flatten_vertical    "false" //                                                                                                                                      [def: "true"] 
+        citadel_camera_use_vmdl_flatten_vertical    "false" //                                                                                                                                      [def: "true"]
 
         // citadel_camera_listening_offset    "-1"   // To be completely honest I have no idea but I want to test this.  [def: "0"]
         citadel_camera_soft_collision_angle   "360"  //                                                                  [def: "75"]
@@ -980,7 +980,10 @@ GameInfo
         // r_wait_on_present                      "true"
 
         // ================ Convars You Shouldn't/Can't Mess With But I Want to Maintain the Documentation ================
+        //cl_skip_update_animations                     "true" // Setting this to  true causes models outside of the game world to a-pose. looks cute.
 
+
+        // r_draw_first_tri_only                    "true"  // Only draws the first triangle. Surprisingly this only supports dx11 [def: "false"]
         // citadel_damage_text_show_effectiveness   "true"  // This is supposed to show if your target has any spirit/bullet resist, but seems to be broken rn. [def: "false"]
         // citadel_first_person                     "true"  // Puts you in first person, messes up character rendering
         // cl_particle_max_count                    "1500"  // Maximum allowed particles. Setting it too low will cause issues. With flooding from the console.  [def: "0"]
@@ -1007,89 +1010,60 @@ GameInfo
         // sc_throw_away_all_layers                 "true"  // Disables rendering, ie the screen is black.          [def: "false"]
 
                 // --------------------------------- END OF CONFIG OptimizationLock -- ver. testing ------------------------------- \\
-citadel_melee_shake_duration 0
-citadel_melee_heavymelee_push_force 0
-citadel_melee_hit_delay_max_time 0
-citadel_melee_shake_frequency 0
-citadel_npc_trooper_celebration_percent 1
-citadel_npc_trooper_celebration_radius 4000
-citadel_melee_shake_amplitude 0
-citadel_melee_heavymelee_toss_force_vs_tiny_min 0
-citadel_melee_heavymelee_push_force_vs_tiny 0
-citadel_medic_minion_sight_range -1
 
 
 
-        // =============== Cvars in Testing :D ===============
-cl_hud_telemetry_frametime_show false // This is from kaiz. 
-panorama_disable_blur true
-panorama_disable_box_shadow true
-panorama_disable_descendant_filtering true
-//panorama_disable_draw_fancy_quad true
-panorama_max_text_shadow_strength 5
-panorama_min_comp_layer_cache_cost 384
-panorama_panel_occlusion false
-//panorama_skip_composition_layer_content_paint_tint true
-panorama_transforms_no_comp_layer true
 
-panorama_comp_layer_lru_lifetime 2
-panorama_clear_frames_on_device_restore 0
-panorama_cache_command_list_size_threshold 512
-v8_jitless false
-v8_stack_size 512
-//panorama_highlight_slow_operations true
-"v8_maximum_heap_size_mb" "1024"                  // (Default is 512) Doubles UI memory heap to prevent CPU GC stutters
-"cl_skip_hierarchy_update_for_unchanged_entities" "true" // Skips updating bones/hierarchy for networked entities that haven't moved. Massive CPU saver.
-"steam_inputhandler_enabled" "0"             // Completely disables Steam Input API polling. Huge for 1% lows if you only use Keyboard/Mouse.
-citadel_unit_status_single_bar_mode true
-//citadel_unit_status_health_per_minor_pip 0
-//citadel_unit_status_max_health_per_bar 5000
-//citadel_unit_status_health_per_pip 0
-citadel_unit_status_health_pips_per_row 100
-engine_max_resource_system_update_time 10
-citadel_unit_status_old_update_rate 15
-//citadel_unit_status_v2_height 600
-//citadel_unit_status_v2_width 300
-citadel_unit_status_single_bar_mode true
-//citadel_unit_status_height 300
-snd_soundmixer_update_maximum_frame_rate 15
-minimap_update_rate_hz 1
-panorama_disable_descendant_filtering true
-//panorama_disable_draw_fancy_quad true
-//panorama_disable_layer_clear true
-//panorama_disable_render_callbacks true
-panorama_disable_render_target_cache false
-panorama_enable_secondary_layout_pass false
-panorama_js_minidumps false
-panorama_max_fps 15
-panorama_max_overlay_fps 15
-panorama_max_text_shadow_strength 5
-panorama_panel_occlusion false
-panorama_skip_composition_layer_content_paint true
-panorama_transforms_no_comp_layer true
-panorama_transition_time_factor 5
-animgraph_enable_dirty_netvar_optimization true
 
-//panorama_clear_frames_on_device_restore "0"
-panorama_debugger_theme dark
-lb_max_visible_envmaps_override 5
-citadel_in_world_item_panel_dpi 0.8
-//citadel_sat_volume_outline_color 255 255 255 255
-//citadel_sat_volume_sat_color 255 255 255 255
-//r_citadel_selection_outline2_alpha 1
-//r_citadel_selection_outline2_offset 10
-//r_citadel_selection_outline2_width 10
-//sc_force_translation_in_projection true
+
+
+
+
+
+
+//=============== Cvars in Testing :D ===============
+//anim_resource_validate_on_load                  "false"
+audio_enclosure_calc_enabled                    "false"
+cam_collision                                   "0"
+citadel_camera_hard_trace_radius                "32" //put under camera tweaks :D
+citadel_camera_wobble_disable                   "true"
+citadel_fibonnaci_sphere_trace_los_max          "32" //put under camera tweaks :D
+citadel_radial_distortion                       "1" // Doesn't seem to do anything :(, here's what it's supposed to do: 0: Off 1: Distorts the visible distribution of arcs based on the mouse pointer. [def: "0"]
+cl_fasttempentcollision                         "20"
+cl_skip_hierarchy_update_for_unchanged_entities "true"
+hud_fastswitch                                  "0"
+mat_shading_complexity_max_register_count       "8"
+multigpu_skip_semaphores                        "true"
+multigpu_skip_transfers                         "true"
+panorama_disable_render_target_cache            "true"
+panorama_skip_compo                             "true"
+panorama_skip_composition_layer_content_paint   "true"
+r_citadel_distancefield_max_distance            "16" // Doesn't seem to do anything, or if it does it is overwritten. [def: "2048"]
+r_citadel_distancefield_min_screen_space_size   "99" // Same as above                                                    [def: "0.015"]
+r_nearz                                         "20"
+r_particle_explicit_fetch                       "true"
+r_skip_precache_validation_check                "true"
+steam_inputhandler_enabled                      "0"
+v8_maximum_heap_size_mb                         "1024"
+// These all were commented out and as such need to be tested ^
+
 //cam_collision false
-//citadel_camera_wobble_disable true
 //citadel_zipline_allow_direction_choice false
-//r_citadel_gpu_preview_denoise false
-//r_citadel_gpu_preview_baked_shadows false
-//r_citadel_depth_prepass_dynamic_objects false
+//cl_ent_joint_lines false
+//cl_ent_joint_names false
+//cl_globallight_orig_calc_frustum false
+//cl_globallight_use_shaadow_near_offset false
+//cl_impacteffects false
+//cl_interp_ag2_for_non_ag2_entities false
+//cl_phys_animated_hierarchy false
+//cl_poll_network_early false
+//cl_show_splashes false
+//cl_skel_constraints_enable false
+//collect_asserts_for_gc false
+//debug_draw_enable false
+//enable_boneflex false
 //ent_joint_lines false
 //ent_joint_names false
-//fog_enable false
-//fog_enableskybox false
 //fx_drawmetalspark false
 //game_particle_manager_requeue_messages false
 //ik_debug_fabrik_forwards_enabled false
@@ -1098,13 +1072,13 @@ citadel_in_world_item_panel_dpi 0.8
 //labelled_debug_helper_enabled false
 //labelled_debug_helper_show_text false
 //labelled_debug_helper_skeleton_show_bone_names false
-//lb_enable_fog_mixed_shadows false
-//lb_enable_binning false
-//lb_enable_baked_shadows false
-//lb_dynamic_shadow_resolution false
-//lb_dynamic_shadow_penumbra false
-//lb_csm_override_staticgeo_cascades_animated_verts false
 //lb_csm_draw_translucent false
+//lb_csm_override_staticgeo_cascades_animated_verts false
+//lb_dynamic_shadow_penumbra false
+//lb_dynamic_shadow_resolution false
+//lb_enable_baked_shadows false
+//lb_enable_binning false
+//lb_enable_fog_mixed_shadows false
 //lb_enable_lights false
 //lb_enable_newsum false
 //lb_enable_shadow_casting false
@@ -1117,63 +1091,70 @@ citadel_in_world_item_panel_dpi 0.8
 //lightquery_debug_direct_lighting false
 //lightquery_debug_indirect_lighting false
 //mat_cache_renderablepasses false
+//panorama_clear_frames_on_device_restore "0"
 //panorama_composition_atlas false
+//panorama_disable_draw_fancy_quad true
+//panorama_disable_draw_fancy_quad true
+//panorama_disable_layer_clear true
+//panorama_disable_render_callbacks true
 //panorama_disable_render_target_cache false
 //panorama_disallow_hover_styles false
 //panorama_enable_secondary_layout_pass false
+//panorama_highlight_slow_operations true
 //panorama_panel_occlusion  false
+//panorama_skip_composition_layer_content_paint_tint true
 //props_break_apply_radial_forces  false
 //pulse_save_execution_history false
 //r_arealights false
-
-
-//cloth_update    false
-//collect_asserts_for_gc false
-//debug_draw_enable false
-//enable_boneflex false
-//anim_resource_validate_on_load                  "false"
-//animgraph_enable false
-//citadel_camera_use_vmdl_flatten_horizontal false
-//citadel_camera_use_vmdl_flatten_vertical false
-//citadel_debug_player_speed_in_meters false
-//citadel_use_new_minimap false
-//citadel_weapon_normalize_recoil_with_firerate false
-//cl_ent_joint_lines false
-//cl_ent_joint_names false
-//cl_globallight_orig_calc_frustum false
-//cl_globallight_use_shaadow_near_offset false
-//cl_impacteffects false
-//cl_interp_ag2_for_non_ag2_entities false
-//cl_phys_animated_hierarchy false
-//cl_poll_network_early false
-//cl_show_splashes false
-//cl_skel_constraints_enable false
-//audio_enclosure_calc_enabled false
-//animated_material_attributes    false
-
-
-
-        // citadel_radial_distortion                     "1" // Doesn't seem to do anything :(, here's what it's supposed to do: 0: Off 1: Distorts the visible distribution of arcs based on the mouse pointer. [def: "0"]
-        // cl_fasttempentcollision                       "20"
-        // citadel_camera_hard_trace_radius              "32" //put under camera tweaks :D
-        // citadel_fibonnaci_sphere_trace_los_max        "32" //put under camera tweaks :D
-        // cam_collision                                 "0"
-        // mat_shading_complexity_max_register_count     "8"
-        // hud_fastswitch                                "0" 
-        panorama_disable_render_target_cache          "true"
-        // r_skip_precache_validation_check              "true"
-        // cl_skip_update_animations                     "true"
-        // multigpu_skip_semaphores                      "true"
-        // multigpu_skip_transfers                       "true"
-        // panorama_skip_composition_layer_content_paint "true"
-        // panorama_skip_compo                           "true"
-        // r_draw_first_tri_only                         "true"
-        // r_frame_sync_enable                           "true"
-        // r_nearz                                       "20"
-        // r_particle_explicit_fetch                     "true"
-        // r_citadel_distancefield_max_distance          "16" // Doesn't seem to do anything, or if it does it is overwritten. [def: "2048"]
-        // r_citadel_distancefield_min_screen_space_size "99" // Same as above                                                    [def: "0.015"]
-
+//r_citadel_depth_prepass_dynamic_objects false
+//r_citadel_gpu_preview_baked_shadows false
+//r_citadel_gpu_preview_denoise false
+//r_citadel_selection_outline2_alpha 1
+//r_citadel_selection_outline2_offset 10
+//r_citadel_selection_outline2_width 10
+//sc_force_translation_in_projection true
+animgraph_enable_dirty_netvar_optimization true
+citadel_in_world_item_panel_dpi 0.8
+citadel_medic_minion_sight_range -1
+citadel_melee_heavymelee_push_force 0
+citadel_melee_heavymelee_push_force_vs_tiny 0
+citadel_melee_heavymelee_toss_force_vs_tiny_min 0
+citadel_melee_hit_delay_max_time 0
+citadel_melee_shake_amplitude 0
+citadel_melee_shake_duration 0
+citadel_melee_shake_frequency 0
+citadel_npc_trooper_celebration_percent 1
+citadel_npc_trooper_celebration_radius 4000
+citadel_unit_status_health_pips_per_row 100
+citadel_unit_status_old_update_rate 15
+engine_max_resource_system_update_time 10
+lb_max_visible_envmaps_override 5
+minimap_update_rate_hz 1
+panorama_cache_command_list_size_threshold 512
+panorama_clear_frames_on_device_restore 0
+panorama_comp_layer_lru_lifetime 2
+panorama_debugger_theme dark
+panorama_disable_blur true
+panorama_disable_box_shadow true
+panorama_disable_descendant_filtering true
+panorama_disable_descendant_filtering true
+panorama_disable_render_target_cache false
+panorama_enable_secondary_layout_pass false
+panorama_js_minidumps false
+panorama_max_fps 15
+panorama_max_overlay_fps 15
+panorama_max_text_shadow_strength 5
+panorama_max_text_shadow_strength 5
+panorama_min_comp_layer_cache_cost 384
+panorama_panel_occlusion false
+panorama_panel_occlusion false
+panorama_skip_composition_layer_content_paint true
+panorama_transforms_no_comp_layer true
+panorama_transforms_no_comp_layer true
+panorama_transition_time_factor 5
+snd_soundmixer_update_maximum_frame_rate 15
+v8_jitless false
+v8_stack_size 512
         rate
         {
             min     "98304"
@@ -1296,8 +1277,4 @@ citadel_in_world_item_panel_dpi 0.8
         ShowLowAvailableVirtualMemoryMessageBox "1"
     }
 }
-
-
-
-
 
