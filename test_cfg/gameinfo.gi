@@ -610,7 +610,7 @@ GameInfo
     {
 
         //BindlessParticleShader                "1"   // Setting this to 1 Will make every particle the error texture. Neat!
-        Blobulator                              "1"
+        //Blobulator                              "1"
 
 
         EnableParticleShaderFeatureBranching "1"
@@ -651,11 +651,11 @@ GameInfo
         citadel_player_glow_disabled                           "0"    // Disables player glow/highlight effect when pinged.               [def: "0"]
         citadel_trooper_glow_disabled                          "1"    // 1 = Disable friendly/enemy minion glow.                          [def: "0"]
         citadel_unit_status_allies_see_thru_walls_max_distance "40"   // How far to make allied players' unit status show through walls.  [def: "0"] (0 means no limit)
-        // citadel_unit_status_dpi                             "6"    // This increases the size of the health bar. Unfortunately I think this lowers performance. A shame. [def: "5"]
+        citadel_unit_status_dpi                             "6"    // This increases the size of the health bar. Unfortunately I think this lowers performance. A shame. [def: "5"]
 
         // --- 2. Field of View ---
         // These commands both affect fov but do so in different ways. citadel_camera_hero_fov changes the field of view using typical degrees but doesn't modify the punch zoom in. This means that if you have a high fov value the zoom in can be disorienting.
-        citadel_camera_hero_fov                             "120"           // The field of view angle of the camera when following a hero.     [def: "90"]
+        citadel_camera_hero_fov                             "114"           // The field of view angle of the camera when following a hero.     [def: "90"]
         //r_aspectratio                                     "3"          // This command is commented out, represented by the // at the beginning of the line. Editing it will not do anything. To mess with it remove the //
         // r_aspectratio changes the zoom of the camera which in turn doesn't make the punch zoom in as jarring, but the command is not as intuitive to set precisely
         // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov).
@@ -663,7 +663,7 @@ GameInfo
         // --- 3. HUD ---
         citadel_unit_status_delta_decay_rate                "2"       // how quickly the yellow to indicate damage fades from the health bar. [def: "3"]
         // citadel_hud_objective_health_debug_show_midboss  "true"    // This makes midboss' health bar visible whenever it's able to be rendered. I like it, you might not [def: "false"]
-         citadel_unit_status_use_v2                         "0"       // Set to 1 to enable the new health bar that allows you to  see enemy stamina. [def: "0"]
+         citadel_unit_status_use_v2                         "false"       // Set to 1 to enable the new health bar that allows you to  see enemy stamina. [def: "0"]
         // citadel_unit_status_use_v2_for_nonplayers        "0"       // Set to 1 to enable the new health bar but for troopers, objs, and camps.     [def: "0"]
         citadel_crosshair_hit_marker_duration               "0.00001" // Removes the hitmarker when shooting people.                      [def: "0.1"]
         citadel_damage_report_enable                        "1"       // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
@@ -673,6 +673,7 @@ GameInfo
         citadel_hud_objective_health_enabled                "2"       // 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks.                           [def: "2"]
         citadel_unit_status_use_new                         "true"       // This uses new Health Bar, to use old Health Bar change "true" to "false".    [def: "false"]
         citadel_show_chat_wheel_angle_threshold             "0"       // (degrees) Increase this to change how much you have to move your camera angle to make the Chat Wheel instantly visible while holding Ping. [def: "16"]
+        citadel_unit_status_single_bar_mode true
 
         // --- 4. Lighting & Shadows ---
         lb_enable_baked_shadows                             "0" // *Disables baked shadows (game looks bright if this is on while stationary lights = 1). [def: "1"]
@@ -683,7 +684,7 @@ GameInfo
         r_draw3dskybox "0" //  Enables drawing the 3D skybox layer (distant geometry).         [def: "1"]
 
         // --- 6. FPS Caps & Minimized Throttling ---
-        engine_low_latency_sleep_after_client_tick "true" // Sleeps strategically after client tick to reduce latency/stutter (low-latency pacing). [def: "false"]
+        //engine_low_latency_sleep_after_client_tick "true" // Sleeps strategically after client tick to reduce latency/stutter (low-latency pacing). [def: "false"]
         engine_no_focus_sleep                      "20"   // Milliseconds the engine sleeps per frame when unfocused (0 = no sleep, not recommended for low-end PC). [def: "20"]
         fps_max                                    "0"    // Max FPS while in game, limit fps to your monitor refresh rate. [def: "400"]
         panorama_max_fps                           "30"   // Menu FPS.                                                        [def: "120"]
@@ -742,9 +743,9 @@ GameInfo
         panorama_allow_transitions             "false" // Turns off UI anim (shop,etc)                                     [def: "1"]
         panorama_disable_blur                  "1"     // Disables UI blur effects in the UI.                              [def: "0"]
         panorama_disable_box_shadow            "1"     // Disables UI box shadows in the UI (less GPU/UI cost).            [def: "0"]
-        panorama_temp_comp_layer_min_dimension "128"   // Based on the name I'm implied to believe this is the minimum size for panorama compositing, ie blur, rounded corners, etc. [def: "512"]
+        //panorama_temp_comp_layer_min_dimension "128"   // Based on the name I'm implied to believe this is the minimum size for panorama compositing, ie blur, rounded corners, etc. [def: "512"]
         //r_citadel_enable_pano_world_blur       "true"
-        r_dashboard_render_quality             "0" // Sets dashboard/UI render quality (lower = cheaper UI rendering). [def: "1"]
+        //r_dashboard_render_quality             "0" // Sets dashboard/UI render quality (lower = cheaper UI rendering). [def: "1"]
 
         // ================ Shadows ================
         r_citadel_shadow_caching                 "false" // We disable all shadows so this shouldn't be needed               [def: "true"]
@@ -860,7 +861,7 @@ GameInfo
         particle_cluster_nodraw                  "1"     // Skips drawing particle “clusters”/grouped particle batches (performance, fewer small effects). [def: "0"]
         r_RainParticleDensity                    "0"     // Density of Particle Rain 0-1.                                    [def: "1"]
         r_draw_particle_children_with_parents    "0"     // I believe this handles the drawing of little visual flourish particles. [def: "-1"]
-        r_late_particle_job_sync                 "true"  // No idea                                                          [def: "false"]
+        r_late_particle_job_sync                 "false" // No idea                                                          [def: "false"]
         r_limit_particle_job_duration            "true"  // Seems to help with particle clutter, although I am not sure.             [def: "false"]
         r_particle_allowprerender                "false" // I imagine it renders particles prematurely, which we do not care for.    [def: "true"]
         r_particle_batch_collections             "true"  // Batches collections of particles, typically batch rendering is faster so this is set to true. [def: "false"]
@@ -927,7 +928,7 @@ GameInfo
         parallel_perform_invalidate_physics               "true"   // Not sure                                                         [def: "false"]
         r_async_compute_fog                               "true"   // Just whether to asyncroniously render fog                        [def: "false"]
         r_citadel_depth_prepass_dynamic_objects           "false"  // Should be not prepassing entities that move                      [def: "true"]
-        r_low_latency                                     "1"      // This acts as the convar which enables low latency, hardware dependent    [def: "1"]
+        r_low_latency                                     "0"      // This acts as the convar which enables low latency, hardware dependent    [def: "1"]
         r_renderdoc_auto_shader_pdbs                      "false"  // Automatically generate shader debug info on capture.             [def: "true"]
         save_parallel                                     "true"   // Absolutely no idea but typically paralell processing is good.    [def: "false"]
         sc_force_materials_batchable                      "true"   // I would imagine this functions as the variable is named.         [def: "false"]
@@ -1022,6 +1023,9 @@ GameInfo
 
 
 //=============== Cvars in Testing :D ===============
+
+engine_show_frame_ticks                         "true"
+engine_show_frame_pacing                        "true"
 //anim_resource_validate_on_load                  "false"
 audio_enclosure_calc_enabled                    "false"
 cam_collision                                   "0"
@@ -1041,10 +1045,12 @@ panorama_skip_composition_layer_content_paint   "true"
 r_citadel_distancefield_max_distance            "16" // Doesn't seem to do anything, or if it does it is overwritten. [def: "2048"]
 r_citadel_distancefield_min_screen_space_size   "99" // Same as above                                                    [def: "0.015"]
 r_nearz                                         "20"
-r_particle_explicit_fetch                       "true"
+//r_particle_explicit_fetch                       "true" // I believe this improves performance but will make soul orbs a bit difficult to see
 r_skip_precache_validation_check                "true"
 steam_inputhandler_enabled                      "0"
-v8_maximum_heap_size_mb                         "1024"
+v8_maximum_heap_size_mb                         "2048"
+v8_jitless true
+v8_stack_size 768
 // These all were commented out and as such need to be tested ^
 
 //cam_collision false
@@ -1123,9 +1129,7 @@ citadel_melee_hit_delay_max_time 0
 citadel_melee_shake_amplitude 0
 citadel_melee_shake_duration 0
 citadel_melee_shake_frequency 0
-citadel_npc_trooper_celebration_percent 1
-citadel_npc_trooper_celebration_radius 4000
-citadel_unit_status_health_pips_per_row 100
+//citadel_unit_status_health_pips_per_row 100
 citadel_unit_status_old_update_rate 15
 engine_max_resource_system_update_time 10
 lb_max_visible_envmaps_override 5
@@ -1153,8 +1157,8 @@ panorama_transforms_no_comp_layer true
 panorama_transforms_no_comp_layer true
 panorama_transition_time_factor 5
 snd_soundmixer_update_maximum_frame_rate 15
-v8_jitless false
-v8_stack_size 512
+panorama_console_max_lines 50
+panorama_console_max_history 50
         rate
         {
             min     "98304"
