@@ -13,7 +13,7 @@
 //         /!#%|'-_- '\%k*|
 //     o   |*@/        \_/
 //         \)&|
-// OptimizationLock v2.5 by Sqooky with help from others <3
+// OptimizationLock v2.5.1 by Sqooky with help from others <3
 
 // As much as I would love to say I did this alone, I did not. These are the amazing people who deserve as much praise as I, if not more
 //  Major thanks to all of these individuals from the bottom of my heart. They are all lovely.
@@ -618,7 +618,7 @@ GameInfo
         //      If you would like to donate as a means of showing thanks I have a kofi.     \\
         //      https://ko-fi.com/sqooky                                                    \\
 
-        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.5 -------- \\
+        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.5.1 -------- \\
         // The github is here https://github.com/Sqooky/OptimizationLock  \\
         // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
         // The gamebanana:https://gamebanana.com/mods/656341 (it's usually behind, please check the github) \\
@@ -991,7 +991,7 @@ GameInfo
         // sc_skip_traversal                        "true"  // Disables rendering, ie the screen is black.          [def: "false"]
         // sc_throw_away_all_layers                 "true"  // Disables rendering, ie the screen is black.          [def: "false"]
 
-                // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.5 ------------------------------- \\
+                // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.5.1 ------------------------------- \\
 
 
 
@@ -1004,8 +1004,6 @@ GameInfo
 
 
 //=============== Cvars in Testing :D ===============
-citadel_viewpunch_damping 100
-citadel_viscous_bowling_radius_debug true
 //sc_instanced_debug_visualizer true
 sc_view_profiler_frame_averaging 2
 sc_instanced_mesh_mesh_shader false
