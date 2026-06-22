@@ -26,14 +26,20 @@
 //- Liah:               Found a cvar causing a weird issue.
 
 // Donors. Thank you so much. Even considering that you would view my work as deserving of any donation at all is incredible. I love you all
-//- Boot:   Gave me FIVE DOLLARS and is just a wonderful person and friend at a baseline
-//- Sonny:  Gave me FIVE DOLLARS and waited through me setting up a paypal account and didn't change their mind
-//- Soulx:  Gave me FIVE DOLLARS and told me about spirolactone 
-//- Xeno:   Very politely waited for me to figure out how to accept donations and gave me FIVE DOLLARS
-//- N8Fan:  Gave me TEN DOLLARS so I could play vampire survivors
-//- Cos:    GAVE ME SEVENTY DOLLARS FOR NO FUCKING REASON I LOVE YOU SO MUCH?????????????????????????
-//- Wely:   Gave me THIRTY DOLLARS IN STEAM GIFT CARD MONEY????? WOA
-//- Prot4g: Gave me TWENTY DOLLARS WOA I LOVE YOU!!!
+//- Boot:               Gave me FIVE DOLLARS and is just a wonderful person and friend at a baseline
+//- Sonny:              Gave me FIVE DOLLARS and waited through me setting up a paypal account and didn't change their mind
+//- Soulx:              Gave me FIVE DOLLARS and told me about spirolactone 
+//- Xeno:               Very politely waited for me to figure out how to accept donations and gave me FIVE DOLLARS
+//- N8Fan:              Gave me TEN DOLLARS so I could play vampire survivors
+//- Cos:                GAVE ME SEVENTY DOLLARS FOR NO FUCKING REASON I LOVE YOU SO MUCH?????????????????????????
+//- Wely:               Gave me THIRTY DOLLARS IN STEAM GIFT CARD MONEY????? WOA
+//- Prot4g:             Gave me TWENTY DOLLARS WOA I LOVE YOU!!!
+//- catmasta:           Gave me TWO DOLLARS!!
+//- a distant admirer:  Gave me TEN DOLLARS and a boon!!!
+//- Kevin:              Gave me TWO DOLLARS also made me trip and write this as kelvin twice. I'm such a mcginnis chud.
+//- jusbeprophet:       Gave me ONE DOLLAR! Bless their heart
+//- Supporter:          Gave me FIVE DOLLAR!!! many thanks to them.
+
 
 // Translators
 //- Egyptianscale: Translated to Russian
