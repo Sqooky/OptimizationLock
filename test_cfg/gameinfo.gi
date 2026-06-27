@@ -729,7 +729,7 @@ GameInfo
         r_mapextents "7000" // Far clipping plane, this will make buildings pop in and out      [def: "16384"] damn that's an oddly specific number
 
         // ================ IMPORTANT ================
-        thread_pool_option "-1" // If I understand correctly, this should be how threads are handled relative to the game, but there isn't a clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage may vary. [def: "-1"]
+        thread_pool_option "6" // If I understand correctly, this should be how threads are handled relative to the game, but there isn't a clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage may vary. [def: "-1"]
         // 1 gives "GlobalThreadPoolMode" "efficiency"
         // 2 removes it from boot.vcfg
         // 3 gives "GlobalThreadPoolMode" "undifferentiated"
@@ -927,7 +927,7 @@ GameInfo
         parallel_perform_invalidate_physics               "true"   // Not sure                                                         [def: "false"]
         r_async_compute_fog                               "true"   // Just whether to asyncroniously render fog                        [def: "false"]
         r_citadel_depth_prepass_dynamic_objects           "false"  // Should be not prepassing entities that move                      [def: "true"]
-        r_low_latency                                     "0"      // This acts as the convar which enables low latency, hardware dependent    [def: "1"]
+        //r_low_latency                                     "0"      // This acts as the convar which enables low latency, hardware dependent    [def: "1"]
         r_renderdoc_auto_shader_pdbs                      "false"  // Automatically generate shader debug info on capture.             [def: "true"]
         save_parallel                                     "true"   // Absolutely no idea but typically paralell processing is good.    [def: "false"]
         //sc_force_materials_batchable                      "true"   // I would imagine this functions as the variable is named.         [def: "false"]
@@ -1010,11 +1010,86 @@ GameInfo
         // sc_throw_away_all_layers                 "true"  // Disables rendering, ie the screen is black.          [def: "false"]
 
                 // --------------------------------- END OF CONFIG OptimizationLock -- ver. testing ------------------------------- \\
+cl_skip_update_animations 1
+cl_updaterate 40
+engine_max_ticks_to_simulate 1
+
+r_RainAllowInSplitScreen 0
+r_RainParticleDensity 0
+r_add_views_in_pre_output 1
+r_allow_onesweep_gpusort 0
+r_arealights 0
+r_aoproxy_cull_dist 0
+r_aoproxy_min_dist 0
+r_aoproxy_min_dist_box 0
+r_character_decal_monitor_render_res 0
+r_character_decal_resolution 0
+r_citadel_antialiasing 0
+r_citadel_depth_prepass_dynamic_objects 0
+r_citadel_distancefield_blur 0
+r_citadel_distancefield_down_sample 0
+r_citadel_distancefield_farfield_enable 0
+r_citadel_distancefield_farfield_occlusion_length 0
+r_citadel_distancefield_farfield_occlusion_start_offset 0
+r_citadel_distancefield_shadows 0
+r_citadel_glow_health_bar_debug true
+r_citadel_npr_outlines false
+r_citadel_npr_outlines_max_dist 1
+r_citadel_shadow_quality 0
+r_citadel_shadowdb 0
+r_citadel_ssao_quality 0
+r_citadel_ssao_thin_occluder_compensation 0
+r_citadel_sun_shadow_slope_scale_depth_bias 0
+r_citadel_upscaling 0
+//r_cubemap_normalization 0
+r_dashboard_render_quality 0
+r_depth_of_field 0
+r_directional_lightmaps 0
+//r_directlighting 0
 
 
-
-
-
+r_distancefield_enable 0
+r_dopixelvisibility 0
+r_draw3dskybox 0
+//r_draw_instances 0
+//r_draw_overlays 0 //causes problems with the hud
+r_drawviewmodel 0
+//r_dx11_software_cmd_lists 0 // causes a lot of issues
+r_effects_bloom 0
+r_enable_cubemap_fog 0
+r_enable_gradient_fog 0
+r_enable_volume_fog 0
+//r_enable_rigid_animation 1
+//r_experimental_lag_limiter 1
+//r_force_render_frame_count 60
+r_force_zprepass 0
+r_grass_allow_flattening 1
+r_hair_ao 0
+r_hair_indirect_transmittance 0
+r_hair_shadowtile 0
+r_hair_voxels 0
+r_hair_wind_global_scale 0
+r_hairsort 0
+//r_indirectlighting 0
+r_impacts_alt_orientation 0
+r_lightmap_bicubic_filtering 0
+r_lightmap_size 4096
+//r_low_latency_trigger_flash 0
+//r_monitor_3dskybox 0
+//r_morphing_enabled 0
+r_multiscattering 0
+r_particle_allowprerender 1
+r_particle_gpu_implicit_lds_cache 1
+//r_particle_max_detail_level 0
+//r_particle_max_draw_distance 7000
+//r_particle_multiplier 0.1
+r_pixelvisibility_partial false
+//r_postprocess_enable false
+//r_render_deferred_opaque false
+//r_render_forward_opaque false
+r_render_hair false
+//r_renderdoc_auto_shader_pdbs false
+//r_renderdoc_open_captures false
 
 
 
@@ -1143,7 +1218,7 @@ citadel_melee_shake_frequency 0
 //citadel_unit_status_health_pips_per_row 100
 citadel_unit_status_old_update_rate 15
 engine_max_resource_system_update_time 10
-lb_max_visible_envmaps_override 5
+//lb_max_visible_envmaps_override -1
 minimap_update_rate_hz 1
 panorama_cache_command_list_size_threshold 512
 panorama_clear_frames_on_device_restore 0
