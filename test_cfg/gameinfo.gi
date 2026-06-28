@@ -644,7 +644,7 @@ GameInfo
 
         // ================ Preferences ================
         // --- 0. IMPORTANT ---
-        r_particle_max_size_cull "700" //                                                                  [def: "1200"]
+        r_particle_max_size_cull "900" //                                                                  [def: "1200"]
         // Particle systems larger than this in every dimension skip culling to save CPU.  They will be drawn anyway
         // So particle culling is handled by the CPU in deadlock, if you have GPU overhead to spare, consider lowering this value.
         steam_inputhandler_enabled "true" // This disables controller support when set to false. Setting to false should improve performance if you're not on a steam deck, but some people are, and I don't want an influx of "why no work with controller"  [def: "true"]
@@ -682,7 +682,7 @@ GameInfo
 
         // --- 4. Lighting & Shadows ---
         lb_enable_baked_shadows                             "0" // *Disables baked shadows (game looks bright if this is on while stationary lights = 1). [def: "1"]
-        lb_enable_dynamic_lights                            "1" // *Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
+        lb_enable_dynamic_lights                            "0" // *Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
         lb_enable_stationary_lights                         "0" // *Disables stationary lights (map looks flatter but more performant).         [def: "1"]
 
         // --- 5. Skybox Rendering ---
@@ -765,7 +765,7 @@ GameInfo
         lb_enable_shadow_casting                 "0"     // Disables baked shadows I believe                                 [def: "1"]
         lb_ssss_samples                          "1"     // Subsurface sample count                                          [def: "11"]
         lb_sun_csm_size_cull_threshold_texels    "30"    // Culls tiny CSM contributions below a texel threshold (performance).              [def: "10"]
-        r_citadel_gpu_culling_shadows            "1"     // Enables GPU-driven culling for shadow casters (performance).     [def: "0"]
+        r_citadel_gpu_culling_shadows            "0"     // Enables GPU-driven culling for shadow casters (performance).     [def: "0"]
         r_citadel_shadow_quality                 "0"     // Deadlock/Citadel shadow quality level (0 = lowest).              [def: "2"]
         r_shadows                                "0"     // Disables dynamic shadows.                                        [def: "1"]
         r_size_cull_threshold_shadow             "1"     // Threshold of shadow map size percentage below which objects get culled (higher = cull more to save shadow cost). [def: "0.2"]
@@ -1051,48 +1051,60 @@ r_directional_lightmaps 0
 //r_directlighting 0
 
 
-//r_distancefield_enable 0
-//r_dopixelvisibility 0
-//r_draw3dskybox 0
-//r_draw_instances 0
-//r_draw_overlays 0 //causes problems with the hud
-r_drawviewmodel 0
-//r_dx11_software_cmd_lists 0 // causes a lot of issues
-r_effects_bloom 0
-r_enable_cubemap_fog 0
-r_enable_gradient_fog 0
-r_enable_volume_fog 0
-//r_enable_rigid_animation 1
-//r_experimental_lag_limiter 1
-//r_force_render_frame_count 60
-r_force_zprepass 0
-r_grass_allow_flattening 1
-r_hair_ao 0
-r_hair_indirect_transmittance 0
-r_hair_shadowtile 0
-r_hair_voxels 0
-r_hair_wind_global_scale 0
-r_hairsort 0
-//r_indirectlighting 0
-r_impacts_alt_orientation 0
-r_lightmap_bicubic_filtering 0
-r_lightmap_size 4096
-//r_low_latency_trigger_flash 0
-//r_monitor_3dskybox 0
-//r_morphing_enabled 0
-r_multiscattering 0
-r_particle_allowprerender 1
-r_particle_gpu_implicit_lds_cache 1
-//r_particle_max_detail_level 0
-//r_particle_max_draw_distance 7000
-//r_particle_multiplier 0.1
-r_pixelvisibility_partial false
-//r_postprocess_enable false
-//r_render_deferred_opaque false
-//r_render_forward_opaque false
-r_render_hair false
-//r_renderdoc_auto_shader_pdbs false
-//r_renderdoc_open_captures false
+////r_distancefield_enable 0
+////r_dopixelvisibility 0
+////r_draw3dskybox 0
+////r_draw_instances 0
+////r_draw_overlays 0 //causes problems with the hud
+//r_drawviewmodel 0
+////r_dx11_software_cmd_lists 0 // causes a lot of issues
+//r_effects_bloom 0
+//r_enable_cubemap_fog 0
+//r_enable_gradient_fog 0
+//r_enable_volume_fog 0
+////r_enable_rigid_animation 1
+////r_experimental_lag_limiter 1
+////r_force_render_frame_count 60
+//r_force_zprepass 0
+//r_grass_allow_flattening 1
+//r_hair_ao 0
+//r_hair_indirect_transmittance 0
+//r_hair_shadowtile 0
+//r_hair_voxels 0
+//r_hair_wind_global_scale 0
+//r_hairsort 0
+////r_indirectlighting 0
+//r_impacts_alt_orientation 0
+//r_lightmap_bicubic_filtering 0
+//r_lightmap_size 4096
+////r_low_latency_trigger_flash 0
+////r_monitor_3dskybox 0
+////r_morphing_enabled 0
+//r_multiscattering 0
+//r_particle_allowprerender 1
+//r_particle_gpu_implicit_lds_cache 1
+////r_particle_max_detail_level 0
+////r_particle_max_draw_distance 7000
+////r_particle_multiplier 0.1
+//r_pixelvisibility_partial false
+////r_postprocess_enable false
+////r_render_deferred_opaque false
+////r_render_forward_opaque false
+//r_render_hair false
+////r_renderdoc_auto_shader_pdbs false
+////r_renderdoc_open_captures false
+//
+//r_size_cull_threshold_fade 0
+////r_skinning_enabled false
+//r_smooth_morph_normals false
+//r_texture_lod_scale 0.5
+////r_vulkan_force_sync1 true
+////r_vulkan_sw_cmd_lists false
+////r_wait_on_present true
+r_world_frame_load_threshold_ms 1000
+////sc_aggregate_bvh_threshold 512
+//sc_allow_dithered_lod false
+sc_use_clear_subrect true
 
 
 
@@ -1135,7 +1147,6 @@ panorama_skip_composition_layer_content_paint   "true"
 //r_citadel_distancefield_min_screen_space_size   "99" // Same as above                                                    [def: "0.015"]
 //r_nearz                                         "20"
 //r_particle_explicit_fetch                       "true" // I believe this improves performance but will make soul orbs a bit difficult to see
-r_skip_precache_validation_check                "true"
 steam_inputhandler_enabled                      "0"
 v8_maximum_heap_size_mb                         "2048"
 v8_jitless true
