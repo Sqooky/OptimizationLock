@@ -729,7 +729,7 @@ GameInfo
         r_mapextents "7000" // Far clipping plane, this will make buildings pop in and out      [def: "16384"] damn that's an oddly specific number
 
         // ================ IMPORTANT ================
-        thread_pool_option "6" // If I understand correctly, this should be how threads are handled relative to the game, but there isn't a clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage may vary. [def: "-1"]
+        thread_pool_option "-1" // If I understand correctly, this should be how threads are handled relative to the game, but there isn't a clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage may vary. [def: "-1"]
         // 1 gives "GlobalThreadPoolMode" "efficiency"
         // 2 removes it from boot.vcfg
         // 3 gives "GlobalThreadPoolMode" "undifferentiated"
@@ -979,8 +979,10 @@ GameInfo
         // r_wait_on_present                      "true"
 
         // ================ Convars You Shouldn't/Can't Mess With But I Want to Maintain the Documentation ================
-        //cl_skip_update_animations                     "true" // Setting this to  true causes models outside of the game world to a-pose. looks cute.
-        //cl_input_enable_raw_keyboard "1" // Surprisingly this can cause issues with holding keys after upgrading with alt. [def: "0"]
+
+        // panorama_enable_secondary_layout_pass    "false" // Setting this to false causes text (chat messages) to not wrap.
+        // cl_skip_update_animations                "true" // Setting this to  true causes models outside of the game world to a-pose. looks cute.
+        // cl_input_enable_raw_keyboard             "1" // Surprisingly this can cause issues with holding keys after upgrading with alt. [def: "0"]
 
 
         // r_draw_first_tri_only                    "true"  // Only draws the first triangle. Surprisingly this only supports dx11 [def: "false"]
@@ -1011,8 +1013,9 @@ GameInfo
 
                 // --------------------------------- END OF CONFIG OptimizationLock -- ver. testing ------------------------------- \\
 cl_skip_update_animations 1
-cl_updaterate 40
-engine_max_ticks_to_simulate 1
+//cl_updaterate 40
+engine_max_resource_system_update_time 1
+engine_update_resource_system_during_low_latency_sleep false
 
 r_RainAllowInSplitScreen 0
 r_RainParticleDensity 0
@@ -1048,9 +1051,9 @@ r_directional_lightmaps 0
 //r_directlighting 0
 
 
-r_distancefield_enable 0
-r_dopixelvisibility 0
-r_draw3dskybox 0
+//r_distancefield_enable 0
+//r_dopixelvisibility 0
+//r_draw3dskybox 0
 //r_draw_instances 0
 //r_draw_overlays 0 //causes problems with the hud
 r_drawviewmodel 0
@@ -1229,7 +1232,6 @@ panorama_disable_box_shadow true
 panorama_disable_descendant_filtering true
 panorama_disable_descendant_filtering true
 panorama_disable_render_target_cache false
-panorama_enable_secondary_layout_pass false
 panorama_js_minidumps false
 panorama_max_fps 15
 panorama_max_overlay_fps 15
@@ -1243,8 +1245,6 @@ panorama_transforms_no_comp_layer true
 panorama_transforms_no_comp_layer true
 panorama_transition_time_factor 5
 snd_soundmixer_update_maximum_frame_rate 15
-panorama_console_max_lines 50
-panorama_console_max_history 50
         rate
         {
             min     "98304"
@@ -1367,4 +1367,3 @@ panorama_console_max_history 50
         ShowLowAvailableVirtualMemoryMessageBox "1"
     }
 }
-
