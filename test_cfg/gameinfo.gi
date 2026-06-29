@@ -208,6 +208,44 @@ GameInfo
 
     RenderSystem
     {
+AsyncHookUpTextureBits 1
+
+BlackLevel 1
+BlackLevelDeltaH 1
+BlackLevelDeltaV 1
+BlackLevelRepeatDim 1
+BlockBytes 1
+BlockCount 1
+FrameTimeDeltaInMsec 1
+FrameInterpolation 1
+FrameSync 1
+FieldOfViewCotangent 30
+
+
+
+FallbackTexture     1
+Fax3Decode1D     1
+Fax3Decode2D     1
+Fax3DecodeRLE     1
+Fax3SetupState     1
+Fax4Decode     1
+FaxDcs     1
+FaxFillFunc     1
+FaxMode     1
+FaxRecvParams     1
+FaxRecvTime     1
+FaxSubAddress     1
+Feature     1
+FeatureAlias     1
+FeatureRule     1
+
+BaselineExposure  0
+BaselineNoise  0
+BaselineSharpness  0
+BayerGreenSplit  0
+BestQualityScale 0
+BitsPerSample 1
+
         // Stolen from CS2
         AllowPartialMipChainImmediateTexLoads "1"
         UseHardwareGammaRamp                  "0" // Fullscreen gamma controlled in postprocessing
@@ -753,7 +791,7 @@ GameInfo
         r_dashboard_render_quality             "0" // Sets dashboard/UI render quality (lower = cheaper UI rendering). [def: "1"]
 
         // ================ Shadows ================
-        r_citadel_shadow_caching                 "false" // We disable all shadows so this shouldn't be needed               [def: "true"]
+        r_citadel_shadow_caching                 "true" // We disable all shadows so this shouldn't be needed               [def: "true"]
         cl_globallight_shadow_mode               "0"     // No idea. It is disabled based on the name.                       [def: "2"]
         lb_barnlight_shadowmap_scale             "0.5"   // Scale for computed barnlight shadowmap size (lower = cheaper).   [def: "1"]
         lb_csm_cascade_size_override             "1"     // Enables overriding CSM cascade sizing rules (forces engine to use override values). [def: "1536"]
@@ -778,12 +816,12 @@ GameInfo
         cl_retire_low_priority_lights               "1"     // Replaces/drops low-priority dynamic lights when higher-priority lights are present (helps cap dlight clutter/cost). [def: "0"]
         mat_async_shader_load                       "1"     // I have no reason to believe the name doesn't match the function  [def: "0"]
         mat_set_shader_quality                      "0"     // Force shader quality setting (valid values are 0 or 1).          [def: null]
-        r_citadel_distancefield_farfield_enable     "0"     // Disables long-range distance field effects.                      [def: "1"]
+        r_citadel_distancefield_farfield_enable     "1"     // Disables long-range distance field effects.                      [def: "1"]
         r_citadel_ssao_quality                      "0"     // SSAO quality level (0 = lowest/off-ish).                         [def: "3"]
         r_citadel_ssao_thin_occluder_compensation   "0"     // Disables special handling for thin occluders in SSAO (cheaper).  [def: "0.5"]
         r_citadel_sun_shadow_slope_scale_depth_bias "1.0"   // \\                                                               [def: "3.54"]
         r_directlighting                            "false" // Set to true to have your characters not be black in the shop     [def:"true"]
-        r_distancefield_enable                      "0"     // Disables/ Enables distance-field system (used by some lighting/shadowing/occlusion features). [def: "1"]
+        r_distancefield_enable                      "1"     // Disables/ Enables distance-field system (used by some lighting/shadowing/occlusion features). [def: "1"]
         r_light_flickering_enabled                  "1"     // Enables light flicker effects where used.                        [def: "1"]
         r_lightmap_bicubic_filtering                "1"     // Enables bicubic filtering on lightmaps.                          [def: "1"]
         r_lightmap_size                             "2048"     // Maximum lightmap resolution..                                    [def: "65536"]
@@ -897,7 +935,7 @@ GameInfo
         // With my understanding of how zprepasses work this should reduce cpu usage if set to zero, but that's under the assumption that valve's implementation isn't properly optimized. Please play with this. Your mileage may vary.
         r_vma_defrag_algorithm                             "0"     // Should speed up vulkan defragging, which could increase performance if you're  getting bad performance the longer a match goes on [def: "1"]
         rtx_dynamic_blas                                   "false" // Don't think that raytracing is used, but I'm making sure         [def: "true"]
-        rtx_dynamic_blas_caching                           "false" //                                                                  [def: "true"]
+        rtx_dynamic_blas_caching                           "true" //                                                                  [def: "true"]
         rtx_force_default_hitgroup                         "true"  //                                                                  [def: "false"]
         rtx_texture_resolution                             "64"    //                                                                  [def: "true"]
         citadel_video_preset                               "5"     // Rendering performance level. min 0, max 3                        [def: "3"]
@@ -1105,6 +1143,21 @@ r_world_frame_load_threshold_ms 1000
 ////sc_aggregate_bvh_threshold 512
 //sc_allow_dithered_lod false
 sc_use_clear_subrect true
+cl_anglespeedkey 1
+cl_animgraph_history_force_temporal_consistency false
+cl_async_restore_server_authoritative_state true
+cl_batch_entity_list_ops_during_latch true
+cl_boxmove_speed 200
+cl_bullet_travel_debug_path 1
+cl_cameraoverride_shadow_depth_bias 1
+cl_cameraoverride_shadow_end 1
+cl_change_callback_limit 1
+cl_citadel_bebop_beam_draw_points true
+cl_citadel_hornet_blast_debug_physics true
+cl_clock_buffer_ticks 3
+cl_clock_recvmargin_desired 6
+cl_ent_joint_lines false
+cl_ent_joint_names false
 
 
 
@@ -1196,7 +1249,7 @@ v8_stack_size 768
 //lb_use_illumination_silhouette false
 //lightquery_debug_direct_lighting false
 //lightquery_debug_indirect_lighting false
-//mat_cache_renderablepasses false
+mat_cache_renderablepasses true
 //panorama_clear_frames_on_device_restore "0"
 //panorama_composition_atlas false
 //panorama_disable_draw_fancy_quad true
@@ -1242,7 +1295,6 @@ panorama_disable_blur true
 panorama_disable_box_shadow true
 panorama_disable_descendant_filtering true
 panorama_disable_descendant_filtering true
-panorama_disable_render_target_cache false
 panorama_js_minidumps false
 panorama_max_fps 15
 panorama_max_overlay_fps 15
@@ -1378,3 +1430,4 @@ snd_soundmixer_update_maximum_frame_rate 15
         ShowLowAvailableVirtualMemoryMessageBox "1"
     }
 }
+
