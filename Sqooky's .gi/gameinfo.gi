@@ -13,7 +13,7 @@
 //         /!#%|'-_- '\%k*|
 //     o   |*@/        \_/
 //         \)&|
-// OptimizationLock v2.5.1 by Sqooky with help from others <3
+// OptimizationLock v2.5.2 by Sqooky with help from others <3
 
 // As much as I would love to say I did this alone, I did not. These are the amazing people who deserve as much praise as I, if not more
 //  Major thanks to all of these individuals from the bottom of my heart. They are all lovely.
@@ -624,7 +624,7 @@ GameInfo
         //      If you would like to donate as a means of showing thanks I have a kofi.     \\
         //      https://ko-fi.com/sqooky                                                    \\
 
-        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.5.1 -------- \\
+        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.5.2 -------- \\
         // The github is here https://github.com/Sqooky/OptimizationLock  \\
         // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
         // The gamebanana:https://gamebanana.com/mods/656341 (it's usually behind, please check the github) \\
@@ -766,12 +766,12 @@ GameInfo
         cl_retire_low_priority_lights               "1"     // Replaces/drops low-priority dynamic lights when higher-priority lights are present (helps cap dlight clutter/cost). [def: "0"]
         mat_async_shader_load                       "1"     // I have no reason to believe the name doesn't match the function  [def: "0"]
         mat_set_shader_quality                      "0"     // Force shader quality setting (valid values are 0 or 1).          [def: null]
-        r_citadel_distancefield_farfield_enable     "0"     // Disables long-range distance field effects.                      [def: "1"]
+        r_citadel_distancefield_farfield_enable     "1"     // Disables long-range distance field effects.                      [def: "1"]
         r_citadel_ssao_quality                      "0"     // SSAO quality level (0 = lowest/off-ish).                         [def: "3"]
         r_citadel_ssao_thin_occluder_compensation   "0"     // Disables special handling for thin occluders in SSAO (cheaper).  [def: "0.5"]
         r_citadel_sun_shadow_slope_scale_depth_bias "1.0"   // \\                                                               [def: "3.54"]
         r_directlighting                            "false" // Set to true to have your characters not be black in the shop     [def:"true"]
-        r_distancefield_enable                      "0"     // Disables/ Enables distance-field system (used by some lighting/shadowing/occlusion features). [def: "1"]
+        r_distancefield_enable                      "1"     // Disables/ Enables distance-field system (used by some lighting/shadowing/occlusion features). [def: "1"]
         r_light_flickering_enabled                  "1"     // Enables light flicker effects where used.                        [def: "1"]
         r_lightmap_bicubic_filtering                "1"     // Enables bicubic filtering on lightmaps.                          [def: "1"]
         r_lightmap_size                             "2048"     // Maximum lightmap resolution..                                    [def: "65536"]
@@ -865,7 +865,6 @@ GameInfo
         // ================ Lod & Culling ================
         sc_allow_dithered_lod                   "false" // Pretty sure this just turns dithering off for when switching between lods. Isn't a big deal [def: "true"]
         // sc_instanced_mesh_size_cull_bias     "10"    // Bias for size culling of instanced meshes                        [def: "1.5"]
-        citadel_use_pvs_for_players             "true"  // Default culls players when out of view                           [def: "false"]
         //mat_viewportscale                       "0.01"  // Scale down the main viewport I belive this gets overwritten by video.txt [def: "1"]
         phys_cull_internal_mesh_contacts        "true"  // Don't simulate the bones inside of a mesh.                       [def: "false"]
         sc_aggregate_bvh_threshold              "128"   // Not fully sure what these do. Don't change them.                 [def: "128"]
@@ -967,6 +966,8 @@ GameInfo
         // r_wait_on_present                      "true"
 
         // ================ Convars You Shouldn't/Can't Mess With But I Want to Maintain the Documentation ================
+
+        //citadel_use_pvs_for_players             "true"  // Default culls players when out of view. Server cvar. Can't be changed.                          [def: "false"]
         //cl_skip_update_animations                     "true" // Setting this to  true causes models outside of the game world to a-pose. looks cute.
         //cl_input_enable_raw_keyboard "1" // Surprisingly this can cause issues with holding keys after upgrading with alt. [def: "0"]
 
@@ -997,7 +998,7 @@ GameInfo
         // sc_skip_traversal                        "true"  // Disables rendering, ie the screen is black.          [def: "false"]
         // sc_throw_away_all_layers                 "true"  // Disables rendering, ie the screen is black.          [def: "false"]
 
-                // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.5.1 ------------------------------- \\
+                // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.5.2 ------------------------------- \\
 
 
 
