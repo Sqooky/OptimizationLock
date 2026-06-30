@@ -793,23 +793,23 @@ BitsPerSample 1
         // ================ Shadows ================
         r_citadel_shadow_caching                 "true" // We disable all shadows so this shouldn't be needed               [def: "true"]
         cl_globallight_shadow_mode               "0"     // No idea. It is disabled based on the name.                       [def: "2"]
-        lb_barnlight_shadowmap_scale             "0.5"   // Scale for computed barnlight shadowmap size (lower = cheaper).   [def: "1"]
+        lb_barnlight_shadowmap_scale             "0"   // Scale for computed barnlight shadowmap size (lower = cheaper).   [def: "1"]
         lb_csm_cascade_size_override             "1"     // Enables overriding CSM cascade sizing rules (forces engine to use override values). [def: "1536"]
         lb_csm_draw_alpha_tested                 "0"     // Prevents alpha-tested geometry from being included in CSM passes (cheaper, possible missing leaf/fence shadows). [def: "1"]
         lb_csm_draw_translucent                  "0"     // Prevents translucent objects from rendering into CSM (cheaper, fewer shadow details). [def: "1"]
         lb_csm_override_staticgeo_cascades       "0"     // Disables realistic static cascades/ shadows from being cast around dynamic shadows such as heroes, uses low quality baked shadows instead. [def: "1"]
         lb_csm_override_staticgeo_cascades_value "-1"    // Base range of static cascade affects around player shadows. (-1 = minimal/disabled override behavior). [def: "-1"]
-        lb_dynamic_shadow_resolution_base        "256"   // Base resolution for dynamic shadows (lower = cheaper).           [def: "1536"]
+        lb_dynamic_shadow_resolution_base        "64"   // Base resolution for dynamic shadows (lower = cheaper).           [def: "1536"]
         lb_enable_shadow_casting                 "0"     // Disables baked shadows I believe                                 [def: "1"]
-        lb_ssss_samples                          "1"     // Subsurface sample count                                          [def: "11"]
-        lb_sun_csm_size_cull_threshold_texels    "30"    // Culls tiny CSM contributions below a texel threshold (performance).              [def: "10"]
+        lb_ssss_samples                          "0"     // Subsurface sample count                                          [def: "11"]
+        lb_sun_csm_size_cull_threshold_texels    "100"    // Culls tiny CSM contributions below a texel threshold (performance).              [def: "10"]
         r_citadel_gpu_culling_shadows            "0"     // Enables GPU-driven culling for shadow casters (performance).     [def: "0"]
         r_citadel_shadow_quality                 "0"     // Deadlock/Citadel shadow quality level (0 = lowest).              [def: "2"]
         r_shadows                                "0"     // Disables dynamic shadows.                                        [def: "1"]
         r_size_cull_threshold_shadow             "1"     // Threshold of shadow map size percentage below which objects get culled (higher = cull more to save shadow cost). [def: "0.2"]
         sc_disable_spotlight_shadows             "1"     // Disables spotlight shadows.                                      [def: "0"]
         sparseshadowtree_disable_for_viewmodel   "0"     // Disable SST generation and runtime for viewmodel (use original CSM rendering).   [def: "1"]
-        sparseshadowtree_enable_rendering        "1"     // Enables Sparse Shadow Tree, rendering static geometry into shadow cascades.      [def: "0"]
+        sparseshadowtree_enable_rendering        "0"     // Enables Sparse Shadow Tree, rendering static geometry into shadow cascades.      [def: "0"]
 
         // ================ Lighting ================
         mat_max_lighting_complexity                 "1"     // Doesn't seem to do anything but throwing it in for posterity.    [def: "8"]
@@ -819,7 +819,7 @@ BitsPerSample 1
         r_citadel_distancefield_farfield_enable     "1"     // Disables long-range distance field effects.                      [def: "1"]
         r_citadel_ssao_quality                      "0"     // SSAO quality level (0 = lowest/off-ish).                         [def: "3"]
         r_citadel_ssao_thin_occluder_compensation   "0"     // Disables special handling for thin occluders in SSAO (cheaper).  [def: "0.5"]
-        r_citadel_sun_shadow_slope_scale_depth_bias "1.0"   // \\                                                               [def: "3.54"]
+        r_citadel_sun_shadow_slope_scale_depth_bias "0"   // \\                                                               [def: "3.54"]
         r_directlighting                            "false" // Set to true to have your characters not be black in the shop     [def:"true"]
         r_distancefield_enable                      "1"     // Disables/ Enables distance-field system (used by some lighting/shadowing/occlusion features). [def: "1"]
         r_light_flickering_enabled                  "1"     // Enables light flicker effects where used.                        [def: "1"]
@@ -842,7 +842,7 @@ BitsPerSample 1
         cl_fasttempentcollision                 "1000" // Limits/controls fast collision processing for temporary entities (impacts/tracers/etc.); higher usually = more work. [def: "5"]
         cloth_sim_on_tick                       "0"    // Update the cloth simulation every tick                           [def: "1"]
         enable_boneflex                         "0"    // Disables bone flexes (procedural facial/mesh flex drivers).      [def: "1"]
-        ik_fabrik_align_chain                   "0"    // Disables FABRIK chain alignment in IK (cheaper).                 [def: "1"]
+        ik_fabrik_align_chain                   "1"    // Disables FABRIK chain alignment in IK (cheaper).                 [def: "1"]
         ik_final_fixup_enable                   "0"    // Disables final IK fixup pass (cheaper animations, potentially less accurate). [def: "1"]
         phys_threaded_cloth_bone_update         "1"    // I am inclined to believe this makes the cloth update threaded    [def: "0"]
         phys_threaded_kinematic_bone_update     "1"    // I am inclined to believe this makes the cloth kinematics threaded    [def: "0"]
@@ -892,9 +892,9 @@ BitsPerSample 1
         r_citadel_screenspace_particles_full_res "true" // Render screen space particles at full resolution. This could introduce readability issues but should be fine. [def: "true"]
         //r_particle_mixed_resolution_viewstart    "16"    // I don't know if this does anything but I didn't notice anything terrible out the gate and lowering particle resolution can't hurt [def: "500"]
         cl_particle_batch_mode                   "1"     // Has a range of 1 or 2, 2 will make celeste's auto rebound look weird and 0 will make them not batch [def: "1"]
-        cl_particle_fallback_base                "10"    // Base for falling back to cheaper effects under load.             [def: "0"]
-        cl_particle_fallback_multiplier          "20"    // Multiplier for falling back to cheaper effects under load.       [def: "0"]
-        cl_particle_sim_fallback_base_multiplier "40"    // How aggressive the switch to fallbacks will be depending on how far over the cl_particle_sim_fallback_threshold_ms the sim time is.  Higher numbers are more aggressive. [def: "5"]
+        cl_particle_fallback_base                "50"    // Base for falling back to cheaper effects under load.             [def: "0"]
+        cl_particle_fallback_multiplier          "100"    // Multiplier for falling back to cheaper effects under load.       [def: "0"]
+        cl_particle_sim_fallback_base_multiplier "100"    // How aggressive the switch to fallbacks will be depending on how far over the cl_particle_sim_fallback_threshold_ms the sim time is.  Higher numbers are more aggressive. [def: "5"]
         cl_particle_sim_fallback_threshold_ms    "1"     // Amount of simulation time that can elapse before new systems start falling back to cheaper versions [def: "6"]
         particle_cluster_nodraw                  "1"     // Skips drawing particle “clusters”/grouped particle batches (performance, fewer small effects). [def: "0"]
         r_RainParticleDensity                    "0"     // Density of Particle Rain 0-1.                                    [def: "1"]
@@ -905,7 +905,7 @@ BitsPerSample 1
         r_particle_batch_collections             "true"  // Batches collections of particles, typically batch rendering is faster so this is set to true. [def: "false"]
         r_particle_max_detail_level              "1"     // The maximum detail level of particle to create.                  [def: "3"]
         r_particle_max_texture_layers            "4"     // Anything below 4 will make infernus afterburn, paige fire, and drifter's passive look very weird and blocky [def: "-1"]
-        r_particle_model_per_thread_count        "64"    // I believe it is how many particle models a thread is allowed to handle.  [def: "32"]
+        r_particle_model_per_thread_count        "16"    // I believe it is how many particle models a thread is allowed to handle.  [def: "32"]
         r_particle_skip_postsim                  "true"  // Not entirely sure what it does, going off of the name I'd imagine it skips the post simulation, this is a testvar [def: "false"]
         // r_particle_timescale                  "1.1"   // Speeds up particle simulation, thus making them end sooner, however this causes visual desyncs, most notably with big effects that last a while such as infernus ult. Please tweak this to what you are comfortable with. [def: "1"]
         cl_aggregate_particles                   "true"  // Doesn't seem to cause any issues but a benchmark proper should be conducted [def: "false"]
@@ -918,14 +918,14 @@ BitsPerSample 1
         citadel_use_pvs_for_players             "true"  // Default culls players when out of view                           [def: "false"]
         //mat_viewportscale                       "0.01"  // Scale down the main viewport I belive this gets overwritten by video.txt [def: "1"]
         phys_cull_internal_mesh_contacts        "true"  // Don't simulate the bones inside of a mesh.                       [def: "false"]
-        sc_aggregate_bvh_threshold              "128"   // Not fully sure what these do. Don't change them.                 [def: "128"]
+        sc_aggregate_bvh_threshold              "256"   // Not fully sure what these do. Don't change them.                 [def: "128"]
         sc_fade_distance_scale_override         "100"   // Distance objects fade in and out                                 [def: "-1"]
         //sc_instanced_mesh_lod_bias              "0.15"  // Bias for LOD selection of instanced mesh                         [def: "1.25"]
         //sc_instanced_mesh_lod_bias_shadow       "0.10"  // Bias for LOD selection of instanced meshes in shadowmaps         [def: "1.75"]
         sc_instanced_mesh_motion_vectors        "0"     // Set 1 if you use motion blur                                     [def: "1"]
         sc_instanced_mesh_size_cull_bias_shadow "10"    // Bias for size culling instanced meshes in shadowmaps             [def: "2"]
-        sc_layer_batch_threshold                "128"   // Not fully sure what these do. Don't change them.                 [default: "128"]
-        sc_layer_batch_threshold_fullsort       "80"    // Not sure what these do. Jasper said to leave them at default     [def: "80"]
+        sc_layer_batch_threshold                "256"   // Not fully sure what these do. Don't change them.                 [default: "128"]
+        sc_layer_batch_threshold_fullsort       "120"    // Not sure what these do. Jasper said to leave them at default     [def: "80"]
         sc_screen_size_lod_scale_override       "0.5"   // Controls LOD scale. Lower values will have less polys            [def: "-1"]
         skeleton_instance_lod_optimization      "false" // Compute LOD mask internally like since 2016, i.e. force all LOD groups' bones to compute [def: "false"]
 
@@ -938,7 +938,7 @@ BitsPerSample 1
         rtx_dynamic_blas_caching                           "true" //                                                                  [def: "true"]
         rtx_force_default_hitgroup                         "true"  //                                                                  [def: "false"]
         rtx_texture_resolution                             "64"    //                                                                  [def: "true"]
-        citadel_video_preset                               "5"     // Rendering performance level. min 0, max 3                        [def: "3"]
+        citadel_video_preset                               "0"     // Rendering performance level. min 0, max 3                        [def: "3"]
         // sc_aggregate_indirect_draw_compaction_threshold "1"     // Need to test                                                   [def: "8"]
         sc_instanced_mesh_opaque_fade                      "false" // Fade meshes? NAH                                                 [def: "true"]
         //sc_aggregate_render_mesh_shader                    "true" // Using mesh shaders if available instead of drawcalls. Should be cheaper [def: "true"]
@@ -959,10 +959,10 @@ BitsPerSample 1
         r_skip_precache_validation_check                  "true"   // I believe this checks to see if things are properly cached in a debug context, which we shouldn't need   [def: "false"]
         cl_batch_entity_list_ops_during_latch             "true"   // Batch entity list adds / removes while latching interpolated variables to avoid mutex contention.        [def: "false"]
         cl_interp_parallel                                "true"   // Run interpolation in parallel for entities with no children.     [def: "false"]
-        cl_modifier_parallel_gather_status_effect_updates "true"   // Not sure                                                         [def: "false"]
+        cl_modifier_parallel_gather_status_effect_updates "false"   // Not sure                                                         [def: "false"]
         cl_phys_assume_fixed_tick_interval                "false"  // Assume the client uses a fixed tickrate like the server (which may not always be true)                   [def: "true"]
         engine_max_ticks_to_simulate                      "2"      // Max number of ticks to simulate per frame, after which simulation will start to slow down compared to real time. [def: "-1"]
-        parallel_perform_invalidate_physics               "true"   // Not sure                                                         [def: "false"]
+        parallel_perform_invalidate_physics               "false"   // Not sure                                                         [def: "false"]
         r_async_compute_fog                               "true"   // Just whether to asyncroniously render fog                        [def: "false"]
         r_citadel_depth_prepass_dynamic_objects           "false"  // Should be not prepassing entities that move                      [def: "true"]
         //r_low_latency                                     "0"      // This acts as the convar which enables low latency, hardware dependent    [def: "1"]
@@ -982,14 +982,14 @@ BitsPerSample 1
         cl_simulate_dormant_entities          "false" // Based on the name I would imagine it does what it says.          [def: "true"]
 
         // ================ Audio ================
-        audio_enable_vmix_mastering           "true" // Whether the engine uses vmix to master the audio, might be a dev command [def: "true"]
-        snd_mixahead                          "0.05"  // Adds some latency that shouldn't be percivable to save cpu       [def: "0.001"]
+        audio_enable_vmix_mastering           "false" // Whether the engine uses vmix to master the audio, might be a dev command [def: "true"]
+        snd_mixahead                          "0.07"  // Adds some latency that shouldn't be percivable to save cpu       [def: "0.001"]
         snd_occlusion_bounces                 "0"     // Limits audio occlusion to save cpu                               [def: "1"]
         snd_occlusion_rays                    "0"     // Occlusion bounces, this effectively disables them.               [def: "4"]
         snd_soundmixer_version                "1"     // [def: "2"]
         snd_steamaudio_reverb_order_rendering "0"     // The amount of directional detail in the rendered audio by Steam Audio. [def: "0"]
         snd_ui_positional                     "false" // Disables positional audio to save cpu                            [def: "true"]
-        snd_steamaudio_num_threads            "4"     // Audio thread count                                               [def: "4"]
+        snd_steamaudio_num_threads            "1"     // Audio thread count                                               [def: "4"]
         // README This ^ probably depends on how good your cpu is, the better it is the more threads you can allow
 
         // ================ Csm Shadows. ================
@@ -1001,7 +1001,7 @@ BitsPerSample 1
         csm_cascade3_override_dist               "0"     // All of these commands should reduce shadow quality.
         csm_max_dist_between_caster_and_receiver "0"     // All of these commands should reduce shadow quality.
         csm_max_num_cascades_override            "0"     // All of these commands should reduce shadow quality.
-        csm_max_shadow_dist_override             "1"     // All of these commands should reduce shadow quality.
+        csm_max_shadow_dist_override             "0"     // All of these commands should reduce shadow quality.
         csm_max_visible_dist                     "0"     // All of these commands should reduce shadow quality.
         csm_res_override_0                       "1"     // All of these commands should reduce shadow quality.
         csm_res_override_1                       "1"     // All of these commands should reduce shadow quality.
@@ -1050,14 +1050,13 @@ BitsPerSample 1
         // sc_throw_away_all_layers                 "true"  // Disables rendering, ie the screen is black.          [def: "false"]
 
                 // --------------------------------- END OF CONFIG OptimizationLock -- ver. testing ------------------------------- \\
-cl_skip_update_animations 1
 //cl_updaterate 40
-engine_max_resource_system_update_time 1
+engine_max_resource_system_update_time 20
 engine_update_resource_system_during_low_latency_sleep false
 
 r_RainAllowInSplitScreen 0
 r_RainParticleDensity 0
-r_add_views_in_pre_output 1
+r_add_views_in_pre_output 0
 r_allow_onesweep_gpusort 0
 r_arealights 0
 r_aoproxy_cull_dist 0
@@ -1073,14 +1072,13 @@ r_citadel_distancefield_farfield_enable 0
 r_citadel_distancefield_farfield_occlusion_length 0
 r_citadel_distancefield_farfield_occlusion_start_offset 0
 r_citadel_distancefield_shadows 0
-r_citadel_glow_health_bar_debug true
+r_citadel_glow_health_bar_debug false
 r_citadel_npr_outlines false
 r_citadel_npr_outlines_max_dist 1
 r_citadel_shadow_quality 0
 r_citadel_shadowdb 0
 r_citadel_ssao_quality 0
 r_citadel_ssao_thin_occluder_compensation 0
-r_citadel_sun_shadow_slope_scale_depth_bias 0
 r_citadel_upscaling 0
 //r_cubemap_normalization 0
 r_dashboard_render_quality 0
@@ -1120,8 +1118,8 @@ r_directional_lightmaps 0
 ////r_morphing_enabled 0
 //r_multiscattering 0
 //r_particle_allowprerender 1
-//r_particle_gpu_implicit_lds_cache 1
-////r_particle_max_detail_level 0
+r_particle_gpu_implicit_lds_cache 0
+r_particle_max_detail_level 0
 ////r_particle_max_draw_distance 7000
 ////r_particle_multiplier 0.1
 //r_pixelvisibility_partial false
@@ -1139,7 +1137,7 @@ r_directional_lightmaps 0
 ////r_vulkan_force_sync1 true
 ////r_vulkan_sw_cmd_lists false
 ////r_wait_on_present true
-r_world_frame_load_threshold_ms 1000
+r_world_frame_load_threshold_ms 500
 ////sc_aggregate_bvh_threshold 512
 //sc_allow_dithered_lod false
 sc_use_clear_subrect true
@@ -1147,13 +1145,13 @@ cl_anglespeedkey 1
 cl_animgraph_history_force_temporal_consistency false
 cl_async_restore_server_authoritative_state true
 cl_batch_entity_list_ops_during_latch true
-cl_boxmove_speed 200
-cl_bullet_travel_debug_path 1
+//cl_boxmove_speed 200
+//cl_bullet_travel_debug_path 1
 cl_cameraoverride_shadow_depth_bias 1
 cl_cameraoverride_shadow_end 1
 cl_change_callback_limit 1
 cl_citadel_bebop_beam_draw_points true
-cl_citadel_hornet_blast_debug_physics true
+//cl_citadel_hornet_blast_debug_physics true
 cl_clock_buffer_ticks 3
 cl_clock_recvmargin_desired 6
 cl_ent_joint_lines false
@@ -1166,14 +1164,14 @@ cl_ent_joint_names false
 
 //=============== Cvars in Testing :D ===============
 //citadel_viewpunch_damping 100
-citadel_viscous_bowling_radius_debug true
+//citadel_viscous_bowling_radius_debug true
 //sc_instanced_debug_visualizer true
-sc_view_profiler_frame_averaging 2
+sc_view_profiler_frame_averaging 0
 sc_instanced_mesh_mesh_shader false
 sc_max_framebuffer_copies_per_layer 1
-r_pipeline_stats_command_flush 1
-r_pipeline_stats_flush_before_sleeping 1
-r_pipeline_stats_use_flush_api 1
+//r_pipeline_stats_command_flush 1
+//r_pipeline_stats_flush_before_sleeping 1
+//r_pipeline_stats_use_flush_api 1
 //r_drawtracers_firstperson false
 sc_allow_write_depth_before_blend false
 
@@ -1188,7 +1186,6 @@ citadel_camera_hard_trace_radius                "32" //put under camera tweaks :
 citadel_camera_wobble_disable                   "true"
 citadel_fibonnaci_sphere_trace_los_max          "32" //put under camera tweaks :D
 //citadel_radial_distortion                       "1" // Doesn't seem to do anything :(, here's what it's supposed to do: 0: Off 1: Distorts the visible distribution of arcs based on the mouse pointer. [def: "0"]
-cl_fasttempentcollision                         "20"
 cl_skip_hierarchy_update_for_unchanged_entities "true"
 //mat_shading_complexity_max_register_count       "8"
 multigpu_skip_semaphores                        "true"
@@ -1284,25 +1281,22 @@ citadel_melee_shake_duration 0
 citadel_melee_shake_frequency 0
 //citadel_unit_status_health_pips_per_row 100
 citadel_unit_status_old_update_rate 15
-engine_max_resource_system_update_time 10
 //lb_max_visible_envmaps_override -1
 minimap_update_rate_hz 1
 panorama_cache_command_list_size_threshold 512
 panorama_clear_frames_on_device_restore 0
-panorama_comp_layer_lru_lifetime 2
+panorama_comp_layer_lru_lifetime 1
 panorama_debugger_theme dark
 panorama_disable_blur true
 panorama_disable_box_shadow true
 panorama_disable_descendant_filtering true
 panorama_disable_descendant_filtering true
 panorama_js_minidumps false
-panorama_max_fps 15
 panorama_max_overlay_fps 15
 panorama_max_text_shadow_strength 5
 panorama_max_text_shadow_strength 5
 panorama_min_comp_layer_cache_cost 384
-panorama_panel_occlusion false
-panorama_panel_occlusion false
+panorama_panel_occlusion true
 panorama_skip_composition_layer_content_paint true
 panorama_transforms_no_comp_layer true
 panorama_transforms_no_comp_layer true
