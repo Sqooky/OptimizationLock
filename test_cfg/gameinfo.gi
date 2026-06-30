@@ -723,20 +723,18 @@ BitsPerSample 1
         lb_enable_dynamic_lights                            "0" // *Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
         lb_enable_stationary_lights                         "0" // *Disables stationary lights (map looks flatter but more performant).         [def: "1"]
 
-        // --- 5. Skybox Rendering ---
-        r_draw3dskybox "0" //  Enables drawing the 3D skybox layer (distant geometry).         [def: "1"]
 
-        // --- 6. FPS Caps & Minimized Throttling ---
-        //engine_low_latency_sleep_after_client_tick "true" // Sleeps strategically after client tick to reduce latency/stutter (low-latency pacing). [def: "false"]
+        // --- 5. FPS Caps & Minimized Throttling ---
+        engine_low_latency_sleep_after_client_tick "false" // When r_low_latency is enabled, this moves the low latency sleep on tick frames to happen after client simulation. [def: "false"]
         engine_no_focus_sleep                      "20"   // Milliseconds the engine sleeps per frame when unfocused (0 = no sleep, not recommended for low-end PC). [def: "20"]
         fps_max                                    "0"    // Max FPS while in game, limit fps to your monitor refresh rate. [def: "400"]
         panorama_max_fps                           "30"   // Menu FPS.                                                        [def: "120"]
         panorama_max_overlay_fps                   "30"   // Fps In the settings/esc menu.                                    [def: "60"]
 
-        // --- 7. Object Culling ---
+        // --- 6. Object Culling ---
         r_size_cull_threshold "0.9" // *Culls small objects sooner based on screen size threshold (higher = more culling). [def: "0.8"]
 
-        // --- 8. Camera Tweaks ---
+        // --- 7. Camera Tweaks ---
 
         citadel_camera_use_vmdl_flatten_horizontal  "false" // From my understanding of how these commands work, they slightly smooth camera inputs. This should make the camera more responsive?   [def: "true"]
         citadel_camera_use_vmdl_flatten_vertical    "false" //                                                                                                                                      [def: "true"]
@@ -756,18 +754,18 @@ BitsPerSample 1
         // citadel_camera_pitch_max "160"  // The maximum pitch angle allowed on the camera.                 [def: "89"]
         // citadel_camera_pitch_min "-160" // The minimum pitch angle allowed on the camera.                 [def: "-89"]
 
-        // --- 9. Texture Quality ---
+        // --- 8. Texture Quality ---
         r_texture_budget_threshold     "0.7" // Reduce texture memory pool size when this percentage of the budget is full. [def: "0.8"]
         r_texture_budget_update_period "0.5" // Time (in seconds) between updating texture memory budget.        [def: "0.1"]
         //r_texture_stream_mip_bias      "3"   // Worth adjusting, practically how good your textures will look.   [def: "1"]
         r_texturefilteringquality      "3"   // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x
 
-        // --- 10. Render Distance ---
+        // --- 9. Render Distance ---
         r_farz       "7000" // This controls the far clipping plane, ie building/player popin   [def: "-1"]
         r_mapextents "7000" // Far clipping plane, this will make buildings pop in and out      [def: "16384"] damn that's an oddly specific number
 
         // ================ IMPORTANT ================
-        thread_pool_option "-1" // If I understand correctly, this should be how threads are handled relative to the game, but there isn't a clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage may vary. [def: "-1"]
+        thread_pool_option "2" // If I understand correctly, this should be how threads are handled relative to the game, but there isn't a clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage may vary. [def: "-1"]
         // 1 gives "GlobalThreadPoolMode" "efficiency"
         // 2 removes it from boot.vcfg
         // 3 gives "GlobalThreadPoolMode" "undifferentiated"
@@ -816,7 +814,7 @@ BitsPerSample 1
         cl_retire_low_priority_lights               "1"     // Replaces/drops low-priority dynamic lights when higher-priority lights are present (helps cap dlight clutter/cost). [def: "0"]
         mat_async_shader_load                       "1"     // I have no reason to believe the name doesn't match the function  [def: "0"]
         mat_set_shader_quality                      "0"     // Force shader quality setting (valid values are 0 or 1).          [def: null]
-        r_citadel_distancefield_farfield_enable     "1"     // Disables long-range distance field effects.                      [def: "1"]
+        r_citadel_distancefield_farfield_enable     "0"     // Disables long-range distance field effects.                      [def: "1"]
         r_citadel_ssao_quality                      "0"     // SSAO quality level (0 = lowest/off-ish).                         [def: "3"]
         r_citadel_ssao_thin_occluder_compensation   "0"     // Disables special handling for thin occluders in SSAO (cheaper).  [def: "0.5"]
         r_citadel_sun_shadow_slope_scale_depth_bias "0"   // \\                                                               [def: "3.54"]
@@ -931,7 +929,7 @@ BitsPerSample 1
 
         // ================ Rendering Stuff ================
         r_citadel_gpu_culling          "true"  // The game barely uses the gpu so this is a win                    [def: "true"]
-        r_force_zprepass               "0"     // 0: Force z prepass off. 1: Force on. -1: Don't force             [def: "-1"]
+        //r_force_zprepass               "0"     // 0: Force z prepass off. 1: Force on. -1: Don't force             [def: "-1"]
         // With my understanding of how zprepasses work this should reduce cpu usage if set to zero, but that's under the assumption that valve's implementation isn't properly optimized. Please play with this. Your mileage may vary.
         r_vma_defrag_algorithm                             "0"     // Should speed up vulkan defragging, which could increase performance if you're  getting bad performance the longer a match goes on [def: "1"]
         rtx_dynamic_blas                                   "false" // Don't think that raytracing is used, but I'm making sure         [def: "true"]
@@ -960,7 +958,7 @@ BitsPerSample 1
         cl_batch_entity_list_ops_during_latch             "true"   // Batch entity list adds / removes while latching interpolated variables to avoid mutex contention.        [def: "false"]
         cl_interp_parallel                                "true"   // Run interpolation in parallel for entities with no children.     [def: "false"]
         cl_modifier_parallel_gather_status_effect_updates "false"   // Not sure                                                         [def: "false"]
-        cl_phys_assume_fixed_tick_interval                "false"  // Assume the client uses a fixed tickrate like the server (which may not always be true)                   [def: "true"]
+        cl_phys_assume_fixed_tick_interval                "true"  // Assume the client uses a fixed tickrate like the server (which may not always be true)                   [def: "true"]
         engine_max_ticks_to_simulate                      "2"      // Max number of ticks to simulate per frame, after which simulation will start to slow down compared to real time. [def: "-1"]
         parallel_perform_invalidate_physics               "false"   // Not sure                                                         [def: "false"]
         r_async_compute_fog                               "true"   // Just whether to asyncroniously render fog                        [def: "false"]
@@ -1018,6 +1016,8 @@ BitsPerSample 1
 
         // ================ Convars You Shouldn't/Can't Mess With But I Want to Maintain the Documentation ================
 
+        r_draw3dskybox "0" //  Enables drawing the 3D skybox layer (distant geometry).         [def: "1"]
+
         // panorama_enable_secondary_layout_pass    "false" // Setting this to false causes text (chat messages) to not wrap.
         // cl_skip_update_animations                "true" // Setting this to  true causes models outside of the game world to a-pose. looks cute.
         // cl_input_enable_raw_keyboard             "1" // Surprisingly this can cause issues with holding keys after upgrading with alt. [def: "0"]
@@ -1050,163 +1050,43 @@ BitsPerSample 1
         // sc_throw_away_all_layers                 "true"  // Disables rendering, ie the screen is black.          [def: "false"]
 
                 // --------------------------------- END OF CONFIG OptimizationLock -- ver. testing ------------------------------- \\
-csm_viewmodel_farz 1
-r_nearz 27
-//cl_updaterate 40
-engine_max_resource_system_update_time 20
-engine_update_resource_system_during_low_latency_sleep false
 
-r_RainAllowInSplitScreen 0
-r_RainParticleDensity 0
-r_add_views_in_pre_output 0
-r_allow_onesweep_gpusort 0
-r_arealights 0
-r_aoproxy_cull_dist 0
-r_aoproxy_min_dist 0
-r_aoproxy_min_dist_box 0
-r_character_decal_monitor_render_res 0
-r_character_decal_resolution 0
-r_citadel_antialiasing 0
-r_citadel_depth_prepass_dynamic_objects 0
-r_citadel_distancefield_blur 0
-r_citadel_distancefield_down_sample 0
-r_citadel_distancefield_farfield_enable 0
-r_citadel_distancefield_farfield_occlusion_length 0
-r_citadel_distancefield_farfield_occlusion_start_offset 0
-r_citadel_distancefield_shadows 0
-r_citadel_glow_health_bar_debug false
-r_citadel_npr_outlines false
-r_citadel_npr_outlines_max_dist 1
-r_citadel_shadow_quality 0
-r_citadel_shadowdb 0
-r_citadel_ssao_quality 0
-r_citadel_ssao_thin_occluder_compensation 0
-r_citadel_upscaling 0
-//r_cubemap_normalization 0
-r_dashboard_render_quality 0
-r_depth_of_field 0
-r_directional_lightmaps 0
-//r_directlighting 0
-
-
-////r_distancefield_enable 0
-////r_dopixelvisibility 0
-////r_draw3dskybox 0
-////r_draw_instances 0
-////r_draw_overlays 0 //causes problems with the hud
-//r_drawviewmodel 0
-////r_dx11_software_cmd_lists 0 // causes a lot of issues
-//r_effects_bloom 0
-//r_enable_cubemap_fog 0
-//r_enable_gradient_fog 0
-//r_enable_volume_fog 0
-////r_enable_rigid_animation 1
-////r_experimental_lag_limiter 1
-////r_force_render_frame_count 60
-//r_force_zprepass 0
-//r_grass_allow_flattening 1
-//r_hair_ao 0
-//r_hair_indirect_transmittance 0
-//r_hair_shadowtile 0
-//r_hair_voxels 0
-//r_hair_wind_global_scale 0
-//r_hairsort 0
-////r_indirectlighting 0
-//r_impacts_alt_orientation 0
-//r_lightmap_bicubic_filtering 0
-//r_lightmap_size 4096
-////r_low_latency_trigger_flash 0
-////r_monitor_3dskybox 0
-////r_morphing_enabled 0
-//r_multiscattering 0
-//r_particle_allowprerender 1
-r_particle_gpu_implicit_lds_cache 0
-r_particle_max_detail_level 0
-////r_particle_max_draw_distance 7000
-////r_particle_multiplier 0.1
-//r_pixelvisibility_partial false
-////r_postprocess_enable false
-////r_render_deferred_opaque false
-////r_render_forward_opaque false
-//r_render_hair false
-////r_renderdoc_auto_shader_pdbs false
-////r_renderdoc_open_captures false
-//
-//r_size_cull_threshold_fade 0
-////r_skinning_enabled false
-//r_smooth_morph_normals false
-//r_texture_lod_scale 0.5
-////r_vulkan_force_sync1 true
-////r_vulkan_sw_cmd_lists false
-////r_wait_on_present true
-r_world_frame_load_threshold_ms 500
-////sc_aggregate_bvh_threshold 512
-//sc_allow_dithered_lod false
-sc_use_clear_subrect true
-cl_anglespeedkey 1
-//cl_animgraph_history_force_temporal_consistency false
-cl_async_restore_server_authoritative_state true
-cl_batch_entity_list_ops_during_latch true
-//cl_boxmove_speed 200
-//cl_bullet_travel_debug_path 1
-cl_cameraoverride_shadow_depth_bias 1
-cl_cameraoverride_shadow_end 1
-cl_change_callback_limit 1
-cl_citadel_bebop_beam_draw_points true
-//cl_citadel_hornet_blast_debug_physics true
-cl_clock_buffer_ticks 3
-cl_clock_recvmargin_desired 6
-cl_ent_joint_lines false
-cl_ent_joint_names false
-
-
-
-
-
-
-//=============== Cvars in Testing :D ===============
-//citadel_viewpunch_damping 100
-//citadel_viscous_bowling_radius_debug true
-//sc_instanced_debug_visualizer true
-sc_view_profiler_frame_averaging 0
-sc_instanced_mesh_mesh_shader false
-sc_max_framebuffer_copies_per_layer 1
-//r_pipeline_stats_command_flush 1
-//r_pipeline_stats_flush_before_sleeping 1
-//r_pipeline_stats_use_flush_api 1
-//r_drawtracers_firstperson false
-sc_allow_write_depth_before_blend false
-
-
-////sc_disableThreading false
-//engine_show_frame_ticks                         "true"
-//engine_show_frame_pacing                        "true"
-//anim_resource_validate_on_load                  "false"
-audio_enclosure_calc_enabled                    "false"
-cam_collision                                   "0"
-citadel_camera_hard_trace_radius                "32" //put under camera tweaks :D
-citadel_camera_wobble_disable                   "true"
-citadel_fibonnaci_sphere_trace_los_max          "32" //put under camera tweaks :D
-//citadel_radial_distortion                       "1" // Doesn't seem to do anything :(, here's what it's supposed to do: 0: Off 1: Distorts the visible distribution of arcs based on the mouse pointer. [def: "0"]
-cl_skip_hierarchy_update_for_unchanged_entities "true"
-//mat_shading_complexity_max_register_count       "8"
-multigpu_skip_semaphores                        "true"
-multigpu_skip_transfers                         "true"
-//panorama_disable_render_target_cache            "true"
-panorama_skip_compo                             "true"
-panorama_skip_composition_layer_content_paint   "true"
-//r_citadel_distancefield_max_distance            "16" // Doesn't seem to do anything, or if it does it is overwritten. [def: "2048"]
-//r_citadel_distancefield_min_screen_space_size   "99" // Same as above                                                    [def: "0.015"]
-//r_nearz                                         "20"
-//r_particle_explicit_fetch                       "true" // I believe this improves performance but will make soul orbs a bit difficult to see
-steam_inputhandler_enabled                      "0"
-v8_maximum_heap_size_mb                         "2048"
-v8_jitless true
-v8_stack_size 768
 // These all were commented out and as such need to be tested ^
-
+r_dopixelvisibility                             "0"
+r_nearz                                         "20"
+//r_draw_instances                                "0" //causes boxes to freak out on dx11
+//r_draw_overlays 0 //causes problems with the hud
+//r_dx11_software_cmd_lists 0 // causes a lot of issues
+//r_enable_rigid_animation 1
+//r_force_render_frame_count 60
+//r_indirectlighting 0
+//r_low_latency_trigger_flash 0
+//r_monitor_3dskybox 0
+//r_morphing_enabled 0
+//r_particle_max_draw_distance 7000
+//r_particle_multiplier 0.1
+//r_postprocess_enable false
+//r_render_deferred_opaque false
+//r_render_forward_opaque false
+//r_renderdoc_auto_shader_pdbs false
+//r_renderdoc_open_captures false
+//r_skinning_enabled false
+//r_vulkan_force_sync1 true
+//r_vulkan_sw_cmd_lists false
+//r_wait_on_present true
+//sc_disableThreading false
+//anim_resource_validate_on_load                  "false"
 //cam_collision false
+//citadel_radial_distortion                       "1" // Doesn't seem to do anything :(, here's what it's supposed to do: 0: Off 1: Distorts the visible distribution of arcs based on the mouse pointer. [def: "0"]
+//citadel_unit_status_health_pips_per_row 100
+//citadel_viewpunch_damping 100
 //citadel_zipline_allow_direction_choice false
+//cl_animgraph_history_force_temporal_consistency false
+//cl_boxmove_speed 200
+//cl_change_callback_limit 1
+//cl_citadel_bebop_beam_draw_points true
+//cl_clock_buffer_ticks 3
+//cl_clock_recvmargin_desired 6
 //cl_ent_joint_lines false
 //cl_ent_joint_names false
 //cl_globallight_orig_calc_frustum false
@@ -1217,9 +1097,12 @@ v8_stack_size 768
 //cl_poll_network_early false
 //cl_show_splashes false
 //cl_skel_constraints_enable false
+//cl_updaterate 40
 //collect_asserts_for_gc false
 //debug_draw_enable false
 //enable_boneflex false
+//engine_show_frame_pacing                        "true"
+//engine_show_frame_ticks                         "true"
 //ent_joint_lines false
 //ent_joint_names false
 //fx_drawmetalspark false
@@ -1242,19 +1125,21 @@ v8_stack_size 768
 //lb_enable_shadow_casting false
 //lb_enable_stationary_lights false
 //lb_enable_sunlight false
+//lb_max_visible_envmaps_override -1
 //lb_mixed_shadows false
 //lb_precomputed_shadowmap_enable false
 //lb_use_ellipsoid_bounds false
 //lb_use_illumination_silhouette false
 //lightquery_debug_direct_lighting false
 //lightquery_debug_indirect_lighting false
-mat_cache_renderablepasses true
+//mat_shading_complexity_max_register_count       "8"
 //panorama_clear_frames_on_device_restore "0"
 //panorama_composition_atlas false
 //panorama_disable_draw_fancy_quad true
 //panorama_disable_draw_fancy_quad true
 //panorama_disable_layer_clear true
 //panorama_disable_render_callbacks true
+//panorama_disable_render_target_cache            "true"
 //panorama_disable_render_target_cache false
 //panorama_disallow_hover_styles false
 //panorama_enable_secondary_layout_pass false
@@ -1265,45 +1150,135 @@ mat_cache_renderablepasses true
 //pulse_save_execution_history false
 //r_arealights false
 //r_citadel_depth_prepass_dynamic_objects false
+//r_citadel_distancefield_max_distance            "16" // Doesn't seem to do anything, or if it does it is overwritten. [def: "2048"]
+//r_citadel_distancefield_min_screen_space_size   "99" // Same as above                                                    [def: "0.015"]
 //r_citadel_gpu_preview_baked_shadows false
 //r_citadel_gpu_preview_denoise false
 //r_citadel_selection_outline2_alpha 1
 //r_citadel_selection_outline2_offset 10
 //r_citadel_selection_outline2_width 10
+//r_cubemap_normalization 0
+//r_directlighting 0
+//r_drawtracers_firstperson false
+//r_drawviewmodel 0
+//r_effects_bloom 0
+//r_enable_cubemap_fog 0
+//r_enable_gradient_fog 0
+//r_enable_volume_fog 0
+//r_grass_allow_flattening 1
+//r_hair_ao 0
+//r_hair_indirect_transmittance 0
+//r_hair_shadowtile 0
+//r_hair_voxels 0
+//r_hair_wind_global_scale 0
+//r_hairsort 0
+//r_impacts_alt_orientation 0
+//r_lightmap_bicubic_filtering 0
+//r_lightmap_size 4096
+//r_multiscattering 0
+//r_particle_allowprerender 1
+//r_particle_explicit_fetch                       "true" // I believe this improves performance but will make soul orbs a bit difficult to see
+//r_pixelvisibility_partial false
+//r_render_hair false
+//r_size_cull_threshold_fade 0
+//r_smooth_morph_normals false
+//r_texture_lod_scale 0.5
+//sc_allow_dithered_lod false
 //sc_force_translation_in_projection true
-animgraph_enable_dirty_netvar_optimization true
-citadel_in_world_item_panel_dpi 0.8
-citadel_medic_minion_sight_range -1
-citadel_melee_heavymelee_push_force 0
-citadel_melee_heavymelee_push_force_vs_tiny 0
-citadel_melee_heavymelee_toss_force_vs_tiny_min 0
-citadel_melee_hit_delay_max_time 0
-citadel_melee_shake_amplitude 0
-citadel_melee_shake_duration 0
-citadel_melee_shake_frequency 0
-//citadel_unit_status_health_pips_per_row 100
-citadel_unit_status_old_update_rate 15
-//lb_max_visible_envmaps_override -1
-minimap_update_rate_hz 1
-panorama_cache_command_list_size_threshold 512
-panorama_clear_frames_on_device_restore 0
-panorama_comp_layer_lru_lifetime 1
-panorama_debugger_theme dark
-panorama_disable_blur true
-panorama_disable_box_shadow true
-panorama_disable_descendant_filtering true
-panorama_disable_descendant_filtering true
-panorama_js_minidumps false
-panorama_max_overlay_fps 15
-panorama_max_text_shadow_strength 5
-panorama_max_text_shadow_strength 5
-panorama_min_comp_layer_cache_cost 384
-panorama_panel_occlusion true
-panorama_skip_composition_layer_content_paint true
-panorama_transforms_no_comp_layer true
-panorama_transforms_no_comp_layer true
-panorama_transition_time_factor 5
-snd_soundmixer_update_maximum_frame_rate 15
+//sc_instanced_debug_visualizer true
+//animgraph_enable_dirty_netvar_optimization true
+//audio_enclosure_calc_enabled                    "false"
+//cam_collision                                   "0"
+//citadel_camera_hard_trace_radius                "32" //put under camera tweaks :D
+//citadel_camera_wobble_disable                   "true"
+//citadel_fibonnaci_sphere_trace_los_max          "32" //put under camera tweaks :D
+//citadel_in_world_item_panel_dpi 0.8
+//citadel_melee_heavymelee_push_force 0
+//citadel_melee_heavymelee_push_force_vs_tiny 0
+//citadel_melee_heavymelee_toss_force_vs_tiny_min 0
+//citadel_melee_hit_delay_max_time 0
+//citadel_melee_shake_amplitude 0
+//citadel_melee_shake_duration 0
+//citadel_melee_shake_frequency 0
+//citadel_unit_status_old_update_rate 15
+//cl_anglespeedkey 1
+//cl_async_restore_server_authoritative_state true
+//cl_batch_entity_list_ops_during_latch true
+//cl_cameraoverride_shadow_depth_bias 1
+//cl_cameraoverride_shadow_end 1
+//cl_ent_joint_lines false
+//cl_ent_joint_names false
+//cl_skip_hierarchy_update_for_unchanged_entities "true"
+//csm_viewmodel_farz 1
+//engine_max_resource_system_update_time 20
+//engine_update_resource_system_during_low_latency_sleep false
+//mat_cache_renderablepasses true
+//minimap_update_rate_hz 1
+//multigpu_skip_semaphores                        "true"
+//multigpu_skip_transfers                         "true"
+//panorama_cache_command_list_size_threshold 512
+//panorama_clear_frames_on_device_restore 0
+//panorama_comp_layer_lru_lifetime 1
+//panorama_debugger_theme dark
+//panorama_disable_blur true
+//panorama_disable_box_shadow true
+//panorama_disable_descendant_filtering true
+//panorama_disable_descendant_filtering true
+//panorama_js_minidumps false
+//panorama_max_overlay_fps 15
+//panorama_max_text_shadow_strength 5
+//panorama_max_text_shadow_strength 5
+//panorama_min_comp_layer_cache_cost 384
+//panorama_panel_occlusion true
+//panorama_skip_compo                             "true"
+//panorama_skip_composition_layer_content_paint   "true"
+//panorama_skip_composition_layer_content_paint true
+//panorama_transforms_no_comp_layer true
+//panorama_transforms_no_comp_layer true
+//panorama_transition_time_factor 5
+//r_RainAllowInSplitScreen 0
+//r_RainParticleDensity 0
+//r_add_views_in_pre_output 0
+//r_allow_onesweep_gpusort 0
+//r_aoproxy_cull_dist 0
+//r_aoproxy_min_dist 0
+//r_aoproxy_min_dist_box 0
+//r_arealights 0
+//r_character_decal_monitor_render_res 0
+//r_character_decal_resolution 0
+//r_citadel_antialiasing 0
+//r_citadel_depth_prepass_dynamic_objects 0
+//r_citadel_distancefield_blur 0
+//r_citadel_distancefield_down_sample 0
+//r_citadel_distancefield_farfield_enable 0
+//r_citadel_distancefield_farfield_occlusion_length 0
+//r_citadel_distancefield_farfield_occlusion_start_offset 0
+//r_citadel_distancefield_shadows 0
+//r_citadel_glow_health_bar_debug false
+//r_citadel_npr_outlines false
+//r_citadel_npr_outlines_max_dist 1
+//r_citadel_shadow_quality 0
+//r_citadel_shadowdb 0
+//r_citadel_ssao_quality 0
+//r_citadel_ssao_thin_occluder_compensation 0
+//r_citadel_upscaling 0
+//r_dashboard_render_quality 0
+//r_depth_of_field 0
+//r_directional_lightmaps 0
+//r_nearz 27
+//r_particle_gpu_implicit_lds_cache 0
+//r_particle_max_detail_level 0
+//r_world_frame_load_threshold_ms 500
+//sc_allow_write_depth_before_blend false
+//sc_instanced_mesh_mesh_shader false
+//sc_max_framebuffer_copies_per_layer 1
+//sc_use_clear_subrect true
+//sc_view_profiler_frame_averaging 0
+//snd_soundmixer_update_maximum_frame_rate 15
+//steam_inputhandler_enabled                      "0"
+//v8_jitless true
+//v8_maximum_heap_size_mb                         "2048"
+//v8_stack_size 768
         rate
         {
             min     "98304"
@@ -1426,3 +1401,4 @@ snd_soundmixer_update_maximum_frame_rate 15
         ShowLowAvailableVirtualMemoryMessageBox "1"
     }
 }
+
