@@ -1050,6 +1050,8 @@ BitsPerSample 1
         // sc_throw_away_all_layers                 "true"  // Disables rendering, ie the screen is black.          [def: "false"]
 
                 // --------------------------------- END OF CONFIG OptimizationLock -- ver. testing ------------------------------- \\
+csm_viewmodel_farz 1
+r_nearz 27
 //cl_updaterate 40
 engine_max_resource_system_update_time 20
 engine_update_resource_system_during_low_latency_sleep false
@@ -1142,7 +1144,7 @@ r_world_frame_load_threshold_ms 500
 //sc_allow_dithered_lod false
 sc_use_clear_subrect true
 cl_anglespeedkey 1
-cl_animgraph_history_force_temporal_consistency false
+//cl_animgraph_history_force_temporal_consistency false
 cl_async_restore_server_authoritative_state true
 cl_batch_entity_list_ops_during_latch true
 //cl_boxmove_speed 200
@@ -1424,4 +1426,3 @@ snd_soundmixer_update_maximum_frame_rate 15
         ShowLowAvailableVirtualMemoryMessageBox "1"
     }
 }
-
