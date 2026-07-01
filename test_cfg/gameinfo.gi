@@ -1054,6 +1054,9 @@ BitsPerSample 1
 // These all were commented out and as such need to be tested ^
 r_dopixelvisibility                             "0"
 r_nearz                                         "20"
+r_render_hair                                   "false"
+r_particle_explicit_fetch                       "true" // I believe this improves performance but will make soul orbs a bit difficult to see
+r_particle_gpu_implicit_lds_cache true
 //r_draw_instances                                "0" //causes boxes to freak out on dx11
 //r_draw_overlays 0 //causes problems with the hud
 //r_dx11_software_cmd_lists 0 // causes a lot of issues
@@ -1177,9 +1180,7 @@ r_nearz                                         "20"
 //r_lightmap_size 4096
 //r_multiscattering 0
 //r_particle_allowprerender 1
-//r_particle_explicit_fetch                       "true" // I believe this improves performance but will make soul orbs a bit difficult to see
 //r_pixelvisibility_partial false
-//r_render_hair false
 //r_size_cull_threshold_fade 0
 //r_smooth_morph_normals false
 //r_texture_lod_scale 0.5
