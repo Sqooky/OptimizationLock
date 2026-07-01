@@ -892,7 +892,7 @@ BitsPerSample 1
         cl_particle_batch_mode                   "1"     // Has a range of 1 or 2, 2 will make celeste's auto rebound look weird and 0 will make them not batch [def: "1"]
         cl_particle_fallback_base                "50"    // Base for falling back to cheaper effects under load.             [def: "0"]
         cl_particle_fallback_multiplier          "100"    // Multiplier for falling back to cheaper effects under load.       [def: "0"]
-        cl_particle_sim_fallback_base_multiplier "100"    // How aggressive the switch to fallbacks will be depending on how far over the cl_particle_sim_fallback_threshold_ms the sim time is.  Higher numbers are more aggressive. [def: "5"]
+        //cl_particle_sim_fallback_base_multiplier "100"    // How aggressive the switch to fallbacks will be depending on how far over the cl_particle_sim_fallback_threshold_ms the sim time is.  Higher numbers are more aggressive. [def: "5"]
         cl_particle_sim_fallback_threshold_ms    "1"     // Amount of simulation time that can elapse before new systems start falling back to cheaper versions [def: "6"]
         particle_cluster_nodraw                  "1"     // Skips drawing particle “clusters”/grouped particle batches (performance, fewer small effects). [def: "0"]
         r_RainParticleDensity                    "0"     // Density of Particle Rain 0-1.                                    [def: "1"]
@@ -903,7 +903,7 @@ BitsPerSample 1
         r_particle_batch_collections             "true"  // Batches collections of particles, typically batch rendering is faster so this is set to true. [def: "false"]
         r_particle_max_detail_level              "1"     // The maximum detail level of particle to create.                  [def: "3"]
         r_particle_max_texture_layers            "4"     // Anything below 4 will make infernus afterburn, paige fire, and drifter's passive look very weird and blocky [def: "-1"]
-        r_particle_model_per_thread_count        "16"    // I believe it is how many particle models a thread is allowed to handle.  [def: "32"]
+        r_particle_model_per_thread_count        "32"    // I believe it is how many particle models a thread is allowed to handle.  [def: "32"]
         r_particle_skip_postsim                  "true"  // Not entirely sure what it does, going off of the name I'd imagine it skips the post simulation, this is a testvar [def: "false"]
         // r_particle_timescale                  "1.1"   // Speeds up particle simulation, thus making them end sooner, however this causes visual desyncs, most notably with big effects that last a while such as infernus ult. Please tweak this to what you are comfortable with. [def: "1"]
         cl_aggregate_particles                   "true"  // Doesn't seem to cause any issues but a benchmark proper should be conducted [def: "false"]
@@ -1052,14 +1052,21 @@ BitsPerSample 1
                 // --------------------------------- END OF CONFIG OptimizationLock -- ver. testing ------------------------------- \\
 
 // These all were commented out and as such need to be tested ^
+hairsim_force_fixed_timestep                    "false"
+particle_powsimd_random_range_exp               "false"
+r_particle_min_timestep                         "0.0037"
 r_dopixelvisibility                             "0"
 r_nearz                                         "20"
 r_render_hair                                   "false"
-r_particle_explicit_fetch                       "true" // I believe this improves performance but will make soul orbs a bit difficult to see
-r_particle_gpu_implicit_lds_cache true
+//r_particle_explicit_fetch                       "true" // I believe this improves performance but will make soul orbs a bit difficult to see
+r_particle_gpu_implicit_lds_cache               "true" // I THINK this caches particle data for updating them
+ent_joint_lines                                 "false" // These shouldn't be needed?
+ent_joint_names                                 "false"
+citadel_powerup_spawner_show_event_timer        "true"  // Curious what this does
+cl_enable_eye_occlusion                         "false"
 //r_draw_instances                                "0" //causes boxes to freak out on dx11
-//r_draw_overlays 0 //causes problems with the hud
-//r_dx11_software_cmd_lists 0 // causes a lot of issues
+//r_draw_overlays                                  "0" //causes problems with the hud
+//r_dx11_software_cmd_lists                        "0" // causes a lot of issues
 //r_enable_rigid_animation 1
 //r_force_render_frame_count 60
 //r_indirectlighting 0
@@ -1104,10 +1111,6 @@ r_particle_gpu_implicit_lds_cache true
 //collect_asserts_for_gc false
 //debug_draw_enable false
 //enable_boneflex false
-//engine_show_frame_pacing                        "true"
-//engine_show_frame_ticks                         "true"
-//ent_joint_lines false
-//ent_joint_names false
 //fx_drawmetalspark false
 //game_particle_manager_requeue_messages false
 //ik_debug_fabrik_forwards_enabled false
@@ -1267,8 +1270,6 @@ r_particle_gpu_implicit_lds_cache true
 //r_depth_of_field 0
 //r_directional_lightmaps 0
 //r_nearz 27
-//r_particle_gpu_implicit_lds_cache 0
-//r_particle_max_detail_level 0
 //r_world_frame_load_threshold_ms 500
 //sc_allow_write_depth_before_blend false
 //sc_instanced_mesh_mesh_shader false
