@@ -208,43 +208,32 @@ GameInfo
 
     RenderSystem
     {
+
+
+
+
+
+
 AsyncHookUpTextureBits 1
-
-BlackLevel 1
-BlackLevelDeltaH 1
-BlackLevelDeltaV 1
-BlackLevelRepeatDim 1
-BlockBytes 1
-BlockCount 1
-FrameTimeDeltaInMsec 1
-FrameInterpolation 1
-FrameSync 1
-FieldOfViewCotangent 30
-
-
-
-FallbackTexture     1
-Fax3Decode1D     1
-Fax3Decode2D     1
-Fax3DecodeRLE     1
-Fax3SetupState     1
-Fax4Decode     1
-FaxDcs     1
-FaxFillFunc     1
-FaxMode     1
-FaxRecvParams     1
-FaxRecvTime     1
-FaxSubAddress     1
-Feature     1
-FeatureAlias     1
-FeatureRule     1
-
 BaselineExposure  0
 BaselineNoise  0
 BaselineSharpness  0
 BayerGreenSplit  0
 BestQualityScale 0
-BitsPerSample 1
+BitsPerSample 8
+BlackLevel 0
+BlackLevelDeltaH 0
+BlackLevelDeltaV 0
+BlackLevelRepeatDim 0
+BlockBytes 1
+BlockCount 1
+FallbackTexture     1
+FieldOfViewCotangent 360
+FrameInterpolation 0
+FrameSync 0
+FrameTimeDeltaInMsec 5
+
+
 
         // Stolen from CS2
         AllowPartialMipChainImmediateTexLoads "1"
@@ -252,9 +241,9 @@ BitsPerSample 1
         // End of stolen from CS2
 
         GraphicsPipelineLibrary            "1"    // This seemed to discard precompiled shaders when set to 0             [def: "1"]
-        IndexBufferPoolSizeMB              "64"   // Not fully sure, in cs2 this is 64        [def: "32"]
+        IndexBufferPoolSizeMB              "128"   // Not fully sure, in cs2 this is 64        [def: "32"]
         LowLatency                         "1"    //      [def: "1"]
-        MinStreamingPoolSizeMB             "512"  // In CS2 this is 500, not sure why      [def: "1024"]
+        MinStreamingPoolSizeMB             "2048"  // In CS2 this is 500, not sure why      [def: "1024"]
         MinStreamingPoolSizeMBTools        "2048" //      [def: "2048"]
         SwapChainSampleableDepth           "1"    //      [def: "1"]
         Use32BitDepthBuffer                "0"    //      [def: "0"]
@@ -267,17 +256,16 @@ BitsPerSample 1
         VulkanOnly_Linux                   "1"   //      [def: "1"]
         VulkanRequireDescriptorIndexing    "1"   // Setting this command to zero causes my wayland compositor to crash upon launching the game. I would imagine don't fiddle with it      [def: "1"]
         VulkanRequireSubgroupWaveOpSupport "1"   //      [def: "1"]
-        VulkanStagingPMBSizeLimitMB        "384" // Jasper (my beloved) said to not mess withthis
+        VulkanStagingPMBSizeLimitMB        "768" // Jasper (my beloved) said to not mess withthis
         VulkanSteamAppShaderCache          "1"   //      [def: "1"]
         VulkanSteamDownloadedShaderCache   "1"   //      [def: "1"]
         VulkanSteamShaderCache             "1"   //      [def: "1"]
 
 
 
-        //MinDXLevel                            "80"
-        //MaxPreloadTextureResolution           "2"
-        //VulkanRequestSM6                      "true"
-        // VulkanUseExternalSubpassDependency "true"
+        MaxPreloadTextureResolution           "0"
+        VulkanRequestSM6                      "true"
+        VulkanUseExternalSubpassDependency "true"
         // VulkanRequireFullGPURayTracing     "true"
 
 
@@ -312,7 +300,10 @@ BitsPerSample 1
         DisableLoadingPlaque           "1"
     }
 
-
+    ContentBuilder
+    {
+        ResourceCompilerDirectXUsesWARP "0"
+    }
 
     SoundSystem
     {
@@ -341,8 +332,8 @@ BitsPerSample 1
     Hammer
     {
         CreateRenderClusters          "1"
-        DefaultMinDrawVolumeSize      "2048"
-        DefaultMinTrianglesPerCluster "2048"
+        DefaultMinDrawVolumeSize      "4096"
+        DefaultMinTrianglesPerCluster "4096"
         DefaultPointEntity            "info_player_start"
         DefaultSolidEntity            "trigger_multiple"
         GameFeatureSet                "Citadel"
@@ -420,9 +411,9 @@ BitsPerSample 1
         WorldRendererBuilder
         {
             VisibilityGuidedMeshClustering     "1"
-            MinimumTrianglesPerClusteredMesh   "4096"
-            MinimumVerticesPerClusteredMesh    "4096"
-            MinimumVolumePerClusteredMesh      "4096" // ~20x20x20 cube
+            MinimumTrianglesPerClusteredMesh   "8192"
+            MinimumVerticesPerClusteredMesh    "8192"
+            MinimumVolumePerClusteredMesh      "8192" // ~20x20x20 cube
             MaxPrecomputedVisClusterMembership "96"
             MaxCullingBoundsGroups             "128"
             UseAggregateInstances              "1"
@@ -558,18 +549,18 @@ BitsPerSample 1
 
 
         HairShading                  "false"
-        // MeshletBufferCPUSlotCount "0"
+        MeshletBufferCPUSlotCount "0"
         ParticleBufferSize           "256"
-        // RenderMeshlets            "1"
+        RenderMeshlets            "0"
 
 
-        CMTAtlasHeight                            "512"
-        CMTAtlasWidth                             "512"
-        //CSMCascadeResolution                      "0" // [def: "2048"]
-        //CharacterDecals                           "0"
-        //CubemapFog                                "0" // [def: "1"]
-        //DefaultShadowTextureHeight                "0" // [def: "6144"]
-        //DefaultShadowTextureWidth                 "0" // [def: "6144"]
+        CMTAtlasHeight                            "0"
+        CMTAtlasWidth                             "0"
+        CSMCascadeResolution                      "0" // [def: "2048"]
+        CharacterDecals                           "0"
+        CubemapFog                                "0" // [def: "1"]
+        DefaultShadowTextureHeight                "0" // [def: "6144"]
+        DefaultShadowTextureWidth                 "0" // [def: "6144"]
         // Temp till I can add support in citadel shaders
         DisableLateAllocatedTransformBuffer         "1"          // [def: "1"]
         DynamicShadowResolution                     "1"          // [def: "1"]
@@ -581,7 +572,7 @@ BitsPerSample 1
         GpuLightBinnerSunLightFastPath              "1"          // [def: "1"]
         //GpuLightBinnerSupportViewModelCascade       "0"
         HDRFrameBuffer                              "0"
-        LayerBatchThresholdFullsort                 "80"    // [def: "20"]
+        LayerBatchThresholdFullsort                 "200"    // [def: "20"]
         MinimumLateAllocatedVertexCacheBufferSizeMB "64"    // [def: "64"]
         NonTexturedGradientFog                      "0"     // [def: "1"]
         SunLightManagerCount                        "0"     // [def: "0"]
@@ -595,8 +586,8 @@ BitsPerSample 1
         VolumetricFog                               "0"    // [def: "1"]
 
         // Stolen from CS2
-        //GpuLightBinnerBinEnvMaps "1"
-        //GpuLightBinnerBinLPVs    "1"
+        GpuLightBinnerBinEnvMaps "1"
+        GpuLightBinnerBinLPVs    "0"
 
         //LightCookieAllocGranularity "1"
         //LightCookieMinAllocSize     "0"
@@ -694,7 +685,7 @@ BitsPerSample 1
         citadel_player_glow_disabled                           "0"    // Disables player glow/highlight effect when pinged.               [def: "0"]
         citadel_trooper_glow_disabled                          "1"    // 1 = Disable friendly/enemy minion glow.                          [def: "0"]
         citadel_unit_status_allies_see_thru_walls_max_distance "40"   // How far to make allied players' unit status show through walls.  [def: "0"] (0 means no limit)
-        citadel_unit_status_dpi                             "6"    // This increases the size of the health bar. Unfortunately I think this lowers performance. A shame. [def: "5"]
+        //citadel_unit_status_dpi                             "6"    // This increases the size of the health bar. Unfortunately I think this lowers performance. A shame. [def: "5"]
 
         // --- 2. Field of View ---
         // These commands both affect fov but do so in different ways. citadel_camera_hero_fov changes the field of view using typical degrees but doesn't modify the punch zoom in. This means that if you have a high fov value the zoom in can be disorienting.
@@ -714,7 +705,7 @@ BitsPerSample 1
         citadel_hideout_ball_show_juggle_count              "1"       // Shows a fun juggle count minigame for hideout ball.              [def: "0"]
         citadel_hideout_ball_show_juggle_fx                 "1"       // Shows juggle visual FX for hideout ball minigame.                [def: "0"]
         citadel_hud_objective_health_enabled                "2"       // 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks.                           [def: "2"]
-        citadel_unit_status_use_new                         "true"       // This uses new Health Bar, to use old Health Bar change "true" to "false".    [def: "false"]
+        citadel_unit_status_use_new                         "false"       // This uses new Health Bar, to use old Health Bar change "true" to "false".    [def: "false"]
         citadel_show_chat_wheel_angle_threshold             "0"       // (degrees) Increase this to change how much you have to move your camera angle to make the Chat Wheel instantly visible while holding Ping. [def: "16"]
         citadel_unit_status_single_bar_mode                 "true"      // This makes the v2 halth bar be one bar as opposed to multiple, which I find more easily readable [def: "false"]
 
@@ -725,7 +716,7 @@ BitsPerSample 1
 
 
         // --- 5. FPS Caps & Minimized Throttling ---
-        engine_low_latency_sleep_after_client_tick "false" // When r_low_latency is enabled, this moves the low latency sleep on tick frames to happen after client simulation. [def: "false"]
+        engine_low_latency_sleep_after_client_tick "true" // When r_low_latency is enabled, this moves the low latency sleep on tick frames to happen after client simulation. [def: "false"]
         engine_no_focus_sleep                      "20"   // Milliseconds the engine sleeps per frame when unfocused (0 = no sleep, not recommended for low-end PC). [def: "20"]
         fps_max                                    "0"    // Max FPS while in game, limit fps to your monitor refresh rate. [def: "400"]
         panorama_max_fps                           "30"   // Menu FPS.                                                        [def: "120"]
@@ -758,14 +749,14 @@ BitsPerSample 1
         r_texture_budget_threshold     "0.7" // Reduce texture memory pool size when this percentage of the budget is full. [def: "0.8"]
         r_texture_budget_update_period "0.5" // Time (in seconds) between updating texture memory budget.        [def: "0.1"]
         //r_texture_stream_mip_bias      "3"   // Worth adjusting, practically how good your textures will look.   [def: "1"]
-        r_texturefilteringquality      "3"   // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x
+        r_texturefilteringquality      "0"   // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x
 
         // --- 9. Render Distance ---
         r_farz       "7000" // This controls the far clipping plane, ie building/player popin   [def: "-1"]
         r_mapextents "7000" // Far clipping plane, this will make buildings pop in and out      [def: "16384"] damn that's an oddly specific number
 
         // ================ IMPORTANT ================
-        thread_pool_option "2" // If I understand correctly, this should be how threads are handled relative to the game, but there isn't a clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage may vary. [def: "-1"]
+        thread_pool_option "3" // If I understand correctly, this should be how threads are handled relative to the game, but there isn't a clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage may vary. [def: "-1"]
         // 1 gives "GlobalThreadPoolMode" "efficiency"
         // 2 removes it from boot.vcfg
         // 3 gives "GlobalThreadPoolMode" "undifferentiated"
@@ -1051,13 +1042,34 @@ BitsPerSample 1
 
                 // --------------------------------- END OF CONFIG OptimizationLock -- ver. testing ------------------------------- \\
 
+citadel_rp_show_dev_messages true
+citadel_roster_select_hover_delay 1
+citadel_roster_select_force_enable_priority_token true
+r_citadel_glow_health_bar_debug false
+anim_decode_forcewritealltransforms true
+animgraph_footlock_enabled 0
+r_morphing_enabled 0
+r_smooth_morph_normals 0
+r_environment_map_roughness_range { 1 1}
+r_light_probe_volume_debug_grid_samplesize 1
+snd_steamaudio_max_occlusion_samples 32
+snd_steamaudio_num_diffuse_samples 512
+lb_ssss_samples 0
 // These all were commented out and as such need to be tested ^
+r_strip_invisible_during_sceneobject_update     "true"
+sc_max_framebuffer_copies_per_layer             "0"
+r_citadel_distancefield_down_sample 6
+sc_force_single_display_list_per_layer          "true"
+r_haircull_percent 0
+sv_pvs_max_distance                             "7500"
+sc_cache_envmap_lpv_lookup                      "false"
 hairsim_force_fixed_timestep                    "false"
 particle_powsimd_random_range_exp               "false"
 r_particle_min_timestep                         "0.0037"
-r_dopixelvisibility                             "0"
+//r_dopixelvisibility                             "0"
 r_nearz                                         "20"
 r_render_hair                                   "false"
+r_hair_shadowtile 0
 //r_particle_explicit_fetch                       "true" // I believe this improves performance but will make soul orbs a bit difficult to see
 r_particle_gpu_implicit_lds_cache               "true" // I THINK this caches particle data for updating them
 ent_joint_lines                                 "false" // These shouldn't be needed?
@@ -1155,7 +1167,6 @@ cl_enable_eye_occlusion                         "false"
 //props_break_apply_radial_forces  false
 //pulse_save_execution_history false
 //r_arealights false
-//r_citadel_depth_prepass_dynamic_objects false
 //r_citadel_distancefield_max_distance            "16" // Doesn't seem to do anything, or if it does it is overwritten. [def: "2048"]
 //r_citadel_distancefield_min_screen_space_size   "99" // Same as above                                                    [def: "0.015"]
 //r_citadel_gpu_preview_baked_shadows false
@@ -1174,7 +1185,6 @@ cl_enable_eye_occlusion                         "false"
 //r_grass_allow_flattening 1
 //r_hair_ao 0
 //r_hair_indirect_transmittance 0
-//r_hair_shadowtile 0
 //r_hair_voxels 0
 //r_hair_wind_global_scale 0
 //r_hairsort 0
@@ -1258,7 +1268,6 @@ cl_enable_eye_occlusion                         "false"
 //r_citadel_distancefield_farfield_occlusion_length 0
 //r_citadel_distancefield_farfield_occlusion_start_offset 0
 //r_citadel_distancefield_shadows 0
-//r_citadel_glow_health_bar_debug false
 //r_citadel_npr_outlines false
 //r_citadel_npr_outlines_max_dist 1
 //r_citadel_shadow_quality 0
@@ -1377,15 +1386,15 @@ cl_enable_eye_occlusion                         "false"
         snd_soundmixer                   "Default_Mix"
         cloth_filter_transform_stateless "0"
 
-        cl_joystick_enabled       "1"
-        panorama_joystick_enabled "1"
+        cl_joystick_enabled       "0"
+        panorama_joystick_enabled "0"
 
         snd_event_browser_focus_events "true"
 
         cl_max_particle_pvs_aabb_edge_length "100"
 
         // Allow aggregation of particles (for perf)
-        // cl_aggregate_particles "true"
+        cl_aggregate_particles "true"
 
         citadel_enable_vdata_sound_preload "true"
         r_add_views_in_pre_output          "1"
