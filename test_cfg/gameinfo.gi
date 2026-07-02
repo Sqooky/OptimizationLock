@@ -31,6 +31,7 @@
 //- Soulx:      Gave me FIVE DOLLARS and told me about spirolactone
 //- Xeno:       Very politely waited for me to figure out how to accept donations and gave me FIVE DOLLARS
 //- N8Fan:      Gave me TEN DOLLARS so I could play vampire survivors
+//- Namea:      Gave me TEN DOLLARS in steam gift cards and was unbelivably polite. I love you so much.
 //- Cos:        GAVE ME SEVENTY DOLLARS FOR NO FUCKING REASON I LOVE YOU SO MUCH?????????????????????????
 //- Wely:       Gave me THIRTY DOLLARS IN STEAM GIFT CARD MONEY????? WOA
 //- Prot4g:     Gave me TWENTY DOLLARS WOA I LOVE YOU!!!
@@ -214,27 +215,6 @@ GameInfo
 
 
 
-AsyncHookUpTextureBits 1
-BaselineExposure  0
-BaselineNoise  0
-BaselineSharpness  0
-BayerGreenSplit  0
-BestQualityScale 0
-BitsPerSample 8
-BlackLevel 0
-BlackLevelDeltaH 0
-BlackLevelDeltaV 0
-BlackLevelRepeatDim 0
-BlockBytes 1
-BlockCount 1
-FallbackTexture     1
-FieldOfViewCotangent 360
-FrameInterpolation 0
-FrameSync 0
-FrameTimeDeltaInMsec 5
-
-
-
         // Stolen from CS2
         AllowPartialMipChainImmediateTexLoads "1"
         UseHardwareGammaRamp                  "0" // Fullscreen gamma controlled in postprocessing
@@ -411,9 +391,9 @@ FrameTimeDeltaInMsec 5
         WorldRendererBuilder
         {
             VisibilityGuidedMeshClustering     "1"
-            MinimumTrianglesPerClusteredMesh   "8192"
-            MinimumVerticesPerClusteredMesh    "8192"
-            MinimumVolumePerClusteredMesh      "8192" // ~20x20x20 cube
+            MinimumTrianglesPerClusteredMesh   "4096"
+            MinimumVerticesPerClusteredMesh    "4096"
+            MinimumVolumePerClusteredMesh      "4096" // ~20x20x20 cube
             MaxPrecomputedVisClusterMembership "96"
             MaxCullingBoundsGroups             "128"
             UseAggregateInstances              "1"
@@ -1043,8 +1023,8 @@ FrameTimeDeltaInMsec 5
                 // --------------------------------- END OF CONFIG OptimizationLock -- ver. testing ------------------------------- \\
 
 citadel_rp_show_dev_messages true
-citadel_roster_select_hover_delay 1
-citadel_roster_select_force_enable_priority_token true
+//citadel_roster_select_hover_delay 1
+//citadel_roster_select_force_enable_priority_token true
 r_citadel_glow_health_bar_debug false
 anim_decode_forcewritealltransforms true
 animgraph_footlock_enabled 0
@@ -1065,7 +1045,7 @@ sv_pvs_max_distance                             "7500"
 sc_cache_envmap_lpv_lookup                      "false"
 hairsim_force_fixed_timestep                    "false"
 particle_powsimd_random_range_exp               "false"
-r_particle_min_timestep                         "0.0037"
+r_particle_min_timestep                         "0.0025"
 //r_dopixelvisibility                             "0"
 r_nearz                                         "20"
 r_render_hair                                   "false"
