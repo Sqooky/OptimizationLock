@@ -682,7 +682,7 @@ GameInfo
         // --- 3. HUD ---
         citadel_unit_status_delta_decay_rate                "2"       // how quickly the yellow to indicate damage fades from the health bar. [def: "3"]
         // citadel_hud_objective_health_debug_show_midboss  "true"    // This makes midboss' health bar visible whenever it's able to be rendered. I like it, you might not [def: "false"]
-         citadel_unit_status_use_v2                         "1"       // Set to 1 to enable the new health bar that allows you to  see enemy stamina. [def: "0"]
+         citadel_unit_status_use_v2                         "0"       // Set to 1 to enable the new health bar that allows you to  see enemy stamina. [def: "0"]
         // citadel_unit_status_use_v2_for_nonplayers        "0"       // Set to 1 to enable the new health bar but for troopers, objs, and camps.     [def: "0"]
         citadel_crosshair_hit_marker_duration               "0.00001" // Removes the hitmarker when shooting people.                      [def: "0.1"]
         citadel_damage_report_enable                        "1"       // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
@@ -741,7 +741,7 @@ GameInfo
         r_mapextents "7000" // Far clipping plane, this will make buildings pop in and out      [def: "16384"] damn that's an oddly specific number
 
         // ================ IMPORTANT ================
-        thread_pool_option "3" // If I understand correctly, this should be how threads are handled relative to the game, but there isn't a clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage may vary. [def: "-1"]
+        thread_pool_option "2" // If I understand correctly, this should be how threads are handled relative to the game, but there isn't a clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage may vary. [def: "-1"]
         // 1 gives "GlobalThreadPoolMode" "efficiency"
         // 2 removes it from boot.vcfg
         // 3 gives "GlobalThreadPoolMode" "undifferentiated"
@@ -1028,7 +1028,7 @@ GameInfo
                 // --------------------------------- END OF CONFIG OptimizationLock -- ver. testing ------------------------------- \\
 
 // These all were commented out and as such need to be tested 
-citadel_rp_show_dev_messages                    true
+//citadel_rp_show_dev_messages                    true
 //citadel_roster_select_hover_delay             1
 //citadel_roster_select_force_enable_priority_token true //causes a crash but does what you think it would.
 r_citadel_glow_health_bar_debug                 false
@@ -1040,7 +1040,7 @@ r_environment_map_roughness_range               { 1 1}
 r_light_probe_volume_debug_grid_samplesize      "1"
 snd_steamaudio_max_occlusion_samples            "32"
 snd_steamaudio_num_diffuse_samples              "512"
-lb_ssss_samples                                 "0"
+//lb_ssss_samples                                 "0"
 r_strip_invisible_during_sceneobject_update     "true"
 sc_max_framebuffer_copies_per_layer             "0"
 r_citadel_distancefield_down_sample 6
@@ -1062,6 +1062,7 @@ ent_joint_names                                 "false"
 citadel_powerup_spawner_show_event_timer        "true"  // Curious what this does
 cl_enable_eye_occlusion                         "false"
 r_physics_particle_op_spawn_scale               "0"
+panorama_comp_layer_lru_lifetime                "0.001"
 //panorama_disable_descendant_filtering           "true"    // Causes issues with the hud
 //panorama_disable_draw_fancy_quad                "true"    // Causes issues with the hud
 //panorama_disable_layer_cache                    "false"
@@ -1220,7 +1221,6 @@ r_physics_particle_op_spawn_scale               "0"
 //multigpu_skip_transfers                         "true"
 //panorama_cache_command_list_size_threshold 512
 //panorama_clear_frames_on_device_restore 0
-panorama_comp_layer_lru_lifetime 0
 //panorama_debugger_theme dark
 //panorama_disable_box_shadow true
 //panorama_disable_descendant_filtering true
