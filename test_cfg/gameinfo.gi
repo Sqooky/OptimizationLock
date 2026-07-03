@@ -31,12 +31,12 @@
 //- Soulx:      Gave me FIVE DOLLARS and told me about spirolactone
 //- Xeno:       Very politely waited for me to figure out how to accept donations and gave me FIVE DOLLARS
 //- N8Fan:      Gave me TEN DOLLARS so I could play vampire survivors
-//- Namea:      Gave me TEN DOLLARS in steam gift cards and was unbelivably polite. I love you so much.
 //- Cos:        GAVE ME SEVENTY DOLLARS FOR NO FUCKING REASON I LOVE YOU SO MUCH?????????????????????????
 //- Wely:       Gave me THIRTY DOLLARS IN STEAM GIFT CARD MONEY????? WOA
 //- Prot4g:     Gave me TWENTY DOLLARS WOA I LOVE YOU!!!
 //- catmasta:   Gave me TWO DOLLARS!!
 //- a distant admirer: Gave me TEN DOLLARS and a boon!!!
+//- Namea:          Gave me TEN DOLLARS in steam gift cards and was unbelivably polite. I love you so much.
 //- Kevin:      Gave me TWO DOLLARS also made me trip and write this as kelvin twice. I'm such a mcginnis chud.
 //- jusbeprophet: Gave me ONE DOLLAR! Bless their heart
 //- Supporter: Gave me FIVE DOLLAR!!! many thanks to them.
@@ -528,10 +528,14 @@ GameInfo
     {
 
 
-        HairShading                  "false"
-        MeshletBufferCPUSlotCount "0"
-        ParticleBufferSize           "256"
-        RenderMeshlets            "0"
+        HairShading                         "false"
+        MeshletBufferCPUSlotCount           "0"
+        ParticleBufferSize                  "256"
+        RenderMeshlets                      "0"
+        ShadowmapMaxFilterRadius            0
+        FogCachedShadowTileMaxFilterRadius  0
+        PointLightShadowsEnabled            0
+        PunctualContactShadows              0
 
 
         CMTAtlasHeight                            "0"
@@ -628,7 +632,7 @@ GameInfo
 
 
         EnableParticleShaderFeatureBranching "1"
-        Float16HDRBackBuffer                 "1"
+        Float16HDRBackBuffer                 "0"
         PET_SupportFadingOpaqueModels        "1"        // Setting this to 0 will make the rujivinator invisible so don't do that
         Features                             "non_homogenous_forward_layer_only"
         ParticlesFoggedByDefault             "0"
@@ -637,6 +641,7 @@ GameInfo
         EnableMixedResolution                "0"
         MPropertyFlattenIntoParentRow           "1"
         PostSimulate                            "0"
+        ParticleTraceOffsetOnlyHit              "1"
     }
 
     ConVars
@@ -677,7 +682,7 @@ GameInfo
         // --- 3. HUD ---
         citadel_unit_status_delta_decay_rate                "2"       // how quickly the yellow to indicate damage fades from the health bar. [def: "3"]
         // citadel_hud_objective_health_debug_show_midboss  "true"    // This makes midboss' health bar visible whenever it's able to be rendered. I like it, you might not [def: "false"]
-         citadel_unit_status_use_v2                         "false"       // Set to 1 to enable the new health bar that allows you to  see enemy stamina. [def: "0"]
+         citadel_unit_status_use_v2                         "1"       // Set to 1 to enable the new health bar that allows you to  see enemy stamina. [def: "0"]
         // citadel_unit_status_use_v2_for_nonplayers        "0"       // Set to 1 to enable the new health bar but for troopers, objs, and camps.     [def: "0"]
         citadel_crosshair_hit_marker_duration               "0.00001" // Removes the hitmarker when shooting people.                      [def: "0.1"]
         citadel_damage_report_enable                        "1"       // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
@@ -753,10 +758,10 @@ GameInfo
         citadel_damage_text_show_effectiveness "0"     // Shows extra “effectiveness” info in damage text (e.g., resist/weakness style feedback). As far as I can tell this is unfinished right now [def: "0"]
         closecaption                           "false" // I assume this does what it says on the tin                       [def: "false"]
         panorama_allow_transitions             "false" // Turns off UI anim (shop,etc)                                     [def: "1"]
-        panorama_disable_blur                  "1"     // Disables UI blur effects in the UI.                              [def: "0"]
+        panorama_disable_blur                  "true"     // Disables UI blur effects in the UI.                              [def: "false"]
         panorama_disable_box_shadow            "1"     // Disables UI box shadows in the UI (less GPU/UI cost).            [def: "0"]
         //panorama_temp_comp_layer_min_dimension "128"   // Based on the name I'm implied to believe this is the minimum size for panorama compositing, ie blur, rounded corners, etc. [def: "512"]
-        //r_citadel_enable_pano_world_blur       "true" // Removes the blur when the shop is open, however can cause ui bugs on some hardware under vulkan [def: "true"]
+        r_citadel_enable_pano_world_blur       "true" // Removes the blur when the shop is open, however can cause ui bugs on some hardware under vulkan [def: "true"]
         r_dashboard_render_quality             "0" // Sets dashboard/UI render quality (lower = cheaper UI rendering). [def: "1"]
 
         // ================ Shadows ================
@@ -1022,25 +1027,25 @@ GameInfo
 
                 // --------------------------------- END OF CONFIG OptimizationLock -- ver. testing ------------------------------- \\
 
-citadel_rp_show_dev_messages true
-//citadel_roster_select_hover_delay 1
-//citadel_roster_select_force_enable_priority_token true
-r_citadel_glow_health_bar_debug false
-anim_decode_forcewritealltransforms true
-animgraph_footlock_enabled 0
-r_morphing_enabled 0
-r_smooth_morph_normals 0
-r_environment_map_roughness_range { 1 1}
-r_light_probe_volume_debug_grid_samplesize 1
-snd_steamaudio_max_occlusion_samples 32
-snd_steamaudio_num_diffuse_samples 512
-lb_ssss_samples 0
-// These all were commented out and as such need to be tested ^
+// These all were commented out and as such need to be tested 
+citadel_rp_show_dev_messages                    true
+//citadel_roster_select_hover_delay             1
+//citadel_roster_select_force_enable_priority_token true //causes a crash but does what you think it would.
+r_citadel_glow_health_bar_debug                 false
+anim_decode_forcewritealltransforms             true
+animgraph_footlock_enabled                      0
+r_morphing_enabled                              0
+r_smooth_morph_normals                          0
+r_environment_map_roughness_range               { 1 1}
+r_light_probe_volume_debug_grid_samplesize      "1"
+snd_steamaudio_max_occlusion_samples            "32"
+snd_steamaudio_num_diffuse_samples              "512"
+lb_ssss_samples                                 "0"
 r_strip_invisible_during_sceneobject_update     "true"
 sc_max_framebuffer_copies_per_layer             "0"
 r_citadel_distancefield_down_sample 6
 sc_force_single_display_list_per_layer          "true"
-r_haircull_percent 0
+r_haircull_percent                              "0"     // I assume this is for a seperate hair system than the one currently implemented. Less time spent culling is better
 sv_pvs_max_distance                             "7500"
 sc_cache_envmap_lpv_lookup                      "false"
 hairsim_force_fixed_timestep                    "false"
@@ -1049,13 +1054,17 @@ r_particle_min_timestep                         "0.0025"
 //r_dopixelvisibility                             "0"
 r_nearz                                         "20"
 r_render_hair                                   "false"
-r_hair_shadowtile 0
+r_hair_shadowtile                               "0"
 //r_particle_explicit_fetch                       "true" // I believe this improves performance but will make soul orbs a bit difficult to see
 r_particle_gpu_implicit_lds_cache               "true" // I THINK this caches particle data for updating them
 ent_joint_lines                                 "false" // These shouldn't be needed?
 ent_joint_names                                 "false"
 citadel_powerup_spawner_show_event_timer        "true"  // Curious what this does
 cl_enable_eye_occlusion                         "false"
+r_physics_particle_op_spawn_scale               "0"
+//panorama_disable_descendant_filtering           "true"    // Causes issues with the hud
+//panorama_disable_draw_fancy_quad                "true"    // Causes issues with the hud
+//panorama_disable_layer_cache                    "false"
 //r_draw_instances                                "0" //causes boxes to freak out on dx11
 //r_draw_overlays                                  "0" //causes problems with the hud
 //r_dx11_software_cmd_lists                        "0" // causes a lot of issues
@@ -1173,7 +1182,6 @@ cl_enable_eye_occlusion                         "false"
 //r_lightmap_size 4096
 //r_multiscattering 0
 //r_particle_allowprerender 1
-//r_pixelvisibility_partial false
 //r_size_cull_threshold_fade 0
 //r_smooth_morph_normals false
 //r_texture_lod_scale 0.5
@@ -1212,9 +1220,8 @@ cl_enable_eye_occlusion                         "false"
 //multigpu_skip_transfers                         "true"
 //panorama_cache_command_list_size_threshold 512
 //panorama_clear_frames_on_device_restore 0
-//panorama_comp_layer_lru_lifetime 1
+panorama_comp_layer_lru_lifetime 0
 //panorama_debugger_theme dark
-//panorama_disable_blur true
 //panorama_disable_box_shadow true
 //panorama_disable_descendant_filtering true
 //panorama_disable_descendant_filtering true
