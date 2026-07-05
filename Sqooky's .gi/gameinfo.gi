@@ -522,8 +522,8 @@ GameInfo
         GpuLightBinnerSupportViewModelCascade       "0"             // dll var, default unknown
         LightCookieAllocGranularity                 "1"             // dll var, default unknown
         LightCookieMinAllocSize                     "0"             // dll var, default unknown
-        CMTAtlasHeight                              "0"             // dll var, default unknown
-        CMTAtlasWidth                               "0"             // dll var, default unknown
+        //CMTAtlasHeight                              "0"             // dll var, default unknown this will cause issues with ginnis' wall
+        //CMTAtlasWidth                               "0"             // dll var, default unknown
         CSMCascadeResolution                        "0"             // [def: "2048"]
         CharacterDecals                             "0"             // dll var, default unknown
         CubemapFog                                  "0"             // [def: "1"]
@@ -612,7 +612,6 @@ GameInfo
     {
 
         //BindlessParticleShader                "1"  // Setting this to 1 Will make every particle the error texture. Neat!
-        Blobulator                              "1" // dll var, default unknown
         EnableMixedResolution                   "1" // dll var, default unknown
         EnableParticleShaderFeatureBranching    "1" 
         Features                                "non_homogenous_forward_layer_only"
@@ -1147,4 +1146,6 @@ GameInfo
         ShowLowAvailableVirtualMemoryMessageBox "1"
     }
 }
+
+
 
