@@ -26,29 +26,26 @@ If you see me in game say hi! My username is "I want to eat flowers!"
 I've probably put *at least* five hundred hours into working on this project. I want it to be free forever, but I'm dirt poor and if you would like to donate as a means of showing thanks I have a kofi here! https://ko-fi.com/sqooky and I will love you forever
 
 **Donors!**
-I love you all so much
-- Boot:   Gave me FIVE DOLLARS and is just a wonderful person and friend at a baseline
-- Sonny:  Gave me FIVE DOLLARS and waited through me setting up a paypal account and didn't change their mind
-- Soulx:  Gave me FIVE DOLLARS and told me about spirolactone 
-- Xeno:   Very politely waited for me to figure out how to accept donations and gave me FIVE DOLLARS
-- N8Fan:  Gave me TEN DOLLARS so I could play vampire survivors
-- Cos:    GAVE ME SEVENTY DOLLARS FOR NO FUCKING REASON I LOVE YOU SO MUCH?????????????????????????
-- Wely:   Gave me THIRTY DOLLARS IN STEAM GIFT CARD MONEY????? WOA
-- Prot4g: Gave me TWENTY DOLLARS WOA I LOVE YOU!!!
+- Boot:           Gave me FIVE DOLLARS and is just a wonderful person and friend at a baseline
+- Sonny:          Gave me FIVE DOLLARS and waited through me setting up a paypal account and didn't change their mind
+- Soulx:          Gave me FIVE DOLLARS and told me about spirolactone
+- Xeno:           Very politely waited for me to figure out how to accept donations and gave me FIVE DOLLARS
+- N8Fan:          Gave me TEN DOLLARS so I could play vampire survivors
+- Cos:            GAVE ME SEVENTY DOLLARS FOR NO FUCKING REASON I LOVE YOU SO MUCH?????????????????????????
+- Wely:           Gave me THIRTY DOLLARS IN STEAM GIFT CARD MONEY????? WOA
+- Prot4g:         Gave me TWENTY DOLLARS WOA I LOVE YOU!!!
+- catmasta:       Gave me TWO DOLLARS!!
+- a distant admirer: Gave me TEN DOLLARS and a boon!!!
+- Namea:          Gave me TEN DOLLARS in steam gift cards and was unbelivably polite. I love you so much.
+- Kevin:          Gave me TWO DOLLARS also made me trip and write this as kelvin twice. I'm such a mcginnis chud.
+- jusbeprophet:   Gave me ONE DOLLAR! Bless their heart
+- Supporter:      Gave me FIVE DOLLAR!!! many thanks to them.
+- WhoLovesDean:   Incredibly kind fellow and gave me THIRTY DOLLARS
+- john6674:       Gave me TWENTY FIVE DOLLARS that's wild. Thank you john, please take care <3
+- noelle:         Gave me FIVE DOLLAR and is nice with a cool username. Tyyyy
+- exazinho:       First person to subscribe to me on kofi. That's amazing. Huge thank you exazinho. I'm glad you saw my little doodle <3
+- Shotty:         Left an incredibly nice donation message and gave me THIRTY DOLLAR. I'm honored please take care.
 - TheLastFriendly: GAVE ME 100 DOLLARS FOR CLOTHES  I LOVE YOU SO MUCH 
-- Boot:               Gave me FIVE DOLLARS and is just a wonderful person and friend at a baseline
-- Sonny:              Gave me FIVE DOLLARS and waited through me setting up a paypal account and didn't change their mind
-- Soulx:              Gave me FIVE DOLLARS and told me about spirolactone 
-- Xeno:               Very politely waited for me to figure out how to accept donations and gave me FIVE DOLLARS
-- N8Fan:              Gave me TEN DOLLARS so I could play vampire survivors
-- Cos:                GAVE ME SEVENTY DOLLARS FOR NO FUCKING REASON I LOVE YOU SO MUCH?????????????????????????
-- Wely:               Gave me THIRTY DOLLARS IN STEAM GIFT CARD MONEY????? WOA
-- Prot4g:             Gave me TWENTY DOLLARS WOA I LOVE YOU!!!
-- catmasta:           Gave me TWO DOLLARS!!
-- a distant admirer:  Gave me TEN DOLLARS and a boon!!!
-- Kevin:              Gave me TWO DOLLARS also made me trip and write this as kelvin twice. I'm such a mcginnis chud.
-- jusbeprophet:       Gave me ONE DOLLAR! Bless their heart
-- Supporter:          Gave me FIVE DOLLAR!!! many thanks to them.
 
 
 <div>
