@@ -159,8 +159,11 @@ GameInfo
 
 		SearchPaths
         {
+
+            //Game                citadel/cvar_unlocker
             Game_Language       citadel_*LANGUAGE*
             Game                citadel/addons
+
             Mod                 citadel
             Write               citadel
             Game                citadel
@@ -518,6 +521,7 @@ GameInfo
 
     SceneSystem
     {
+        PerVertexLighting                           "0"
 
         GpuLightBinnerSupportViewModelCascade       "0"             // dll var, default unknown
         LightCookieAllocGranularity                 "1"             // dll var, default unknown
@@ -662,15 +666,17 @@ GameInfo
         // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov).
 
         // --- 3. HUD ---
+
+        citadel_distance_mouse_move_for_minimap_drawing     "1"         // this command makes drawing on the minimap more precise so you can actually doodle on it :D makes me happy [def: "15"]
         // citadel_hud_objective_health_debug_show_midboss  "true"    // This makes midboss' health bar visible whenever it's able to be rendered. I like it, you might not [def: "false"]
-         citadel_unit_status_use_v2                         "0"       // Set to 1 to enable the new health bar that allows you to  see enemy stamina. [def: "0"]
+        //citadel_unit_status_use_v2                         "1"       // Set to 1 to enable the new health bar that allows you to  see enemy stamina. [def: "0"]
         // citadel_unit_status_use_v2_for_nonplayers        "0"       // Set to 1 to enable the new health bar but for troopers, objs, and camps.     [def: "0"]
         citadel_damage_report_enable                        "1"       // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
         citadel_damage_text_batching_window_ability         "1000"    // How long to wait until batching damage text.
         citadel_hideout_ball_show_juggle_count              "1"       // Shows a fun juggle count minigame for hideout ball.              [def: "0"]
         citadel_hideout_ball_show_juggle_fx                 "1"       // Shows juggle visual FX for hideout ball minigame.                [def: "0"]
         citadel_hud_objective_health_enabled                "2"       // 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks.                           [def: "2"]
-        citadel_unit_status_use_new                         "false"       // This uses new Health Bar, to use old Health Bar change "true" to "false".    [def: "false"]
+        citadel_unit_status_use_new                         "true"       // This uses new Health Bar, to use old Health Bar change "true" to "false".    [def: "false"]
         citadel_show_chat_wheel_angle_threshold             "0"       // (degrees) Increase this to change how much you have to move your camera angle to make the Chat Wheel instantly visible while holding Ping. [def: "16"]
         //citadel_unit_status_single_bar_mode                 "true"      // This makes the v2 halth bar be one bar as opposed to multiple, which I find more easily readable [def: "false"]
 
@@ -681,7 +687,7 @@ GameInfo
 
 
         // --- 5. FPS Caps & Minimized Throttling ---
-        engine_low_latency_sleep_after_client_tick  "true" // When r_low_latency is enabled, this moves the low latency sleep on tick frames to happen after client simulation. [def: "false"]
+        engine_low_latency_sleep_after_client_tick  "false" // When r_low_latency is enabled, this moves the low latency sleep on tick frames to happen after client simulation. [def: "false"]
         panorama_max_fps                            "30"    // Menu FPS.                                                        [def: "120"]
         panorama_max_overlay_fps                    "30"    // Fps In the settings/esc menu.                                    [def: "60"]
 
@@ -689,6 +695,8 @@ GameInfo
         r_size_cull_threshold                       "0.9"   // *Culls small objects sooner based on screen size threshold (higher = more culling). [def: "0.8"]
 
         // --- 7. Camera Tweaks ---
+
+        citadel_camera_wobble_disable               "true"  // I believe this disables the camera wobble when heavy melee'd or talking walker/guardian damage. I like it
         engine_accurate_input_processing_delta_time "true"  // When true, elapsed time given to the input processing will be the time elapsed since the last input processing. This is only relevant when input is processed multiple times per frame ( i.e. multiple ticks per frame) [def: false]
         citadel_camera_use_vmdl_flatten_horizontal  "false" // From my understanding of how these commands work, they slightly smooth camera inputs. This should make the camera more responsive?   [def: "true"]
         citadel_camera_use_vmdl_flatten_vertical    "false" //                                                                                                                                      [def: "true"]
@@ -854,7 +862,7 @@ GameInfo
         r_draw_particle_children_with_parents    "0"        // I believe this handles the drawing of little visual flourish particles. [def: "-1"]
         //r_late_particle_job_sync                 "true"   // No idea                                                          [def: "false"]
         r_limit_particle_job_duration            "true"     // Seems to help with particle clutter, although I am not sure.             [def: "false"]
-        r_particle_allowprerender                "false"    // I imagine it renders particles prematurely, which we do not care for.    [def: "true"]
+        r_particle_allowprerender                "true"    // I imagine it renders particles prematurely, which we do not care for.    [def: "true"]
         r_particle_batch_collections             "true"     // Batches collections of particles, typically batch rendering is faster so this is set to true. [def: "false"]
         r_particle_max_detail_level              "1"        // The maximum detail level of particle to create.                  [def: "3"]
         r_particle_max_texture_layers            "4"        // Anything below 4 will make infernus afterburn, paige fire, and drifter's passive look very weird and blocky [def: "-1"]
@@ -891,7 +899,7 @@ GameInfo
         rtx_dynamic_blas_caching                           "true" //                                                                  [def: "true"]
         rtx_force_default_hitgroup                         "true"  //                                                                  [def: "false"]
         rtx_texture_resolution                             "64"    //                                                                  [def: "true"]
-        citadel_video_preset                               "0"     // Rendering performance level. min 0, max 3                        [def: "3"]
+        citadel_video_preset                               "9"     //                         [def: "3"]
         // sc_aggregate_indirect_draw_compaction_threshold "1"     // Need to test                                                   [def: "8"]
         sc_instanced_mesh_opaque_fade                      "false" // Fade meshes? NAH                                                 [def: "true"]
         //sc_aggregate_render_mesh_shader                    "true" // Using mesh shaders if available instead of drawcalls. Should be cheaper [def: "true"]
@@ -906,6 +914,8 @@ GameInfo
 
 
         // ================ Misc ================
+
+        citadel_distance_mouse_move_for_minimap_drawing 0.1
         cl_enable_eye_occlusion                         "false"     // [def: "true"]
         ent_joint_lines                                 "false"     // [def: "true"]        // These shouldn't be needed?
         ent_joint_names                                 "false"     // [def: "true"]        //
@@ -1021,8 +1031,32 @@ GameInfo
         //r_dopixelvisibility                       "0"     // Causes issues with boxes being invisible
         //citadel_rp_show_dev_messages              "true"  // Rich presence debug messages. Spams console with "x is doing y in the hideout"
         //citadel_roster_select_force_enable_priority_token "true" // Causes a crash but does what you think it would.
+        //r_opaque                                  "false" // Causes the map to not be rendered.
+        //r_wait_on_present                         "true"  // Seems to cause frame rate to artificially lower
+        //r_drawtracers                         0
 
                 // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.6 ------------------------------- \\
+
+// ============ 2.6.1 convars. I am unsure as to whether most of these do anything but am including them because them did seem to help ============
+citadel_outer_radius_scaler                 "0"
+r_drawtracers_firstperson                   "false"
+citadel_crosshair_clip_bullet_gap           "0"
+citadel_bullet_shot_offset_fade_time        "0"
+r_drawviewmodel                             "false"
+r_citadel_gpu_preview_denoise_passes        "0"
+r_citadel_cloak_blur_amount                 "0"
+r_drawropes                                 "false"
+viewmodel_fov                               "0"
+csm_viewmodel_farz                          "1"
+sparseshadowtree_leaf_precision_viewmodel   "1"
+csm_viewmodel_max_shadow_dist               "1"
+csm_viewmodel_max_visible_dist              "1"
+csm_viewmodel_nearz                         "512"
+debug_draw_enable                           "false"
+default_fov                                 "0"
+citadel_show_survey                         "true"
+citadel_test_ranked_summary                 "true"
+r_particle_newinput                         "true"
 
         rate
         {
@@ -1146,6 +1180,8 @@ GameInfo
         ShowLowAvailableVirtualMemoryMessageBox "1"
     }
 }
+
+
 
 
 
