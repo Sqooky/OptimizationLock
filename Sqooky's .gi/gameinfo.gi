@@ -13,7 +13,7 @@
 //         /!#%|'-_- '\%k*|
 //     o   |*@/        \_/
 //         \)&|
-// OptimizationLock v2.6 by Sqooky with help from others <3
+// OptimizationLock v2.6.2 by Sqooky with help from others <3
 
 // As much as I would love to say I did this alone, I did not. These are the amazing people who deserve as much praise as I, if not more
 //  Major thanks to all of these individuals from the bottom of my heart. They are all lovely.
@@ -635,7 +635,7 @@ GameInfo
         //      If you would like to donate as a means of showing thanks I have a kofi.     \\
         //      https://ko-fi.com/sqooky                                                    \\
 
-        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.6 -------- \\
+        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.6.2 -------- \\
         // The github is here https://github.com/Sqooky/OptimizationLock  \\
         // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
         // The gamebanana:https://gamebanana.com/mods/656341 (it's usually behind, please check the github) \\
@@ -914,8 +914,6 @@ GameInfo
 
 
         // ================ Misc ================
-
-        citadel_distance_mouse_move_for_minimap_drawing 0.1
         cl_enable_eye_occlusion                         "false"     // [def: "true"]
         ent_joint_lines                                 "false"     // [def: "true"]        // These shouldn't be needed?
         ent_joint_names                                 "false"     // [def: "true"]        //
@@ -1033,12 +1031,12 @@ GameInfo
         //citadel_roster_select_force_enable_priority_token "true" // Causes a crash but does what you think it would.
         //r_opaque                                  "false" // Causes the map to not be rendered.
         //r_wait_on_present                         "true"  // Seems to cause frame rate to artificially lower
-        //r_drawtracers                         0
+        //r_drawtracers                             "0"     // Makes lash's ground slam marker invisible. I would enable it anyway but I don't like getting fifty trillion "how do I fix this" dms
+        //citadel_outer_radius_scaler               "0"     // For some reason setting this to zero disables ping wheel input.
 
-                // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.6 ------------------------------- \\
+                // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.6.2 ------------------------------- \\
 
 // ============ 2.6.1 convars. I am unsure as to whether most of these do anything but am including them because them did seem to help ============
-citadel_outer_radius_scaler                 "0"
 r_drawtracers_firstperson                   "false"
 citadel_crosshair_clip_bullet_gap           "0"
 citadel_bullet_shot_offset_fade_time        "0"
