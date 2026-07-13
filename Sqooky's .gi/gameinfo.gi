@@ -681,9 +681,9 @@ GameInfo
         //citadel_unit_status_single_bar_mode                 "true"      // This makes the v2 halth bar be one bar as opposed to multiple, which I find more easily readable [def: "false"]
 
         // --- 4. Lighting & Shadows ---
-        lb_enable_baked_shadows                             "1" // *Disables baked shadows (game looks bright if this is on while stationary lights = 1). [def: "1"]
+        lb_enable_baked_shadows                             "0" // *Disables baked shadows (game looks bright if this is on while stationary lights = 1). [def: "1"]
         lb_enable_dynamic_lights                            "1" // *Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
-        lb_enable_stationary_lights                         "1" // *Disables stationary lights (map looks flatter but more performant).         [def: "1"]
+        lb_enable_stationary_lights                         "0" // *Disables stationary lights (map looks flatter but more performant).         [def: "1"]
 
 
         // --- 5. FPS Caps & Minimized Throttling ---
@@ -720,13 +720,13 @@ GameInfo
         r_texture_budget_threshold     "0.7" // Reduce texture memory pool size when this percentage of the budget is full. [def: "0.8"]
         r_texture_budget_update_period "0.5" // Time (in seconds) between updating texture memory budget.        [def: "0.1"]
         //r_texture_stream_mip_bias      "3"   // Worth adjusting, practically how good your textures will look.   [def: "1"]
-        r_texturefilteringquality      "5"   // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x
+        r_texturefilteringquality      "4"   // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x
 
         // --- 9. Render Distance ---
-        r_farz       "-1" // This controls the far clipping plane, ie building/player popin   [def: "-1"]
-        r_mapextents "12000" // Far clipping plane, this will make buildings pop in and out      [def: "16384"] 
+        r_farz       "9000" // This controls the far clipping plane, ie building/player popin   [def: "-1"]
+        r_mapextents "9000" // Far clipping plane, this will make buildings pop in and out      [def: "16384"] 
 
-        r_nearz      "-1"   // Opposite of r_farz. removes things closer to you. [def: "-1"]
+        r_nearz      "20"   // Opposite of r_farz. removes things closer to you. [def: "-1"]
 
         // ================ IMPORTANT ================
         thread_pool_option "-1" // If I understand correctly, this should be how threads are handled relative to the game, but there isn't a clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage may vary. [def: "-1"]
@@ -892,7 +892,7 @@ GameInfo
 
         // ================ Rendering Stuff ================
         r_citadel_gpu_culling          "true"  // The game barely uses the gpu so this is a win                    [def: "true"]
-        r_force_zprepass               "0"     // 0: Force z prepass off. 1: Force on. -1: Don't force             [def: "-1"]
+        //r_force_zprepass               "0"     // 0: Force z prepass off. 1: Force on. -1: Don't force             [def: "-1"]
         // With my understanding of how zprepasses work this should reduce cpu usage if set to zero, but that's under the assumption that valve's implementation isn't properly optimized. Please play with this. Your mileage may vary.
         r_vma_defrag_algorithm                             "0"     // Should speed up vulkan defragging, which could increase performance if you're  getting bad performance the longer a match goes on [def: "1"]
         rtx_dynamic_blas                                   "false" // Don't think that raytracing is used, but I'm making sure         [def: "true"]
@@ -960,7 +960,7 @@ GameInfo
         snd_soundmixer_version                "2"     // [def: "2"]
         snd_steamaudio_reverb_order_rendering "0"     // The amount of directional detail in the rendered audio by Steam Audio. [def: "0"]
         snd_ui_positional                     "false" // Disables positional audio to save cpu                            [def: "true"]
-        snd_steamaudio_num_threads            "6"     // Audio thread count                                               [def: "4"]
+        snd_steamaudio_num_threads            "4"     // Audio thread count                                               [def: "4"]
         // README This ^ probably depends on how good your cpu is, the better it is the more threads you can allow
 
         // ================ Csm Shadows. ================
