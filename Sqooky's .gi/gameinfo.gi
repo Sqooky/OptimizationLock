@@ -13,7 +13,7 @@
 //         /!#%|'-_- '\%k*|
 //     o   |*@/        \_/
 //         \)&|
-// OptimizationLock v2.6.2 by Sqooky with help from others <3
+// OptimizationLock v2.6.3 by Sqooky with help from others <3
 
 // As much as I would love to say I did this alone, I did not. These are the amazing people who deserve as much praise as I, if not more
 //  Major thanks to all of these individuals from the bottom of my heart. They are all lovely.
@@ -635,7 +635,7 @@ GameInfo
         //      If you would like to donate as a means of showing thanks I have a kofi.     \\
         //      https://ko-fi.com/sqooky                                                    \\
 
-        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.6.2 -------- \\
+        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.6.3 -------- \\
         // The github is here https://github.com/Sqooky/OptimizationLock  \\
         // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
         // The gamebanana:https://gamebanana.com/mods/656341 (it's usually behind, please check the github) \\
@@ -669,7 +669,7 @@ GameInfo
 
         citadel_distance_mouse_move_for_minimap_drawing     "1"         // this command makes drawing on the minimap more precise so you can actually doodle on it :D makes me happy [def: "15"]
         // citadel_hud_objective_health_debug_show_midboss  "true"    // This makes midboss' health bar visible whenever it's able to be rendered. I like it, you might not [def: "false"]
-        //citadel_unit_status_use_v2                         "1"       // Set to 1 to enable the new health bar that allows you to  see enemy stamina. [def: "0"]
+       //citadel_unit_status_use_v2                         "1"       // Set to 1 to enable the new health bar that allows you to  see enemy stamina. [def: "0"]
         // citadel_unit_status_use_v2_for_nonplayers        "0"       // Set to 1 to enable the new health bar but for troopers, objs, and camps.     [def: "0"]
         citadel_damage_report_enable                        "1"       // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
         citadel_damage_text_batching_window_ability         "1000"    // How long to wait until batching damage text.
@@ -713,8 +713,8 @@ GameInfo
         // citadel_fibonnaci_sphere_trace_los_max "160" // How big to cap the size of the sphere when checking for really large explosion/effects [def: "160"]
 
         // Uncommenting these cvars will make it so that you can look above/behind yourself. It's kinda awesome but reverses your movement input and could make some people motion sick.
-        citadel_camera_pitch_max "160"  // The maximum pitch angle allowed on the camera.                 [def: "89"]
-        citadel_camera_pitch_min "-160" // The minimum pitch angle allowed on the camera.                 [def: "-89"]
+        //citadel_camera_pitch_max "160"  // The maximum pitch angle allowed on the camera.                 [def: "89"]
+        //citadel_camera_pitch_min "-160" // The minimum pitch angle allowed on the camera.                 [def: "-89"]
 
         // --- 8. Texture Quality ---
         r_texture_budget_threshold     "0.7" // Reduce texture memory pool size when this percentage of the budget is full. [def: "0.8"]
@@ -980,6 +980,25 @@ GameInfo
         csm_res_override_3                       "1"     // All of these commands should reduce shadow quality.
         csm_viewmodel_shadows                    "false" // All of these commands should reduce shadow quality.
 
+        // ============ 2.6.1 convars. I am unsure as to whether most of these do anything but am including them because them did seem to help ============
+        r_drawtracers_firstperson                   "false"
+        citadel_crosshair_clip_bullet_gap           "0"
+        citadel_bullet_shot_offset_fade_time        "0"
+        r_drawviewmodel                             "false"
+        r_citadel_gpu_preview_denoise_passes        "0"
+        r_citadel_cloak_blur_amount                 "0"
+        r_drawropes                                 "false"
+        viewmodel_fov                               "0"
+        csm_viewmodel_farz                          "1"
+        sparseshadowtree_leaf_precision_viewmodel   "1"
+        csm_viewmodel_max_shadow_dist               "1"
+        csm_viewmodel_max_visible_dist              "1"
+        csm_viewmodel_nearz                         "512"
+        debug_draw_enable                           "false"
+        default_fov                                 "0"
+        citadel_show_survey                         "true"
+        citadel_test_ranked_summary                 "true"
+        r_particle_newinput                         "true"
 
         // =============== No Clue What These do But it's Probably Important. ===============
         //If you test these please report to me on your findings
@@ -1034,27 +1053,9 @@ GameInfo
         //r_drawtracers                             "0"     // Makes lash's ground slam marker invisible. I would enable it anyway but I don't like getting fifty trillion "how do I fix this" dms
         //citadel_outer_radius_scaler               "0"     // For some reason setting this to zero disables ping wheel input.
 
-                // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.6.2 ------------------------------- \\
+                // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.6.3 ------------------------------- \\
 
-// ============ 2.6.1 convars. I am unsure as to whether most of these do anything but am including them because them did seem to help ============
-r_drawtracers_firstperson                   "false"
-citadel_crosshair_clip_bullet_gap           "0"
-citadel_bullet_shot_offset_fade_time        "0"
-r_drawviewmodel                             "false"
-r_citadel_gpu_preview_denoise_passes        "0"
-r_citadel_cloak_blur_amount                 "0"
-r_drawropes                                 "false"
-viewmodel_fov                               "0"
-csm_viewmodel_farz                          "1"
-sparseshadowtree_leaf_precision_viewmodel   "1"
-csm_viewmodel_max_shadow_dist               "1"
-csm_viewmodel_max_visible_dist              "1"
-csm_viewmodel_nearz                         "512"
-debug_draw_enable                           "false"
-default_fov                                 "0"
-citadel_show_survey                         "true"
-citadel_test_ranked_summary                 "true"
-r_particle_newinput                         "true"
+
 
         rate
         {
@@ -1178,7 +1179,6 @@ r_particle_newinput                         "true"
         ShowLowAvailableVirtualMemoryMessageBox "1"
     }
 }
-
 
 
 
