@@ -526,8 +526,8 @@ GameInfo
         GpuLightBinnerSupportViewModelCascade       "0"             // dll var, default unknown
         LightCookieAllocGranularity                 "1"             // dll var, default unknown
         LightCookieMinAllocSize                     "0"             // dll var, default unknown
-        //CMTAtlasHeight                              "0"             // dll var, default unknown this will cause issues with ginnis' wall
-        //CMTAtlasWidth                               "0"             // dll var, default unknown
+        CMTAtlasHeight                              "0"             // dll var, default unknown this will cause issues with ginnis' wall
+        CMTAtlasWidth                               "0"             // dll var, default unknown
         CSMCascadeResolution                        "0"             // [def: "2048"]
         CharacterDecals                             "0"             // dll var, default unknown
         CubemapFog                                  "0"             // [def: "1"]
@@ -565,6 +565,16 @@ GameInfo
         TransformTextureRowCount                    "1024"          // [def: "1024"]
         TransformTextureRowCountToolsMode           "6144"          // [def: "6144"]
         VolumetricFog                               "0"             // [def: "1"]
+        SelfShadowStrength                          "0"             // dll var
+        ShadowAtlas                                 "0"             // dll var
+        ShadowDepth                                 "0"
+        ShadowDepthBuffer                           "0"
+        ShadowDepthBufferNoCmp                      "0"
+        EnableAlphaTint                             "0"
+        EnableSunlight                              "0"
+        EnableViewModelSunlight                     "0"
+        Encountered                                 "0"
+    
 
 
 
@@ -1126,10 +1136,16 @@ sparseshadowtree_enable_rendering false
 
 sparseshadowtree_enable_rendering false
 steam_inputhandler_enabled false
-subtick_buttons_enabled true
+//subtick_buttons_enabled true
 tv_enable_delta_frames false
 vis_sunlight_enable false
 volume_fog_enable_jitter false
+cl_clock_buffer_ticks 0
+cl_clockdrift_max_ticks 1
+//cl_hold_game_events_until_server_tick false
+//engine_client_tick_pad_enable           true
+//host_force_frametime_to_equal_tick_interval true
+//host_force_max_frametime_to_tick_interval true
 
 
 
@@ -1270,6 +1286,7 @@ volume_fog_enable_jitter false
         ShowLowAvailableVirtualMemoryMessageBox "1"
     }
 }
+
 
 
 
