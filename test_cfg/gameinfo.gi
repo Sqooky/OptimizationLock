@@ -793,10 +793,10 @@ GameInfo
         r_directlighting                            "false" // Set to true to have your characters not be black in the shop     [def:"true"]
         r_distancefield_enable                      "0"     // Disables/ Enables distance-field system (used by some lighting/shadowing/occlusion features). [def: "1"]
         r_light_flickering_enabled                  "0"     // Enables light flicker effects where used.                        [def: "1"]
-        r_lightmap_bicubic_filtering                "0"     // Enables bicubic filtering on lightmaps.                          [def: "1"]
+        r_lightmap_bicubic_filtering                "1"     // Enables bicubic filtering on lightmaps.                          [def: "1"]
         r_lightmap_size                             "2048"  // Maximum lightmap resolution..                                    [def: "65536"]
         r_lightmap_size_directional_irradiance      "0"     // Sets directional irradiance lightmap data size (lower = less detail) (-1 = uses value of r_lightmap_size ). [def: "-1"]
-        r_multiscattering                           "0"     // Enables multi-scattering lighting approximation.                 [def: "1"]
+        r_multiscattering                           "1"     // Enables multi-scattering lighting approximation.                 [def: "1"]
         r_rendersun                                 "0"     // Disables sun lighting.                                           [def: "1"]
         r_ssao                                      "0"     // Disables screen-space ambient occlusion.                         [def: "1"]
         r_ssao_strength                             "0"     // AO strength multiplier (0 = no AO contribution).                 [def: "1.2"]
@@ -1072,7 +1072,7 @@ GameInfo
         // --------------------------------- END OF CONFIG OptimizationLock -- ver. testing ------------------------------- \\
 
 
-        //sc_screen_size_lod_scale_override               "0.55" // Personal preference setting
+        sc_screen_size_lod_scale_override               "0.55" // Personal preference setting
         //cl_hold_game_events_until_server_tick         "false"
         //engine_client_tick_pad_enable                 "true"
         //host_force_frametime_to_equal_tick_interval   "true"
@@ -1090,7 +1090,7 @@ GameInfo
         citadel_portrait_world_renderer_off             "true" // Disables character models in shop
         cl_ragdoll_limit                                "0"
         cl_phys_enabled                                 "false" // Disables all physics. This means ragdolls just maintain the last pose and boxes don't fall over
-        r_postprocess_enable                            "false" // Disables colorcorrection and other similar effects so the game will look duller
+        //r_postprocess_enable                            "false" // Disables colorcorrection and other similar effects so the game will look duller
         animgraph_footlock_enabled                      "false"
         animgraph_slowdownonslopes_enabled              "false"
         audio_enable_spawn_mask_mix_layer               "false"
@@ -1181,7 +1181,7 @@ GameInfo
         panorama_panel_occlusion                        "false"
         panorama_reload_animations                      "10"
         panorama_render_target_cache_max_size           "16384"
-        r_citadel_disable_npr_lighting                  "true"
+        //r_citadel_disable_npr_lighting                  "true"
         //r_indirectlighting                              "false"
         r_shadowtile_waveops                            flase
 
