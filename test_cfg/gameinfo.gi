@@ -723,8 +723,8 @@ GameInfo
         // citadel_fibonnaci_sphere_trace_los_max "160" // How big to cap the size of the sphere when checking for really large explosion/effects [def: "160"]
 
         // Uncommenting these cvars will make it so that you can look above/behind yourself. It's kinda awesome but reverses your movement input and could make some people motion sick.
-        // citadel_camera_pitch_max "3600"  // The maximum pitch angle allowed on the camera.                 [def: "89"]
-        // citadel_camera_pitch_min "-3600" // The minimum pitch angle allowed on the camera.                 [def: "-89"]
+         citadel_camera_pitch_max "3600"  // The maximum pitch angle allowed on the camera.                 [def: "89"]
+         citadel_camera_pitch_min "-3600" // The minimum pitch angle allowed on the camera.                 [def: "-89"]
 
         // --- 8. Texture Quality ---
         r_texture_budget_threshold     "0.7" // Reduce texture memory pool size when this percentage of the budget is full. [def: "0.8"]
@@ -1089,7 +1089,7 @@ GameInfo
         sc_screen_size_lod_scale_override               "0.001"
         citadel_portrait_world_renderer_off             "true" // Disables character models in shop
         cl_ragdoll_limit                                "0"
-        cl_phys_enabled                                 "false" // Disables all physics. This means ragdolls just maintain the last pose and boxes don't fall over
+        //cl_phys_enabled                                 "false" // Disables all physics. This means ragdolls just maintain the last pose and boxes don't fall over
         //r_postprocess_enable                            "false" // Disables colorcorrection and other similar effects so the game will look duller
         animgraph_footlock_enabled                      "false"
         animgraph_slowdownonslopes_enabled              "false"
@@ -1177,13 +1177,13 @@ GameInfo
         citadel_minimap_local_player_width              "1"
         citadel_minimap_overlap_scan_distance           "0"
         panorama_max_text_shadow_strength               "1"
-        panorama_min_comp_layer_cache_cost              "16"
+        //panorama_min_comp_layer_cache_cost              "16"
         panorama_panel_occlusion                        "false"
-        panorama_reload_animations                      "10"
-        panorama_render_target_cache_max_size           "16384"
+        //panorama_reload_animations                      "10"
+        //panorama_render_target_cache_max_size           "16384"
         //r_citadel_disable_npr_lighting                  "true"
         //r_indirectlighting                              "false"
-        r_shadowtile_waveops                            flase
+        //r_shadowtile_waveops                            flase
 
 
 
