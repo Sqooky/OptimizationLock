@@ -114,6 +114,8 @@ Comment out ``sc_screen_size_lod_scale_override`` or increase the value.
 ``r_drawdecals`` comment it out or set it to true  
 - "Can't see blast vent wind at range"  
 ``sc_fade_distance_scale_override`` comment it out  
+- "I'm using boot's/kaiz's config and I can't read the inworld text (soul pickups, bridge buffs, statue buffs, etc)  
+comment out or increase the value of ``citadel_in_world_item_panel_dpi``
 
 # Mod Support
 Every variation of the config included in this repository has mod support added. For those who wish to remove or add it back in, remove ``Game                citadel/addons`` From the searchpaths bracket.
