@@ -13,7 +13,7 @@
 //         /!#%|'-_- '\%k*|
 //     o   |*@/        \_/
 //         \)&|
-// OptimizationLock v2.9.2 by Sqooky with help from others <3
+// OptimizationLock v2.9.3 by Sqooky with help from others <3
 
 // As much as I would love to say I did this alone, I did not. These are the amazing people who deserve as much praise as I, if not more
 //  Major thanks to all of these individuals from the bottom of my heart. They are all lovely.
@@ -670,7 +670,7 @@ GameInfo
         //      If you would like to donate as a means of showing thanks I have a kofi.     \\
         //      https://ko-fi.com/sqooky                                                    \\
 
-        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.9.1 -------- \\
+        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.9.3 -------- \\
         // The github is here https://github.com/Sqooky/OptimizationLock  \\
         // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
         // The gamebanana:https://gamebanana.com/mods/656341 (it's usually behind, please check the github) \\
@@ -707,21 +707,23 @@ GameInfo
         r_aspectratio "3.3" // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov).
 
         // --- 3. HUD ---
-        citadel_damage_report_enable                    "1"     // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
-        citadel_damage_text_batching_window_ability     "1000"  // How long to wait until batching damage text.
-        citadel_distance_mouse_move_for_minimap_drawing "1"     // this command makes drawing on the minimap more precise so you can actually doodle on it :D makes me happy [def: "15"]
-        citadel_hideout_ball_show_juggle_count          "1"     // Shows a fun juggle count minigame for hideout ball.              [def: "0"]
-        citadel_hideout_ball_show_juggle_fx             "1"     // Shows juggle visual FX for hideout ball minigame.                [def: "0"]
-        citadel_hud_objective_health_debug_show_midboss "false" // This makes midboss' health bar visible whenever it's able to be rendered. I like it, you might not [def: "false"]
-        citadel_hud_objective_health_enabled            "2"     // 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks.                           [def: "2"]
-        citadel_unit_status_old_update_rate             "15"    // How frequently health bars can update. Lowering it should improve performance    [def: "30"]
-        citadel_unit_status_single_bar_mode             "false" // This makes the v2 halth bar be one bar as opposed to multiple, which I find more easily readable [def: "false"]
-        citadel_unit_status_use_new                     "false" // This uses new Health Bar, to use old Health Bar change "true" to "false".    [def: "false"]
-        citadel_unit_status_use_v2                      "0"     // Set to 1 to enable the new health bar that allows you to  see enemy stamina. [def: "0"]
-        citadel_unit_status_use_v2_for_nonplayers       "0"     // Set to 1 to enable the new health bar but for troopers, objs, and camps.     [def: "0"]
-        v8_maximum_heap_size_mb                         "1024"  // This should double the amount of cache used by the ingame hud, so less stutter! Yay!
+        citadel_damage_report_enable                    "1"         // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
+        citadel_damage_text_batching_window_ability     "1000"      // How long to wait until batching damage text.
+        citadel_distance_mouse_move_for_minimap_drawing "1"         // this command makes drawing on the minimap more precise so you can actually doodle on it :D makes me happy [def: "15"]
+        citadel_hideout_ball_show_juggle_count          "1"         // Shows a fun juggle count minigame for hideout ball.              [def: "0"]
+        citadel_hideout_ball_show_juggle_fx             "1"         // Shows juggle visual FX for hideout ball minigame.                [def: "0"]
+        citadel_hud_objective_health_debug_show_midboss "false"     // This makes midboss' health bar visible whenever it's able to be rendered. I like it, you might not [def: "false"]
+        citadel_hud_objective_health_enabled            "2"         // 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks.                           [def: "2"]
+        citadel_unit_status_old_update_rate             "15"        // How frequently health bars can update. Lowering it should improve performance    [def: "30"]
+        citadel_unit_status_single_bar_mode             "false"     // This makes the v2 halth bar be one bar as opposed to multiple, which I find more easily readable [def: "false"]
+        citadel_unit_status_use_new                     "false"     // This uses new Health Bar, to use old Health Bar change "true" to "false".                    [def: "false"]
+        citadel_unit_status_use_v2                      "0"         // Set to 1 to enable the new health bar that allows you to  see enemy stamina.                 [def: "0"]
+        citadel_unit_status_use_v2_for_nonplayers       "0"         // Set to 1 to enable the new health bar but for troopers, objs, and camps.                     [def: "0"]
+        v8_maximum_heap_size_mb                         "1024"      // This should double the amount of cache used by the ingame hud, so less stutter! Yay!
+        panorama_comp_layer_lru_lifetime                "4"         // This should keep panorama caches loaded for longer so the game can use them more frequently.
+        panorama_render_target_cache_max_size           "134217728" // This should increase the panorama cache size by 4x
 
-        // --- 3.1 Uncomment these commands if you want to have the chat wheel not show up when pinging ---
+        // --- 3.1 Uncomment These Commands if You Want to Have The Chat Wheel Not Show Up When Pinging ---
         // citadel_show_chat_wheel_angle_threshold         "30"    // (degrees) Increase this to change how much you have to move your camera angle to make the Chat Wheel instantly visible while holding Ping. [def: "16"]
         // citadel_show_chat_wheel_time                    "15"    //
         // citadel_auto_ping_window                        "0"     //
@@ -748,6 +750,26 @@ GameInfo
         citadel_melee_shake_amplitude               "0"     // I believe this properly disables the camera shake on heavy melee                 [def: 0.55]
         engine_accurate_input_processing_delta_time "true"  // When true, elapsed time given to the input processing will be the time elapsed since the last input processing. This is only relevant when input is processed multiple times per frame ( i.e. multiple ticks per frame) [def: false]
         r_citadel_clip_sphere_min_opacity           "0"     // Removes the blur from the pinhole camera                         [def: "40"]
+
+        // --- 7. Camera Responsivity Tweaks ---
+        cam_idealdelta                          "0"
+        cam_idealdist                           "0"
+        cam_ideallag                            "0"
+        citadel_camera_dist                     "0"
+        citadel_camera_height                   "0"
+        citadel_camera_height_ceiling_distance  "0"
+        citadel_camera_listening_offset         "-1"
+        citadel_camera_pitch_default            "0"
+        citadel_camera_see_distance_max         "7000"
+        citadel_shoot_forward_offset            "0"
+        citadel_stuck_camera_trace_extra_length "0"
+        citadel_tightcamera_alternative         "1"
+        nav_edit_use_camera                     "0"
+        rpg_camera_yaw                          "0"
+
+
+
+
 
         // --- 8. Texture Quality ---
         r_texture_budget_threshold     "0.7" // Reduce texture memory pool size when this percentage of the budget is full. [def: "0.8"]
@@ -1033,6 +1055,8 @@ GameInfo
 
         // ================ Convars You Shouldn't/Can't Mess With But I Want to Maintain the Documentation ================
 
+        // citadel_camera_height_approach_speed     "0"             // This makes the camera go all black when set to zero. Cool!
+
         // r_drawdecals                             "1"             // *Render decals. If not set to true lash's slam and warden's ult indicators become quite difficult to see.                                                  [def: "1"]
         // citadel_crosshair_hit_marker_duration    "0.00001"       // Removes the hitmarker when shooting people.                      [def: "0.1"]
         // citadel_damage_text_show_effectiveness   "0"             // Shows extra “effectiveness” info in damage text (e.g., resist/weakness style feedback). As far as I can tell this is unfinished right now [def: "0"]
@@ -1116,7 +1140,7 @@ GameInfo
         // citadel_hideout_enable_testing_tools    "true"   // Unfortunately this doesn't work    [def: "false"]
 
 
-        // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.9.1 ------------------------------- \\
+        // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.9.3 ------------------------------- \\
 
         rate
         {
