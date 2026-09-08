@@ -952,7 +952,7 @@ GameInfo
         // Most of the commands here I am unsure of the effects/efficacy of. They are included for posterity.
         //r_low_latency                                     "0"      // This acts as the convar which enables low latency, hardware dependent    [def: "1"]
         //sc_force_materials_batchable                      "true"   // I would imagine this functions as the variable is named.         [def: "false"]
-        cc_captiontrace                                   "0"     // Show missing closecaptions (0 = no, 1 = devconsole, 2 = show in hud) [def: "1"]
+        cc_captiontrace                                   "0" // Show missing closecaptions (0 = no, 1 = devconsole, 2 = show in hud) [def: "1"]
         citadel_bullet_shot_offset_fade_time              "0"
         citadel_show_survey                               "true"
         citadel_test_ranked_summary                       "true"
@@ -961,37 +961,37 @@ GameInfo
         cl_interp_parallel                                "true"  // Run interpolation in parallel for entities with no children.     [def: "false"]
         cl_modifier_parallel_gather_status_effect_updates "false" // Not sure                                                         [def: "false"]
         cl_phys_assume_fixed_tick_interval                "true"  // Assume the client uses a fixed tickrate like the server (which may not always be true)                   [def: "true"]
-        csm_viewmodel_farz                                "1"
-        csm_viewmodel_max_shadow_dist                     "1"
-        csm_viewmodel_max_visible_dist                    "1"
-        csm_viewmodel_nearz                               "512"
-        debug_draw_enable                                 "false"
-        default_fov                                       "0"
-        engine_max_ticks_to_simulate                      "2"    // Max number of ticks to simulate per frame, after which simulation will start to slow down compared to real time. [def: "-1"]
-        r_async_compute_fog                               "true" // Just whether to asyncroniously render fog                        [def: "false"]
-        r_citadel_cloak_blur_amount                       "0"
+        csm_viewmodel_farz                                "1"     //
+        csm_viewmodel_max_shadow_dist                     "1"     //
+        csm_viewmodel_max_visible_dist                    "1"     //
+        csm_viewmodel_nearz                               "512"   //
+        debug_draw_enable                                 "false" //
+        default_fov                                       "0"     //
+        engine_max_ticks_to_simulate                      "2"     // Max number of ticks to simulate per frame, after which simulation will start to slow down compared to real time. [def: "-1"]
+        r_async_compute_fog                               "true"  // Just whether to asyncroniously render fog                        [def: "false"]
+        r_citadel_cloak_blur_amount                       "0"     //
         r_citadel_depth_prepass_dynamic_objects           "false" // Should be not prepassing entities that move                      [def: "true"]
         r_citadel_glow_health_bar_debug                   "false" // This seems to be a command controlling the rendering of a debug tool. Seeing as its inclusion doesn't benefit us I have disabled it [def: "true"]
-        r_citadel_gpu_preview_denoise_passes              "0"
-        r_drawropes                                       "false"
-        r_drawtracers_firstperson                         "false"
-        r_drawviewmodel                                   "false"
-        r_enable_cubemap_fog                              "false"
+        r_citadel_gpu_preview_denoise_passes              "0"     // [def: "3"]
+        r_drawropes                                       "false" // [def: "true"]
+        r_drawtracers_firstperson                         "false" // [def: "true"]
+        r_drawviewmodel                                   "false" // [def: "true"]
+        r_enable_cubemap_fog                              "false" // [def: "true"]
         r_enable_gradient_fog                             "false" // These commands just disable fog. I don't think you can disable fog via cvars (In this config I accomplish it through scenesystem), but in the event that they save us a render pass they are disabled
-        r_enable_rigid_animation                          "false"
-        r_enable_volume_fog                               "false"
+        r_enable_rigid_animation                          "false" // [def: "true"]
+        r_enable_volume_fog                               "false" // [def: "true"]
         r_hair_ao                                         "0"     // Disables hair ambient occlusion/shading pass.                    [def: "1"]
         r_max_portal_render_targets                       "2"     // Maxium number of Doorman doors to allow rendering.               [def: "0"] // This will cause visual bugs when set to 1, either set it to 2 or 0 to disable them.
         r_particle_model_new                              "false" // Jasper stated that these variables aren't used by deadlock so I'm disabling them to be safe :steam_happy:    [def: "false"]
         r_particle_model_new8                             "false" // Jasper stated that these variables aren't used by deadlock so I'm disabling them to be safe :steam_happy:    [def: "true"]
-        r_particle_newinput                               "true"
+        r_particle_newinput                               "true"  //
         r_pixelvisibility_partial                         "false" // As far as I am aware this disables the pixel visibility system which should reduce visual fidelity but saves you from drawing a ray (I THINK) [def: "true"]
         r_render_hair                                     "false" // [def: "true"]
         r_renderdoc_auto_shader_pdbs                      "false" // Automatically generate shader debug info on capture.             [def: "true"]
         r_skip_precache_validation_check                  "true"  // I believe this checks to see if things are properly cached in a debug context, which we shouldn't need   [def: "false"]
-        r_strip_invisible_during_sceneobject_update       "1"
-        sparseshadowtree_leaf_precision_viewmodel         "0"
-        viewmodel_fov                                     "0"
+        r_strip_invisible_during_sceneobject_update       "1"     // idk ngl    [def: "false"]
+        sparseshadowtree_leaf_precision_viewmodel         "0"     //            [def: "0.0005"]
+        viewmodel_fov                                     "0"     //            [def: "54"]
 
         // ================ Grass ================
         r_grass_end_fade   "0" // When to cull grass when far                                      [def: "300"]
