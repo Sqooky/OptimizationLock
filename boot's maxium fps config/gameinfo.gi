@@ -775,8 +775,8 @@ GameInfo
         // ================ Visual Clarity ================
         // r_dopixelvisibility                        "false" // Default true, enables or disables pixel visibility calculations
         // r_draw_overlays                            "false" // Removes the walker line on the ground too, do not recommend
-        citadel_per_weapon_per_surface_impact_effects "false"
-        cl_impacteffects                              "0"
+        citadel_per_weapon_per_surface_impact_effects "true"
+        cl_impacteffects                              "1"
         cl_show_splashes                              "0" // Disables splash effects (water/impact splashes).                 [def: "1"]
         fog_enable                                    "0"
         fx_drawmetalspark                             "false" // Default: true Draw metal spark effects.
@@ -855,13 +855,13 @@ GameInfo
         // cl_particle_sim_fallback_base_multiplier "5" // How aggressive the switch to fallbacks will be depending on how far over the cl_particle_sim_fallback_threshold_ms the sim time is. [def: "5"]
         cl_aggregate_particles                      "1"
         cl_particle_batch_mode                      "1"     // Has a range of 1 or 2, 2 will make celeste's auto rebound look weird and 0 will make them not batch [def: "1"]
-        cl_particle_fallback_base                   "10"    // Base for falling back to cheaper effects under load.             [def: "0"]
-        cl_particle_fallback_multiplier             "10"    // Multiplier for falling back to cheaper effects under load.       [def: "0"]
+        // cl_particle_fallback_base                   "10"    // Base for falling back to cheaper effects under load.             [def: "0"]
+        // cl_particle_fallback_multiplier             "10"    // Multiplier for falling back to cheaper effects under load.       [def: "0"]
         cl_particle_max_count                       "0"     // Maximum allowed particles. Setting it too low will cause issues. With flooding from the console.  [def: "0"]
-        cl_particle_sim_fallback_base_multiplier    "100"   // How aggressive the switch to fallbacks will be depending on how far over the cl_particle_sim_fallback_threshold_ms the sim time is.  Higher numbers are more aggressive. [def: "5"]
-        cl_particle_sim_fallback_threshold_ms       "0"     // Amount of simulation time that can elapse before new systems start falling back to cheaper versions [def: "6"]
-        particle_cluster_nodraw                     "1"     // Skips drawing particle “clusters”/grouped particle batches (performance, fewer small effects). [def: "0"]
-        particle_cluster_use_collision_hulls        "false" // REPLICATED CONVAR, MIGHT NEED TO MATCH WITH SERVER
+        // cl_particle_sim_fallback_base_multiplier    "100"   // How aggressive the switch to fallbacks will be depending on how far over the cl_particle_sim_fallback_threshold_ms the sim time is.  Higher numbers are more aggressive. [def: "5"]
+        // cl_particle_sim_fallback_threshold_ms       "0"     // Amount of simulation time that can elapse before new systems start falling back to cheaper versions [def: "6"]
+        particle_cluster_nodraw                     "0"     // Skips drawing particle “clusters”/grouped particle batches (performance, fewer small effects). [def: "0"]
+        particle_cluster_use_collision_hulls        "true" // REPLICATED CONVAR, MIGHT NEED TO MATCH WITH SERVER
         r_RainParticleDensity                       "0"     // Density of Particle Rain 0-1.                                    [def: "1"]
         r_citadel_screenspace_particles_full_res    "0"
         r_draw_particle_children_with_parents       "0"     // I believe this handles the drawing of little visual flourish particles. [def: "-1"]
@@ -871,7 +871,7 @@ GameInfo
         r_particle_cables_cast_shadows              "0"     // Disables shadow casting from cable/rope-like particle effects. [def: "1"]
         r_particle_cables_render                    "false" // default true break lash ult, might need to set back to 1
         r_particle_cables_render_meshlets           "0"
-        r_particle_max_detail_level                 "0"      // The maximum detail level of particle to create.                  [def: "3"]
+        r_particle_max_detail_level                 "1"      // The maximum detail level of particle to create.                  [def: "3"]
         r_particle_max_draw_distance                "300000" // Lower = less particle range, more FPS, dont go below this value it doesnt draw trooper hp bar,
         r_particle_max_texture_layers               "4"      // Anything below 4 will make infernus afterburn, paige fire, and drifter's passive look very weird and blocky [def: "-1"]
         r_particle_min_timestep                     "0.001"
@@ -923,7 +923,7 @@ GameInfo
         citadel_match_details_lane_stats_time     "360"
         cl_batch_entity_list_ops_during_latch     "1"     // Batch entity list adds / removes while latching interpolated variables to avoid mutex contention.    [def: "false"]
         cl_interp_parallel                        "1"     // Run interpolation in parallel for entities with no children.     [def: "false"]
-        cl_phys_enabled                           "false" // You can disable physics and might see an improvement in framerate, however a lot will be buggy.   [def: "true"]
+        cl_phys_enabled                           "true" // You can disable physics and might see an improvement in framerate, however a lot will be buggy.   [def: "true"]
         cl_phys_networked_start_sleep             "true"  // try on and off, this is probably what causing result screen to pop up when idling
         cl_phys_sleep_enable                      "1"
         cl_phys_timescale                         "1"     // [FPS IMPACT] 0=Disable physics (max FPS) | 1=Normal physics | Lower = slower physics, less CPU
@@ -1150,7 +1150,7 @@ GameInfo
 
         citadel_enable_vdata_sound_preload "true"
 
-        r_particle_allowprerender "false"
+        r_particle_allowprerender "true"
     }
 
     Memory
