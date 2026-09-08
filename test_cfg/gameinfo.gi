@@ -248,7 +248,7 @@ GameInfo
 
         // Stolen from CS2
         AllowPartialMipChainImmediateTexLoads "1"
-        UseHardwareGammaRamp                  "0" // Fullscreen gamma controlled in postprocessing
+        //UseHardwareGammaRamp                  "0" // Fullscreen gamma controlled in postprocessing
         // End of stolen from CS2
 
         GraphicsPipelineLibrary            "1"    // This seemed to discard precompiled shaders when set to 0             [def: "1"]
@@ -677,6 +677,8 @@ GameInfo
         // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
         // The gamebanana:https://gamebanana.com/mods/656341 (it's usually behind, please check the github) \\
 
+        // IF YOU ARE MODIFYING A COMMAND AND NOTHING IS CHANGING SEE BELOW
+        //this_is_an_example_comment "true"     // This command is commented out, represented by the // at the beginning of the line. Editing it will not do anything. To mess with it remove the //
 
         // ================ Preferences ================
         // --- 0. IMPORTANT ---
@@ -691,6 +693,7 @@ GameInfo
         sc_screen_size_lod_scale_override        "0.0001"  // Controls LOD scale. Lower values will make sinners and playermodels look worse "my sinner's lights are little triangles" [def: "-1"]
         steam_inputhandler_enabled               "true"  // This disables controller support when set to false. Setting to false should improve performance if you're not on a steam deck, but some people are, and I don't want an influx of "why no work with controller"  [def: "true"]
         lb_enable_dynamic_lights                 "false" // SET THIS TO TRUE TO MAKE HERO PORTRAITS HAVE COLOR IN THE SHOP AND ENDGAME *Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
+        // mm_prefer_solo_only                   "true"  // If I understand what this command does, this command controls whether or not you are matched with other solo queue players. For me this dramatically improved the solo queue performance but I am not sure if that is placebo. [def: "false"]
 
         // --- 1. Outlines ---
         citadel_boss_glow_disabled                             "1"    // Disables boss and walker glow/highlight effect.                  [def: "0]
@@ -740,7 +743,7 @@ GameInfo
         panorama_max_overlay_fps                   "30"    // Fps In the settings/esc menu.                                    [def: "60"]
 
         // --- 6. Object Culling ---
-        r_size_cull_threshold "0.9" // *Culls small objects sooner based on screen size threshold (higher = more culling). [def: "0.8"]
+        r_size_cull_threshold "2.4" // *Culls small objects sooner based on screen size threshold (higher = more culling). [def: "0.8"]
 
         // --- 7. Camera Tweaks ---
         // citadel_camera_listening_offset    "-1"   // To be completely honest I have no idea but I want to test this.  [def: "0"]
@@ -753,9 +756,7 @@ GameInfo
 
         // --- 7. Camera Responsivity Tweaks ---
         cam_idealdelta                          "0"
-        cam_idealdist                           "0"
         cam_ideallag                            "0"
-        citadel_camera_dist                     "0"
         citadel_camera_height                   "0"
         citadel_camera_height_ceiling_distance  "0"
         citadel_camera_listening_offset         "-1"
@@ -797,12 +798,12 @@ GameInfo
 
 
         // ================= UI ================
-        closecaption                "false" // I assume this does what it says on the tin                       [def: "false"]
-        panorama_allow_transitions  "false" // Turns off UI anim (shop,etc)                                     [def: "1"]
-        panorama_disable_blur       "true"  // Disables UI blur effects in the UI.                              [def: "false"]
-        panorama_disable_box_shadow "true"  // Disables UI box shadows in the UI (less GPU/UI cost).            [def: "false"]
-        panorama_panel_occlusion    "true"  // According to John Valve this is an optimization feature that stops rendering of panels underneath the top level. [def: "true"]
-        r_dashboard_render_quality  "1"     // Sets dashboard/UI render quality (lower = cheaper UI rendering). [def: "1"]
+        closecaption               "false" // I assume this does what it says on the tin                       [def: "false"]
+        panorama_allow_transitions "false" // Turns off UI anim (shop,etc)                                     [def: "1"]
+        panorama_disable_blur      "true"  // Disables UI blur effects in the UI.                              [def: "false"]
+        //panorama_disable_box_shadow "true"  // Disables UI box shadows in the UI (less GPU/UI cost).            [def: "false"]
+        panorama_panel_occlusion   "true" // According to John Valve this is an optimization feature that stops rendering of panels underneath the top level. [def: "true"]
+        r_dashboard_render_quality "1"    // Sets dashboard/UI render quality (lower = cheaper UI rendering). [def: "1"]
 
         // ================ Shadows ================
         cl_globallight_shadow_mode               "2"    // No idea. It is disabled based on the name.                       [def: "2"]
@@ -815,12 +816,12 @@ GameInfo
         lb_dynamic_shadow_resolution_base        "16"   // Base resolution for dynamic shadows (lower = cheaper).           [def: "1024"]
         lb_enable_shadow_casting                 "0"    // Disables baked shadows I believe                                 [def: "1"]
         lb_ssss_samples                          "0"    // Subsurface sample count                                          [def: "11"]
-        lb_sun_csm_size_cull_threshold_texels    "100"  // Culls tiny CSM contributions below a texel threshold (performance).              [def: "10"]
+        lb_sun_csm_size_cull_threshold_texels    "60"   // Culls tiny CSM contributions below a texel threshold (performance).              [def: "10"]
         r_citadel_gpu_culling_shadows            "1"    // Enables GPU-driven culling for shadow casters (performance).     [def: "0"]
         r_citadel_shadow_caching                 "true" // We disable all shadows so this shouldn't be needed               [def: "true"]
         r_citadel_shadow_quality                 "0"    // Deadlock/Citadel shadow quality level (0 = lowest).              [def: "2"]
         r_shadows                                "0"    // Disables dynamic shadows.                                        [def: "1"]
-        r_size_cull_threshold_shadow             "1"    // Threshold of shadow map size percentage below which objects get culled (higher = cull more to save shadow cost). [def: "0.2"]
+        r_size_cull_threshold_shadow             "2.4"  // Threshold of shadow map size percentage below which objects get culled (higher = cull more to save shadow cost). [def: "0.2"]
         sc_disable_spotlight_shadows             "1"    // Disables spotlight shadows.                                      [def: "0"]
         sparseshadowtree_disable_for_viewmodel   "1"    // Disable SST generation and runtime for viewmodel (use original CSM rendering).   [def: "1"]
         sparseshadowtree_enable_rendering        "0"    // Enables Sparse Shadow Tree, rendering static geometry into shadow cascades.      [def: "0"]
@@ -834,7 +835,7 @@ GameInfo
         r_citadel_ssao_thin_occluder_compensation   "0"     // Disables special handling for thin occluders in SSAO (cheaper).  [def: "0.5"]
         r_citadel_sun_shadow_slope_scale_depth_bias "0"     // \\                                                               [def: "3.54"]
         r_directlighting                            "false" // Set to true to have your characters not be black in the shop     [def:"true"]
-        r_distancefield_enable                      "0"     // Disables/ Enables distance-field system (used by some lighting/shadowing/occlusion features). [def: "1"]
+        r_distancefield_enable                      "1"     // Disables/ Enables distance-field system (used by some lighting/shadowing/occlusion features). [def: "1"]
         r_lightmap_bicubic_filtering                "1"     // Enables bicubic filtering on lightmaps.                          [def: "1"]
         r_lightmap_size                             "2048"  // Maximum lightmap resolution..                                    [def: "65536"]
         r_lightmap_size_directional_irradiance      "0"     // Sets directional irradiance lightmap data size (lower = less detail) (-1 = uses value of r_lightmap_size ). [def: "-1"]
@@ -844,7 +845,7 @@ GameInfo
         r_ssao_strength                             "0"     // AO strength multiplier (0 = no AO contribution).                 [def: "1.2"]
 
         // ================ Ragdolls ================
-        cl_disable_ragdolls "1" // Keep set to 0 - enabling this (disabling ragdolls) can cause issue with doorman's ultimate. [def: "0"]
+        cl_disable_ragdolls "0" // Keep set to 0 - enabling this (disabling ragdolls) can cause issue with doorman's ultimate. [def: "0"]
         cl_ragdoll_limit    "0" // Limit of how many ragdolls can be rendered at once.              [def: "-1"]
 
         // ================ Models ================
@@ -860,7 +861,6 @@ GameInfo
         mat_colorcorrection                  "1"     // Disables/ Enables color correction (game looks less vibrant when off).   [def: "1"]
         r_character_decal_resolution         "4"     // Resolution of character decal textures.                          [def: "1024"]
         r_depth_of_field                     "0"     // Disables depth of field.                                         [def: "1"]
-        r_drawdecals                         "1"     // *Render decals.                                                  [def: "1"]
         r_effects_bloom                      "0"     // Disables effects bloom.                                          [def: "1"]
         r_post_bloom                         "0"     // Disables post-process bloom.                                     [def: "1"]
         sc_clutter_enable                    "false" // Disables clutter props, improves visibility & FPS.               [def: "true"]
@@ -888,14 +888,17 @@ GameInfo
         // gpu_mem_level         "1"     // GPU Memory level.                                                        [def: "2"]
 
         // ================ Particles ================
-        // cl_particle_sim_fallback_base_multiplier "100"    // How aggressive the switch to fallbacks will be depending on how far over the cl_particle_sim_fallback_threshold_ms the sim time is.  Higher numbers are more aggressive. [def: "5"]
+        cl_particle_sim_fallback_base_multiplier "100" // How aggressive the switch to fallbacks will be depending on how far over the cl_particle_sim_fallback_threshold_ms the sim time is.  Higher numbers are more aggressive. [def: "5"]
+        cl_particle_sim_fallback_threshold_ms    "1"   // Amount of simulation time that can elapse before new systems start falling back to cheaper versions [def: "6"]
+        cl_particle_fallback_multiplier          "10"  // Multiplier for falling back to cheaper effects under load.       [def: "0"]
+        cl_particle_fallback_base                "5"   // Base for falling back to cheaper effects under load.             [def: "0"]
         // r_particle_mixed_resolution_viewstart    "16"     // I don't know if this does anything but I didn't notice anything terrible out the gate and lowering particle resolution can't hurt [def: "500"]
-        //r_particle_timescale                  "3"      // Speeds up particle simulation, thus making them end sooner, however this causes visual desyncs, most notably with big effects that last a while such as infernus ult. Please tweak this to what you are comfortable with. [def: "1"]
+        //r_particle_timescale                  "1"      // Speeds up particle simulation, thus making them end sooner, however this causes visual desyncs, most notably with big effects that last a while such as infernus ult. Please tweak this to what you are comfortable with. [def: "1"]
         cl_aggregate_particles                   "true"    // Doesn't seem to cause any issues but a benchmark proper should be conducted [def: "false"]
         cl_particle_batch_mode                   "1"       // Has a range of 1 or 2, 2 will make celeste's auto rebound look weird and 0 will make them not batch [def: "1"]
         r_RainParticleDensity                    "0"       // Density of Particle Rain 0-1.                                    [def: "1"]
         r_citadel_screenspace_particles_full_res "true"    // Render screen space particles at full resolution. This could introduce readability issues but should be fine. [def: "true"]
-        r_draw_particle_children_with_parents    "0"       // I believe this handles the drawing of little visual flourish particles. [def: "-1"]
+        r_draw_particle_children_with_parents    "1"       // I believe this handles the drawing of little visual flourish particles. [def: "-1"]
         r_limit_particle_job_duration            "true"    // Seems to help with particle clutter, although I am not sure.             [def: "false"]
         r_particle_allowprerender                "true"    // I imagine it renders particles prematurely, which we do not care for.    [def: "true"]
         r_particle_batch_collections             "true"    // Batches collections of particles, typically batch rendering is faster so this is set to true. [def: "false"]
@@ -947,47 +950,48 @@ GameInfo
 
         // ================ Misc ================
         // Most of the commands here I am unsure of the effects/efficacy of. They are included for posterity.
-        r_hair_ao                                         "0" // Disables hair ambient occlusion/shading pass.                    [def: "1"]
-        r_drawtracers_firstperson                         "false"
+        //r_low_latency                                     "0"      // This acts as the convar which enables low latency, hardware dependent    [def: "1"]
+        //sc_force_materials_batchable                      "true"   // I would imagine this functions as the variable is named.         [def: "false"]
+        cc_captiontrace                                   "0"     // Show missing closecaptions (0 = no, 1 = devconsole, 2 = show in hud) [def: "1"]
         citadel_bullet_shot_offset_fade_time              "0"
-        r_drawviewmodel                                   "false"
-        r_citadel_gpu_preview_denoise_passes              "0"
-        r_citadel_cloak_blur_amount                       "0"
-        r_drawropes                                       "false"
-        viewmodel_fov                                     "0"
+        citadel_show_survey                               "true"
+        citadel_test_ranked_summary                       "true"
+        cl_batch_entity_list_ops_during_latch             "true"  // Batch entity list adds / removes while latching interpolated variables to avoid mutex contention.        [def: "false"]
+        cl_enable_eye_occlusion                           "false" // [def: "true"]
+        cl_interp_parallel                                "true"  // Run interpolation in parallel for entities with no children.     [def: "false"]
+        cl_modifier_parallel_gather_status_effect_updates "false" // Not sure                                                         [def: "false"]
+        cl_phys_assume_fixed_tick_interval                "true"  // Assume the client uses a fixed tickrate like the server (which may not always be true)                   [def: "true"]
         csm_viewmodel_farz                                "1"
-        sparseshadowtree_leaf_precision_viewmodel         "0"
         csm_viewmodel_max_shadow_dist                     "1"
         csm_viewmodel_max_visible_dist                    "1"
         csm_viewmodel_nearz                               "512"
         debug_draw_enable                                 "false"
         default_fov                                       "0"
-        citadel_show_survey                               "true"
-        citadel_test_ranked_summary                       "true"
-        r_particle_newinput                               "true"
+        engine_max_ticks_to_simulate                      "2"    // Max number of ticks to simulate per frame, after which simulation will start to slow down compared to real time. [def: "-1"]
+        r_async_compute_fog                               "true" // Just whether to asyncroniously render fog                        [def: "false"]
+        r_citadel_cloak_blur_amount                       "0"
+        r_citadel_depth_prepass_dynamic_objects           "false" // Should be not prepassing entities that move                      [def: "true"]
+        r_citadel_glow_health_bar_debug                   "false" // This seems to be a command controlling the rendering of a debug tool. Seeing as its inclusion doesn't benefit us I have disabled it [def: "true"]
+        r_citadel_gpu_preview_denoise_passes              "0"
+        r_drawropes                                       "false"
+        r_drawtracers_firstperson                         "false"
+        r_drawviewmodel                                   "false"
+        r_enable_cubemap_fog                              "false"
         r_enable_gradient_fog                             "false" // These commands just disable fog. I don't think you can disable fog via cvars (In this config I accomplish it through scenesystem), but in the event that they save us a render pass they are disabled
         r_enable_rigid_animation                          "false"
         r_enable_volume_fog                               "false"
-        r_enable_cubemap_fog                              "false"
-        cl_enable_eye_occlusion                           "false" // [def: "true"]
-        r_render_hair                                     "false" // [def: "true"]
-        r_citadel_glow_health_bar_debug                   "false" // This seems to be a command controlling the rendering of a debug tool. Seeing as its inclusion doesn't benefit us I have disabled it [def: "true"]
-        cc_captiontrace                                   "0"     // Show missing closecaptions (0 = no, 1 = devconsole, 2 = show in hud) [def: "1"]
+        r_hair_ao                                         "0"     // Disables hair ambient occlusion/shading pass.                    [def: "1"]
+        r_max_portal_render_targets                       "2"     // Maxium number of Doorman doors to allow rendering.               [def: "0"] // This will cause visual bugs when set to 1, either set it to 2 or 0 to disable them.
         r_particle_model_new                              "false" // Jasper stated that these variables aren't used by deadlock so I'm disabling them to be safe :steam_happy:    [def: "false"]
         r_particle_model_new8                             "false" // Jasper stated that these variables aren't used by deadlock so I'm disabling them to be safe :steam_happy:    [def: "true"]
+        r_particle_newinput                               "true"
         r_pixelvisibility_partial                         "false" // As far as I am aware this disables the pixel visibility system which should reduce visual fidelity but saves you from drawing a ray (I THINK) [def: "true"]
-        r_skip_precache_validation_check                  "true"  // I believe this checks to see if things are properly cached in a debug context, which we shouldn't need   [def: "false"]
-        cl_batch_entity_list_ops_during_latch             "true"  // Batch entity list adds / removes while latching interpolated variables to avoid mutex contention.        [def: "false"]
-        cl_interp_parallel                                "true"  // Run interpolation in parallel for entities with no children.     [def: "false"]
-        cl_modifier_parallel_gather_status_effect_updates "false" // Not sure                                                         [def: "false"]
-        cl_phys_assume_fixed_tick_interval                "true"  // Assume the client uses a fixed tickrate like the server (which may not always be true)                   [def: "true"]
-        engine_max_ticks_to_simulate                      "2"     // Max number of ticks to simulate per frame, after which simulation will start to slow down compared to real time. [def: "-1"]
-        r_async_compute_fog                               "true"  // Just whether to asyncroniously render fog                        [def: "false"]
-        r_citadel_depth_prepass_dynamic_objects           "false" // Should be not prepassing entities that move                      [def: "true"]
+        r_render_hair                                     "false" // [def: "true"]
         r_renderdoc_auto_shader_pdbs                      "false" // Automatically generate shader debug info on capture.             [def: "true"]
-        r_max_portal_render_targets                       "2"     // Maxium number of Doorman doors to allow rendering.               [def: "0"] // This will cause visual bugs when set to 1, either set it to 2 or 0 to disable them.
-        //r_low_latency                                     "0"      // This acts as the convar which enables low latency, hardware dependent    [def: "1"]
-        //sc_force_materials_batchable                      "true"   // I would imagine this functions as the variable is named.         [def: "false"]
+        r_skip_precache_validation_check                  "true"  // I believe this checks to see if things are properly cached in a debug context, which we shouldn't need   [def: "false"]
+        r_strip_invisible_during_sceneobject_update       "1"
+        sparseshadowtree_leaf_precision_viewmodel         "0"
+        viewmodel_fov                                     "0"
 
         // ================ Grass ================
         r_grass_end_fade   "0" // When to cull grass when far                                      [def: "300"]
@@ -1055,10 +1059,11 @@ GameInfo
 
 
         // ================ Convars You Shouldn't/Can't Mess With But I Want to Maintain the Documentation ================
-
+        // ai_disable                               "1"             // Both of these commands disable creep animations which means that neutrals and guardians won't move [def: "0"]
+        // ai_disabled                              "1"             // [def: "0"]
+        // cam_idealdist                            "0"
+        // citadel_camera_dist                      "0"
         // citadel_camera_height_approach_speed     "0"             // This makes the camera go all black when set to zero. Cool!
-
-        // r_drawdecals                             "1"             // *Render decals. If not set to true lash's slam and warden's ult indicators become quite difficult to see.                                                  [def: "1"]
         // citadel_crosshair_hit_marker_duration    "0.00001"       // Removes the hitmarker when shooting people.                      [def: "0.1"]
         // citadel_damage_text_show_effectiveness   "0"             // Shows extra “effectiveness” info in damage text (e.g., resist/weakness style feedback). As far as I can tell this is unfinished right now [def: "0"]
         // citadel_first_person                     "true"          // Puts you in first person, messes up character rendering
@@ -1067,8 +1072,6 @@ GameInfo
         // citadel_rp_show_dev_messages             "true"          // Rich presence debug messages. Spams console with "x is doing y in the hideout"
         // citadel_weapon_spread_debug              true            // Doesn't seem to do anything.
         // cl_input_enable_raw_keyboard             "1"             // Surprisingly this can cause issues with holding keys after upgrading with alt. [def: "0"]
-        // cl_particle_fallback_base                "50"            // Base for falling back to cheaper effects under load.             [def: "0"]
-        // cl_particle_fallback_multiplier          "100"           // Multiplier for falling back to cheaper effects under load.       [def: "0"]
         // cl_particle_max_count                    "1500"          // Maximum allowed particles. Setting it too low will cause issues. With flooding from the console.  [def: "0"]
         // cl_particle_sim_fallback_threshold_ms    "0.3"           // Amount of simulation time that can elapse before new systems start falling back to cheaper versions [def: "6"]
         // cl_phys_enabled                          "false"         // You can disable physics and might see an improvement in framerate, however a lot will be buggy.   [def: "true"]
@@ -1113,10 +1116,13 @@ GameInfo
         // sc_skip_traversal                        "true"          // Disables rendering, ie the screen is black.          [def: "false"]
         // sc_throw_away_all_layers                 "true"          // Disables rendering, ie the screen is black.          [def: "false"]
         // subtick_buttons_enabled                  "true"          // Makes it so people on windows systems cannot move
+        //instant_replay                            "true"          // enables/disables the replay system. If set to false players will be in the idle animation in replays [def: "true"]
+        //music_hideout_debug_enabled               "true"          // Doesn't do anything
+        fog_enable               "false"
+        fog_enableskybox         "false" // I doubt the fog commands actually are modifiable but I am maintaining their inclusion for posterity
+        volume_fog_enable_jitter "false" // Don't think I can
 
         // --------------------------------- END OF CONFIG OptimizationLock -- ver. testing ------------------------------- \\
-
-
 
 
         ai_animgraph_lerp_movement_yaw                         "0"
@@ -1154,8 +1160,6 @@ GameInfo
         ai_debug_volumetric_event                              "0"
         ai_debug_volumetric_event_duration                     "0"
         ai_debugscriptconditions                               "0"
-        //ai_disable                                             "1"
-        //ai_disabled                                            "1"
         ai_doors_force_animation                               "0"
         ai_drop_hint                                           "0"
         ai_dump_hints                                          "0"
