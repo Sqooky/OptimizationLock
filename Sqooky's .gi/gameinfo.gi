@@ -13,7 +13,7 @@
 //         /!#%|'-_- '\%k*|
 //     o   |*@/        \_/
 //         \)&|
-// OptimizationLock v2.9.3-1 by Sqooky with help from others <3
+// OptimizationLock v2.10 by Sqooky with help from others <3
 
 // As much as I would love to say I did this alone, I did not. These are the amazing people who deserve as much praise as I, if not more
 //  Major thanks to all of these individuals from the bottom of my heart. They are all lovely.
@@ -670,7 +670,7 @@ GameInfo
         //      If you would like to donate as a means of showing thanks I have a kofi.     \\
         //      https://ko-fi.com/sqooky                                                    \\
 
-        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.9.3 -------- \\
+        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 2.10 -------- \\
         // The github is here https://github.com/Sqooky/OptimizationLock  \\
         // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
         // The gamebanana:https://gamebanana.com/mods/656341 (it's usually behind, please check the github) \\
@@ -1142,7 +1142,7 @@ GameInfo
         // citadel_hideout_enable_testing_tools    "true"   // Unfortunately this doesn't work    [def: "false"]
 
 
-        // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.9.3 ------------------------------- \\
+        // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.10 ------------------------------- \\
 
         rate
         {
