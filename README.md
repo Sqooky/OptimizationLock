@@ -22,9 +22,11 @@ To either request support or contribute findings to the project, our Discord Ser
 If you see me in game say hi! My username is "I want to eat flowers!"
 
 ### Donating
-I've probably put *at least* five hundred hours into working on this project. I want it to be free forever, but I'm dirt poor and if you would like to donate as a means of showing thanks I have a kofi here! https://ko-fi.com/sqooky and I will love you forever. You will be added to the list of donors and I will probably read your name at the end of the next yt videos I make.
+I've probably put *at least* five hundred hours into working on this project. I want it to be free forever, but I'm dirt poor and if you would like to donate as a means of showing thanks I have a kofi here! https://ko-fi.com/sqooky and I will love you forever. You will be added to the list of donors and I will probably read your name at the end of the next yt videos I make. 
+
 <a href="https://ko-fi.com/sqooky" target="_blank"><img height="90" src="https://files.gamebanana.com/img/ss/mods/6a29840754e45.jpg" alt="Buy Me a Coffee at ko-fi.com"></a> <br>
-## [List of Donors](https://github.com/Sqooky/OptimizationLock#donors)
+
+#### [List of Donors](https://github.com/Sqooky/OptimizationLock#donors)
 
 <div>
   <img src="https://github.com/Sqooky/OptimizationLock/blob/main/media/joy.png?raw=true" alt="A picture reading Sqooky's .gi A collage of performance configs with the intent of optimizing the game."/>
@@ -88,6 +90,8 @@ Comment out or increase the value of ``citadel_in_world_item_panel_dpi``
 ``r_citadel_npr_force_solid_outline`` Set this to false. 
 - "The puddle beneath neutrals, the rank display, the statues in spawn, and the spirit urn all now are rainbowy and look super weird."
 ``r_citadel_npr_force_solid_outline`` Set this command to false.
+- "Why does McGinnis' wall turn into a tombstone for a second"
+Comment out these from under SceneEffects ``CMTAtlasHeight`` ``CMTAtlasWidth``
 
 ## How do I Manually Add Convars
 
