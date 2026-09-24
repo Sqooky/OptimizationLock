@@ -90,6 +90,8 @@ Comment out or increase the value of ``citadel_in_world_item_panel_dpi``
 ``r_citadel_npr_force_solid_outline`` Set this to false. 
 - "The puddle beneath neutrals, the rank display, the statues in spawn, and the spirit urn all now are rainbowy and look super weird."
 ``r_citadel_npr_force_solid_outline`` Set this command to false.
+- "I am using Kaizuchaneru's config and my character's clothes don't move sometimes.
+``cloth_update`` set it to 1
 - "Why does McGinnis' wall turn into a tombstone for a second"
 Comment out these from under SceneEffects ``CMTAtlasHeight`` ``CMTAtlasWidth``
 

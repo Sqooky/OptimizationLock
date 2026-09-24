@@ -845,7 +845,7 @@ GameInfo
         r_ssao_strength                             "0"     // AO strength multiplier (0 = no AO contribution).                 [def: "1.2"]
 
         // ================ Ragdolls ================
-        cl_disable_ragdolls "0" // Keep set to 0 - enabling this (disabling ragdolls) can cause issue with doorman's ultimate. [def: "0"]
+        cl_disable_ragdolls "1" // Keep set to 0 - enabling this (disabling ragdolls) can cause issue with doorman's ultimate. [def: "0"]
         cl_ragdoll_limit    "0" // Limit of how many ragdolls can be rendered at once.              [def: "-1"]
 
         // ================ Models ================
@@ -1332,10 +1332,8 @@ GameInfo
         citadel_unit_status_hide_names                     "true"
         cl_clock_buffer_ticks                              "0"
         cl_clockdrift_max_ticks                            "1"
-        cl_disable_ragdolls                                "true"
         cl_globallight_freeze                              "true"
         cl_poll_network_early                              "true"
-        cl_ragdoll_limit                                   "0"
         cl_skel_constraints_enable                         "false"
         cl_skip_hierarchy_update_for_unchanged_entities    "true"
         cl_skip_update_animations                          "false"
