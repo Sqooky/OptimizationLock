@@ -92,7 +92,9 @@ Comment out ``sc_screen_size_lod_scale_override`` or increase the value.
 - "I'm using the maxfps testing config/boot's/kaiz's config and I can't read the inworld text (soul pickups, bridge buffs, statue buffs, etc)  
 Comment out or increase the value of ``citadel_in_world_item_panel_dpi``
 - When I aim down sights (right click) as rem or venator my camera moves down.
-``citadel_camera_use_vmdl_flatten_vertical`` Comment it out or set it to ``true``
+``citadel_camera_use_vmdl_flatten_vertical`` Comment it out or set it to ``true``  
+- "Rat King's camera is in the ground" (#70)  
+``citadel_camera_use_vmdl_flatten_vertical`` must be ``true`` (the default). The included configs now ship it as ``true``; if you use an older copy, set it to ``true`` or comment it out.
 - "I am using Kaizuchaneru's config and my modded skin makes Billy's Blasted look weird"
 ``r_citadel_npr_force_solid_outline`` Set this to false. 
 - "The puddle beneath neutrals, the rank display, the statues in spawn, and the spirit urn all now are rainbowy and look super weird."
