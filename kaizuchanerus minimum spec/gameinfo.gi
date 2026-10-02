@@ -570,7 +570,7 @@ r_aspectratio 2.3 // FOV: 1.33=70fov | 1.56=75fov | 1.75=80fov | 2.0=85fov | 2.1
 
 // Camera smoothing/wobble — preference only, no FPS impact:
 citadel_camera_use_vmdl_flatten_horizontal false // disable horizontal smoothing
-citadel_camera_use_vmdl_flatten_vertical false // disable vertical smoothing
+citadel_camera_use_vmdl_flatten_vertical true // disable vertical smoothing
 citadel_camera_wobble_disable true // disable camera wobble
 
 // VIEW DISTANCE & POP-IN  (trade FPS vs visible popping)
