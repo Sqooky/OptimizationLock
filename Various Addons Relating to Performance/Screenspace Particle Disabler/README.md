@@ -1,9 +1,8 @@
 ### What The Mod Does
-This mod disables all of the blur found in the ui elements which significantly (for me) reduces stutter.
+This mod disables all of the screenspace particles, which means the particles that are at the edge of the screen in certain contexts
+Low health, Blood Tribute, Shiv's bloodletting, etc
 ### Credits  
-Me (I made it)
-Bytenode (helped me make it)
-Ashleyyyy (was there when I made it)
+Laund (made it)
 
 ### Installation
 Place this file in your addons folder in Deadlock\game\citadel, just like you would any other mod.
