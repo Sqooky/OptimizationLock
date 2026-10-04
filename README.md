@@ -57,7 +57,7 @@ Solutions:
     Delete the mods: go to steamapps/common/Deadlock/game/citadel/addons and delete all its contents.
     Disable mod loading: open steamapps/common/Deadlock/game/citadel/gameinfo.gi and search for "citadel/addons". add // in front of that line (in front of Game): // Game "citadel/addons". Then make sure to start through steam, not a mod manager.
         this allows you to keep your mod folder intact
-- "Will this effect my mods?"
+- "Will this affect my mods?"
 No. Every config file included in this repo has mod support already added.
 - "How do I find a value in the config"  
 Press ctrl+f in your text editor and type in the string you want.  
@@ -68,30 +68,30 @@ To comment a line put ``//`` at the front of the line. It will make it not execu
 - "Why are my characters dark in the portraits on the end screen and shop"  
 ``lb_enable_dynamic_lights`` set it to ``true``
 - "Why are buildings popping in and out"  
-``r_farz`` or ``r_mapextents`` comment them out.  
+comment out ``r_farz`` or ``r_mapextents``.  
 - "How do I change my fov"  
 ``citadel_camera_hero_fov`` or ``r_aspectratio`` Comment this out or lower the value.  
-- "The config broke this patch"  
+- "The config broke this patch"
 The gameinfo.gi gets overwritten every major update. You need to manually replace it again.  
 - "I can't see boxes past a certain distance"  
-``r_size_cull_threshold "0.7"``
+decrease ``r_size_cull_threshold``, for example ``r_size_cull_threshold "0.7"``
 - "I can't see trooper healthbars past a certain distance"  
-Change the values ``r_size_cull_threshold`` ``sc_fade_distance_scale_override``
+Decrease ``r_size_cull_threshold`` or change ``sc_fade_distance_scale_override``
 - "Can't see the Doorman ult indicator"  
 Set ``cl_ragdoll_limit`` to `` "-1"``
-- "There's holes in victor and paige at certain angles"  
+- "There's holes in Victor and Paige at certain angles"  
 Comment out ``sc_screen_size_lod_scale_override`` or increase the value.
 - "Sinners lights are little triangles"  
 Comment out ``sc_screen_size_lod_scale_override`` or increase the value.  
-- "I'm using boot's/kaiz's config and I can't see heros in shop or in the end screen"  
+- "I'm using boot's/kaiz's config and I can't see heroes in shop or in the end screen"  
 ``citadel_portrait_world_renderer_off`` comment it out or set it to false  
-- "I'm using boot's/kaiz's config and I can't see lash's ground slam"  
+- "I'm using boot's/kaiz's config and I can't see Lash's ground slam"  
 ``r_drawdecals`` comment it out or set it to true  
 - "Can't see blast vent wind at range"  
-``sc_fade_distance_scale_override`` comment it out  
+comment out ``sc_fade_distance_scale_override``  
 - "I'm using the maxfps testing config/boot's/kaiz's config and I can't read the inworld text (soul pickups, bridge buffs, statue buffs, etc)  
 Comment out or increase the value of ``citadel_in_world_item_panel_dpi``
-- When I aim down sights (right click) as rem or venator my camera moves down.
+- When I aim down sights (right click) as Rem or Venator my camera moves down.
 ``citadel_camera_use_vmdl_flatten_vertical`` Comment it out or set it to ``true``
 - "I am using Kaizuchaneru's config and my modded skin makes Billy's Blasted look weird"
 ``r_citadel_npr_force_solid_outline`` Set this to false. 
