@@ -76,9 +76,14 @@ Solutions:
     Delete the mods: go to steamapps/common/Deadlock/game/citadel/addons and delete all its contents.
     Disable mod loading: open steamapps/common/Deadlock/game/citadel/gameinfo.gi and search for "citadel/addons". add // in front of that line (in front of Game): // Game "citadel/addons". Then make sure to start through steam, not a mod manager.
         this allows you to keep your mod folder intact
+<<<<<<< HEAD
 
 - "Will this effect my mods?"
   No. Every config file included in this repo has mod support already added.
+=======
+- "Will this affect my mods?"
+No. Every config file included in this repo has mod support already added.
+>>>>>>> 3c7e3e9c76bf2b07117f5fb20c1a104683e29223
 - "How do I find a value in the config"  
   Press ctrl+f in your text editor and type in the string you want.
 - "How do I restore a value to default"  
@@ -88,6 +93,7 @@ Solutions:
 - "Why are my characters dark in the portraits on the end screen and shop"  
   `lb_enable_dynamic_lights` set it to `true`
 - "Why are buildings popping in and out"  
+<<<<<<< HEAD
   `r_farz` or `r_mapextents` comment them out.
 - "How do I change my fov"  
   `citadel_camera_hero_fov` or `r_aspectratio` Comment this out or lower the value.
@@ -113,6 +119,33 @@ Solutions:
   Comment out or increase the value of `citadel_in_world_item_panel_dpi`
 - When I aim down sights (right click) as rem or venator my camera moves down.
   `citadel_camera_use_vmdl_flatten_vertical` Comment it out or set it to `true`
+=======
+comment out ``r_farz`` or ``r_mapextents``.  
+- "How do I change my fov"  
+``citadel_camera_hero_fov`` or ``r_aspectratio`` Comment this out or lower the value.  
+- "The config broke this patch"
+The gameinfo.gi gets overwritten every major update. You need to manually replace it again.  
+- "I can't see boxes past a certain distance"  
+decrease ``r_size_cull_threshold``, for example ``r_size_cull_threshold "0.7"``
+- "I can't see trooper healthbars past a certain distance"  
+Decrease ``r_size_cull_threshold`` or change ``sc_fade_distance_scale_override``
+- "Can't see the Doorman ult indicator"  
+Set ``cl_ragdoll_limit`` to `` "-1"``
+- "There's holes in Victor and Paige at certain angles"  
+Comment out ``sc_screen_size_lod_scale_override`` or increase the value.
+- "Sinners lights are little triangles"  
+Comment out ``sc_screen_size_lod_scale_override`` or increase the value.  
+- "I'm using boot's/kaiz's config and I can't see heroes in shop or in the end screen"  
+``citadel_portrait_world_renderer_off`` comment it out or set it to false  
+- "I'm using boot's/kaiz's config and I can't see Lash's ground slam"  
+``r_drawdecals`` comment it out or set it to true  
+- "Can't see blast vent wind at range"  
+comment out ``sc_fade_distance_scale_override``  
+- "I'm using the maxfps testing config/boot's/kaiz's config and I can't read the inworld text (soul pickups, bridge buffs, statue buffs, etc)  
+Comment out or increase the value of ``citadel_in_world_item_panel_dpi``
+- When I aim down sights (right click) as Rem or Venator my camera moves down.
+``citadel_camera_use_vmdl_flatten_vertical`` Comment it out or set it to ``true``
+>>>>>>> 3c7e3e9c76bf2b07117f5fb20c1a104683e29223
 - "I am using Kaizuchaneru's config and my modded skin makes Billy's Blasted look weird"
   `r_citadel_npr_force_solid_outline` Set this to false.
 - "The puddle beneath neutrals, the rank display, the statues in spawn, and the spirit urn all now are rainbowy and look super weird."
