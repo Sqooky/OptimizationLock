@@ -83,6 +83,28 @@
 //- odie:           Commissioned me!
 //- sixsav:         GAVE ME TWENTY DOLLAR... wonderful and I owe them
 //- salvator:       Game me FVIE DOLLAR and is lovely
+//- CHANG:
+//- Shotty:
+//- maeaissance:
+//- sae sushio:
+//- dec:
+//- onetapman:
+//- Habitus:
+//- max:
+//- bingbinginc:
+//- aeyri:
+//- Supporter:
+//- soulx:
+//- Supporter:
+//- NSH:
+//- crush:
+//- Jill:
+//- Stable:
+//- Supporter:
+//- Isabellawa:
+//- nostmau:
+//- NicanorGordon:
+//- Harry:
 
 
 
@@ -198,21 +220,21 @@ GameInfo
             Game_UILanguage "citadel_*LANGUAGE*"
 
             // These are optional low-violence paths. They will only get mounted if you're in a low-violence mode.
-            Game_UILanguage "citadel_*LANGUAGE*"
+            Game_UILanguage  "citadel_*LANGUAGE*"
             Game_LowViolence "citadel_lv"
 
-            Mod                 citadel
-            Write               citadel
-            Game                citadel/custom
-            Game                citadel/addons
-            Game                citadel
-            Game                core
+            Mod   "citadel"
+            Write "citadel"
+            Game  "citadel/custom"
+            Game  "citadel/addons"
+            Game  "citadel"
+            Game  "core"
         }
 
         LegacyUserSettingsPathID "MOD"
         UserSettingsPathID       "USRLOCAL" // this needs to be commented out in order to have citadel/cfg/video.txt usable, however if this is commented out it will force you into low violence mode (make drifter and mina purple)
-        // If it isn't commented out then you will need to edit the video.txt located at 
-        // Windows: \steam\userdata\your_steam_id\1422450\local\cfg 
+        // If it isn't commented out then you will need to edit the video.txt located at
+        // Windows: \steam\userdata\your_steam_id\1422450\local\cfg
         // Linux:  ~/.steam/steam/userdata/your_steam_id/1422450/local/
 
     }
@@ -743,11 +765,11 @@ GameInfo
         // ================ Preferences ================
         // --- 0. IMPORTANT ---
         // mm_prefer_solo_only                   "true"  // If I understand what this command does, this command controls whether or not you are matched with other solo queue players. For me this dramatically improved the solo queue performance but I am not sure if that is placebo. [def: "false"]
-        citadel_camera_use_vmdl_flatten_vertical "true" // Setting this command to false should improve responsiveness of mouse input but makes Rem, Venator, AND ESPICIALLY RAT KING's cameras move downwards when aiming down scope. Not exactly a dealbreaker but might be undesirable for some.                                                                                                                                      [def: "true"]
+        citadel_camera_use_vmdl_flatten_vertical "true"  // Setting this command to false should improve responsiveness of mouse input but makes Rem, Venator, AND ESPICIALLY RAT KING's cameras move downwards when aiming down scope. Not exactly a dealbreaker but might be undesirable for some.                                                                                                                                      [def: "true"]
         citadel_portrait_world_renderer_off      "false" // Disables character models in shop and endgame screen                                            [def: "false"]
         citadel_trooper_glow_disabled            "1"     // 1 = Disable friendly/enemy minion glow.                                                         [def: "0"]
         cl_phys_enabled                          "true"  // Disables all physics. This means ragdolls just maintain the last pose and boxes don't fall over [def: "true"]
-        lb_enable_dynamic_lights                 "true" // SET THIS TO TRUE TO MAKE HERO PORTRAITS HAVE COLOR IN THE SHOP AND ENDGAME *Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
+        lb_enable_dynamic_lights                 "true"  // SET THIS TO TRUE TO MAKE HERO PORTRAITS HAVE COLOR IN THE SHOP AND ENDGAME *Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
         r_citadel_enable_pano_world_blur         "true"  // This command disables the blur in the shop and improves the performance of the shop DRAMATICALLY however it can cause visual issues with the pause menu on nvidia systems running vulkan. Please experiment. [def: "true"]
         r_particle_explicit_fetch                "false" // [def: "false"]        // I believe this improves performance but will make soul orbs a bit difficult to see
         r_particle_max_size_cull                 "900"   // [def: "1200"] // Particle systems larger than this in every dimension skip culling to save CPU.  They will be drawn anyway. // So particle culling is handled by the CPU in deadlock, if you have GPU overhead to spare, consider lowering this value.
@@ -813,7 +835,7 @@ GameInfo
         panorama_max_overlay_fps                   "30"    // Fps In the settings/esc menu.                                    [def: "60"]
 
         // --- 6. Camera Tweaks ---
-        citadel_melee_shake_duration 0
+        citadel_melee_shake_duration "0"
         // citadel_camera_listening_offset    "-1"   // To be completely honest I have no idea but I want to test this.  [def: "0"]
         citadel_camera_soft_collision_angle         "75"    //                                                                  [def: "75"]
         citadel_camera_use_vmdl_flatten_horizontal  "false" // From my understanding of how these commands work, they slightly smooth camera inputs. This should make the camera more responsive?   [def: "true"]
@@ -1366,4 +1388,3 @@ GameInfo
         ShowLowAvailableVirtualMemoryMessageBox "1"
     }
 }
-

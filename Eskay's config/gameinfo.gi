@@ -1,3 +1,15 @@
+// OptimizationLock Eskay's Preset v1
+// This is a fork of Sqooky's config modified by eskay. You can find her here:
+// Eskay's Youtube: https://www.youtube.com/@Eskay_OW
+// Eskay's Twitch:  https://www.twitch.tv/eskay
+
+
+
+
+
+
+
+
 //      If you would like to donate as a means of showing thanks I have a kofi.     \\
 //      https://ko-fi.com/sqooky                                                    \\
 //           ...       ....
@@ -13,7 +25,6 @@
 //         /!#%|'-_- '\%k*|
 //     o   |*@/        \_/
 //         \)&|
-// OptimizationLock Maxfps Version v1.0 by Sqooky with help from others <3
 
 // As much as I would love to say I did this alone, I did not. These are the amazing people who deserve as much praise as I, if not more
 //  Major thanks to all of these individuals from the bottom of my heart. They are all lovely.
@@ -83,28 +94,6 @@
 //- odie:           Commissioned me!
 //- sixsav:         GAVE ME TWENTY DOLLAR... wonderful and I owe them
 //- salvator:       Game me FVIE DOLLAR and is lovely
-//- CHANG:
-//- Shotty:
-//- maeaissance:
-//- sae sushio:
-//- dec:
-//- onetapman:
-//- Habitus:
-//- max:
-//- bingbinginc:
-//- aeyri:
-//- Supporter:
-//- soulx:
-//- Supporter:
-//- NSH:
-//- crush:
-//- Jill:
-//- Stable:
-//- Supporter:
-//- Isabellawa:
-//- nostmau:
-//- NicanorGordon:
-//- Harry:
 
 
 
@@ -220,23 +209,20 @@ GameInfo
             Game_UILanguage "citadel_*LANGUAGE*"
 
             // These are optional low-violence paths. They will only get mounted if you're in a low-violence mode.
-            Game_UILanguage "citadel_*LANGUAGE*"
-            Game_LowViolence "citadel_lv"
+            //Game                citadel/cvar_unlocker
+            Game_Language "citadel_*LANGUAGE*"
+            Game          "citadel/addons"
 
-            Mod                 citadel
-            Write               citadel
-            Game                citadel/custom
-            Game                citadel/addons
-            Game                citadel
-            Game                core
+            Mod   "citadel"
+            Write "citadel"
+            Game  "citadel"
+            Mod   "core"
+            Write "core"
+            Game  "core"
         }
 
+        UserSettingsPathID       "USRLOCAL"
         LegacyUserSettingsPathID "MOD"
-        UserSettingsPathID       "USRLOCAL" // this needs to be commented out in order to have citadel/cfg/video.txt usable, however if this is commented out it will force you into low violence mode (make drifter and mina purple)
-        // If it isn't commented out then you will need to edit the video.txt located at 
-        // Windows: \steam\userdata\your_steam_id\1422450\local\cfg 
-        // Linux:  ~/.steam/steam/userdata/your_steam_id/1422450/local/
-
     }
 
     MaterialSystem2
@@ -754,7 +740,7 @@ GameInfo
         //      If you would like to donate as a means of showing thanks I have a kofi.     \\
         //      https://ko-fi.com/sqooky                                                    \\
 
-        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. Maxfps 1.1 -------- \\
+        // -------- Performance Config! Eskay's.gi / OptimizationLock -- v1 -------- \\
         // The github is here https://github.com/Sqooky/OptimizationLock  \\
         // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
         // The gamebanana:https://gamebanana.com/mods/656341 (it's usually behind, please check the github) \\
@@ -764,28 +750,17 @@ GameInfo
 
         // ================ Preferences ================
         // --- 0. IMPORTANT ---
-        // mm_prefer_solo_only                   "true"  // If I understand what this command does, this command controls whether or not you are matched with other solo queue players. For me this dramatically improved the solo queue performance but I am not sure if that is placebo. [def: "false"]
-        citadel_camera_use_vmdl_flatten_vertical "true" // This command should improve responsiveness of mouse input makes rem and venator's cameras move slightly downwards when aiming down scope. Not exactly a dealbreaker but might be undesirable for some.                                                                                                                                      [def: "true"]
-        citadel_portrait_world_renderer_off      "false" // Disables character models in shop and endgame screen                                            [def: "false"]
-        citadel_trooper_glow_disabled            "1"     // 1 = Disable friendly/enemy minion glow.                                                         [def: "0"]
-        cl_phys_enabled                          "false"  // Disables all physics. This means ragdolls just maintain the last pose and boxes don't fall over [def: "true"]
-        lb_enable_dynamic_lights                 "false" // SET THIS TO TRUE TO MAKE HERO PORTRAITS HAVE COLOR IN THE SHOP AND ENDGAME *Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
-        r_citadel_enable_pano_world_blur         "true"  // This command disables the blur in the shop and improves the performance of the shop DRAMATICALLY however it can cause visual issues with the pause menu on nvidia systems running vulkan. Please experiment. [def: "true"]
-        r_particle_explicit_fetch                "false" // [def: "false"]        // I believe this improves performance but will make soul orbs a bit difficult to see
-        r_particle_max_size_cull                 "900"   // [def: "1200"] // Particle systems larger than this in every dimension skip culling to save CPU.  They will be drawn anyway. // So particle culling is handled by the CPU in deadlock, if you have GPU overhead to spare, consider lowering this value.
-        r_size_cull_threshold                    "1.4"   // This will control the distance trooper healthbars and boxes stop rendering *Culls small objects sooner based on screen size threshold (higher = more culling). [def: "0.8"]
-        sc_screen_size_lod_scale_override        "0.00001"  // Controls LOD scale. Lower values will make sinners and playermodels look worse "my sinner's lights are little triangles" [def: "-1"]
-        steam_inputhandler_enabled               "true"  // This disables controller support when set to false. Setting to false should improve performance if you're not on a steam deck, but some people are, and I don't want an influx of "why no work with controller"  [def: "true"]
-        citadel_in_world_item_panel_dpi        "0"    // This controls the quality of the text above soul pickups, so boxes, golden statues, and soul orbs. Higher values mean better quality, lower means worse. [def: "2"]
-
-        // --- Render Distance ---
-        r_farz       "7000" // This controls the far clipping plane, ie building/player popin   [def: "-1"]
-        r_mapextents "7000" // Far clipping plane, this will make buildings pop in and out      [def: "16384"]
-
-        // --- Health Bar Minor Tweaks ---
-        // citadel_unit_status_delta_decay_delay   "0"   // The delay between doing damage and havin the yellow damage indicator appear [def: "0.5"]
-        // citadel_unit_status_delta_decay_rate    "10"  // How quickly the yellow "you're dealing damage" indicator fades [def: "0.5"]
-        // citadel_unit_status_recent_damage_time  "inf" // how long to show someone's numerical health value when you shoot them. Inf means infinite, but will cause the healthbar to jiggle/shake forever. [def: "0.25"]
+        citadel_portrait_world_renderer_off "false" // Disables character models in shop and endgame screen                                            [def: "false"]
+        citadel_trooper_glow_disabled       "1"     // 1 = Disable friendly/enemy minion glow.                                                         [def: "0"]
+        cl_phys_enabled                     "true"  // Disables all physics. This means ragdolls just maintain the last pose and boxes don't fall over [def: "true"]
+        lb_enable_dynamic_lights            "true"  // SET THIS TO TRUE TO MAKE HERO PORTRAITS HAVE COLOR IN THE SHOP AND ENDGAME *Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
+        r_citadel_enable_pano_world_blur    "true"  // This command disables the blur in the shop and improves the performance of the shop DRAMATICALLY however it can cause visual issues with the pause menu on nvidia systems running vulkan. Please experiment. [def: "true"]
+        r_particle_explicit_fetch           "false" // [def: "false"]        // I believe this improves performance but will make soul orbs a bit difficult to see
+        r_particle_max_size_cull            "900"   // [def: "1200"] // Particle systems larger than this in every dimension skip culling to save CPU.  They will be drawn anyway. // So particle culling is handled by the CPU in deadlock, if you have GPU overhead to spare, consider lowering this value.
+        r_size_cull_threshold               "0.9"   // This will control the distance trooper healthbars and boxes stop rendering *Culls small objects sooner based on screen size threshold (higher = more culling). [def: "0.8"]
+        sc_screen_size_lod_scale_override   "0.55"  // Controls LOD scale. Lower values will make sinners and playermodels look worse "my sinner's lights are little triangles" [def: "-1"]
+        steam_inputhandler_enabled          "true"  // This disables controller support when set to false. Setting to false should improve performance if you're not on a steam deck, but some people are, and I don't want an influx of "why no work with controller"  [def: "true"]
+        // citadel_in_world_item_panel_dpi        "0"    // This controls the quality of the text above soul pickups, so boxes, golden statues, and soul orbs. Higher values mean better quality, lower means worse. [def: "2"]
 
 
 
@@ -798,10 +773,9 @@ GameInfo
 
         // --- 2. Field of View ---
         // r_aspectratio changes the zoom of the camera which in turn doesn't make the punch zoom in as jarring, but the command is not as intuitive to set precisely
-        r_aspectratio "2.9" // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov).
+        r_aspectratio "2.2" // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov).
 
         // --- 3. HUD ---
-        citadel_unit_status_stamina_low_pips            "7"     // below this threshold stamina is permanantly visble [def: "3"]
         citadel_damage_report_enable                    "1"     // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
         citadel_damage_text_batching_window_ability     "1000"  // How long to wait until batching damage text.
         citadel_distance_mouse_move_for_minimap_drawing "1"     // this command makes drawing on the minimap more precise so you can actually doodle on it :D makes me happy [def: "15"]
@@ -835,7 +809,7 @@ GameInfo
         panorama_max_overlay_fps                   "30"    // Fps In the settings/esc menu.                                    [def: "60"]
 
         // --- 6. Camera Tweaks ---
-        citadel_melee_shake_duration 0
+        citadel_melee_shake_duration "0"
         // citadel_camera_listening_offset    "-1"   // To be completely honest I have no idea but I want to test this.  [def: "0"]
         citadel_camera_soft_collision_angle         "75"    //                                                                  [def: "75"]
         citadel_camera_use_vmdl_flatten_horizontal  "false" // From my understanding of how these commands work, they slightly smooth camera inputs. This should make the camera more responsive?   [def: "true"]
@@ -920,7 +894,7 @@ GameInfo
         r_ssao_strength                             "0"    // AO strength multiplier (0 = no AO contribution).                 [def: "1.2"]
 
         // ================ Ragdolls ================
-        cl_disable_ragdolls "1" // Keep set to 0 - enabling this (disabling ragdolls) can cause issue with doorman's ultimate. [def: "0"]
+        cl_disable_ragdolls "0" // Keep set to 0 - enabling this (disabling ragdolls) can cause issue with doorman's ultimate. [def: "0"]
         cl_ragdoll_limit    "0" // Limit of how many ragdolls can be rendered at once.              [def: "-1"]
 
         // ================ Models ================
@@ -929,7 +903,7 @@ GameInfo
         enable_boneflex                 "0"    // Disables bone flexes (procedural facial/mesh flex drivers).      [def: "1"]
         ik_fabrik_align_chain           "1"    // Disables FABRIK chain alignment in IK (cheaper).                 [def: "1"]
         ik_final_fixup_enable           "0"    // Disables final IK fixup pass (cheaper animations, potentially less accurate). [def: "1"]
-        props_break_max_pieces_perframe "0"    // Makes boxes and troopers break into a single piece               [def: "16"]  // Say thank you to jasper that this can be set to 0 now <3
+        props_break_max_pieces_perframe "1"    // Makes boxes and troopers break into a single piece               [def: "16"]  // In future updates hopefully this being set to 0 will cause them to not leave any pieces behind
 
         // ================ Visual Clarity ================
         cl_show_splashes                     "0"     // Disables splash effects (water/impact splashes).                 [def: "1"]
@@ -990,14 +964,14 @@ GameInfo
         //mat_viewportscale                       "0.01"  // Scale down the main viewport I belive this gets overwritten by video.txt [def: "1"]
         //sc_instanced_mesh_lod_bias              "0.001"  // Bias for LOD selection of instanced mesh                         [def: "1.25"]
         //sc_instanced_mesh_lod_bias_shadow       "0.001"  // Bias for LOD selection of instanced meshes in shadowmaps         [def: "1.75"]
-        phys_cull_internal_mesh_contacts        "true"  // Don't simulate the bones inside of a mesh.                       [def: "false"]
-        sc_aggregate_bvh_threshold              "256"   // Not fully sure what these do. Don't change them.                 [def: "128"]
-        sc_allow_dithered_lod                   "false" // Pretty sure this just turns dithering off for when switching between lods. Isn't a big deal [def: "true"]
-        sc_fade_distance_scale_override         "100"   // Distance objects fade in and out                                 [def: "-1"]
-        sc_instanced_mesh_motion_vectors        "0"     // Set 1 if you use motion blur                                     [def: "1"]
-        sc_instanced_mesh_size_cull_bias_shadow "10"    // Bias for size culling instanced meshes in shadowmaps             [def: "2"]
-        sc_layer_batch_threshold                "256"   // Not fully sure what these do. Don't change them.                 [default: "128"]
-        sc_layer_batch_threshold_fullsort       "120"   // Not sure what these do. Jasper said to leave them at default     [def: "80"]
+        phys_cull_internal_mesh_contacts "true"  // Don't simulate the bones inside of a mesh.                       [def: "false"]
+        sc_aggregate_bvh_threshold       "256"   // Not fully sure what these do. Don't change them.                 [def: "128"]
+        sc_allow_dithered_lod            "false" // Pretty sure this just turns dithering off for when switching between lods. Isn't a big deal [def: "true"]
+        //sc_fade_distance_scale_override         "100"   // Distance objects fade in and out                                 [def: "-1"]
+        sc_instanced_mesh_motion_vectors        "0"   // Set 1 if you use motion blur                                     [def: "1"]
+        sc_instanced_mesh_size_cull_bias_shadow "10"  // Bias for size culling instanced meshes in shadowmaps             [def: "2"]
+        sc_layer_batch_threshold                "256" // Not fully sure what these do. Don't change them.                 [default: "128"]
+        sc_layer_batch_threshold_fullsort       "120" // Not sure what these do. Jasper said to leave them at default     [def: "80"]
 
         // ================ Rendering Stuff ================
         // sc_aggregate_indirect_draw_compaction_threshold "1"     // Need to test                                                   [def: "8"]
@@ -1191,10 +1165,7 @@ GameInfo
         fog_enable               "false"
         fog_enableskybox         "false" // I doubt the fog commands actually are modifiable but I am maintaining their inclusion for posterity
         volume_fog_enable_jitter "false" // Don't think I can
-
-        // --------------------------------- END OF CONFIG OptimizationLock -- ver. Maxfps 1.1 ------------------------------- \\
-
-        citadel_unit_status_stamina_low_pips          "7"
+        // --------------------------------- END OF CONFIG OptimizationLock -- v1 ------------------------------- \\
 
 
         // ====================== SV commands we cannot change but I want to maintain documentation for ======================
@@ -1220,47 +1191,6 @@ GameInfo
 
 
 
-
-        // ====================== Testing Version Commands ======================
-        audio_enable_spawn_mask_mix_layer          "false"
-        citadel_enable_new_ping_particle           "true"
-        citadel_fibonnaci_sphere_trace_los_max     "80"
-        citadel_minimap_overlap_scan_distance      "0"
-        citadel_orb_debug_draw_state               "1"
-        citadel_player_outline_enemies             "false"
-        citadel_portrait_unit_ag2_enable           "false"
-        citadel_unit_status_hide_names             "true"
-        con_enable                                 "true"
-        debug_draw_enable                          "false"
-        enable_boneflex                            "false"
-        engine_low_latency_sleep_after_client_tick "true"
-        fog_enable                                 "false"
-        fog_enableskybox                           "false"
-        lb_allow_time_sliced_shadow_map_rendering  "false"
-        lb_bin_slices                              "0"
-        lb_enable_fog_mixed_shadows                "false"
-        lb_enable_newsum                           "false"
-        lb_enable_shadow_casting                   "false"
-        lb_enable_sunlight                         "false"
-        lb_mixed_shadows                           "false"
-        lb_precomputed_shadowmap_enable            "false"
-        r_citadel_fsr_enable_mip_bias              "false"
-        r_enable_cubemap_fog                       "false"
-        r_enable_gradient_fog                      "false"
-        r_enable_rigid_animation                   "false"
-        r_enable_volume_fog                        "false"
-        r_morphing_enabled                         "false"
-        sc_aggregate_gpu_vis_culling               "true"
-        sc_hdr_enabled_override                    "0"
-        sc_instanced_mesh_enable                   "false"
-        sc_instanced_mesh_gpu_density_culling      "false"
-        snd_boxverb_simd                           "false"
-        snd_enable_subgraph_corenull_passthrough   "false"
-        sparseshadowtree_disable_add_layers        "false"
-        steam_inputhandler_enabled                 "false"
-        tv_enable_delta_frames                     "false"
-        vis_sunlight_enable                        "false"
-        volume_fog_enable_jitter                   "false"
 
 
 
@@ -1432,4 +1362,3 @@ GameInfo
         ShowLowAvailableVirtualMemoryMessageBox "1"
     }
 }
-

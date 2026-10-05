@@ -5,11 +5,11 @@
 ### [Инструкции на български тук](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_bulgarian.md)
 ### [Istruzioni in italiano qui](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_italian.md)
 
-## Corps principal
-Pour demander de l'aide ou partager vos trouvailles avec le projet, notre serveur Discord est disponible [ici](https://discord.gg/EF3Jq57jQv).  
+## Présentation
+Pour demander de l'aide ou filer vos trouvailles au projet, le Discord est [ici](https://discord.gg/EF3Jq57jQv).
 
 ### Faire un don
-J'ai sans doute consacré *au moins* 500 heures à ce projet. Je veux qu'il reste gratuit pour toujours, mais je suis fauché : si vous souhaitez faire un don en guise de remerciement, voici mon Ko-fi ! https://ko-fi.com/sqooky (Je vous aimerai pour toujours)
+J'ai sans doute passé *au moins* 500 heures là-dessus. Je veux que ça reste gratuit, mais je suis fauchée. Si vous voulez donner pour dire merci, mon Ko-fi est là : https://ko-fi.com/sqooky (je vous aimerai pour toujours)
 
 **Donateurs !**
 Je vous aime tous tellement
@@ -19,111 +19,111 @@ Je vous aime tous tellement
 - Sonny
 
 <div>
-  <img src="https://github.com/Sqooky/OptimizationLock/blob/main/media/joy.png?raw=true" alt="Une image intitulée Sqooky's .gi — Un collage de configurations de performance visant à optimiser le jeu."/>
+  <img src="https://github.com/Sqooky/OptimizationLock/blob/main/media/joy.png?raw=true" alt="Une image intitulée Sqooky's .gi — un collage de configurations de performance visant à optimiser le jeu."/>
 </div>
 
 # Instructions de base
-Pour installer la configuration de performance, remplacez le fichier `gameinfo.gi` situé dans ``steamapps/common/deadlock/game/citadel`` par celui téléchargé depuis ce dépôt. **Un tutoriel vidéo** d'installation est disponible [ici](https://youtu.be/TbjLbQVN2kE).
+Pour installer la config, remplacez le `gameinfo.gi` dans `steamapps/common/deadlock/game/citadel` par celui de ce dépôt. **Le tuto vidéo** est [ici](https://youtu.be/TbjLbQVN2kE).
 
 # Tableau
-Voici la liste de chaque configuration disponible dans ce dépôt.
+Liste des configs du dépôt.
 
 | Fichier de configuration | Objectif | Captures d'écran |
 |---|---|---|
-| [Configuration de Sqooky / OptimizationLock par défaut](https://github.com/Sqooky/OptimizationLock/blob/main/Sqooky's%20.gi/gameinfo.gi) | Orientée vers la performance sans sacrifier l'apparence du jeu. Recommandée pour la plupart des utilisateurs. | Captures disponibles [ici](https://github.com/Sqooky/OptimizationLock/tree/main/Sqooky's%20.gi) |
-| [Test_Cfg](https://github.com/Sqooky/OptimizationLock/blob/main/test_cfg/gameinfo.gi) | La configuration de Sqooky en branche de test. Peut causer de légers problèmes mais devrait offrir de meilleures performances. | Aucune capture. |
-| [Maximum FPS par Boot](https://github.com/Sqooky/OptimizationLock/blob/main/boot's%20maxium%20fps%20config/gameinfo.gi) | Fortement orientée vers la performance ; c'est actuellement la configuration qui offre le meilleur FPS parmi toutes celles testées. | Captures disponibles [ici](https://github.com/Sqooky/OptimizationLock/tree/main/boot's%20maxium%20fps%20config) |
-| [Spec minimum par Kaizuchaneru](https://github.com/Sqooky/OptimizationLock/blob/main/kaizuchanerus%20minimum%20spec/gameinfo.gi) | Cette configuration priorise les FPS avant tout et réduit énormément la qualité graphique. Recommandée pour les PC peu puissants. | Captures disponibles [ici](https://github.com/Sqooky/OptimizationLock/tree/main/kaizuchanerus%20minimum%20spec) |
-| [gameinfo.gi de Piggy](https://github.com/Sqooky/OptimizationLock/tree/main/piggy's%20config) | Actuellement obsolète, mais disponible pour ceux qui souhaitent utiliser sa configuration. | |
-| [Convars.txt](https://github.com/Sqooky/OptimizationLock/blob/main/convars.txt) | Toutes les convars présentes dans le code du jeu. Pas vraiment une configuration, mais plutôt une référence. | |
-| [Base_convars.txt](https://github.com/Sqooky/OptimizationLock/blob/main/base_convars.txt) | Toutes les convars utilisées par défaut dans OptimizationLock, si vous souhaitez les ajouter manuellement. | |
+| [Config de Sqooky / OptimizationLock par défaut](https://github.com/Sqooky/OptimizationLock/blob/main/Sqooky's%20.gi/gameinfo.gi) | Orientée perf, sans rendre le jeu moche. C'est celle que je conseillerais à la plupart des gens. | Captures [ici](https://github.com/Sqooky/OptimizationLock/tree/main/Sqooky's%20.gi) |
+| [Config max FPS de Sqooky](https://github.com/Sqooky/OptimizationLock/blob/main/test_cfg/gameinfo.gi) | Ma config max FPS. Encore en chantier, donc pas vraiment documentée, mais c'est la meilleure FPS globale que je connaisse. | Pas de captures. |
+| [Max FPS de Boot](https://github.com/Sqooky/OptimizationLock/blob/main/boot's%20maxium%20fps%20config/gameinfo.gi) | De bonnes FPS, mais en pratique abandonnée : Boot n'a pas pu la maintenir depuis un moment. | Captures [ici](https://github.com/Sqooky/OptimizationLock/tree/main/boot's%20maxium%20fps%20config) |
+| [Config minimale de Kaizuchaneru](https://github.com/Sqooky/OptimizationLock/blob/main/kaizuchanerus%20minimum%20spec/gameinfo.gi) | Les FPS d'abord, le reste après. La qualité graphique tombe fort. Pour les PC à la ramasse. | Captures [ici](https://github.com/Sqooky/OptimizationLock/tree/main/kaizuchanerus%20minimum%20spec) |
+| [gameinfo.gi de Piggy](https://github.com/Sqooky/OptimizationLock/tree/main/piggy's%20config%20(comparatively%20outdated)) | Dépassée, mais elle est là si vous voulez la sienne. | |
+| [Convars.txt](https://github.com/Sqooky/OptimizationLock/blob/main/convars.txt) | Toutes les convars du code du jeu. Pas une config, une référence. | |
+| [Base_convars.txt](https://github.com/Sqooky/OptimizationLock/blob/main/base_convars.txt) | Les convars par défaut d'OptimizationLock, si vous voulez les coller à la main. | |
 
-Pour ajouter des convars manuellement, ouvrez `gameinfo.gi`, faites Ctrl+F sur ``convars`` et collez les commandes après le ``{``.  
-Lorsque vous ajoutez des convars manuellement, veillez à ne pas supprimer `` rate {`` ni à placer de commandes dans ses accolades, car cela empêcherait le jeu de se lancer.
+Pour ajouter des convars à la main, ouvrez `gameinfo.gi`, Ctrl+F sur `convars`, et collez après le `{`.
+Ne supprimez pas `rate {`, et ne mettez rien dans son bloc. Sinon le jeu ne se lance pas.
 ```
 Convars {
-//vos convars commencent sur cette ligne-
+// vos convars commencent sur cette ligne-
 
 
 // et se terminent sur celle-ci.
 rate {
 ```
 
-# « LA MAP EST BIZARRE ET SOMBRE APRÈS L'INSTALLATION DE LA CONFIGURATION »
-Réduisez les paramètres d'ombres en jeu à Moyen ou Bas.
+# « LA MAP EST BIZARRE ET SOMBRE APRÈS L'INSTALLATION DE LA CONFIG »
+Baissez les ombres en jeu, Moyen ou Bas.
 
 # FAQ
-- « Comment trouver une valeur dans la configuration ? »  
-Faites Ctrl+F dans votre éditeur de texte et tapez la chaîne recherchée.  
-- « Comment rétablir une valeur par défaut ? »  
-Commentez-la.  
-- « Que signifie "commenter" ? »  
-Commenter une ligne consiste à mettre ``//`` au début de celle-ci. Elle ne sera alors plus exécutée par la configuration.  
-- « Pourquoi mes personnages sont-ils sombres dans les portraits de fin de partie et dans la boutique ? »  
-``lb_enable_dynamic_lights`` : mettez-le à ``true``.
-- « Pourquoi les bâtiments apparaissent et disparaissent-ils ? »  
-``r_farz`` ou ``r_mapextents`` : commentez-les.  
-- « Comment changer mon FOV ? »  
-``citadel_camera_hero_fov`` ou ``r_aspectratio`` : commentez ou réduisez la valeur.  
-- « La configuration est cassée depuis ce patch. »  
-Le fichier `gameinfo.gi` est écrasé à chaque mise à jour majeure. Vous devez le remplacer à nouveau manuellement.  
-- « Je ne vois pas les caisses au-delà d'une certaine distance. »  
-``r_size_cull_threshold "0.7"``
-- « Je ne vois pas les barres de vie des soldats à distance. »  
-Modifiez les valeurs ``r_size_cull_threshold`` et ``sc_fade_distance_scale_override``.
-- « Je ne vois pas l'indicateur de l'ultime de Doorman. »  
-Mettez ``cl_ragdoll_limit`` à `` "-1"``.
-- « Il y a des trous dans Victor et Paige sous certains angles. »  
-Commentez ``sc_screen_size_lod_scale_override`` ou augmentez la valeur.
-- « Les lumières de Sinner's Sacrifice sont de petits triangles. »  
-Commentez ``sc_screen_size_lod_scale_override`` ou augmentez la valeur.  
-- « Avec la configuration de Boot/Kaiz, je ne vois pas les héros dans la boutique ni en fin de partie. »  
-``citadel_portrait_world_renderer_off`` : commentez ou mettez à ``false``.  
-- « Avec la configuration de Boot/Kaiz, je ne vois pas le slam au sol de Lash. »  
-``r_drawdecals`` : commentez ou mettez à ``true``.  
-- « Je ne vois pas le vent des blast vents à distance. »  
-``sc_fade_distance_scale_override`` : commentez-le.  
+- « Comment je trouve une valeur dans la config ? »
+Ctrl+F dans l'éditeur, et vous tapez la chaîne.
+- « Comment je remets une valeur par défaut ? »
+Vous la commentez.
+- « Commenter, ça veut dire quoi ? »
+Vous mettez `//` au début de la ligne. La config l'ignore.
+- « Pourquoi mes persos sont sombres dans les portraits de fin de partie et dans la boutique ? »
+`lb_enable_dynamic_lights`, mettez-le à `true`.
+- « Pourquoi les bâtiments pop ? »
+Commentez `r_farz` ou `r_mapextents`.
+- « Comment je change mon FOV ? »
+`citadel_camera_hero_fov` ou `r_aspectratio`. Commentez, ou baissez la valeur.
+- « La config est cassée depuis ce patch. »
+`gameinfo.gi` est écrasé à chaque grosse maj. Faut le remplacer à la main.
+- « Je ne vois pas les caisses passé une certaine distance. »
+Baissez `r_size_cull_threshold`, par exemple `r_size_cull_threshold "0.7"`.
+- « Je ne vois pas les barres de vie des troopers à distance. »
+Baissez `r_size_cull_threshold`, ou changez `sc_fade_distance_scale_override`.
+- « Je ne vois pas l'indicateur de l'ult de Doorman. »
+`cl_ragdoll_limit` à `"-1"`.
+- « Victor et Paige ont des trous sous certains angles. »
+Commentez `sc_screen_size_lod_scale_override`, ou montez la valeur.
+- « Les lumières de Sinner sont des petits triangles. »
+Commentez `sc_screen_size_lod_scale_override`, ou montez la valeur.
+- « Config de Boot ou de Kaiz : je ne vois pas les héros dans la boutique ni à l'écran de fin. »
+`citadel_portrait_world_renderer_off`, commentez ou mettez à `false`.
+- « Config de Boot ou de Kaiz : je ne vois pas le slam au sol de Lash. »
+`r_drawdecals`, commentez ou mettez à `true`.
+- « Je ne vois pas le souffle des Blast Vents à distance. »
+Commentez `sc_fade_distance_scale_override`.
 
 # Support des mods
-Toutes les variantes de la configuration incluses dans ce dépôt prennent en charge les mods. Pour désactiver ou réactiver cette prise en charge, supprimez ou ajoutez ``Game                citadel/addons`` dans le bloc searchpaths.
+Toutes les configs du dépôt gèrent déjà les mods. Pour l'enlever ou le remettre, retirez ou rajoutez `Game                citadel/addons` dans le bloc searchpaths.
 
 # Crédits
-Autant que j'aimerais dire que j'ai fait ça seul, ce n'est pas le cas. Voici les personnes formidables qui méritent autant de reconnaissance que moi, sinon plus.  
-Un grand merci à chacun d'entre eux, du fond du cœur. Ils sont tous formidables.  
-- Sqooky : Je suis la développeuse et mainteneuse principal de ce projet, mais sans tous les autres ici, il ne serait pas maintenu à ce niveau.  
-- JasperP : Mon héros personnel. (Développeur de Valve qui m'a contacté suite à mon travail sur le projet.)  
-- Boot : A fourni les cvars CSM, avec une amélioration notable des performances.  
-- Brullee : A supprimé les fausses cvars et les commandes redondantes, ajouté cvarlist.md et reformaté la configuration.  
-- Kaizuchaneru : Sans être directement impliqué dans le développement, a testé la plupart des cvars.  
-- Tamara Mochaccina : A apporté le correctif de la lunette de Vindicta et celui du brouillard.  
-- RoseyLemonz : A supprimé les cvars en double.
+J'aimerais bien dire que j'ai fait ça seule. C'est pas le cas. Ces personnes méritent autant de remerciements que moi, sinon plus.
+Un énorme merci, du fond du cœur. Ils sont tous adorables.
+- Sqooky : je suis la dev et la mainteneuse principale, mais sans les autres le projet ne tiendrait pas à ce point.
+- JasperP : mon héros. (Dev Valve, il m'a contactée à cause de mon boulot sur le projet.)
+- Boot : a filé les cvars CSM. Gros gain de perf.
+- Brullee : a viré les fausses cvars et les commandes en double, ajouté cvarlist.md, reformaté la config.
+- Kaizuchaneru : pas dans le dev en direct, mais a testé presque toutes les cvars.
+- Tamara Mochaccina : le fix de la lunette de Vindicta, et celui du brouillard.
+- RoseyLemonz : a viré les cvars en double.
 
 ## Donateurs
-Merci infiniment. Le simple fait que vous considériez mon travail comme méritant un don est incroyable. Je vous aime tous.  
-- Boot : M'a donné 5$ et est tout simplement une personne merveilleuse et un ami formidable.
-- Sonny : M'a donné 5$ et a patiemment attendu que je configure un compte PayPal, sans changer d'avis.
-- Soulx : M'a donné 5$ et m'a parlé de la spironolactone.
-- Xeno : A très poliment attendu que je comprenne comment accepter les dons, et s'est montré très courtois tout du long.
+Merci. Vraiment. Que vous trouviez ça digne d'un don, c'est déjà énorme. Je vous aime.
+- Boot : 5 $, et juste une personne géniale. Un ami, point.
+- Sonny : 5 $, et a attendu que je me débrouille avec PayPal sans se défiler.
+- Soulx : 5 $, et m'a parlé de la spironolactone.
+- Xeno : a attendu très poliment que je pige comment prendre les dons, et m'a donné 5 $.
 
 ## Traducteurs
-- Egyptianscale : Traduit en russe
-- Tamara Mochaccina et Heathen : Traduit en espagnol
-- Linaa et anartoast : Traduit en portugais
-- Macchiako : Traduit en bulgare
-- Cyvoid : Traduit en italien
-- Vi : Traduit en français
-- ZHTodd223 : Traduit en chinois
-- Sasha11711 : Traduit en ukrainien !
+- Egyptianscale : russe
+- Tamara Mochaccina et Heathen : espagnol
+- Linaa et anartoast : portugais
+- Macchiako : bulgare
+- Cyvoid : italien
+- Vi : français
+- ZHTodd223 : chinois
+- Sasha11711 : ukrainien
 
-## Misc
-- Artemon121 : A créé le débloqueur de cvars Citadel, ce qui a aidé Abdalla à récupérer des cvars et à les tester en jeu.
-- Dacooder : A apporté un correctif, copié la configuration, l'a distribuée sous son propre nom, puis, quand je lui ai demandé pourquoi il avait retiré les crédits alors qu'il m'appelait auparavant « le cerveau du projet », m'a traité de harceleur et a réalisé deux vidéos et un Google Doc pour me dénoncer. Honnêtement, ça a refait ma journée.
-- Kin : A réalisé une quantité folle de benchmarks sans qu'on le lui demande.
-- Kunet : A créé un outil de mise en forme pour la syntaxe gameinfo ! C'est pour ça que tout est correctement indenté ! C'est GÉNIAL.
-- Maihdenless : A lancé l'OptimizationLock original et son Discord.
-- Piggy : M'a permis de dupliquer sa configuration.
+## Divers
+- Artemon121 : a fait l'outil qui révèle les cvars cachées de Citadel. Abdalla a pu les chopper et les tester en jeu grâce à ça.
+- Dacooder : un fix, puis il a copié la config, l'a filée sous son nom, et quand je lui ai demandé pourquoi il avait retiré les crédits alors qu'il m'appelait « le cerveau du projet », il m'a traitée de harceleuse. Deux vidéos et un Google Doc pour me dénoncer. Honnêtement, ça m'a fait ma journée.
+- Kin : une quantité folle de benchmarks, sans qu'on lui demande.
+- Kunet : un formateur pour la syntaxe gameinfo. C'est pour ça que l'indentation est propre. C'est énorme.
+- Maihdenless : a lancé l'OptimizationLock d'origine, et le Discord.
+- Piggy : m'a laissée reprendre sa config ici.
 
-## Personnes formidables rencontrées grâce à ce projet que je veux remercier malgré tout
+## Gens formidables croisés grâce au projet, que je veux remercier quand même
 - 6Daves
 - Achira
 - Anartoast
@@ -137,9 +137,9 @@ Merci infiniment. Le simple fait que vous considériez mon travail comme mérita
 - Masteroms
 - PeachCebo
 - Tamara Mochaccina
-- Et vous : merci d'utiliser ce projet et d'égayer ma journée <3. Prenez soin de vous.
+- Et vous. Merci de l'utiliser, ça me fait ma journée <3. Prenez soin de vous.
 
-## Merveilleuses personnes qui m'ont fourni des captures d'écran <33333
+## Gens formidables qui m'ont filé des captures <33333
 - Abooo
 - Dirtkiller23/Aricole
 - Thai
@@ -147,8 +147,8 @@ Merci infiniment. Le simple fait que vous considériez mon travail comme mérita
 - Lina 🜏
 
 # Annonce très importante
-Dans un patch publié il y a quelque temps, une modification de `citadel_main_english.txt` indiquait : « Impossible d'entrer en matchmaking si un membre du groupe a modifié des ConVars dans Gameinfo.gi ou utilise le mode Outils. » Pour l'instant, cette restriction n'est pas pleinement appliquée.
+Dans un patch d'il y a un moment, `citadel_main_english.txt` disait : « Impossible d'entrer en matchmaking si un membre du groupe a modifié des ConVars dans Gameinfo.gi ou lance le mode Outils. » Pour l'instant, c'est pas vraiment en place.
 
-Cela dit, il est possible que Valve la mette correctement en œuvre à l'avenir, limitant ainsi l'utilisation des convars en jeu. D'ici là (et très probablement même après), je continuerai à travailler sur ce projet.
+Valve peut encore l'activer pour de bon, et bloquer les convars en jeu. D'ici là, et très probablement après aussi, je continue le projet.
 
-En attendant, n'hésitez pas à écrire [un message sur le forum](https://forums.playdeadlock.com/) pour dire « hé, j'ai peur de ne plus pouvoir jouer à ~60+ FPS si les cvars sont correctement désactivées », car c'est le moyen le plus direct de faire remonter votre avis aux développeurs.
+En attendant, un [message sur le forum](https://forums.playdeadlock.com/) du genre « héééé j'ai peur de plus pouvoir jouer à ~+60 FPS si les cvars sautent », c'est le chemin le plus direct vers les devs.
