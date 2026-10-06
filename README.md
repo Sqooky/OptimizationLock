@@ -72,21 +72,33 @@ Here is a list of each config provided in this repository.
 
 # FAQ
 
-If you get an error message like FATAL ERROR: ... <something>.xml that means a old/outdated/broken mod is responsible.
-
-Solutions:
-
-    Delete the mods: go to steamapps/common/Deadlock/game/citadel/addons and delete all its contents.
-    Disable mod loading: open steamapps/common/Deadlock/game/citadel/gameinfo.gi and search for "citadel/addons". add // in front of that line (in front of Game): // Game "citadel/addons". Then make sure to start through steam, not a mod manager.
-        this allows you to keep your mod folder intact
-<<<<<<< HEAD
-
 - "Will this effect my mods?"
   No. Every config file included in this repo has mod support already added.
-=======
-- "Will this affect my mods?"
+`gameinfo.gi` is a configuration file for Source games, which the game loads on startup. It contains blocks of configs in the form `<name> "<value>"`, split into multiple categories/sections by `{}`.
+
+## My game doesn't open with the config! Something is broken! (disabling mods)
+
+If you get an error message like `FATAL ERROR: ... <something>.xml` that means a old/outdated/broken mod is responsible.
+
+Solutions:
+- Delete the mods: go to `steamapps/common/Deadlock/game/citadel/addons` and delete all its contents.
+- Disable mod loading: open `steamapps/common/Deadlock/game/citadel/gameinfo.gi` and search for `"citadel/addons"`. add `//` in front of that line (in front of `Game`): `// Game "citadel/addons"`. Then make sure to start through steam, not a mod manager.
+  - this allows you to keep your mod folder intact
+
+## Editing gameinfo.gi
+
+When editing gameinfo.gi you should only do the following 2 things, to be safe:
+- Change the value of a config, for example `panorama_max_fps "30"` to `panorama_max_fps "60"`
+- Add and remove `//` from lines **only** if its followed by a config like `panorama_max_fps "30"`
+  - Do not remove `//` from lines which contain a sentence or note
+  - Do not remove `//` from behind a config
+
+If you follow these rules you can still cause issues, but at least those issues will be related to the configs you changed, not the game failing to read the file.
+
+## gameinfo.gi is getting reset
+
+This is very likely caused by starting through Deadlock Mod Manager, which checks your gameinfo.gi for some pretty basic things and replaces it if that check fails. Its recommended you manage mods manually, you basically just place the mod files in `steamapps/common/Deadlock/game/citadel/addons` after extracting them from the zip/7z, and make sure `Game "citadel/addons"` does *not* have a `//` before it.- "Will this affect my mods?"
 No. Every config file included in this repo has mod support already added.
->>>>>>> 3c7e3e9c76bf2b07117f5fb20c1a104683e29223
 - "How do I find a value in the config"  
   Press ctrl+f in your text editor and type in the string you want.
 - "How do I restore a value to default"  
