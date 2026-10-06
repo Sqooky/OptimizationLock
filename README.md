@@ -32,6 +32,9 @@ Translated by [ZHTodd223](https://github.com/ZHTodd223)
 
 Translated by [Sasha11711](https://gamebanana.com/members/4167224)
 
+### [🇭🇺Instrukciók magyarul itt](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_hungarian.md)
+
+
 ## Main body
 
 To either request support or contribute findings to the project, our Discord Server can be found [here](https://discord.gg/EF3Jq57jQv).
