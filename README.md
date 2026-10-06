@@ -108,7 +108,6 @@ No. Every config file included in this repo has mod support already added.
 - "Why are my characters dark in the portraits on the end screen and shop"  
   `lb_enable_dynamic_lights` set it to `true`
 - "Why are buildings popping in and out"  
-<<<<<<< HEAD
   `r_farz` or `r_mapextents` comment them out.
 - "How do I change my fov"  
   `citadel_camera_hero_fov` or `r_aspectratio` Comment this out or lower the value.
@@ -160,7 +159,6 @@ comment out ``sc_fade_distance_scale_override``
 Comment out or increase the value of ``citadel_in_world_item_panel_dpi``
 - When I aim down sights (right click) as Rem or Venator my camera moves down.
 ``citadel_camera_use_vmdl_flatten_vertical`` Comment it out or set it to ``true``
->>>>>>> 3c7e3e9c76bf2b07117f5fb20c1a104683e29223
 - "I am using Kaizuchaneru's config and my modded skin makes Billy's Blasted look weird"
   `r_citadel_npr_force_solid_outline` Set this to false.
 - "The puddle beneath neutrals, the rank display, the statues in spawn, and the spirit urn all now are rainbowy and look super weird."
