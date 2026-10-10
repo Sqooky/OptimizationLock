@@ -861,7 +861,7 @@ GameInfo
         // --- 8. Texture Quality ---
         r_texture_budget_threshold     "0.7" // Reduce texture memory pool size when this percentage of the budget is full. [def: "0.8"]
         r_texture_budget_update_period "0.5" // Time (in seconds) between updating texture memory budget.        [def: "0.1"]
-        r_texture_stream_mip_bias      "3"   // Worth adjusting, practically how good your textures will look.   [def: "1"]
+        r_texture_stream_mip_bias      "3"   // Worth adjusting, practically how good your textures will look. If sinners lights are not closing properly lower the value  [def: "1"]
         r_texturefilteringquality      "0"   // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x
 
         // ================ IMPORTANT ================
@@ -993,7 +993,7 @@ GameInfo
         phys_cull_internal_mesh_contacts        "true"  // Don't simulate the bones inside of a mesh.                       [def: "false"]
         sc_aggregate_bvh_threshold              "256"   // Not fully sure what these do. Don't change them.                 [def: "128"]
         sc_allow_dithered_lod                   "false" // Pretty sure this just turns dithering off for when switching between lods. Isn't a big deal [def: "true"]
-        sc_fade_distance_scale_override         "100"   // Distance objects fade in and out                                 [def: "-1"]
+        sc_fade_distance_scale_override         "100"   // Distance objects fade in and out, affects vents                  [def: "-1"]
         sc_instanced_mesh_motion_vectors        "0"     // Set 1 if you use motion blur                                     [def: "1"]
         sc_instanced_mesh_size_cull_bias_shadow "10"    // Bias for size culling instanced meshes in shadowmaps             [def: "2"]
         sc_layer_batch_threshold                "256"   // Not fully sure what these do. Don't change them.                 [default: "128"]
