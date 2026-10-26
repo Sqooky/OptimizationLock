@@ -199,10 +199,12 @@ As much as I would love to say I did this alone, I did not. These are the amazin
 - JasperP: My personal hero. (Valve dev who reached out to me due to my work on the project.)
 - Boot: Provided the csm cvars which had a notable performance improvement.
 - Brullee: Removed fake cvars, redundant commands, added cvarlist.md, and reformatted config.
-- Kaizuchaneru: While not directly invovled in the deveopment, they tested most cvars.
+- Kaizuchaneru: Very nice person, helped a lot with testing cvars, made the bat auto updater. 
 - Tamara Mochaccina: Contributed vindicta scope fix and the fog fix.
 - RoseyLemonz: Removed duplicate cvars
 - Laund: Very very helpful, super duper nice, and helped me with making stuff to improve the workflow. Made the "clutter be gone" mod that is included in this.
+- Neb: Made the auto updater script
+- Bonclide: Updated the autoupdater. 
 
 ## Donors
 
@@ -290,6 +292,20 @@ As much as I would love to say I did this alone, I did not. These are the amazin
 - nostmau:
 - NicanorGordon:
 - Harry:
+- Virus:
+- seiko:
+- CHANG:
+- PublicKip:
+- kUnato:
+- Alden Haight:
+- CenturionJac:
+- Emma:
+- Unsainted:
+- 4br4h4m:
+- Paige <3:
+- maeaissance:
+- tavanuka:
+- lem1nty:
 
 ## Translators
 

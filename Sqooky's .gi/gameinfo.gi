@@ -13,7 +13,7 @@
 //         /!#%|'-_- '\%k*|
 //     o   |*@/        \_/
 //         \)&|
-// OptimizationLock Ver. 3.6.1 by Sqooky with help from others <3
+// OptimizationLock Ver. 3.7 by Sqooky with help from others <3
 
 // Launch Options
 // Pleas experiemnt with -dx11 or -vulkan
@@ -109,7 +109,20 @@
 //- nostmau:
 //- NicanorGordon:
 //- Harry:
-
+//- Virus:
+//- seiko:
+//- CHANG:
+//- PublicKip:
+//- kUnato:
+//- Alden Haight:
+//- CenturionJac:
+//- Emma:
+//- Unsainted:
+//- 4br4h4m:
+//- Paige <3:
+//- maeaissance:
+//- tavanuka:
+//- lem1nty:
 
 
 // Translators
@@ -121,6 +134,7 @@
 //- Vi:         Translated to French
 //- ZHTodd223:  Translated to Chinese
 //- Sasha11711: Translated to Ukrainian!
+//- Corpse2mor: Translated to Turkish!
 
 // Misc
 //- Artemon121:     Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game.
@@ -287,32 +301,32 @@ GameInfo
 
     RenderSystem
     {
-        GraphicsPipelineLibrary            "1"    // This seemed to discard precompiled shaders when set to 0             [def: "1"]
-        IndexBufferPoolSizeMB              "128"  // Not fully sure, in cs2 this is 64        [def: "32"]
-        LowLatency                         "1"    //      [def: "1"]
-        MinStreamingPoolSizeMB             "2048" // In CS2 this is 500, not sure why      [def: "1024"]
-        MinStreamingPoolSizeMBTools        "2048" //      [def: "2048"]
-        SwapChainSampleableDepth           "1"    //      [def: "1"]
-        Use32BitDepthBuffer                "0"    //      [def: "0"]
-        Use32BitDepthBufferWithoutStencil  "0"    //      [def: "0"]
-        UseReverseDepth                    "1"    // Also not fully sure.                     [def: "1"]
-        VulkanAdditionalShaderCache        "vulkan_shader_cache.foz"
-        VulkanDefrag                       "1"   //      [def: "1"]
-        VulkanMutableSwapchain             "1"   //      [def: "1"]
-        VulkanOnlyTestProbability          "0"   // Jasper said that "[when set to 1] this makes users have a 1% chance of using Vulkan" [def: "0"]
-        VulkanOnly_Linux                   "1"   //      [def: "1"]
-        VulkanRequireDescriptorIndexing    "1"   // Setting this command to zero causes my wayland compositor to crash upon launching the game. I would imagine don't fiddle with it      [def: "1"]
-        VulkanRequireSubgroupWaveOpSupport "1"   //      [def: "1"]
-        VulkanStagingPMBSizeLimitMB        "768" // Jasper (my beloved) said to not mess withthis
-        VulkanSteamAppShaderCache          "1"   //      [def: "1"]
-        VulkanSteamDownloadedShaderCache   "1"   //      [def: "1"]
-        VulkanSteamShaderCache             "1"   //      [def: "1"]
-
+        GraphicsPipelineLibrary            "1"                       // This seemed to discard precompiled shaders when set to 0             [def: "1"]
+        IndexBufferPoolSizeMB              "128"                     // Not fully sure, in cs2 this is 64        [def: "32"]
+        LowLatency                         "1"                       //      [def: "1"]
+        MinStreamingPoolSizeMB             "500"                     // In CS2 this is 500, not sure why      [def: "1024"]
+        MinStreamingPoolSizeMBTools        "2048"                    //      [def: "2048"]
+        SwapChainSampleableDepth           "1"                       //      [def: "1"]
+        Use32BitDepthBuffer                "0"                       //      [def: "0"]
+        Use32BitDepthBufferWithoutStencil  "0"                       //      [def: "0"]
+        UseReverseDepth                    "1"                       // Also not fully sure.                     [def: "1"]
+        VulkanAdditionalShaderCache        "vulkan_shader_cache.foz" //
+        VulkanDefrag                       "1"                       //      [def: "1"]
+        VulkanMutableSwapchain             "1"                       //      [def: "1"]
+        VulkanOnlyTestProbability          "0"                       // Jasper said that "[when set to 1] this makes users have a 1% chance of using Vulkan" [def: "0"]
+        VulkanOnly_Linux                   "1"                       //      [def: "1"]
+        VulkanRequireDescriptorIndexing    "1"                       // Setting this command to zero causes my wayland compositor to crash upon launching the game. I would imagine don't fiddle with it      [def: "1"]
+        VulkanRequireSubgroupWaveOpSupport "1"                       //      [def: "1"]
+        VulkanStagingPMBSizeLimitMB        "768"                     // Jasper (my beloved) said to not mess withthis
+        VulkanSteamAppShaderCache          "1"                       //      [def: "1"]
+        VulkanSteamDownloadedShaderCache   "1"                       //      [def: "1"]
+        VulkanSteamShaderCache             "1"                       //      [def: "1"]
 
 
         MaxPreloadTextureResolution           "0" // this stems from the dll so you can assume that there is no default value.
         AllowPartialMipChainImmediateTexLoads "1"
-
+        ExecuteQueuedCommandBuffers           "0"
+        VulkanRequireSM6                      "false"
 
     }
 
@@ -654,33 +668,16 @@ GameInfo
         VolumetricFog                               "0"          // [def: "1"]
 
         //================= A String in SceneSystem.dll =================
-        //CMTAtlasHeight                      "0"     // dll var, default unknown this will cause issues with ginnis' wall
-        //CMTAtlasWidth                       "0"     // dll var, default unknown
-        CharacterDecals                       "0"     // dll var, default unknown
-        FogCachedShadowTileMaxFilterRadius    "0"     // dll var, default unknown
-        DisableShadowFullSort                 "1"     // dll var, default unknown
-        EnableAlphaTint                       "0"     // dll var, default unknown
-        EnableSunlight                        "0"     // dll var, default unknown
-        EnableViewModelSunlight               "0"     // dll var, default unknown
-        GpuLightBinnerSupportViewModelCascade "0"     // dll var, default unknown
-        HairShading                           "false" // dll var, default unknown
-        GpuLightBinnerBinEnvMaps              "1"     // dll var, default unknown
-        GpuLightBinnerBinLPVs                 "0"     // dll var, default unknown
-        LightCookieAllocGranularity           "1"     // dll var, default unknown
-        LightCookieMinAllocSize               "0"     // dll var, default unknown
-        SupportsInstancedFade                 "0"     // dll var, default unknown
-        ParticleBufferSize                    "512"   // dll var, default unknown
-        PerVertexLighting                     "0"     // dll var, default unknown
-        PointLightShadowsEnabled              "0"     // dll var, default unknown
-        PointLightShadowsEnabled              "0"     // dll var, default unknown
-        PunctualContactShadows                "0"     // dll var, default unknown
-        SelfShadowStrength                    "0"     // dll var, default unknown
-        ShadowAtlas                           "0"     // dll var, default unknown
-        ShadowDepth                           "0"     // dll var, default unknown
-        ShadowDepthBuffer                     "0"     // dll var, default unknown
-        ShadowDepthBufferNoCmp                "0"     // dll var, default unknown
-        ShadowmapMaxFilterRadius              "0"     // dll var, default unknown
-        SparseShadowTrees                     "0"     // dll var, default unknown
+        FogCachedShadowTileMaxFilterRadius "0"     // dllvar [def: "3"]
+        GpuLightBinnerBinLPVs              "false" // dllvar [def: "true"]
+        HairShading                        "false" // dllvar [def: "false"]
+        LightCookieAllocGranularity        "1"     // dllvar [def: "8"]
+        LightCookieMinAllocSize            "0"     // dllvar [def: "16"]
+        ParticleBufferSize                 "2048"  // dllvar [def: "65536"]
+        PunctualContactShadows             "0"     // dllvar [def: "false"]
+        ShadowmapMaxFilterRadius           "0"     // dllvar [def: "32"]
+        ShadowmapMaxFilterRadius           "8"     // dllvar [def: "32"]
+        SparseShadowTrees                  "0"     // dllvar [def: "0"]
 
 
 
@@ -741,11 +738,22 @@ GameInfo
 
         //================= In Particles.dll =================
         EnableMixedResolution         "1" // dll var, default unknown
-        MPropertyFlattenIntoParentRow "1"
-        ParticleTraceOffsetOnlyHit    "1"
-        ParticlesFoggedByDefault      "0"
-        PerVertexLighting             "0"
-        PostSimulate                  "0"
+        BindlessParticleShader        "1" //
+        Budget_ActualTraces           "1" //
+        Budget_RenderUS               "1" //
+        Budget_SimulationUS           "1" //
+        Budget_InterectionTests       "1" //
+        MPropertyFlattenIntoParentRow "1" //
+        ParticleTraceOffsetOnlyHit    "1" //
+        ParticlesFoggedByDefault      "0" //
+        PerVertexLighting             "0" //
+        PostSimulate                  "0" //
+        GameSupportsLegacyShaders     "1" //
+        GPUParticles                  "1" //
+        MixedResolution
+        {
+            Slices "16"
+        }
     }
 
     Physics
@@ -759,7 +767,7 @@ GameInfo
         //      If you would like to donate as a means of showing thanks I have a kofi.     \\
         //      https://ko-fi.com/sqooky                                                    \\
 
-        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 3.6.1 -------- \\
+        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 3.7 -------- \\
         // The github is here https://github.com/Sqooky/OptimizationLock  \\
         // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
         // The gamebanana:https://gamebanana.com/mods/656341 (it's usually behind, please check the github) \\
@@ -769,20 +777,21 @@ GameInfo
 
         // ================ Preferences ================
         // --- 0. IMPORTANT ---
-        // mm_prefer_solo_only                   "true"  // If I understand what this command does, this command controls whether or not you are matched with other solo queue players. For me this dramatically improved the solo queue performance but I am not sure if that is placebo. [def: "false"]
         // citadel_in_world_item_panel_dpi        "0"    // This controls the quality of the text above soul pickups, so boxes, golden statues, and soul orbs. Higher values mean better quality, lower means worse. [def: "2"]
-        citadel_camera_use_vmdl_flatten_vertical      "true"  // Setting this command to false should improve responsiveness of mouse input but makes Rem, Venator, AND ESPICIALLY RAT KING's cameras move downwards when aiming down scope. Not exactly a dealbreaker but might be undesirable for some.                                                                                                                                      [def: "true"]
-        citadel_per_weapon_per_surface_impact_effects "false" // Reduces the visuals for bullet tracers. This will disable the radius of yamato right click. [def: "true"]
-        citadel_portrait_world_renderer_off           "false" // Disables character models in shop and endgame screen                                            [def: "false"]
-        citadel_trooper_glow_disabled                 "1"     // 1 = Disable friendly/enemy minion glow.                                                         [def: "0"]
-        cl_phys_enabled                               "true"  // Disables all physics. This means ragdolls just maintain the last pose and boxes don't fall over [def: "true"]
-        lb_enable_dynamic_lights                      "true"  // SET THIS TO TRUE TO MAKE HERO PORTRAITS HAVE COLOR IN THE SHOP AND ENDGAME *Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
-        r_citadel_enable_pano_world_blur              "true"  // This command disables the blur in the shop and improves the performance of the shop DRAMATICALLY however it can cause visual issues with the pause menu on nvidia systems running vulkan. Please experiment. [def: "true"]
-        r_particle_explicit_fetch                     "false" // [def: "false"]        // I believe this improves performance but will make soul orbs a bit difficult to see
-        r_particle_max_size_cull                      "900"   // [def: "1200"] // Particle systems larger than this in every dimension skip culling to save CPU.  They will be drawn anyway. // So particle culling is handled by the CPU in deadlock, if you have GPU overhead to spare, consider lowering this value.
-        r_size_cull_threshold                         "0.9"   // This will control the distance trooper healthbars and boxes stop rendering *Culls small objects sooner based on screen size threshold (higher = more culling). [def: "0.8"]
-        sc_screen_size_lod_scale_override             "0.55"  // Controls LOD scale. Lower values will make sinners and playermodels look worse "my sinner's lights are little triangles" [def: "-1"]
-        steam_inputhandler_enabled                    "true"  // This disables controller support when set to false. Setting to false should improve performance if you're not on a steam deck, but some people are, and I don't want an influx of "why no work with controller"  [def: "true"]
+        // mm_prefer_solo_only                   "true"  // If I understand what this command does, this command controls whether or not you are matched with other solo queue players. For me this dramatically improved the solo queue performance but I am not sure if that is placebo. [def: "false"]
+        //citadel_per_weapon_per_surface_impact_effects "false" // Reduces the visuals for bullet tracers. This will disable the radius of yamato right click. [def: "true"]
+        //citadel_always_show_active_hud_stats "true"  // makes it so that the active stats are always visible" // [def: "false"]
+        citadel_camera_use_vmdl_flatten_vertical "true"  // Setting this command to false should improve responsiveness of mouse input but makes Rem, Venator, AND ESPICIALLY RAT KING's cameras move downwards when aiming down scope. Not exactly a dealbreaker but might be undesirable for some.                                                                                                                                      [def: "true"]
+        citadel_portrait_world_renderer_off      "false" // Disables character models in shop and endgame screen                                            [def: "false"]
+        citadel_trooper_glow_disabled            "1"     // 1 = Disable friendly/enemy minion glow.                                                         [def: "0"]
+        cl_phys_enabled                          "true"  // Disables all physics. This means ragdolls just maintain the last pose and boxes don't fall over [def: "true"]
+        lb_enable_dynamic_lights                 "true"  // SET THIS TO TRUE TO MAKE HERO PORTRAITS HAVE COLOR IN THE SHOP AND ENDGAME *Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
+        r_citadel_enable_pano_world_blur         "true"  // This command disables the blur in the shop and improves the performance of the shop DRAMATICALLY however it can cause visual issues with the pause menu on nvidia systems running vulkan. Please experiment. [def: "true"]
+        r_particle_explicit_fetch                "false" // [def: "false"]        // I believe this improves performance but will make soul orbs a bit difficult to see
+        r_particle_max_size_cull                 "900"   // [def: "1200"] // Particle systems larger than this in every dimension skip culling to save CPU.  They will be drawn anyway. // So particle culling is handled by the CPU in deadlock, if you have GPU overhead to spare, consider lowering this value.
+        r_size_cull_threshold                    "0.9"   // This will control the distance trooper healthbars and boxes stop rendering *Culls small objects sooner based on screen size threshold (higher = more culling). [def: "0.8"]
+        sc_screen_size_lod_scale_override        "0.55"  // Controls LOD scale. Lower values will make sinners and playermodels look worse "my sinner's lights are little triangles" [def: "-1"]
+        steam_inputhandler_enabled               "true"  // This disables controller support when set to false. Setting to false should improve performance if you're not on a steam deck, but some people are, and I don't want an influx of "why no work with controller"  [def: "true"]
 
         // --- Render Distance ---
         r_farz       "7000" // This controls the far clipping plane, ie building/player popin   [def: "-1"]
@@ -820,6 +829,7 @@ GameInfo
         minimap_trooper_update_rate_hz                  "2"     // How many times a second the icons for troopers are updated on the minimap [def: "5"]
         panorama_comp_layer_lru_lifetime                "4"     // This should keep panorama caches loaded for longer so the game can use them more frequently. [def: "1"]
         v8_maximum_heap_size_mb                         "1024"  // This should double the amount of cache used by the ingame hud, so less stutter! Yay!
+        citadel_unit_status_hide_names                  "true"  // This should hide playernames from health bars. [def: "false"]
 
         // --- 4. Lighting & Shadows ---
         lb_enable_stationary_lights "false" // *Disables stationary lights (map looks flatter but more performant).         [def: "1"]
@@ -1067,6 +1077,8 @@ GameInfo
         cl_simulate_dormant_entities "false" // Based on the name I would imagine it does what it says.          [def: "true"]
 
         // ================ Audio ================
+        audio_viewing_damage_decay_time          "0"     //
+        audio_viewing_damage_hold_time           "0"     //
         audio_enable_vmix_mastering              "false" // Whether the engine uses vmix to master the audio, might be a dev command [def: "true"]
         snd_mixahead                             "0.05"  // Adds some latency that shouldn't be percivable to save cpu       [def: "0.001"]
         snd_occlusion_bounces                    "0"     // Limits audio occlusion to save cpu                               [def: "1"]
@@ -1184,7 +1196,7 @@ GameInfo
         fog_enableskybox         "false" // I doubt the fog commands actually are modifiable but I am maintaining their inclusion for posterity
         volume_fog_enable_jitter "false" // Don't think I can
 
-        // --------------------------------- END OF CONFIG OptimizationLock -- ver. 3.6.1 ------------------------------- \\
+        // --------------------------------- END OF CONFIG OptimizationLock -- ver. 3.7 ------------------------------- \\
 
 
         // ====================== SV commands we cannot change but I want to maintain documentation for ======================
@@ -1217,18 +1229,21 @@ GameInfo
 
         // ================ ai_ Commands ================
         // Not certain if these actually improve performance but they aren't replicated or unable to be overwritten
-        ai_async_queue_max_jobs               "1"     //
-        ai_foot_sweep_enable                  "false" //
-        ai_gather_conditions_async            "true"  //
-        ai_lod_auto_enabled                   "true"  //
-        ai_strong_optimizations_no_checkstand "1"     //
-        ai_think_interval                     "0.3"   //
-        ai_think_interval_lod_low             "1"     //
-        ai_think_interval_lod_med             "0.4"   //
-        ai_think_interval_lod_very_low        "2"     //
-        ai_use_async_ragdoll_fixup            "true"  //
+        ai_async_queue_max_jobs                  "1"     //
+        citadel_ai_path_pathing_time_ms_per_tick "20"    //
+        ai_foot_sweep_enable                     "false" //
+        ai_gather_conditions_async               "true"  //
+        ai_lod_auto_enabled                      "true"  //
+        ai_strong_optimizations_no_checkstand    "1"     //
+        ai_think_interval                        "0.3"   //
+        ai_think_interval_lod_low                "1"     //
+        ai_think_interval_lod_med                "0.4"   //
+        ai_think_interval_lod_very_low           "2"     //
+        ai_use_async_ragdoll_fixup               "true"  //
+        ai_motor_max_state_time_active           "0"     //
 
         // ================ citadel_ Commands ================
+        citadel_action_refresh_interval           "0.11"  //
         citadel_damage_indicator_height           "10"    //
         citadel_damage_indicator_radius           "1"     //
         citadel_damage_indicator_width            "10"    //

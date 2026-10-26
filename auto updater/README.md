@@ -1,3 +1,6 @@
+There is a windows only updater here too by kaizuchaneru under OptimizationLockGameInfoUpdater.bat 
+
+The documentation below covers the python script by neb
 # gameinfo-updater
 
 I got annoyed with having to manually patch the file each time it updated, so heres a script to auto-update and apply overrides
