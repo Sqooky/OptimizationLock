@@ -748,7 +748,7 @@ GameInfo
         ParticlesFoggedByDefault      "0" //
         PerVertexLighting             "0" //
         PostSimulate                  "0" //
-        GameSupportsLegacyShaders     "1" //
+        //GameSupportsLegacyShaders     "1" // this breaks paige, drifter, and infernus' particles. I don't know why
         GPUParticles                  "1" //
         MixedResolution
         {

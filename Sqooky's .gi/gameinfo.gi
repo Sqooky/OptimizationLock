@@ -13,7 +13,7 @@
 //         /!#%|'-_- '\%k*|
 //     o   |*@/        \_/
 //         \)&|
-// OptimizationLock Ver. 3.7 by Sqooky with help from others <3
+// OptimizationLock Ver. 3.7.1 hotfix by Sqooky with help from others <3
 
 // Launch Options
 // Pleas experiemnt with -dx11 or -vulkan
@@ -748,7 +748,7 @@ GameInfo
         ParticlesFoggedByDefault      "0" //
         PerVertexLighting             "0" //
         PostSimulate                  "0" //
-        GameSupportsLegacyShaders     "1" //
+        //GameSupportsLegacyShaders     "1" // this breaks paige, drifter, and infernus' particles. I don't know why
         GPUParticles                  "1" //
         MixedResolution
         {
@@ -767,7 +767,7 @@ GameInfo
         //      If you would like to donate as a means of showing thanks I have a kofi.     \\
         //      https://ko-fi.com/sqooky                                                    \\
 
-        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 3.7 -------- \\
+        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 3.7.1 hotfix -------- \\
         // The github is here https://github.com/Sqooky/OptimizationLock  \\
         // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
         // The gamebanana:https://gamebanana.com/mods/656341 (it's usually behind, please check the github) \\
@@ -1196,7 +1196,7 @@ GameInfo
         fog_enableskybox         "false" // I doubt the fog commands actually are modifiable but I am maintaining their inclusion for posterity
         volume_fog_enable_jitter "false" // Don't think I can
 
-        // --------------------------------- END OF CONFIG OptimizationLock -- ver. 3.7 ------------------------------- \\
+        // --------------------------------- END OF CONFIG OptimizationLock -- ver. 3.7.1 hotfix ------------------------------- \\
 
 
         // ====================== SV commands we cannot change but I want to maintain documentation for ======================
