@@ -1,9 +1,20 @@
-There is a windows only updater here too by kaizuchaneru under OptimizationLockGameInfoUpdater.bat 
+There is a windows only updater here too by kaizuchaneru, You need to download
+
+OptimizationLockGameInfoUpdater.bat
+OptimizationLockGameInfoUpdater.ps1
+
+and place it in your citadel folder
+:\steam\steamapps\common\Deadlock\game\citadel
+
+To run you just double click the .bat and it should be self explanatory
+It will create a folder called OptimizationLockGameinfoUpdater, your backups and config preference will live here,.
+If you run into 403, that usually means you are rate limited, just wait it out.
 
 The documentation below covers the python script by neb
 # gameinfo-updater
 
 I got annoyed with having to manually patch the file each time it updated, so heres a script to auto-update and apply overrides
+
 
 **Requirements:** Python 3.8+
 
