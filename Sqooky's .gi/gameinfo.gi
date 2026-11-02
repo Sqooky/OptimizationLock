@@ -13,10 +13,10 @@
 //         /!#%|'-_- '\%k*|
 //     o   |*@/        \_/
 //         \)&|
-// OptimizationLock Ver. 3.7.1 hotfix by Sqooky with help from others <3
+// OptimizationLock Ver. 3.8 by Sqooky with help from others <3
 
 // Launch Options
-// Pleas experiemnt with -dx11 or -vulkan
+// Please experiemnt with -dx11 or -vulkan
 // -nojoy -nosteamcontroller -nohltv -particles 1  -softparticlesdefaultoff -particle_disable_diffuse
 
 // As much as I would love to say I did this alone, I did not. These are the amazing people who deserve as much praise as I, if not more
@@ -28,6 +28,8 @@
 //- Kaizuchaneru:       While not directly invovled in the deveopment, they tested most cvars.
 //- Tamara Mochaccina:  Contributed vindicta scope fix and the fog fix.
 //- Liah:               Found a cvar causing a weird issue.
+//- Laund:              Inspirational dev of mine who made clutter be gone as well as helped a TON with general workflow and is incredibly nice.
+//- Hoppcx:             Did a wonderful finding for cvars that increase performance, as well as making some great tools.
 
 // Donors. Thank you so much. Even considering that you would view my work as deserving of any donation at all is incredible. I love you all
 //- Boot:           Gave me FIVE DOLLARS and is just a wonderful person and friend at a baseline
@@ -138,7 +140,7 @@
 
 // Misc
 //- Artemon121:     Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game.
-//- Dacooder:       Made a lovely video showcasing myself and my work
+//- Dacooder:       
 //- Kin:            Did an insane amount of benchmarking unprompted.
 //- Kunet:          Made a formatter for the gameinfo sytax! This is why things are properly indented! That's LIT.
 //- Maihdenless:    Started the original OptimisationLock & its Discord.
@@ -301,32 +303,31 @@ GameInfo
 
     RenderSystem
     {
-        GraphicsPipelineLibrary            "1"                       // This seemed to discard precompiled shaders when set to 0             [def: "1"]
-        IndexBufferPoolSizeMB              "128"                     // Not fully sure, in cs2 this is 64        [def: "32"]
-        LowLatency                         "1"                       //      [def: "1"]
-        MinStreamingPoolSizeMB             "500"                     // In CS2 this is 500, not sure why      [def: "1024"]
-        MinStreamingPoolSizeMBTools        "2048"                    //      [def: "2048"]
-        SwapChainSampleableDepth           "1"                       //      [def: "1"]
-        Use32BitDepthBuffer                "0"                       //      [def: "0"]
-        Use32BitDepthBufferWithoutStencil  "0"                       //      [def: "0"]
-        UseReverseDepth                    "1"                       // Also not fully sure.                     [def: "1"]
-        VulkanAdditionalShaderCache        "vulkan_shader_cache.foz" //
-        VulkanDefrag                       "1"                       //      [def: "1"]
-        VulkanMutableSwapchain             "1"                       //      [def: "1"]
-        VulkanOnlyTestProbability          "0"                       // Jasper said that "[when set to 1] this makes users have a 1% chance of using Vulkan" [def: "0"]
-        VulkanOnly_Linux                   "1"                       //      [def: "1"]
-        VulkanRequireDescriptorIndexing    "1"                       // Setting this command to zero causes my wayland compositor to crash upon launching the game. I would imagine don't fiddle with it      [def: "1"]
-        VulkanRequireSubgroupWaveOpSupport "1"                       //      [def: "1"]
-        VulkanStagingPMBSizeLimitMB        "768"                     // Jasper (my beloved) said to not mess withthis
-        VulkanSteamAppShaderCache          "1"                       //      [def: "1"]
-        VulkanSteamDownloadedShaderCache   "1"                       //      [def: "1"]
-        VulkanSteamShaderCache             "1"                       //      [def: "1"]
-
-
-        MaxPreloadTextureResolution           "0" // this stems from the dll so you can assume that there is no default value.
-        AllowPartialMipChainImmediateTexLoads "1"
-        ExecuteQueuedCommandBuffers           "0"
-        VulkanRequireSM6                      "false"
+        GraphicsPipelineLibrary               "1"                       // This seemed to discard precompiled shaders when set to 0             [def: "1"]
+        IndexBufferPoolSizeMB                 "128"                     // Not fully sure, in cs2 this is 64        [def: "32"]
+        LowLatency                            "1"                       //      [def: "1"]
+        MinStreamingPoolSizeMB                "500"                     // In CS2 this is 500, not sure why      [def: "1024"]
+        MinStreamingPoolSizeMBTools           "2048"                    //      [def: "2048"]
+        SwapChainSampleableDepth              "1"                       //      [def: "1"]
+        Use32BitDepthBuffer                   "0"                       //      [def: "0"]
+        Use32BitDepthBufferWithoutStencil     "0"                       //      [def: "0"]
+        UseReverseDepth                       "1"                       // Also not fully sure.                     [def: "1"]
+        VulkanAdditionalShaderCache           "vulkan_shader_cache.foz" // Shader cache file [def: "vulkan_shader_cache.foz"]
+        VulkanDefrag                          "1"                       //      [def: "1"]
+        VulkanMutableSwapchain                "1"                       //      [def: "1"]
+        VulkanOnlyTestProbability             "0"                       // Jasper said that "[when set to 1] this makes users have a 1% chance of using Vulkan" [def: "0"]
+        VulkanOnly_Linux                      "1"                       //      [def: "1"]
+        VulkanRequireDescriptorIndexing       "1"                       // Setting this command to zero causes my wayland compositor to crash upon launching the game. I would imagine don't fiddle with it      [def: "1"]
+        VulkanRequireSubgroupWaveOpSupport    "1"                       //      [def: "1"]
+        VulkanStagingPMBSizeLimitMB           "768"                     // Jasper (my beloved) said to not mess withthis
+        VulkanSteamAppShaderCache             "1"                       //      [def: "1"]
+        VulkanSteamDownloadedShaderCache      "1"                       //      [def: "1"]
+        VulkanSteamShaderCache                "1"                       //      [def: "1"]
+        MaxPreloadTextureResolution           "0"                       // this stems from the dll so you can assume that there is no default value.
+        AllowPartialMipChainImmediateTexLoads "1"                       //
+        ExecuteQueuedCommandBuffers           "0"                       //
+        VulkanRequireSM6                      "false"                   //
+        MinDXLevel                            "80"                      //
 
     }
 
@@ -348,7 +349,7 @@ GameInfo
         }
         PauseSinglePlayerOnGameOverlay "1"
         PauseOnCtrlConsole             "0" // Src2 issues a 'setpause' on holding down CTRL + toggleconsole key, disable this for Deadlock.
-        DefensiveConCommands           "1"
+        DefensiveConCommands           "0"
         DisableLoadingPlaque           "1"
         LocalServerClientAccess        "1"
 
@@ -749,7 +750,7 @@ GameInfo
         PerVertexLighting             "0" //
         PostSimulate                  "0" //
         //GameSupportsLegacyShaders     "1" // this breaks paige, drifter, and infernus' particles. I don't know why
-        GPUParticles                  "1" //
+        GPUParticles "1" //
         MixedResolution
         {
             Slices "16"
@@ -767,7 +768,7 @@ GameInfo
         //      If you would like to donate as a means of showing thanks I have a kofi.     \\
         //      https://ko-fi.com/sqooky                                                    \\
 
-        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 3.7.1 hotfix -------- \\
+        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 3.8 -------- \\
         // The github is here https://github.com/Sqooky/OptimizationLock  \\
         // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
         // The gamebanana:https://gamebanana.com/mods/656341 (it's usually behind, please check the github) \\
@@ -794,8 +795,8 @@ GameInfo
         steam_inputhandler_enabled               "true"  // This disables controller support when set to false. Setting to false should improve performance if you're not on a steam deck, but some people are, and I don't want an influx of "why no work with controller"  [def: "true"]
 
         // --- Render Distance ---
-        r_farz       "7000" // This controls the far clipping plane, ie building/player popin   [def: "-1"]
-        r_mapextents "7000" // Far clipping plane, this will make buildings pop in and out      [def: "16384"]
+        r_farz       "6800" // This controls the far clipping plane, ie building/player popin   [def: "-1"]
+        r_mapextents "6800" // Far clipping plane, this will make buildings pop in and out      [def: "16384"]
 
         // --- Enemy Health Bar Minor Tweaks ---
         // citadel_unit_status_delta_decay_delay   "0"   // The delay between doing damage and havin the yellow damage indicator appear [def: "0.5"]
@@ -813,6 +814,7 @@ GameInfo
 
         // --- 3. HUD ---
         // panorama_render_target_cache_max_size        "134217728" // This should increase the panorama cache size by 4x, needs more testing                       [def: "31457280"]
+        panorama_min_comp_layer_cache_cost              "0"     // Minimum size of a hud element before the game caches it. Setting it to zero means EVERYTHING is cached. This does have the unfortunate effect of raising vram usage by about 300mb, [def "4096"]
         citadel_damage_report_enable                    "1"     // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
         citadel_damage_text_batching_window_ability     "1000"  // How long to wait until batching damage text.
         citadel_distance_mouse_move_for_minimap_drawing "1"     // this command makes drawing on the minimap more precise so you can actually doodle on it :D makes me happy [def: "15"]
@@ -871,7 +873,7 @@ GameInfo
         r_texturefilteringquality      "0"   // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x
 
         // ================ IMPORTANT ================
-        thread_pool_option "2" // If I understand correctly, this should be how threads are handled relative to the game, but there isn't a clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage may vary. [def: "-1"]
+        thread_pool_option "4" // If I understand correctly, this should be how threads are handled relative to the game, but there isn't a clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage may vary. [def: "-1"]
         // 1 gives "GlobalThreadPoolMode" "efficiency"
         // 2 removes it from boot.vcfg
         // 3 gives "GlobalThreadPoolMode" "undifferentiated"
@@ -1029,14 +1031,15 @@ GameInfo
 
         // ================ Misc ================
         // Most of the commands here I am unsure of the effects/efficacy of. They are included for posterity.
-        //r_low_latency                                     "0"      // This acts as the convar which enables low latency, hardware dependent    [def: "1"]
-        //sc_force_materials_batchable                      "true"   // I would imagine this functions as the variable is named.         [def: "false"]
+        //r_low_latency                                   "0"      // This acts as the convar which enables low latency, hardware dependent    [def: "1"]
+        //sc_force_materials_batchable                    "true"   // I would imagine this functions as the variable is named.         [def: "false"]
         cc_captiontrace                                   "0" // Show missing closecaptions (0 = no, 1 = devconsole, 2 = show in hud) [def: "1"]
         citadel_bullet_shot_offset_fade_time              "0"
         citadel_show_survey                               "true"
         citadel_test_ranked_summary                       "true"
         cl_batch_entity_list_ops_during_latch             "true"  // Batch entity list adds / removes while latching interpolated variables to avoid mutex contention.        [def: "false"]
         cl_enable_eye_occlusion                           "false" // [def: "true"]
+        cl_generate_postdataupdatepreserved               "false" // Do we update entities when their statuses haven't changed [def: "true"]
         cl_interp_parallel                                "true"  // Run interpolation in parallel for entities with no children.     [def: "false"]
         cl_modifier_parallel_gather_status_effect_updates "false" // Not sure                                                         [def: "false"]
         cl_phys_assume_fixed_tick_interval                "true"  // Assume the client uses a fixed tickrate like the server (which may not always be true)                   [def: "true"]
@@ -1044,7 +1047,7 @@ GameInfo
         csm_viewmodel_max_shadow_dist                     "1"     //
         csm_viewmodel_max_visible_dist                    "1"     //
         csm_viewmodel_nearz                               "512"   //
-        debug_draw_enable                                 "false" //
+        debug_draw_enable                                 "true"  //  [def: "true"]
         default_fov                                       "0"     //
         engine_max_ticks_to_simulate                      "2"     // Max number of ticks to simulate per frame, after which simulation will start to slow down compared to real time. [def: "-1"]
         r_async_compute_fog                               "true"  // Just whether to asyncroniously render fog                        [def: "false"]
@@ -1077,19 +1080,19 @@ GameInfo
         cl_simulate_dormant_entities "false" // Based on the name I would imagine it does what it says.          [def: "true"]
 
         // ================ Audio ================
-        audio_viewing_damage_decay_time          "0"     //
-        audio_viewing_damage_hold_time           "0"     //
+        audio_enable_spawn_mask_mix_layer        "false" // Disabling these should help with performance, Yay! [def: "true"]
         audio_enable_vmix_mastering              "false" // Whether the engine uses vmix to master the audio, might be a dev command [def: "true"]
+        audio_viewing_damage_decay_time          "0"     // [def: "-1"]
+        audio_viewing_damage_hold_time           "0"     // [def: "3"]
+        snd_boxverb_simd                         "false" // Disabling these should help with performance, Yay! [def: "true"]
+        snd_enable_subgraph_corenull_passthrough "false" // Disabling these should help with performance, Yay! [def: "true"]
         snd_mixahead                             "0.05"  // Adds some latency that shouldn't be percivable to save cpu       [def: "0.001"]
         snd_occlusion_bounces                    "0"     // Limits audio occlusion to save cpu                               [def: "1"]
         snd_occlusion_rays                       "0"     // Occlusion bounces, this effectively disables them.               [def: "4"]
         snd_soundmixer_version                   "2"     // [def: "2"]
+        snd_steamaudio_num_threads               "4"     // Audio thread count                                               [def: "4"]
         snd_steamaudio_reverb_order_rendering    "0"     // The amount of directional detail in the rendered audio by Steam Audio. [def: "0"]
         snd_ui_positional                        "false" // Disables positional audio to save cpu                            [def: "true"]
-        snd_steamaudio_num_threads               "4"     // Audio thread count                                               [def: "4"]
-        audio_enable_spawn_mask_mix_layer        "false" // Disabling these should help with performance, Yay! [def: "true"]
-        snd_boxverb_simd                         "false" // Disabling these should help with performance, Yay! [def: "true"]
-        snd_enable_subgraph_corenull_passthrough "false" // Disabling these should help with performance, Yay! [def: "true"]
 
         // README This ^ probably depends on how good your cpu is, the better it is the more threads you can allow
 
@@ -1196,10 +1199,11 @@ GameInfo
         fog_enableskybox         "false" // I doubt the fog commands actually are modifiable but I am maintaining their inclusion for posterity
         volume_fog_enable_jitter "false" // Don't think I can
 
-        // --------------------------------- END OF CONFIG OptimizationLock -- ver. 3.7.1 hotfix ------------------------------- \\
+        // --------------------------------- END OF CONFIG OptimizationLock -- ver. 3.8 ------------------------------- \\
 
 
-        // ====================== SV commands we cannot change but I want to maintain documentation for ======================
+
+        // ====================== Commands we cannot change but I want to maintain documentation for ======================
         // skeleton_instance_lod_optimization      "false"  // Compute LOD mask internally like since 2016, i.e. force all LOD groups' bones to compute [def: "false"]
         // ragdoll_parallel_pose_control           "1"      // Multithreaded ragdoll handling, better performance (if ragdolls aren't disabled). [def: "0"]
         // r_light_flickering_enabled              "0"      // Enables light flicker effects where used.                        [def: "1"]
@@ -1284,41 +1288,40 @@ GameInfo
         lb_shadow_texture_width_override                       "16"    //
 
         // ================ r_ Commands ================
-        r_aoproxy_cull_dist                  "0.01"  //
-        r_arealights                         "false" //
-        r_character_decal_monitor_render_res "64"    //
-        r_citadel_depthoffield_enable        "false" //
-        r_citadel_fog_quality                "0"     //
-        r_citadel_fsr_enable_mip_bias        "false" //
-        r_citadel_shadowdb                   "8"     //
-        r_citadel_ssao_denoise_passes        "0"     //
-        r_citadel_ssao_radius                "0"     //
-        r_enable_cubemap_fog                 "false" //
-        r_enable_gradient_fog                "false" //
-        r_enable_volume_fog                  "false" //
-        r_hair_indirect_transmittance        "false" //
-        r_hair_shadowtile                    "false" //
-        r_haircull_percent                   "100"   //
-        r_impacts_alt_orientation            "false" //
-        r_late_particle_job_sync             "1"     //
-        r_light_sensitivity_mode             "true"  //
-        r_monitor_3dskybox                   "0"     //
-        r_morphing_enabled                   "false" //
-        r_muzzleflashbrightness              "0.01"  //
-        r_ropetranslucent                    "false" //
-        r_smooth_morph_normals               "0"     //
-        r_ssao_blur                          "0"     //
-        r_texture_budget_dynamic             "1"     //
-        r_texture_lod_scale                  "8"     //
-        r_texture_nonstreaming_load          "1"     //
-        r_texture_pool_reduce_rate           "512"   //
-        r_texture_pool_size                  "256"   //
-        r_texture_stream_max_resolution      "128"   //
-        r_texture_stream_resolution_bias     "0.01"  //
-        r_world_wind_frequency_grass         "0"     //
-        r_world_wind_frequency_trees         "0"     //
+        r_aoproxy_cull_dist                  "0.01"  // [def: ""]
+        r_arealights                         "false" // [def: ""]
+        r_character_decal_monitor_render_res "64"    // [def: ""]
+        r_citadel_depthoffield_enable        "false" // [def: ""]
+        r_citadel_fog_quality                "0"     // [def: ""]
+        r_citadel_fsr_enable_mip_bias        "false" // [def: ""]
+        r_citadel_shadowdb                   "8"     // [def: ""]
+        r_citadel_ssao_denoise_passes        "0"     // [def: ""]
+        r_citadel_ssao_radius                "0"     // [def: ""]
+        r_enable_cubemap_fog                 "false" // [def: ""]
+        r_enable_gradient_fog                "false" // [def: ""]
+        r_enable_volume_fog                  "false" // [def: ""]
+        r_hair_indirect_transmittance        "false" // [def: ""]
+        r_hair_shadowtile                    "false" // [def: ""]
+        r_haircull_percent                   "100"   // [def: ""]
+        r_impacts_alt_orientation            "false" // [def: ""]
+        r_late_particle_job_sync             "1"     // [def: ""]
+        r_monitor_3dskybox                   "0"     // [def: ""]
+        r_morphing_enabled                   "false" // [def: ""]
+        r_ropetranslucent                    "false" // [def: ""]
+        r_smooth_morph_normals               "false" // [def: "true"]
+        r_ssao_blur                          "false"     // [def: "true"]
+        r_texture_budget_dynamic             "1"     // [def: ""]
+        r_texture_lod_scale                  "8"     // Scale factor for requested texture size (texture streaming) [def: "1"]
+        r_texture_nonstreaming_load          "1"     // [def: ""]
+        r_texture_pool_reduce_rate           "512"   // [def: ""]
+        r_texture_pool_size                  "256"   // [def: ""]
+        r_texture_stream_max_resolution      "128"   // [def: ""]
+        r_texture_stream_resolution_bias     "0.01"  // [def: ""]
+        r_world_wind_frequency_grass         "0"     // [def: ""]
+        r_world_wind_frequency_trees         "0"     // [def: ""]
 
         // ================ rope_ Commands ================
+        // Deadlock doesn't use ropes (outside of lash ult I think) so this is just shutting them off to make sure)
         rope_collide              "0" //
         rope_smooth_enlarge       "0" //
         rope_smooth_maxalpha      "0" //
@@ -1535,3 +1538,6 @@ GameInfo
         ShowLowAvailableVirtualMemoryMessageBox "1"
     }
 }
+// Beautiful single transgender women in your area are making deadlock fps configs. Click 👆 here 👆 to find out more!
+// If you're reading this chances are you have a prescription for a reason. Consider taking your meds
+// or watch me idk your life

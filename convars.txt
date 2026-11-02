@@ -2190,7 +2190,10 @@ citadel_damage_text_dynamic_emphasis_percent 0.25 (developmentonly clientdll)
 	Percent of the victims max health the damage needs to be, for it to be dynamically emphasized.
 
 citadel_damage_text_follow_healthbar_pos true (developmentonly clientdll)
-	Damage text follows the victim's healthbar position (only works on V2 healthbars)
+	Damage text follows the victim's healthbar position
+
+citadel_damage_text_follow_healthbar_scale true (developmentonly clientdll)
+	Damage text follows the victim's healthbar scale
 
 citadel_damage_text_follow_victim_pos true (developmentonly clientdll)
 	Damage text follows victim's position
@@ -2254,6 +2257,9 @@ citadel_damage_text_x_offset_near 0 (developmentonly clientdll)
 
 citadel_deadpack_instant_shot false (gamedll clientdll replicated cheat release)
 	<no description>
+
+citadel_deadpack_ult_charge_navpath true (gamedll clientdll replicated cheat release)
+	Experimental: the ultimate charge follows a server-side NavSpace path to its target, and the client stops predicting it
 
 citadel_death_linger_time 3 (developmentonly gamedll)
 	How logn does the player icon linger on the minimap after they die
@@ -2486,7 +2492,7 @@ citadel_enable_ping_rate_limiting true (developmentonly gamedll)
 citadel_enable_slows_affect_air_drag true (gamedll clientdll replicated cheat release)
 	Whether slows affect air drag
 
-citadel_enable_survey true (developmentonly clientdll)
+citadel_enable_survey false (developmentonly clientdll)
 	Kill switch in case we want to make sure the survey isn't shown, or temporarily disable it
 
 citadel_enable_vdata_sound_preload true (developmentonly clientdll)
@@ -2727,7 +2733,7 @@ citadel_fow_player_range 2500 (developmentonly gamedll replicated)
 	Player Fow Vision Range
 
 citadel_gamemode_streetbrawl_enabled false (gamedll clientdll replicated release)
-	<no description>
+	Set to Enable StreetBrawl
 
 citadel_generator_minimap_icon_radius 24 (developmentonly clientdll)
 	<no description>
@@ -2788,6 +2794,24 @@ citadel_gun_iron_sights_threshold 0.9 (developmentonly gamedll clientdll replica
 
 citadel_gun_max_spread_penalty 5 (gamedll clientdll replicated cheat)
 	Max spread penalty you can incur from taking damage
+
+citadel_halloween_candy_death_drop false (gamedll release)
+	When set, players drop all their candy when they die
+
+citadel_halloween_candy_heavy_melee_drop true (gamedll release)
+	When set, getting hit by a heavy melee knocks candy out of the victim
+
+citadel_halloween_candy_heavy_melee_drop_count 2 (gamedll release)
+	Minimum candy a heavy melee knocks out
+
+citadel_halloween_candy_heavy_melee_drop_lockout 1.5 (gamedll release)
+	Seconds before the victim can pick their knocked out candy back up
+
+citadel_halloween_candy_heavy_melee_drop_percent 0.3 (gamedll release)
+	Fraction of the victim's held candy a heavy melee knocks out, rounded down (never less than citadel_halloween_candy_heavy_melee_drop_count)
+
+citadel_halloween_candy_street_brawl_round_grant 2 (gamedll release)
+	Candy given to every player at the start of each Street Brawl round
 
 citadel_hero_builds_confirm_discard_edits true (clientdll archive release)
 	Prompt for confirmation before discarding unsaved hero build edits.
@@ -3034,6 +3058,9 @@ citadel_hud_heal_counter_duration 2 (developmentonly clientdll defensive)
 
 citadel_hud_hide_own_health false (clientdll release)
 	Hides your own health bar on the HUD
+
+citadel_hud_high_unspent_souls_threshold 7000 (developmentonly clientdll)
+	Unspent souls at or above this amount set gHighUnspentSouls on the HUD (pulsing soul count, quickbuy bounce)
 
 citadel_hud_objective_health_debug_show_midboss false (developmentonly clientdll)
 	<no description>
@@ -3401,6 +3428,15 @@ citadel_minimap_show_hitboxes false (developmentonly clientdll)
 citadel_minimap_spectator_fow_team_view 1 (min: 0, max: 3, clientdll release)
 	Which team to view the minimap as when freeflying
 
+citadel_minimap_targeting_cursor_send_interval 0.1 (clientdll release)
+	Seconds between sending your minimap targeting cursor position to teammates
+
+citadel_minimap_targeting_cursor_smoothing 15 (clientdll release)
+	How quickly a teammate's minimap targeting cursor eases toward its latest position
+
+citadel_minimap_targeting_cursor_timeout 0.5 (clientdll release)
+	Seconds without an update before a teammate's minimap targeting cursor is hidden
+
 citadel_minimap_teleporter_active_dist 400 (developmentonly clientdll defensive)
 	<no description>
 
@@ -3409,6 +3445,9 @@ citadel_minimap_teleporter_height_dist 160 (developmentonly clientdll defensive)
 
 citadel_minimap_teleporter_nearby_dist 1600 (developmentonly clientdll defensive)
 	<no description>
+
+citadel_minimap_travel_destination_linger_time 3 (clientdll release)
+	Seconds a minimap travel destination marker stays after the hero lands there
 
 citadel_minimap_trooper_size 3 (clientdll release)
 	<no description>
@@ -3605,7 +3644,7 @@ citadel_news_entries_list_request_count 10 (developmentonly clientdll)
 citadel_news_entries_seen "" (clientdll archive release)
 	<no description>
 
-citadel_news_entry_override_latest 694273194214819790 (developmentonly clientdll)
+citadel_news_entry_override_latest 0 (developmentonly clientdll)
 	<no description>
 
 citadel_no_orbs_on_hero_kill true (gamedll clientdll replicated cheat)
@@ -3911,7 +3950,7 @@ citadel_player_gold_comeback_multiplier 2.268 (developmentonly gamedll clientdll
 citadel_player_gold_comeback_npc_max_mutliplier_delta 1.2 (developmentonly gamedll clientdll replicated defensive)
 	<no description>
 
-citadel_player_gold_comeback_npc_max_mutliplier_value 1.26 (developmentonly gamedll clientdll replicated defensive)
+citadel_player_gold_comeback_npc_max_mutliplier_value 1.3 (developmentonly gamedll clientdll replicated defensive)
 	<no description>
 
 citadel_player_gold_difficulty_multiplier 2.484 (developmentonly gamedll clientdll replicated defensive)
@@ -4526,13 +4565,19 @@ citadel_scenepanel_use_intermediate_texture false (developmentonly clientdll)
 citadel_secondary_language_builds -1 (clientdll archive per_user)
 	<no description>
 
-citadel_secure_gold_fixed 1.6 (developmentonly gamedll)
+citadel_secure_gold_behind_max_bonus 0.5 (developmentonly gamedll)
+	Max extra secure rate (fraction of baseline) for a player behind the enemy team's average net worth
+
+citadel_secure_gold_behind_max_delta 0.2 (developmentonly gamedll)
+	Net worth deficit vs the enemy team's average (fraction of that average) at which the secure rate bonus is maxed
+
+citadel_secure_gold_fixed 1.2 (developmentonly gamedll)
 	<no description>
 
 citadel_secure_gold_fixed_growth 0.08 (developmentonly gamedll)
 	<no description>
 
-citadel_secure_gold_percent 0.005 (developmentonly gamedll)
+citadel_secure_gold_percent 0.00375 (developmentonly gamedll)
 	<no description>
 
 citadel_secure_gold_rate 1 (developmentonly gamedll)
@@ -4760,7 +4805,7 @@ citadel_slide_delay 0.15 (developmentonly gamedll clientdll replicated defensive
 citadel_slide_one_button_falling_max_lookahead_distance 150 (developmentonly gamedll clientdll replicated defensive)
 	<no description>
 
-citadel_slow_air_drag_penalty_scale 0.35 (gamedll clientdll replicated cheat)
+citadel_slow_air_drag_penalty_scale 0.5 (gamedll clientdll replicated cheat)
 	Fraction of an active movement slow that is also applied as additional air drag
 
 citadel_snowball_level_override -1 (gamedll cheat release client_can_execute)
@@ -4991,10 +5036,10 @@ citadel_subtitles_text_color_g 198 (min: 0, max: 255, clientdll archive per_user
 citadel_subtitles_text_color_r 198 (min: 0, max: 255, clientdll archive per_user)
 	Red channel of the HUD subtitle text color.
 
-citadel_super_neutral_gold_reward 3000 (developmentonly gamedll clientdll replicated defensive)
+citadel_super_neutral_gold_reward 1500 (developmentonly gamedll clientdll replicated defensive)
 	<no description>
 
-citadel_super_neutral_gold_reward_bonus_per_minute 50 (developmentonly gamedll clientdll replicated defensive)
+citadel_super_neutral_gold_reward_bonus_per_minute 25 (developmentonly gamedll clientdll replicated defensive)
 	<no description>
 
 citadel_super_trooper_gold_mult 0.85 (developmentonly gamedll clientdll replicated)
@@ -5044,6 +5089,12 @@ citadel_throwsand_projectile_show_debug false (developmentonly gamedll clientdll
 
 citadel_tick_gold_comeback_redirect_payout 1 (developmentonly gamedll defensive)
 	Fraction of the redirected comeback souls pool paid out to the two lowest net worth players each period
+
+citadel_tick_gold_deficit_max_multiplier 1.3 (developmentonly gamedll defensive)
+	Tick gold payout multiplier for a team at or beyond citadel_tick_gold_deficit_max_ratio behind in net worth. Ramps from 1 at parity.
+
+citadel_tick_gold_deficit_max_ratio 1.2 (min: 1.01, developmentonly gamedll defensive)
+	Enemy team net worth / our team net worth at which citadel_tick_gold_deficit_max_multiplier is reached
 
 citadel_tick_gold_payout_for_lowest 0.025 (developmentonly gamedll defensive)
 	<no description>
@@ -8113,6 +8164,9 @@ lb_debug_visualize_fog_shadowed_lights 0 (developmentonly cheat menubar_item gam
 
 lb_debug_visualize_lights 0 (developmentonly cheat menubar_item gameinfo_cannot_override)
 	SceneSystem/LightBinner/Debug Visualize Lights
+
+lb_debug_visualize_precomputed_shadow_atlas_lights false (developmentonly cheat menubar_item gameinfo_cannot_override)
+	SceneSystem/LightBinner/Debug Visualize Precomputed Shadow Atlas Lights
 
 lb_debug_visualize_shadowed_light_details false (developmentonly cheat gameinfo_cannot_override)
 	<no description>
@@ -11222,7 +11276,7 @@ r_particle_gpu_implicit_debug_wireframe false (developmentonly)
 r_particle_gpu_implicit_lds_cache false (developmentonly)
 	<no description>
 
-r_particle_max_detail_level 3 (developmentonly defensive gameinfo_cannot_override)
+r_particle_max_detail_level 3 (min: 0, max: 3, developmentonly defensive)
 	The maximum detail level of particle to create
 
 r_particle_max_draw_distance 1000000 (cheat)
@@ -14590,4 +14644,3 @@ zipline_use_new_latch 2 (developmentonly gamedll clientdll replicated defensive)
 
 zoom_sensitivity_ratio 1 (min: 0.01, max: 3, clientdll archive per_user)
 	Additional mouse sensitivity scale factor applied when FOV is zoomed in.
-ditional mouse sensitivity scale factor applied when FOV is zoomed in.
