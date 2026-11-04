@@ -13,7 +13,7 @@
 //         /!#%|'-_- '\%k*|
 //     o   |*@/        \_/
 //         \)&|
-// OptimizationLock Ver. 3.8 by Sqooky with help from others <3
+// OptimizationLock Ver. 3.9 by Sqooky with help from others <3
 
 // Launch Options
 // Please experiemnt with -dx11 or -vulkan
@@ -768,7 +768,7 @@ GameInfo
         //      If you would like to donate as a means of showing thanks I have a kofi.     \\
         //      https://ko-fi.com/sqooky                                                    \\
 
-        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 3.8 -------- \\
+        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 3.9 -------- \\
         // The github is here https://github.com/Sqooky/OptimizationLock  \\
         // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
         // The gamebanana:https://gamebanana.com/mods/656341 (it's usually behind, please check the github) \\
@@ -1084,17 +1084,16 @@ GameInfo
         audio_enable_vmix_mastering              "false" // Whether the engine uses vmix to master the audio, might be a dev command [def: "true"]
         audio_viewing_damage_decay_time          "0"     // [def: "-1"]
         audio_viewing_damage_hold_time           "0"     // [def: "3"]
-        snd_boxverb_simd                         "false" // Disabling these should help with performance, Yay! [def: "true"]
+        snd_boxverb_simd                         "true"  // Having this be enabled should improve cpu processing of audio by a very wide margin. (THANK YOU LAUND FOR TELLING ME) [def: "true"]
+        snd_diffusor_simd                        "true"  // I would assume the same is true for below. [def: "false"]
         snd_enable_subgraph_corenull_passthrough "false" // Disabling these should help with performance, Yay! [def: "true"]
-        snd_mixahead                             "0.05"  // Adds some latency that shouldn't be percivable to save cpu       [def: "0.001"]
+        snd_mixahead                             "0.01"  // Adds some latency that shouldn't be percivable to save cpu       [def: "0.001"]
         snd_occlusion_bounces                    "0"     // Limits audio occlusion to save cpu                               [def: "1"]
         snd_occlusion_rays                       "0"     // Occlusion bounces, this effectively disables them.               [def: "4"]
         snd_soundmixer_version                   "2"     // [def: "2"]
         snd_steamaudio_num_threads               "4"     // Audio thread count                                               [def: "4"]
         snd_steamaudio_reverb_order_rendering    "0"     // The amount of directional detail in the rendered audio by Steam Audio. [def: "0"]
         snd_ui_positional                        "false" // Disables positional audio to save cpu                            [def: "true"]
-
-        // README This ^ probably depends on how good your cpu is, the better it is the more threads you can allow
 
         // ================ Csm Shadows. ================
         // According to jasper these shouldn't do anything, but I'm keeping them because they seemed to provide a performance increase with them disabled
@@ -1136,72 +1135,69 @@ GameInfo
 
 
         // ================ Convars You Shouldn't/Can't Mess With But I Want to Maintain the Documentation ================
-        // lb_enable_baked_shadows                  "false" // *Disables baked shadows (game looks bright if this is on while stationary lights = 1). [def: "1"]
-        // phys_dynamic_scaling                     "false" // Makes it so that you can't shoot holiday barrels
-        // ai_disable                               "1"             // Both of these commands disable creep animations which means that neutrals and guardians won't move [def: "0"]
-        // ai_disabled                              "1"             // [def: "0"]
-        // cam_idealdist                            "0"
-        // citadel_camera_dist                      "0"
-        // citadel_camera_height_approach_speed     "0"             // This makes the camera go all black when set to zero. Cool!
-        // citadel_camera_hero_fov                  "106"           // The field of view angle of the camera when following a hero.     [def: "90"] //
-        // citadel_crosshair_hit_marker_duration    "0.00001"       // Removes the hitmarker when shooting people.                      [def: "0.1"]
-        // citadel_damage_text_show_effectiveness   "0"             // Shows extra “effectiveness” info in damage text (e.g., resist/weakness style feedback). As far as I can tell this is unfinished right now [def: "0"]
-        // citadel_first_person                     "true"          // Puts you in first person, messes up character rendering
-        // citadel_roster_select_force_enable_priority_token "true" // Causes a crash but does what you think it would.
-        // citadel_rp_show_dev_messages             "true"          // Rich presence debug messages. Spams console with "x is doing y in the hideout"
-        // citadel_weapon_spread_debug              true            // Doesn't seem to do anything.
-        // cl_input_enable_raw_keyboard             "1"             // Surprisingly this can cause issues with holding keys after upgrading with alt. [def: "0"]
-        // cl_particle_max_count                    "1500"          // Maximum allowed particles. Setting it too low will cause issues. With flooding from the console.  [def: "0"]
-        // cl_particle_sim_fallback_threshold_ms    "0.3"           // Amount of simulation time that can elapse before new systems start falling back to cheaper versions [def: "6"]
-        // cl_phys_enabled                          "false"         // You can disable physics and might see an improvement in framerate, however a lot will be buggy.   [def: "true"]
-        // cl_skip_update_animations                "true"          // Setting this to  true causes models outside of the game world to a-pose. looks cute.
-        // gpu_level                                "1"             // GPU level literally doesn't matter, gets set to 2 in the engine
-        // instant_replay                           "true"          // enables/disables the replay system. If set to false players will be in the idle animation in replays [def: "true"]
-        // lb_enable_envmaps                        "false"         // This makes all characters black
-        // movement_stats_debug_draw                "true"          // Doesn't seem to do anything
-        // panorama_disable_descendant_filtering    "true"          // Causes issues with the hud
-        // panorama_disable_draw_fancy_quad         "true"          // Causes issues with the hud
-        // panorama_enable_secondary_layout_pass    "false"         // Setting this to false causes text (chat messages) to not wrap.
-        // panorama_max_text_shadow_strength        "10"            // Freaks out text shadows.
-        // panorama_temp_comp_layer_min_dimension   "128"           // Based on the name I'm implied to believe this is the minimum size for panorama compositing, ie blur, rounded corners, etc. [def: "512"]
-        // panorama_worldpanel_update_culling       "true"          // Messes with health bar rendering, the information will be inaccurate unless close to the target if set to true. It is weird.       [def: "false"]
-        // phys_batch_ray_test                      "16"            // Don't know what this does? shouldn't be needed deadlock doesn't have many physics objects  [def: "0"]
-        // r_citadel_gpu_culling_two_pass           "false"         // Setting this to false will cause issues with frametime [def: "true"]
-        // r_citadel_npr_force_solid_outline        "false"         // Causes odd visual bugs with dragons and neutrals when set to true    [def: "false"]
-        // r_citadel_npr_outlines                   "false"         // Enable the little black outlines on players. Unfortunately this was disabled and no longer works a few months ago.                                [def: "true"]
-        // r_citadel_npr_outlines_max_dist          "1"             // Limits outline distance to reduce unnecessary processing.        [def: "1000"]
-        // r_citadel_selection_outline2_alpha       "0.2"           // Outlines on enemy players and abilities on a scale of 0-1.       [def: "0.8"]
-        // r_dopixelvisibility                      "0"             // Causes issues with boxes being invisible
-        // r_draw3dskybox                           "0"             //  Enables drawing the 3D skybox layer (distant geometry).         [def: "1"]
-        // r_draw_first_tri_only                    "true"          // Only draws the first triangle. Surprisingly this only supports dx11 [def: "false"]
-        // r_draw_instances                         "0"             //causes boxes to freak out on dx11
-        // r_draw_overlays                          "0"             //causes problems with the hud
-        // r_drawdecals                             "1"             // *Render decals. If not set to true lash's slam and warden's ult indicators become quite difficult to see.                                                  [def: "1"]
-        // r_drawskybox                             "true"          // Can't be changed anymore                                             [def: "true"]
-        // r_drawtracers                            "0"             // Makes lash's ground slam marker invisible. I would enable it anyway but I don't like getting fifty trillion "how do I fix this" dms
-        // r_dx11_software_cmd_lists                "0"             // causes a lot of issues
-        // r_extra_render_frames                    "1"             // Setting this to anything above 0 causes issues with latency. negative values cause the game to crash. [def: "0"]
-        // r_frame_sync_enable                      "false"         // Setting this to false causes vram to overflow to normal ram for some reason? Game freaks out.                [def: "true"]
-        // r_opaque                                 "false"         // Causes the map to not be rendered.
-        // r_showdebugoverlays                      "true"          // Shows a ton of debug overlays IT MAKES ME SO HAPPY I LOVE IT     [def: "false"]
-        // r_skinning_enabled                       "false"         // makes players a pose
-        // r_translucent                            "false"         // Messes up all particles
-        // r_wait_on_present                        "true"          // Seems to cause frame rate to artificially lower
-        // sc_aggregate_gpu_culling_show_culled     "true"          // Debug I think, doesn't seem to do anything                     [def: "false"]
-        // sc_aggregate_render_mesh_shader          "false"         // Using mesh shaders if available instead of drawcalls.          [def: "true"]
-        // sc_aggregate_show_outside_vis            "true"          // This makes the entire map stop rendering             [def: "false"]
-        // sc_disable_procedural_layer_rendering    "false"         // Disables rendering, ie the screen is black.          [def: "false"]
-        // sc_skip_traversal                        "true"          // Disables rendering, ie the screen is black.          [def: "false"]
-        // sc_throw_away_all_layers                 "true"          // Disables rendering, ie the screen is black.          [def: "false"]
-        // subtick_buttons_enabled                  "true"          // Makes it so people on windows systems cannot move
-        // music_hideout_debug_enabled              "true"          // Doesn't do anything
+        // citadel_hud_objective_health_idle_timeout         "0"       // Causes issues with patron hp bars 
+        // citadel_orb_debug_draw_state                      "-1"      // Gives a debug sphere to the soul orb in the player hideout. I like it.    [def: "-1"]
+        // lb_enable_baked_shadows                           "false"   // *Disables baked shadows (game looks bright if this is on while stationary lights = 1). [def: "1"]
+        // phys_dynamic_scaling                              "false"   // Makes it so that you can't shoot holiday barrels
+        // ai_disable                                        "1"       // Both of these commands disable creep animations which means that neutrals and guardians won't move [def: "0"]
+        // ai_disabled                                       "1"       // [def: "0"]
+        // cam_idealdist                                     "0"
+        // citadel_camera_dist                               "0"
+        // citadel_camera_height_approach_speed              "0"       // This makes the camera go all black when set to zero. Cool!
+        // citadel_camera_hero_fov                           "106"     // The field of view angle of the camera when following a hero.     [def: "90"] //
+        // citadel_crosshair_hit_marker_duration             "0.00001" // Removes the hitmarker when shooting people.                      [def: "0.1"]
+        // citadel_damage_text_show_effectiveness            "0"       // Shows extra “effectiveness” info in damage text (e.g., resist/weakness style feedback). As far as I can tell this is unfinished right now [def: "0"]
+        // citadel_first_person                              "true"    // Puts you in first person, messes up character rendering
+        // citadel_roster_select_force_enable_priority_token "true"    // Causes a crash but does what you think it would.
+        // citadel_rp_show_dev_messages                      "true"    // Rich presence debug messages. Spams console with "x is doing y in the hideout"
+        // citadel_weapon_spread_debug                       true      // Doesn't seem to do anything.
+        // cl_input_enable_raw_keyboard                      "1"       // Surprisingly this can cause issues with holding keys after upgrading with alt. [def: "0"]
+        // cl_particle_max_count                             "1500"    // Maximum allowed particles. Setting it too low will cause issues. With flooding from the console.  [def: "0"]
+        // cl_particle_sim_fallback_threshold_ms             "0.3"     // Amount of simulation time that can elapse before new systems start falling back to cheaper versions [def: "6"]
+        // cl_phys_enabled                                   "false"   // You can disable physics and might see an improvement in framerate, however a lot will be buggy.   [def: "true"]
+        // cl_skip_update_animations                         "true"    // Setting this to  true causes models outside of the game world to a-pose. looks cute.
+        // gpu_level                                         "1"       // GPU level literally doesn't matter, gets set to 2 in the engine
+        // instant_replay                                    "true"    // enables/disables the replay system. If set to false players will be in the idle animation in replays [def: "true"]
+        // lb_enable_envmaps                                 "false"   // This makes all characters black
+        // movement_stats_debug_draw                         "true"    // Doesn't seem to do anything
+        // panorama_disable_descendant_filtering             "true"    // Causes issues with the hud
+        // panorama_disable_draw_fancy_quad                  "true"    // Causes issues with the hud
+        // panorama_enable_secondary_layout_pass             "false"   // Setting this to false causes text (chat messages) to not wrap.
+        // panorama_max_text_shadow_strength                 "10"      // Freaks out text shadows.
+        // panorama_temp_comp_layer_min_dimension            "128"     // Based on the name I'm implied to believe this is the minimum size for panorama compositing, ie blur, rounded corners, etc. [def: "512"]
+        // panorama_worldpanel_update_culling                "true"    // Messes with health bar rendering, the information will be inaccurate unless close to the target if set to true. It is weird.       [def: "false"]
+        // phys_batch_ray_test                               "16"      // Don't know what this does? shouldn't be needed deadlock doesn't have many physics objects  [def: "0"]
+        // r_citadel_gpu_culling_two_pass                    "false"   // Setting this to false will cause issues with frametime [def: "true"]
+        // r_citadel_npr_force_solid_outline                 "false"   // Causes odd visual bugs with dragons and neutrals when set to true    [def: "false"]
+        // r_citadel_npr_outlines                            "false"   // Enable the little black outlines on players. Unfortunately this was disabled and no longer works a few months ago.                                [def: "true"]
+        // r_citadel_npr_outlines_max_dist                   "1"       // Limits outline distance to reduce unnecessary processing.        [def: "1000"]
+        // r_citadel_selection_outline2_alpha                "0.2"     // Outlines on enemy players and abilities on a scale of 0-1.       [def: "0.8"]
+        // r_dopixelvisibility                               "0"       // Causes issues with boxes being invisible
+        // r_draw3dskybox                                    "0"       //  Enables drawing the 3D skybox layer (distant geometry).         [def: "1"]
+        // r_draw_first_tri_only                             "true"    // Only draws the first triangle. Surprisingly this only supports dx11 [def: "false"]
+        // r_draw_instances                                  "0"       //causes boxes to freak out on dx11
+        // r_draw_overlays                                   "0"       //causes problems with the hud
+        // r_drawdecals                                      "1"       // *Render decals. If not set to true lash's slam and warden's ult indicators become quite difficult to see.                                                  [def: "1"]
+        // r_drawskybox                                      "true"    // Can't be changed anymore                                             [def: "true"]
+        // r_drawtracers                                     "0"       // Makes lash's ground slam marker invisible. I would enable it anyway but I don't like getting fifty trillion "how do I fix this" dms
+        // r_dx11_software_cmd_lists                         "0"       // causes a lot of issues
+        // r_extra_render_frames                             "1"       // Setting this to anything above 0 causes issues with latency. negative values cause the game to crash. [def: "0"]
+        // r_frame_sync_enable                               "false"   // Setting this to false causes vram to overflow to normal ram for some reason? Game freaks out.                [def: "true"]
+        // r_opaque                                          "false"   // Causes the map to not be rendered.
+        // r_showdebugoverlays                               "true"    // Shows a ton of debug overlays IT MAKES ME SO HAPPY I LOVE IT     [def: "false"]
+        // r_skinning_enabled                                "false"   // makes players a pose
+        // r_translucent                                     "false"   // Messes up all particles
+        // r_wait_on_present                                 "true"    // Seems to cause frame rate to artificially lower
+        // sc_aggregate_gpu_culling_show_culled              "true"    // Debug I think, doesn't seem to do anything                     [def: "false"]
+        // sc_aggregate_render_mesh_shader                   "false"   // Using mesh shaders if available instead of drawcalls.          [def: "true"]
+        // sc_aggregate_show_outside_vis                     "true"    // This makes the entire map stop rendering             [def: "false"]
+        // sc_disable_procedural_layer_rendering             "false"   // Disables rendering, ie the screen is black.          [def: "false"]
+        // sc_skip_traversal                                 "true"    // Disables rendering, ie the screen is black.          [def: "false"]
+        // sc_throw_away_all_layers                          "true"    // Disables rendering, ie the screen is black.          [def: "false"]
+        // subtick_buttons_enabled                           "true"    // Makes it so people on windows systems cannot move
+        // music_hideout_debug_enabled                       "true"    // Doesn't do anything
         fog_enable               "false"
-        fog_enableskybox         "false" // I doubt the fog commands actually are modifiable but I am maintaining their inclusion for posterity
         volume_fog_enable_jitter "false" // Don't think I can
-
-        // --------------------------------- END OF CONFIG OptimizationLock -- ver. 3.8 ------------------------------- \\
-
-
 
         // ====================== Commands we cannot change but I want to maintain documentation for ======================
         // skeleton_instance_lod_optimization      "false"  // Compute LOD mask internally like since 2016, i.e. force all LOD groups' bones to compute [def: "false"]
@@ -1223,9 +1219,6 @@ GameInfo
         citadel_npc_force_animate_every_tick "false" // Don't change this, it does what it says on the tin.              [def: "true"]
         // citadel_perf_interval_report_s          "100000" // The interval that we record performance stats to the log at measured in seconds [def: "60"]
         // citadel_hideout_enable_testing_tools    "true"   // Unfortunately this doesn't work    [def: "false"]
-
-
-
 
         // ====================== Testing Version Commands ======================
         // r_fallback_texture_lod_scale                           "8"
@@ -1253,9 +1246,7 @@ GameInfo
         citadel_damage_indicator_width            "10"    //
         citadel_enable_new_ping_particle          "true"  //
         citadel_fibonnaci_sphere_trace_los_max    "80"    //
-        citadel_hud_objective_health_idle_timeout "0"     //
         citadel_minimap_overlap_scan_distance     "0"     //
-        citadel_orb_debug_draw_state              "1"     //
         citadel_player_outline_enemies            "false" //
         citadel_portrait_unit_ag2_enable          "false" //
         citadel_use_pvs_for_players               "true"  //
@@ -1309,7 +1300,7 @@ GameInfo
         r_morphing_enabled                   "false" // [def: ""]
         r_ropetranslucent                    "false" // [def: ""]
         r_smooth_morph_normals               "false" // [def: "true"]
-        r_ssao_blur                          "false"     // [def: "true"]
+        r_ssao_blur                          "false" // [def: "true"]
         r_texture_budget_dynamic             "1"     // [def: ""]
         r_texture_lod_scale                  "8"     // Scale factor for requested texture size (texture streaming) [def: "1"]
         r_texture_nonstreaming_load          "1"     // [def: ""]
@@ -1370,13 +1361,7 @@ GameInfo
         wind_system_temporal_smoothing               "false" //
 
 
-
-
-
-
-
-
-
+// --------------------------------- END OF CONFIG OptimizationLock -- ver. 3.9 ------------------------------- \\
 
 
         rate
