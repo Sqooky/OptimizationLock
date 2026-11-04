@@ -140,7 +140,7 @@
 
 // Misc
 //- Artemon121:     Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game.
-//- Dacooder:       
+//- Dacooder:
 //- Kin:            Did an insane amount of benchmarking unprompted.
 //- Kunet:          Made a formatter for the gameinfo sytax! This is why things are properly indented! That's LIT.
 //- Maihdenless:    Started the original OptimisationLock & its Discord.
@@ -1135,7 +1135,7 @@ GameInfo
 
 
         // ================ Convars You Shouldn't/Can't Mess With But I Want to Maintain the Documentation ================
-        // citadel_hud_objective_health_idle_timeout         "0"       // Causes issues with patron hp bars 
+        // citadel_hud_objective_health_idle_timeout         "0"       // Causes issues with patron hp bars
         // citadel_orb_debug_draw_state                      "-1"      // Gives a debug sphere to the soul orb in the player hideout. I like it.    [def: "-1"]
         // lb_enable_baked_shadows                           "false"   // *Disables baked shadows (game looks bright if this is on while stationary lights = 1). [def: "1"]
         // phys_dynamic_scaling                              "false"   // Makes it so that you can't shoot holiday barrels
@@ -1240,16 +1240,16 @@ GameInfo
         ai_motor_max_state_time_active           "0"     //
 
         // ================ citadel_ Commands ================
-        citadel_action_refresh_interval           "0.11"  //
-        citadel_damage_indicator_height           "10"    //
-        citadel_damage_indicator_radius           "1"     //
-        citadel_damage_indicator_width            "10"    //
-        citadel_enable_new_ping_particle          "true"  //
-        citadel_fibonnaci_sphere_trace_los_max    "80"    //
-        citadel_minimap_overlap_scan_distance     "0"     //
-        citadel_player_outline_enemies            "false" //
-        citadel_portrait_unit_ag2_enable          "false" //
-        citadel_use_pvs_for_players               "true"  //
+        citadel_action_refresh_interval        "0.11"  //
+        citadel_damage_indicator_height        "10"    //
+        citadel_damage_indicator_radius        "1"     //
+        citadel_damage_indicator_width         "10"    //
+        citadel_enable_new_ping_particle       "true"  //
+        citadel_fibonnaci_sphere_trace_los_max "80"    //
+        citadel_minimap_overlap_scan_distance  "0"     //
+        citadel_player_outline_enemies         "false" //
+        citadel_portrait_unit_ag2_enable       "false" //
+        citadel_use_pvs_for_players            "true"  //
 
         // ================ cl_ Commands ================
         cl_bone_cache_optimization    "1"     //
@@ -1361,7 +1361,7 @@ GameInfo
         wind_system_temporal_smoothing               "false" //
 
 
-// --------------------------------- END OF CONFIG OptimizationLock -- ver. 3.9 ------------------------------- \\
+        // --------------------------------- END OF CONFIG OptimizationLock -- ver. 3.9 ------------------------------- \\
 
 
         rate
