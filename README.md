@@ -35,6 +35,11 @@ Translated by [Sasha11711](https://gamebanana.com/members/4167224)
 ### [🇹🇷 Türkçe talimatlar burada](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_turkish.md)
 [corpse2mor](https://steamcommunity.com/profiles/76561198892952457/) Tarafından Çevrildi.
 
+### [Belarusian Translation Here](https://github.com/Sqooky/OptimizationLock/blob/main/translations/README_belarusian.md)
+
+By grazik.gafriginal
+
+
 ## Main body
 
 To either request support or contribute findings to the project, our Discord Server can be found [here](https://discord.gg/EF3Jq57jQv).
