@@ -77,7 +77,7 @@ Here is a list of each config provided in this repository.
 
 # FAQ
 
-- "Will this effect my mods?"
+- "Will this affect my mods?"
   No. Every config file included in this repo has mod support already added.
 `gameinfo.gi` is a configuration file for Source games, which the game loads on startup. It contains blocks of configs in the form `<name> "<value>"`, split into multiple categories/sections by `{}`.
 
