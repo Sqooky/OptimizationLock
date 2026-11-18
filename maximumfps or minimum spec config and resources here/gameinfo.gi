@@ -117,13 +117,27 @@
 //- kUnato:
 //- Alden Haight:
 //- CenturionJac:
-//- Emma:
+//- Emma:               HUGE fan
 //- Unsainted:
 //- 4br4h4m:
 //- Paige <3:
 //- maeaissance:
 //- tavanuka:
 //- lem1nty:
+//- vcr romance:        Incredibly kind and supportive person. I'm honoted to have met them.
+//- alice:
+//- jorgen:
+//- Deadlockian:
+//- sae sushio:
+//- Ashley:             Banana
+//- guukicap:
+//- anno:
+//- Jammie:
+//- Teddy:
+//- KasaiDraws:         Absolutely phenomenal artist and an incredible friend <3
+//- Ejee:
+//- Warden:             NEVER SHOW FEAR. NO MATTER THE ODDS
+//- Frogmeisterthe2th:  Frocar....
 
 
 // Translators

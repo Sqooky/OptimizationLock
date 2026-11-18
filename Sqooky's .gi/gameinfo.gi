@@ -117,13 +117,27 @@
 //- kUnato:
 //- Alden Haight:
 //- CenturionJac:
-//- Emma:
+//- Emma:               HUGE fan
 //- Unsainted:
 //- 4br4h4m:
 //- Paige <3:
 //- maeaissance:
 //- tavanuka:
 //- lem1nty:
+//- vcr romance:        Incredibly kind and supportive person. I'm honoted to have met them.
+//- alice:
+//- jorgen:
+//- Deadlockian:
+//- sae sushio:
+//- Ashley:             Banana
+//- guukicap:
+//- anno:
+//- Jammie:
+//- Teddy:
+//- KasaiDraws:         Absolutely phenomenal artist and an incredible friend <3
+//- Ejee:
+//- Warden:             NEVER SHOW FEAR. NO MATTER THE ODDS
+//- Frogmeisterthe2th:  Frocar....
 
 
 // Translators
@@ -767,7 +781,7 @@ GameInfo
         //      If you would like to donate as a means of showing thanks I have a kofi.     \\
         //      https://ko-fi.com/sqooky                                                    \\
 
-        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 3.9 -------- \\
+        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 4.0 -------- \\
         // The github is here https://github.com/Sqooky/OptimizationLock  \\
         // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
         // The gamebanana:https://gamebanana.com/mods/656341 (it's usually behind, please check the github) \\
@@ -1360,7 +1374,7 @@ GameInfo
         wind_system_temporal_smoothing               "false" //
 
 
-        // --------------------------------- END OF CONFIG OptimizationLock -- ver. 3.9 ------------------------------- \\
+        // --------------------------------- END OF CONFIG OptimizationLock -- ver. 4.0 ------------------------------- \\
 
 
         rate
