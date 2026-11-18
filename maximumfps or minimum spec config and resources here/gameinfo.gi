@@ -677,7 +677,6 @@ GameInfo
         ParticleBufferSize                 "2048"  // dllvar [def: "65536"]
         PunctualContactShadows             "0"     // dllvar [def: "false"]
         ShadowmapMaxFilterRadius           "0"     // dllvar [def: "32"]
-        ShadowmapMaxFilterRadius           "8"     // dllvar [def: "32"]
         SparseShadowTrees                  "0"     // dllvar [def: "0"]
 
 
