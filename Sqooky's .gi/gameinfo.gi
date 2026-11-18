@@ -794,7 +794,7 @@ GameInfo
         // citadel_in_world_item_panel_dpi              "0"     // default: "2"     | This controls the quality of the text above soul pickups, so boxes, golden statues, and soul orbs. Higher values mean better quality, lower means worse.
         // mm_prefer_solo_only                          "true"  // default: "false" | If I understand what this command does, this command controls whether or not you are matched with other solo queue players. For me this dramatically improved the solo queue performance but I am not sure if that is placebo.
         //citadel_per_weapon_per_surface_impact_effects "false" // default: "true"  | Reduces the visuals for bullet tracers. This will disable the radius of yamato right click.
-        //citadel_always_show_active_hud_stats          "true"  // default: "false" | makes it so that the active stats are always visible" //
+        //citadel_always_show_active_hud_stats          "true"  // default: "false" | makes it so that the active stats are always visible
         citadel_camera_use_vmdl_flatten_vertical        "true"  // default: "true"  | Setting this command to false should improve responsiveness of mouse input but makes Rem, Venator, AND ESPICIALLY RAT KING's cameras move downwards when aiming down scope. Not exactly a dealbreaker but might be undesirable for some.
         citadel_portrait_world_renderer_off             "false" // default: "false" | Disables character models in shop and endgame screen
         citadel_trooper_glow_disabled                   "1"     // default: "0"     | 1 = Disable friendly/enemy minion glow.
@@ -806,6 +806,7 @@ GameInfo
         r_size_cull_threshold                           "0.9"   // default: "0.8"   | This will control the distance trooper healthbars and boxes stop rendering *Culls small objects sooner based on screen size threshold (higher = more culling).
         sc_screen_size_lod_scale_override               "0.55"  // default: "-1"    | Controls LOD scale. Lower values will make sinners and playermodels look worse "my sinner's lights are little triangles"
         steam_inputhandler_enabled                      "true"  // default: "true"  | This disables controller support when set to false. Setting to false should improve performance if you're not on a steam deck, but some people are, and I don't want an influx of "why no work with controller"
+        citadel_use_pvs_for_players                     "false"  // default: "false"  | This is a weird command, it will cause players to be culled at certain distances, which can be undesirable if trying to hyperline or snipe on vindicta. For that reason it has been disabled, although if you don't need to shoot people from stupidly far away you should leave this one disabled.
 
         // --- Render Distance ---
         r_farz       "6800" // default: "-1"    | This controls the far clipping plane, ie building/player popin
@@ -1262,7 +1263,6 @@ GameInfo
         citadel_minimap_overlap_scan_distance  "0"     //
         citadel_player_outline_enemies         "false" //
         citadel_portrait_unit_ag2_enable       "false" //
-        citadel_use_pvs_for_players            "true"  //
 
         // ================ cl_ Commands ================
         cl_bone_cache_optimization    "1"     //

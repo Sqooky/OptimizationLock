@@ -13,7 +13,7 @@
 //         /!#%|'-_- '\%k*|
 //     o   |*@/        \_/
 //         \)&|
-// OptimizationLock Maxfps Version Ver.2.8 by Sqooky with help from others <3
+// OptimizationLock Maxfps Version Ver.2.0 by Sqooky with help from others <3
 
 // Launch Options
 // Please experiemnt with -dx11 or -vulkan
@@ -780,7 +780,7 @@ GameInfo
         //      If you would like to donate as a means of showing thanks I have a kofi.     \\
         //      https://ko-fi.com/sqooky                                                    \\
 
-        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. Maxfps 1.8 -------- \\
+        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. Maxfps 2.0 -------- \\
         // The github is here https://github.com/Sqooky/OptimizationLock  \\
         // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
         // The gamebanana:https://gamebanana.com/mods/656341 (it's usually behind, please check the github) \\
@@ -796,7 +796,7 @@ GameInfo
         citadel_in_world_item_panel_dpi               "0"       // default: "2"     | This controls the quality of the text above soul pickups, so boxes, golden statues, and soul orbs. Higher values mean better quality, lower means worse.
         citadel_per_weapon_per_surface_impact_effects "false"   // default: "true"  | Reduces the visuals for bullet tracers. This will disable the radius of yamato right click.
         citadel_player_model_force_highest_lod        "false"   // default: "true"  | Courtesy of dohn valve too, allows the player model to render lowest LoD from your sc_screensize_lod_scale_override setting if you so choose
-        citadel_portrait_world_renderer_off           "false"   // default: "false" | Disables character models in shop and endgame screen
+        citadel_portrait_world_renderer_off           "true"   // default: "false" | Disables character models in shop and endgame screen
         citadel_trooper_glow_disabled                 "1"       // default: "0"     | 1 = Disable friendly/enemy minion glow.
         cl_phys_enabled                               "false"   // default: "true"  | Disables all physics. This means ragdolls just maintain the last pose and boxes don't fall over
         lb_enable_dynamic_lights                      "false"   // default: "1"     | SET THIS TO TRUE TO MAKE HERO PORTRAITS HAVE COLOR IN THE SHOP AND ENDGAME *Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect)
@@ -806,6 +806,7 @@ GameInfo
         r_size_cull_threshold                         "1.4"     // default: "0.8"   | This will control the distance trooper healthbars and boxes stop rendering *Culls small objects sooner based on screen size threshold (higher = more culling).
         sc_screen_size_lod_scale_override             "0.00001" // default: "-1"    | Controls LOD scale. Lower values will make sinners and playermodels look worse "my sinner's lights are little triangles"
         steam_inputhandler_enabled                    "true"    // default: "true"  | This disables controller support when set to false. Setting to false should improve performance if you're not on a steam deck, but some people are, and I don't want an influx of "why no work with controller"
+        citadel_use_pvs_for_players                     "true"  // default: "false"  | This is a weird command, it will cause players to be culled at certain distances, which can be undesirable if trying to hyperline or snipe on vindicta. For that reason it has been disabled, although if you don't need to shoot people from stupidly far away you should leave this one disabled.
 
         // --- Render Distance ---
         r_farz       "6000" // default: "-1"    | This controls the far clipping plane, ie building/player popin
@@ -826,25 +827,25 @@ GameInfo
         r_aspectratio "2.5" // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov).
 
         // --- 3. HUD ---
-        // panorama_render_target_cache_max_size "134217728" // default: "31457280" | This should increase the panorama cache size by 4x, needs more testing
-        panorama_min_comp_layer_cache_cost              "0"     // default: "4096"  | Minimum size of a hud element before the game caches it. Setting it to zero means EVERYTHING is cached. This does have the unfortunate effect of raising vram usage by about 300mb
-        citadel_damage_report_enable                    "1"     // default: "1"     | Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay).
-        citadel_damage_text_batching_window_ability     "1000"  //                  | How long to wait until batching damage text.
-        citadel_distance_mouse_move_for_minimap_drawing "1"     // default: "15"    | this command makes drawing on the minimap more precise so you can actually doodle on it :D makes me happy
-        citadel_hideout_ball_show_juggle_count          "1"     // default: "0"     | Shows a fun juggle count minigame for hideout ball.
-        citadel_hideout_ball_show_juggle_fx             "1"     // default: "0"     | Shows juggle visual FX for hideout ball minigame.
-        citadel_hud_objective_health_debug_show_midboss "false" // default: "false" | This makes midboss' health bar visible whenever it's able to be rendered. I like it, you might not
-        citadel_hud_objective_health_enabled            "2"     // default: "2"     | 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks.
-        citadel_minimap_trooper_size                    "2"     // default: "3"     | The size of the white dots that are troopers on the minimap
-        citadel_show_minimap_reveal_indicators          "true"  //                  | idk yet
-        citadel_show_old_neutral_camp_icons             "false" //                  | idk yet
-        citadel_unit_status_old_update_rate             "15"    // default: "30"    | How frequently health bars can update. Lowering it should improve performance
-        citadel_unit_status_single_bar_mode             "false" // default: "false" | This makes the v2 halth bar be one bar as opposed to multiple, which I find more easily readable
-        citadel_unit_status_stamina_low_pips            "7"     // default: "3"     | below this threshold stamina is permanantly visble
-        minimap_trooper_update_rate_hz                  "2"     // default: "5"     | How many times a second the icons for troopers are updated on the minimap
-        panorama_comp_layer_lru_lifetime                "4"     // default: "1"     | This should keep panorama caches loaded for longer so the game can use them more frequently.
-        v8_maximum_heap_size_mb                         "1024"  //                  | This should double the amount of cache used by the ingame hud, so less stutter! Yay!
-        citadel_unit_status_hide_names                  "true"  // default: "false" | This should hide playernames from health bars.
+        // panorama_render_target_cache_max_size        "134217728" // default: "31457280" | This should increase the panorama cache size by 4x, needs more testing
+        panorama_min_comp_layer_cache_cost              "0"         // default: "4096"     | Minimum size of a hud element before the game caches it. Setting it to zero means EVERYTHING is cached. This does have the unfortunate effect of raising vram usage by about 300mb
+        citadel_damage_report_enable                    "1"         // default: "1"        | Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay).
+        citadel_damage_text_batching_window_ability     "1000"      //                     | How long to wait until batching damage text.
+        citadel_distance_mouse_move_for_minimap_drawing "1"         // default: "15"       | this command makes drawing on the minimap more precise so you can actually doodle on it :D makes me happy
+        citadel_hideout_ball_show_juggle_count          "1"         // default: "0"        | Shows a fun juggle count minigame for hideout ball.
+        citadel_hideout_ball_show_juggle_fx             "1"         // default: "0"        | Shows juggle visual FX for hideout ball minigame.
+        citadel_hud_objective_health_debug_show_midboss "false"     // default: "false"    | This makes midboss' health bar visible whenever it's able to be rendered. I like it, you might not
+        citadel_hud_objective_health_enabled            "2"         // default: "2"        | 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks.
+        citadel_minimap_trooper_size                    "2"         // default: "3"        | The size of the white dots that are troopers on the minimap
+        citadel_show_minimap_reveal_indicators          "true"      //                     | idk yet
+        citadel_show_old_neutral_camp_icons             "false"     //                     | idk yet
+        citadel_unit_status_old_update_rate             "15"        // default: "30"       | How frequently health bars can update. Lowering it should improve performance
+        citadel_unit_status_single_bar_mode             "false"     // default: "false"    | This makes the v2 halth bar be one bar as opposed to multiple, which I find more easily readable
+        citadel_unit_status_stamina_low_pips            "7"         // default: "3"        | below this threshold stamina is permanantly visble
+        minimap_trooper_update_rate_hz                  "2"         // default: "5"        | How many times a second the icons for troopers are updated on the minimap
+        panorama_comp_layer_lru_lifetime                "4"         // default: "1"        | This should keep panorama caches loaded for longer so the game can use them more frequently.
+        v8_maximum_heap_size_mb                         "1024"      //                     | This should double the amount of cache used by the ingame hud, so less stutter! Yay!
+        citadel_unit_status_hide_names                  "true"      // default: "false"    | This should hide playernames from health bars.
 
         // --- 4. Lighting & Shadows ---
         lb_enable_stationary_lights "false" // default: "1" | *Disables stationary lights (map looks flatter but more performant).
@@ -1262,7 +1263,6 @@ GameInfo
         citadel_minimap_overlap_scan_distance  "0"     //
         citadel_player_outline_enemies         "false" //
         citadel_portrait_unit_ag2_enable       "false" //
-        citadel_use_pvs_for_players            "true"  //
 
         // ================ cl_ Commands ================
         cl_bone_cache_optimization    "1"     //
@@ -1374,7 +1374,7 @@ GameInfo
         wind_system_temporal_smoothing               "false" //
 
 
-        // --------------------------------- END OF CONFIG OptimizationLock -- ver. 1.8 ------------------------------- \\
+        // --------------------------------- END OF CONFIG OptimizationLock -- ver. 2.0 ------------------------------- \\
 
 
         rate
