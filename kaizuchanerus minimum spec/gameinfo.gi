@@ -902,7 +902,7 @@ r_citadel_depth_prepass_dynamic_objects 0
 //sc_force_single_display_list_per_layer 1
 "lb_shadow_texture_width_override" "16"          // Shrinks the global shadow atlas to 16 pixels
 "lb_shadow_texture_height_override" "16"         // Shrinks the global shadow atlas to 16 pixels
-lb_enable_binning 0
+//lb_enable_binning 0
 
 r_frame_sync_enable 0
 
@@ -981,13 +981,13 @@ citadel_unit_status_healthbar_highlight_speed "100"
  
         "rate"
         {
-            "min"       "98304"
+            "min"       "133120"
             "default"   "786432"
             "max"       "1000000"
         }
 
         // Networking - General
-        "sv_minrate"    "98304"
+        "sv_minrate"    "133120"
         "sv_maxunlag"   "0.500"
         "sv_maxunlag_player" "0.200"
         "sv_lagcomp_filterbyviewangle" "false"
