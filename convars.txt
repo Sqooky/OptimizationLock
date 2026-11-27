@@ -1157,6 +1157,9 @@ citadel_announcement_banned_heroes_display_time 10 (developmentonly clientdll de
 citadel_announcement_display_time 8 (developmentonly clientdll defensive)
 	<no description>
 
+citadel_archer_charged_shot_ricochet_aim_debug 0 (gamedll clientdll replicated cheat)
+	Seconds to draw the Charged Shot ricochet aim cone (yellow), natural reflection (white) and biased shot (green). 0 disables.
+
 citadel_auto_highlight_seconds_after 8 (clientdll release)
 	How many seconds after the highlight event to show when viewing highlights.
 
@@ -1379,6 +1382,48 @@ citadel_bot_director_zipline_stable 0.4 (developmentonly gamedll replicated defe
 citadel_bot_disconnect_takeover_enabled false (developmentonly gamedll clientdll replicated defensive)
 	<no description>
 
+citadel_bot_drill 0 (gamedll replicated release)
+	Sandbox bot drill. 1: diving Danny, 2: flying Vindicta, 3: Abrams Shoulder Charge and melee, 4: Grey Talon Rain of Arrows and Charged Shot, 5: Paradox Kinetic Carbine and Paradoxical Swap, 6: Viscous Goo Ball, 7: Viscous Puddle Punch, 8: Bebop Grapple Arm, 9: Graves Borrowed Decree parry, 10: Baba Threadsap, 11: Billy combo, 12: Baba Granny Long Legs, 13: Lash Death Slam and Ground Strike, 14: Silver wolf form, 15: Holliday Bounce Pad and Powder Keg, 16: McGinnis Spectral Wall and Heavy Barrage
+
+citadel_bot_drill_air_jumps 2 (gamedll replicated release)
+	Air jumps the Lash bot drill target makes after Grapple to gain height
+
+citadel_bot_drill_attack_delay_max 4 (gamedll replicated release)
+	Longest wait in seconds between a bot drill target's attacks
+
+citadel_bot_drill_attack_delay_min 2 (gamedll replicated release)
+	Shortest wait in seconds between a bot drill target's attacks
+
+citadel_bot_drill_charged_shot_chance 0.5 (gamedll replicated release)
+	Chance per flight that the Grey Talon bot drill target fires a Charged Shot
+
+citadel_bot_drill_chase_distance 30 (gamedll replicated release)
+	Distance in meters from its start the bot drill target stops chasing the player at
+
+citadel_bot_drill_combo_swings 2 (gamedll replicated release)
+	Melee attacks the Abrams and Billy bot drill targets finish their combos with
+
+citadel_bot_drill_distance 15 (gamedll replicated release)
+	Distance in meters from the player the bot drill target starts at
+
+citadel_bot_drill_height 8 (gamedll replicated release)
+	Height in meters the bot drill target flies at
+
+citadel_bot_drill_parry_charge_percent 50 (gamedll replicated release)
+	Heavy melee charge percent at which the Graves bot drill target parries
+
+citadel_bot_drill_reset_delay 2 (gamedll replicated release)
+	Seconds after landing or finishing an attack before the bot drill target returns to its start
+
+citadel_bot_drill_retreat_distance 10 (gamedll replicated release)
+	Distance in meters from the player the McGinnis bot drill target dashes away at
+
+citadel_bot_drill_roam_distance 4 (gamedll replicated release)
+	Distance in meters from its start a roaming bot drill target moves around in
+
+citadel_bot_drill_wall_distance 3 (gamedll replicated release)
+	Distance in meters behind the player the McGinnis bot drill target deploys Spectral Wall at
+
 citadel_bot_forward_back false (gamedll replicated release)
 	Forces citadel bots to move back and forth
 
@@ -1496,7 +1541,7 @@ citadel_bounty_aoe_deny_radius 2165.35 (gamedll clientdll replicated cheat)
 citadel_bounty_aoe_radius 2165.35 (gamedll clientdll replicated cheat)
 	The radius in which teammates gain a portion of bounties
 
-citadel_bounty_aoe_radius_autoscore 1771.65 (gamedll clientdll replicated cheat)
+citadel_bounty_aoe_radius_autoscore 1653.54 (gamedll clientdll replicated cheat)
 	The radius in which a trooper death is automatically assigned to a nearby player.
 
 citadel_bounty_aoe_radius_neutrals 800 (gamedll clientdll replicated cheat)
@@ -1934,8 +1979,11 @@ citadel_combatlog_fight_idle_time 5 (developmentonly gamedll clientdll replicate
 citadel_combatlog_file "" (developmentonly clientdll defensive)
 	A file you want to write combatlog events to as they happen.
 
-citadel_comeback_redirect_fraction 0.7 (developmentonly gamedll defensive)
-	Fraction of the comeback souls earned by a player above the enemy team's average net worth that is redirected to the tick gold pool for the two lowest net worth teammates
+citadel_comeback_redirect_fraction 0.8 (developmentonly gamedll defensive)
+	Max fraction of the comeback souls earned by a player above their own team's average net worth that is redirected to the tick gold pool for the two lowest net worth teammates. Ramps from 0 at the team average.
+
+citadel_comeback_redirect_max_ratio 1.2 (min: 1.01, developmentonly gamedll defensive)
+	Player net worth / own team average net worth at which citadel_comeback_redirect_fraction is reached
 
 citadel_commend_notification_anonymous_allies false (developmentonly clientdll)
 	Show ally commends as an anonymous thumbs up instead of the commender's hero and name
@@ -2492,7 +2540,7 @@ citadel_enable_ping_rate_limiting true (developmentonly gamedll)
 citadel_enable_slows_affect_air_drag true (gamedll clientdll replicated cheat release)
 	Whether slows affect air drag
 
-citadel_enable_survey false (developmentonly clientdll)
+citadel_enable_survey true (developmentonly clientdll)
 	Kill switch in case we want to make sure the survey isn't shown, or temporarily disable it
 
 citadel_enable_vdata_sound_preload true (developmentonly clientdll)
@@ -2978,6 +3026,9 @@ citadel_hideout_map_enabled false (developmentonly gamedll clientdll replicated)
 citadel_hideout_npc_debug false (developmentonly gamedll)
 	<no description>
 
+citadel_hideout_owner_ranked_season_reward_override 0 (developmentonly gamedll)
+	<no description>
+
 citadel_hideout_spoof_connection_state -1 (developmentonly clientdll)
 	<no description>
 
@@ -3168,6 +3219,9 @@ citadel_item_purchases_force_enhanced false (gamedll cheat)
 	While true, all items purchased/drafted will be enhanced
 
 citadel_item_rejuvenator_label_offset 160 (clientdll cheat)
+	<no description>
+
+citadel_item_rejuvenator_label_scale 2 (clientdll cheat)
 	<no description>
 
 citadel_item_sell_price_ratio 0.5 (developmentonly gamedll clientdll replicated)
@@ -3368,7 +3422,10 @@ citadel_melee_heavymelee_push_force_vs_tiny 35 (developmentonly gamedll)
 citadel_melee_heavymelee_toss_force_vs_tiny_min 250 (developmentonly gamedll)
 	<no description>
 
-citadel_melee_hit_delay_max_time 0.1 (developmentonly gamedll defensive)
+citadel_melee_hit_delay_max_time 0.16 (developmentonly gamedll defensive)
+	<no description>
+
+citadel_melee_lagcomp_debug false (developmentonly gamedll defensive)
 	<no description>
 
 citadel_melee_shake_amplitude 0.55 (developmentonly gamedll defensive)
@@ -3944,16 +4001,16 @@ citadel_player_gold_comeback_assister_ratio 1.5 (developmentonly gamedll clientd
 citadel_player_gold_comeback_killer_fraction 0.3 (developmentonly gamedll clientdll replicated defensive)
 	<no description>
 
-citadel_player_gold_comeback_multiplier 2.268 (developmentonly gamedll clientdll replicated defensive)
+citadel_player_gold_comeback_multiplier 0.92 (developmentonly gamedll clientdll replicated defensive)
 	<no description>
 
 citadel_player_gold_comeback_npc_max_mutliplier_delta 1.2 (developmentonly gamedll clientdll replicated defensive)
 	<no description>
 
-citadel_player_gold_comeback_npc_max_mutliplier_value 1.3 (developmentonly gamedll clientdll replicated defensive)
+citadel_player_gold_comeback_npc_max_mutliplier_value 1.285 (developmentonly gamedll clientdll replicated defensive)
 	<no description>
 
-citadel_player_gold_difficulty_multiplier 2.484 (developmentonly gamedll clientdll replicated defensive)
+citadel_player_gold_difficulty_multiplier 1 (developmentonly gamedll clientdll replicated defensive)
 	<no description>
 
 citadel_player_gold_killer_to_assist_ratio 2.2 (developmentonly gamedll defensive)
@@ -3962,7 +4019,7 @@ citadel_player_gold_killer_to_assist_ratio 2.2 (developmentonly gamedll defensiv
 citadel_player_gold_per_level_postmax 2000 (developmentonly gamedll clientdll replicated defensive)
 	Gold per 'level' after maxing out rewards
 
-citadel_player_gold_reward_first_kill_bonus 125 (developmentonly gamedll clientdll replicated defensive)
+citadel_player_gold_reward_first_kill_bonus 175 (developmentonly gamedll clientdll replicated defensive)
 	<no description>
 
 citadel_player_gold_reward_max 2200 (developmentonly gamedll clientdll replicated defensive)
@@ -3996,12 +4053,6 @@ citadel_player_neutral_gold_drop_min 50 (developmentonly gamedll defensive)
 	<no description>
 
 citadel_player_neutral_gold_drop_min_increase_per_minute 5 (developmentonly gamedll defensive)
-	<no description>
-
-citadel_player_neutral_gold_duration 180 (developmentonly gamedll defensive)
-	<no description>
-
-citadel_player_neutral_gold_fallrate 300 (developmentonly gamedll defensive)
 	<no description>
 
 citadel_player_outline_allies false (developmentonly clientdll gameinfo_cannot_override)
@@ -4211,7 +4262,7 @@ citadel_popular_items_min_games 5000 (developmentonly clientdll)
 citadel_popular_items_min_pick_pct_early_game 10 (developmentonly gamedll clientdll replicated)
 	<no description>
 
-citadel_popular_items_min_pick_pct_late_game 10 (developmentonly gamedll clientdll replicated)
+citadel_popular_items_min_pick_pct_late_game 7.5 (developmentonly gamedll clientdll replicated)
 	<no description>
 
 citadel_popular_items_min_pick_pct_mid_game 10 (developmentonly gamedll clientdll replicated)
@@ -4562,10 +4613,31 @@ citadel_sat_volume_sat_color [255, 255, 255, 255] (developmentonly gamedll clien
 citadel_scenepanel_use_intermediate_texture false (developmentonly clientdll)
 	<no description>
 
+citadel_seasonal_thanksgiving false (gamedll clientdll replicated release)
+	If enabled, the Thanksgiving parade floats spawn when the match starts
+
+citadel_seasonal_thanksgiving_float_box_respawn_time 180 (developmentonly gamedll replicated)
+	Seconds after a parade float's box is broken before a new one appears on the float. Negative never respawns it.
+
+citadel_seasonal_thanksgiving_float_first_box_match_time 180 (developmentonly gamedll replicated)
+	Seconds of match time before a parade float gets its first box. Until then it has none, and rides at its raised height. 0 gives it one as soon as it spawns.
+
+citadel_seasonal_thanksgiving_float_initial_distance 0 (developmentonly gamedll replicated)
+	How far down the lane 4 zipline, in units along its path, from the first node inside the move range the first parade float spawns. The rest are spaced on from there.
+
+citadel_seasonal_thanksgiving_float_move_range_max_y 5000 (developmentonly gamedll replicated)
+	World Y of the +Y end of the parade floats' path. A float driving toward +Y that passes this teleports back to the -Y end.
+
+citadel_seasonal_thanksgiving_float_move_range_min_y -5000 (developmentonly gamedll replicated)
+	World Y of the -Y end of the parade floats' path. No path limit unless this is below citadel_seasonal_thanksgiving_float_move_range_max_y.
+
+citadel_seasonal_thanksgiving_float_spacing 1500 (developmentonly gamedll replicated)
+	<no description>
+
 citadel_secondary_language_builds -1 (clientdll archive per_user)
 	<no description>
 
-citadel_secure_gold_behind_max_bonus 0.5 (developmentonly gamedll)
+citadel_secure_gold_behind_max_bonus 0.75 (developmentonly gamedll)
 	Max extra secure rate (fraction of baseline) for a player behind the enemy team's average net worth
 
 citadel_secure_gold_behind_max_delta 0.2 (developmentonly gamedll)
@@ -4812,6 +4884,21 @@ citadel_snowball_level_override -1 (gamedll cheat release client_can_execute)
 	Change the snowball level
 
 citadel_solo_bot_match false (gamedll clientdll replicated release)
+	<no description>
+
+citadel_soul_bag_extra_spawn_min_value_multiplier 2 (developmentonly gamedll defensive)
+	<no description>
+
+citadel_soul_bag_scale_max 8.5 (developmentonly gamedll defensive)
+	<no description>
+
+citadel_soul_bag_scale_max_value 2000 (developmentonly gamedll defensive)
+	<no description>
+
+citadel_soul_bag_scale_min 1 (developmentonly gamedll defensive)
+	<no description>
+
+citadel_soul_bag_spawn_max 5 (developmentonly gamedll defensive)
 	<no description>
 
 citadel_soul_rune_lane_experiment false (developmentonly gamedll clientdll replicated)
@@ -5142,7 +5229,7 @@ citadel_track_player_vs_player_accuracy true (gamedll clientdll replicated cheat
 	<no description>
 
 citadel_trailingteam_bias_threshold_max 0.15 (developmentonly gamedll clientdll replicated)
-	Max Difference between teams to get full trailing bonuses for Koth/Urn
+	Max Difference between teams to get full trailing bonuses for Urn
 
 citadel_trailingteam_bias_threshold_min 0 (developmentonly gamedll clientdll replicated)
 	Min Difference between teams to start getting trailing bonuses for Koth/Urn
@@ -6881,6 +6968,9 @@ deadlock_hero_debuts_seen "" (clientdll archive release)
 deadlock_mm_preference 1 (clientdll archive release)
 	What style of player do we want to try and match with in matchmaking
 
+deadlock_ranked_season_last_acknowledged_interval 0 (clientdll archive release)
+	<no description>
+
 deadlock_steam_input_debug false (developmentonly clientdll defensive)
 	Show Steam Input Error Messages and Spew in console
 
@@ -8324,7 +8414,7 @@ lservercfgfile "listenserver.cfg" (developmentonly gamedll defensive)
 lua_assert_on_error false (developmentonly defensive)
 	<no description>
 
-lua_is_currently_executing false (hidden dontrecord release flag_36)
+lua_is_currently_executing false (hidden dontrecord release vconsole_no_change_notify)
 	<no description>
 
 lua_shipping_assert_on_error false (developmentonly defensive)
@@ -14644,3 +14734,4 @@ zipline_use_new_latch 2 (developmentonly gamedll clientdll replicated defensive)
 
 zoom_sensitivity_ratio 1 (min: 0.01, max: 3, clientdll archive per_user)
 	Additional mouse sensitivity scale factor applied when FOV is zoomed in.
+Additional mouse sensitivity scale factor applied when FOV is zoomed in.
